@@ -90,7 +90,7 @@ public void connect() {
 public  ConnectWindow(INIACRMIServer aMainFrame) {
 
         //sorter = aMainFrame.sorter;
-    			//dataBase = aMainFrame.dataBase;
+    	//dataBase = aMainFrame.dataBase;
     	mainFrame = aMainFrame;    
         setSize(500,155);
         setLocation(100, 50);
