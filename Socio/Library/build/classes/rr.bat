@@ -1,3 +1,0 @@
-rmic DictionaryManager
-rmic Question
-rmic SocioInput
