@@ -1,7 +1,7 @@
 /*
  * Main.java
  *
- * Created on 6 Январь 2004 г., 15:41
+ * Created on 6 РЇРЅРІР°СЂСЊ 2004 Рі., 15:41
  */
 import java.rmi.server.UnicastRemoteObject;
 import java.rmi.RemoteException;
@@ -123,7 +123,7 @@ public class INIACRMIServer extends UnicastRemoteObject implements INIACRMIInter
             try {
               if (Lib.getID().compareTo(LibID)==0) Lib.RefreshLocalClient(); else Lib.Refresh();
             } catch( Exception re ) {
-                System.err.println("Ошибка "+re.getMessage());
+                System.err.println("РћС€РёР±РєР° "+re.getMessage());
             }
             i++;
         }
@@ -158,7 +158,7 @@ public class INIACRMIServer extends UnicastRemoteObject implements INIACRMIInter
             Res=new Integer(ResS);
             //stmt.close();
         } catch (Exception E) {
-            System.out.println("Ошибка создания Скрипта3 создания новой записи "+E);
+            System.out.println("РћС€РёР±РєР° СЃРѕР·РґР°РЅРёСЏ РЎРєСЂРёРїС‚Р°3 СЃРѕР·РґР°РЅРёСЏ РЅРѕРІРѕР№ Р·Р°РїРёСЃРё "+E);
         }
         return Res;
     };
@@ -173,11 +173,11 @@ public class INIACRMIServer extends UnicastRemoteObject implements INIACRMIInter
         try{
             Statement statement=connection.createStatement();
 
-            System.out.println( "Создаем новую таблицу" );	
+            System.out.println( "РЎРѕР·РґР°РµРј РЅРѕРІСѓСЋ С‚Р°Р±Р»РёС†Сѓ" );	
             String SeqSql="select orders.nextval from dual";
             ResultSet resultSet=statement.executeQuery(SeqSql);
             while (resultSet.next()) {
-                System.err.println("Ключ "+resultSet.getInt(1));
+                System.err.println("РљР»СЋС‡ "+resultSet.getInt(1));
                 TableName="Table"+resultSet.getInt(1); 
 //                SQLCreateString=SqlCreate();
 //                System.out.println(SQLCreateString);	
@@ -185,14 +185,14 @@ public class INIACRMIServer extends UnicastRemoteObject implements INIACRMIInter
             }
 //            statement.executeQuery("commit");
         }   catch( Exception e){
-            System.out.println("Ошибка создания новой строки"+e);
+            System.out.println("РћС€РёР±РєР° СЃРѕР·РґР°РЅРёСЏ РЅРѕРІРѕР№ СЃС‚СЂРѕРєРё"+e);
     	}
         return TableName;
     }
     
     
     protected void RestoreCollections(){
-        //Восстановление коллекции
+        //Р’РѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёРµ РєРѕР»Р»РµРєС†РёРё
     }
     
     protected void initConnectParametrs() {
@@ -215,7 +215,7 @@ public class INIACRMIServer extends UnicastRemoteObject implements INIACRMIInter
                     	else if (Key.equalsIgnoreCase("Server"))  Server = Value;
                             else if (Key.equalsIgnoreCase("Driver"))  Driver = Value;
                                 else if (Key.equalsIgnoreCase("RMIServer"))  RMIServer = Value;
-                                    else if (Key.equalsIgnoreCase("RMINamе" ))  RMIName = Value;
+                                    else if (Key.equalsIgnoreCase("RMINamРµ" ))  RMIName = Value;
                                         else if (Key.equalsIgnoreCase("RMIPort")) RMIPort = (new Integer(Value)).intValue();
                             
                 }
@@ -266,7 +266,7 @@ public class INIACRMIServer extends UnicastRemoteObject implements INIACRMIInter
      * @param args the command line arguments
      */
     
-    //Работа со словарем
+    //Р Р°Р±РѕС‚Р° СЃРѕ СЃР»РѕРІР°СЂРµРј
     
     /*public void NewQuest(String Str) throws RemoteException { 
         INIACSession.getMainDictionary().New(Str);
@@ -289,7 +289,7 @@ public class INIACRMIServer extends UnicastRemoteObject implements INIACRMIInter
     }
     public void setQuestName(int QuestNum, String Name) throws RemoteException {    }
     
-    //Работа с вопросои
+    //Р Р°Р±РѕС‚Р° СЃ РІРѕРїСЂРѕСЃРѕРё
     
     
     public void delAnswer(int QuestNum, int AnswerNum) throws RemoteException {  }
@@ -324,7 +324,7 @@ public class INIACRMIServer extends UnicastRemoteObject implements INIACRMIInter
             //registry.rebind("//"+RMIServer+"/"+RMIName, this);
             Naming.rebind("//"+RMIServer+"/"+RMIName, this);
 	} catch( Exception re ) {
-            System.err.println("Ошибка "+re.getMessage());
+            System.err.println("РћС€РёР±РєР° "+re.getMessage());
             re.printStackTrace();    
             System.exit(1); //fail - exit 
 	}
@@ -334,7 +334,7 @@ public class INIACRMIServer extends UnicastRemoteObject implements INIACRMIInter
     
     public void Register(LibraryRefreshInterface aLib) throws RemoteException {
         LibraryList.add(aLib);
-        System.out.println("Прошла регистрация");
+        System.out.println("РџСЂРѕС€Р»Р° СЂРµРіРёСЃС‚СЂР°С†РёСЏ");
     }
     
     /*public void pingLibraries() throws RemoteException {
@@ -344,7 +344,7 @@ public class INIACRMIServer extends UnicastRemoteObject implements INIACRMIInter
             try {
               Lib.Refresh();  
             } catch( Exception re ) {
-                System.err.println("Ошибка "+re.getMessage());
+                System.err.println("РћС€РёР±РєР° "+re.getMessage());
             }
             i++;
         }
@@ -397,7 +397,7 @@ public class INIACRMIServer extends UnicastRemoteObject implements INIACRMIInter
                 Res.add(((DictionaryInterface)O).getID());
             }
         } catch( Exception e){
-            System.out.println("Ошибка "+e.toString());
+            System.out.println("РћС€РёР±РєР° "+e.toString());
     	}     
         return Res;
     }    
@@ -423,13 +423,13 @@ public class INIACRMIServer extends UnicastRemoteObject implements INIACRMIInter
 
     /*public  void addDMI (DataModuleInterface DMI) throws RemoteException {
         INIACSession.DataModuleCollection.add(DMI);
-        System.out.println("Добавили модуль данных");
+        System.out.println("Р”РѕР±Р°РІРёР»Рё РјРѕРґСѓР»СЊ РґР°РЅРЅС‹С…");
         try {
             Library.RefreshDictionaryList();
-            System.out.println("Добавили модуль данных");
+            System.out.println("Р”РѕР±Р°РІРёР»Рё РјРѕРґСѓР»СЊ РґР°РЅРЅС‹С…");
             WriteDictionaries();
         } catch (Exception e2) {
-            System.out.println("Ошибка в addDMI"+e2);
+            System.out.println("РћС€РёР±РєР° РІ addDMI"+e2);
         }
     }*/
 
@@ -443,7 +443,7 @@ public class INIACRMIServer extends UnicastRemoteObject implements INIACRMIInter
                 if (Flag) StoreDMI(DM, 4); 
                 INIACSession.DataModuleCollection.add(DM);
                 DM.setName(aName,0,Flag);
-                System.out.println("Добавили "+aName);
+                System.out.println("Р”РѕР±Р°РІРёР»Рё "+aName);
                 break;
             }
             case 2: {
@@ -454,7 +454,7 @@ public class INIACRMIServer extends UnicastRemoteObject implements INIACRMIInter
                 //DM.setServer(this);
                 INIACSession.DataModuleCollection.add(DM);
                 DM.setName(aName,0,Flag);                
-                System.out.println("Добавили "+aName);
+                System.out.println("Р”РѕР±Р°РІРёР»Рё "+aName);
                 break;
             }
             case 3: {
@@ -463,7 +463,7 @@ public class INIACRMIServer extends UnicastRemoteObject implements INIACRMIInter
                 if (Flag) StoreDMI(DM, 4);                 
                 INIACSession.DataModuleCollection.add(DM);
                 DM.setName(aName,0,Flag);                
-                System.out.println("Добавили "+aName);
+                System.out.println("Р”РѕР±Р°РІРёР»Рё "+aName);
                 break;
             }
             case 4: {
@@ -472,7 +472,7 @@ public class INIACRMIServer extends UnicastRemoteObject implements INIACRMIInter
                 if (Flag) StoreDMI(DM, 4);                 
                 INIACSession.DataModuleCollection.add(DM);
                 DM.setName(aName,0,Flag);
-                System.out.println("Добавили "+aName);
+                System.out.println("Р”РѕР±Р°РІРёР»Рё "+aName);
                 break;
             }
             case 5: {
@@ -486,7 +486,7 @@ public class INIACRMIServer extends UnicastRemoteObject implements INIACRMIInter
                 DM.setEditable(false);
                 INIACSession.DataModuleCollection.add(DM);
                 DM.setName(aName,0,Flag);
-                System.out.println("Добавили "+aName);
+                System.out.println("Р”РѕР±Р°РІРёР»Рё "+aName);
                 break;
             }
             
@@ -504,7 +504,7 @@ public class INIACRMIServer extends UnicastRemoteObject implements INIACRMIInter
     }
     
     public DictionaryInterface newDictionary(String Name, boolean Flag) throws RemoteException {
-        System.out.println("Создаем словарь 1");
+        System.out.println("РЎРѕР·РґР°РµРј СЃР»РѕРІР°СЂСЊ 1");
         DictionaryInterface DI=newDictionary(Name,getKey(),Flag);
         return DI;
     }
@@ -514,9 +514,9 @@ public class INIACRMIServer extends UnicastRemoteObject implements INIACRMIInter
         try {
             DI = new DictionaryManager(this, Name,IDKey,Flag);
             INIACSession.getDictionaryCollection().add(DI);
-            System.out.println("Создали словарь 3");
+            System.out.println("РЎРѕР·РґР°Р»Рё СЃР»РѕРІР°СЂСЊ 3");
         } catch (Exception e2) {
-            System.out.println("Неудается записать 2 "+e2);
+            System.out.println("РќРµСѓРґР°РµС‚СЃСЏ Р·Р°РїРёСЃР°С‚СЊ 2 "+e2);
         }
             
         return DI;
@@ -603,7 +603,7 @@ public class INIACRMIServer extends UnicastRemoteObject implements INIACRMIInter
                 }
 
         } catch (Exception e2) {
-                System.out.println("\n Неудается записать 3 "+e2);
+                System.out.println("\n РќРµСѓРґР°РµС‚СЃСЏ Р·Р°РїРёСЃР°С‚СЊ 3 "+e2);
         }
     }
 
@@ -623,7 +623,7 @@ public class INIACRMIServer extends UnicastRemoteObject implements INIACRMIInter
             System.out.println(SQLStr);
             statement.executeUpdate(SQLStr);
         } catch (Exception e2) {
-                System.out.println("Ошибка в writeDictionary "+e2);
+                System.out.println("РћС€РёР±РєР° РІ writeDictionary "+e2);
         }
     }
 
@@ -662,7 +662,7 @@ public class INIACRMIServer extends UnicastRemoteObject implements INIACRMIInter
                 i++;
             }    
         } catch (Exception e2) {
-                System.out.println("Ошибка в writeDictionary "+e2);
+                System.out.println("РћС€РёР±РєР° РІ writeDictionary "+e2);
         }            
         
     }
@@ -687,7 +687,7 @@ public class INIACRMIServer extends UnicastRemoteObject implements INIACRMIInter
                 i++;
             }
         } catch (Exception e2) {
-                System.out.println("Ошибка в writeDictionary "+e2);
+                System.out.println("РћС€РёР±РєР° РІ writeDictionary "+e2);
         }
     };
 
@@ -698,24 +698,24 @@ public class INIACRMIServer extends UnicastRemoteObject implements INIACRMIInter
                 "' where Row_id = "+ID+
                 "' and Object_type = "+type;
                 statement.executeUpdate(query);
-                System.out.println("Записываем "+query);
+                System.out.println("Р—Р°РїРёСЃС‹РІР°РµРј "+query);
 
         } catch (Exception e2) {
-                System.out.println("Ошибка в Registerer "+e2);
+                System.out.println("РћС€РёР±РєР° РІ Registerer "+e2);
         }
     }
 
 
 
     public void StoreAllBase() throws RemoteException {
-        System.out.println( "Создаем новую таблицу" );
+        System.out.println( "РЎРѕР·РґР°РµРј РЅРѕРІСѓСЋ С‚Р°Р±Р»РёС†Сѓ" );
         try {
                Statement statement=connection.createStatement();
                String SQLStr="Delete from Library";
                statement.executeUpdate(SQLStr);
                RecurrentStore(INIACSession.DataRoot,0,statement);
         } catch (Exception e2) {
-                System.out.println("Ошибка в WriteSQLDictionaries() "+e2);
+                System.out.println("РћС€РёР±РєР° РІ WriteSQLDictionaries() "+e2);
         }
     }
     
@@ -728,7 +728,7 @@ public class INIACRMIServer extends UnicastRemoteObject implements INIACRMIInter
                 Res.add(((DataModuleInterface)O).getID());
             }
         } catch( Exception e){
-            System.out.println("Ошибка в getDMIKeys"+e.toString());
+            System.out.println("РћС€РёР±РєР° РІ getDMIKeys"+e.toString());
     	}
         return Res;
     }    
@@ -779,7 +779,7 @@ public class INIACRMIServer extends UnicastRemoteObject implements INIACRMIInter
             subRS.close();
             Substmt.close();
         } catch (Exception e2) {
-                System.out.println("Ошибка в readDictionary "+e2);
+                System.out.println("РћС€РёР±РєР° РІ readDictionary "+e2);
         }    
 
         return null;
@@ -815,14 +815,14 @@ public class INIACRMIServer extends UnicastRemoteObject implements INIACRMIInter
                 Substmt.close();
             }
         } catch (Exception e2) {
-                System.out.println("Ошибка в readDictionary "+e2);
+                System.out.println("РћС€РёР±РєР° РІ readDictionary "+e2);
         }
     }
     
     public void readQuestion(Integer QuestID) {
         try {
             String Name="";
-            QuestionInterface QI=this.getMainDictionary().newQuestion("Новый вопрос readQuestion", QuestID, false);
+            QuestionInterface QI=this.getMainDictionary().newQuestion("РќРѕРІС‹Р№ РІРѕРїСЂРѕСЃ readQuestion", QuestID, false);
             Statement Substmt=connection.createStatement();
             String SQLStr="Select * from Library where Row_ID='"+QuestID+"'";
             ResultSet subRS=Substmt.executeQuery(SQLStr);
@@ -863,7 +863,7 @@ public class INIACRMIServer extends UnicastRemoteObject implements INIACRMIInter
             subRS.close();
             Substmt.close();
         } catch (Exception e2) {
-                System.out.println("Ошибка в ReadQuestion "+e2);
+                System.out.println("РћС€РёР±РєР° РІ ReadQuestion "+e2);
         }
     }
     
@@ -872,7 +872,7 @@ public class INIACRMIServer extends UnicastRemoteObject implements INIACRMIInter
     public void readAnswer(Integer AnswerID) {
         try {
             String Name="";
-            AnswerInterface AI=this.getMainQuestion().newAnswer("Новый ответ", AnswerID, false);
+            AnswerInterface AI=this.getMainQuestion().newAnswer("РќРѕРІС‹Р№ РѕС‚РІРµС‚", AnswerID, false);
             Statement Substmt=connection.createStatement();
             String SQLStr="Select * from Library where Row_ID='"+AnswerID+"'";
             ResultSet subRS=Substmt.executeQuery(SQLStr);
@@ -887,14 +887,14 @@ public class INIACRMIServer extends UnicastRemoteObject implements INIACRMIInter
                         case 2: {
                             boolean flag=subRS.getString(4).equalsIgnoreCase("true");
                             AI.setTextable(flag, false);
-                            //другие типы
+                            //РґСЂСѓРіРёРµ С‚РёРїС‹
                         }
                 }
             }
             subRS.close();
             Substmt.close();
         } catch (Exception e2) {
-                System.out.println("Ошибка в ReadAnswer "+e2);
+                System.out.println("РћС€РёР±РєР° РІ ReadAnswer "+e2);
         }
     }
 
@@ -944,7 +944,7 @@ public class INIACRMIServer extends UnicastRemoteObject implements INIACRMIInter
             stmt.execute("commit");
             stmt.close();
         } catch (Exception e2) {
-            System.out.println("Ошибка в DMIStore() 2"+e2);
+            System.out.println("РћС€РёР±РєР° РІ DMIStore() 2"+e2);
         }    
     }
     
@@ -1020,7 +1020,7 @@ public class INIACRMIServer extends UnicastRemoteObject implements INIACRMIInter
             stmt.execute("commit");
             stmt.close();
         } catch (Exception e2) {
-            System.out.println("Ошибка в StoreDictionary"+e2);
+            System.out.println("РћС€РёР±РєР° РІ StoreDictionary"+e2);
         }    
     }
 
@@ -1063,12 +1063,12 @@ public class INIACRMIServer extends UnicastRemoteObject implements INIACRMIInter
             stmt.execute("commit");
             stmt.close();
         } catch (Exception e2) {
-            System.out.println("Ошибка в StoreAnswer"+e2);
+            System.out.println("РћС€РёР±РєР° РІ StoreAnswer"+e2);
         }    
     }
     
     
-    public void StoreDQА(DQAInterface DQA, int type) throws RemoteException {
+    public void StoreDQРђ(DQAInterface DQA, int type) throws RemoteException {
         try {
             //String SQLStr="Select * from Library where Row_ID='"+ID+"'";
             switch (DQA.getType()) {
@@ -1088,7 +1088,7 @@ public class INIACRMIServer extends UnicastRemoteObject implements INIACRMIInter
             }
             //pingLibraries();
         } catch (Exception e2) {
-            System.out.println("Ошибка в StoreDQA"+e2);
+            System.out.println("РћС€РёР±РєР° РІ StoreDQA"+e2);
         }                     
     }
     
@@ -1097,7 +1097,7 @@ public class INIACRMIServer extends UnicastRemoteObject implements INIACRMIInter
             DQAInterface OLDDMI=this.getDictionary(ID);
             DQAStore(OLDDMI,type);
         } catch (Exception e2) {
-            System.out.println("Ошибка в DQAStore() 1"+e2);
+            System.out.println("РћС€РёР±РєР° РІ DQAStore() 1"+e2);
         }
     }  */  
     
@@ -1111,7 +1111,7 @@ public class INIACRMIServer extends UnicastRemoteObject implements INIACRMIInter
                     case 0: {
                         String SQLStr="delete from Library where Row_ID="+ID+" and Object_Type=0";
                         int res=stmt.executeUpdate(SQLStr);                        
-                        SQLStr=StartSQLStr+ID+",1,0,'новый модуль',"+OLDDMI.getParent()+")";
+                        SQLStr=StartSQLStr+ID+",1,0,'РЅРѕРІС‹Р№ РјРѕРґСѓР»СЊ',"+OLDDMI.getParent()+")";
                         res=stmt.executeUpdate(SQLStr);
                         break;
                     }                        
@@ -1139,7 +1139,7 @@ public class INIACRMIServer extends UnicastRemoteObject implements INIACRMIInter
                         break;
                     }
                     case 3: {
-                        //словарь
+                        //СЃР»РѕРІР°СЂСЊ
                         String SQLStr="delete from Library where Row_ID="+ID+" and Object_Type=3";
                         int res=stmt.executeUpdate(SQLStr);
                         SQLStr=StartSQLStr+ID+",1,3,'"+OLDDMI.getDictionary()+"',0)";
@@ -1148,7 +1148,7 @@ public class INIACRMIServer extends UnicastRemoteObject implements INIACRMIInter
                         break;
                     }                    
                     case 4: {
-                        //тип блока данных
+                        //С‚РёРї Р±Р»РѕРєР° РґР°РЅРЅС‹С…
                         String SQLStr="delete from Library where Row_ID="+ID+" and Object_Type=4";
                         int res=stmt.executeUpdate(SQLStr);
                         SQLStr=StartSQLStr+ID+",1,4,'"+OLDDMI.getType()+"',0)";                        
@@ -1157,7 +1157,7 @@ public class INIACRMIServer extends UnicastRemoteObject implements INIACRMIInter
                         break;
                     }
                     case 5: {
-                        //комментарий 
+                        //РєРѕРјРјРµРЅС‚Р°СЂРёР№ 
                         String SQLStr="delete from Library where Row_ID="+ID+" and Object_Type=5";
                         int res=stmt.executeUpdate(SQLStr);
                         SQLStr=StartSQLStr+ID+",1,5,'"+OLDDMI.getComment()+"',0)";                        
@@ -1166,7 +1166,7 @@ public class INIACRMIServer extends UnicastRemoteObject implements INIACRMIInter
                         break;
                     }
                     case 6: {
-                        //имя таблицы
+                        //РёРјСЏ С‚Р°Р±Р»РёС†С‹
                         String SQLStr="delete from Library where Row_ID="+ID+" and Object_Type=6";
                         int res=stmt.executeUpdate(SQLStr);
                         SQLStr=StartSQLStr+ID+",1,6,'"+OLDDMI.getTableName()+"',0)";                                                
@@ -1175,7 +1175,7 @@ public class INIACRMIServer extends UnicastRemoteObject implements INIACRMIInter
                         break;
                     }
                     case 7: {
-                        //аннотации
+                        //Р°РЅРЅРѕС‚Р°С†РёРё
                         String SQLStr="delete from Library where Row_ID="+ID+" and Object_Type=7";
                         int res=stmt.executeUpdate(SQLStr);
                         SQLStr=StartSQLStr+ID+",1,7,'"+OLDDMI.getAnnotation()+"',0)";                                                
@@ -1184,7 +1184,7 @@ public class INIACRMIServer extends UnicastRemoteObject implements INIACRMIInter
                         break;
                     }
                     case 8: {
-                        //Дата начала
+                        //Р”Р°С‚Р° РЅР°С‡Р°Р»Р°
                         String SQLStr="delete from Library where Row_ID="+ID+" and Object_Type=8";
                         int res=stmt.executeUpdate(SQLStr);
                         SQLStr=StartSQLStr+ID+",1,8,'"+OLDDMI.getStartDate()+"',0)";
@@ -1193,7 +1193,7 @@ public class INIACRMIServer extends UnicastRemoteObject implements INIACRMIInter
                         break;
                     }
                     case 9: {
-                        //дата завершения
+                        //РґР°С‚Р° Р·Р°РІРµСЂС€РµРЅРёСЏ
                         String SQLStr="delete from Library where Row_ID="+ID+" and Object_Type=9";
                         int res=stmt.executeUpdate(SQLStr);
                         SQLStr=StartSQLStr+ID+",1,9,'"+OLDDMI.getEndDate()+"',0)";
@@ -1202,7 +1202,7 @@ public class INIACRMIServer extends UnicastRemoteObject implements INIACRMIInter
                         break;
                     }
                     case 10: {
-                        //квота
+                        //РєРІРѕС‚Р°
                         String SQLStr="delete from Library where Row_ID="+ID+" and Object_Type=10";
                         int res=stmt.executeUpdate(SQLStr);
                         SQLStr=StartSQLStr+ID+",1,10,'"+OLDDMI.getQuota()+"',0)";
@@ -1211,7 +1211,7 @@ public class INIACRMIServer extends UnicastRemoteObject implements INIACRMIInter
                         break;
                     }
                     case 11: {
-                        //Условия
+                        //РЈСЃР»РѕРІРёСЏ
                         String SQLStr="delete from Library where Row_ID="+ID+" and Object_Type=11";
                         int res=stmt.executeUpdate(SQLStr);
                         SQLStr=StartSQLStr+ID+",1,11,'"+OLDDMI.getCondition()+"',0)";
@@ -1220,7 +1220,7 @@ public class INIACRMIServer extends UnicastRemoteObject implements INIACRMIInter
                         break;
                     }
                     case 12: {
-                        //предки
+                        //РїСЂРµРґРєРё
                         String SQLStr="delete from Library where Row_ID="+ID+" and Object_Type=12";
                         int res=stmt.executeUpdate(SQLStr);
                         SQLStr=StartSQLStr+ID+",1,12,'"+OLDDMI.getParent()+"',0)";
@@ -1243,7 +1243,7 @@ public class INIACRMIServer extends UnicastRemoteObject implements INIACRMIInter
             stmt.close();
             //pingLibraries();
         } catch (Exception e2) {
-            System.out.println("Ошибка в DMIStore(). Что то возможно не записалось"+e2);
+            System.out.println("РћС€РёР±РєР° РІ DMIStore(). Р§С‚Рѕ С‚Рѕ РІРѕР·РјРѕР¶РЅРѕ РЅРµ Р·Р°РїРёСЃР°Р»РѕСЃСЊ"+e2);
         }        
     }
     
@@ -1252,7 +1252,7 @@ public class INIACRMIServer extends UnicastRemoteObject implements INIACRMIInter
             DataModuleInterface OLDDMI = this.getDMI(ID);
             this.StoreDMI(OLDDMI, type);
         } catch (Exception e2) {
-            System.out.println("Ошибка в DMIStore() 1"+e2);
+            System.out.println("РћС€РёР±РєР° РІ DMIStore() 1"+e2);
         }
     }    
     
@@ -1292,67 +1292,67 @@ public class INIACRMIServer extends UnicastRemoteObject implements INIACRMIInter
                         break;
                     }
                     case 3: {
-                        //словарь
+                        //СЃР»РѕРІР°СЂСЊ
                         DictID=new Integer(RS.getString(4));
                         if (this.getDictionary(DictID)==null) readDictionary(DictID);
                         break;
                     }                    
                     case 4: {
-                        //тип блока данных
+                        //С‚РёРї Р±Р»РѕРєР° РґР°РЅРЅС‹С…
                         type=new Integer(RS.getString(4)).intValue();
                         break;
                     }
                     case 5: {
-                        //комментарий 
+                        //РєРѕРјРјРµРЅС‚Р°СЂРёР№ 
                         Comment=RS.getString(4);
                         break;
                     }
                     case 6: {
-                        //таблица
+                        //С‚Р°Р±Р»РёС†Р°
                         TableName=RS.getString(4);
                         break;
                     }
                     case 7: {
-                        //тип блока данных
+                        //С‚РёРї Р±Р»РѕРєР° РґР°РЅРЅС‹С…
                         Annotation=RS.getString(4);
                         break;
                     }
                     case 8: {
-                        //комментарий
+                        //РєРѕРјРјРµРЅС‚Р°СЂРёР№
                         StartDate=RS.getString(4);
                         break;
                     }
                     case 9: {
-                        //комментарий
+                        //РєРѕРјРјРµРЅС‚Р°СЂРёР№
                         StartDate=RS.getString(4);
                         break;
                     }
                     case 10: {
-                        //комментарий
+                        //РєРѕРјРјРµРЅС‚Р°СЂРёР№
                         String S=RS.getString(4);
                         if (S!=null) {
                             try {
                                 Quota=new Integer(S);    
                             }  catch (Exception e2) {
-                                System.out.println("Сбой преобразоования даты"+e2);
+                                System.out.println("РЎР±РѕР№ РїСЂРµРѕР±СЂР°Р·РѕРѕРІР°РЅРёСЏ РґР°С‚С‹"+e2);
                             }
                         }
                         
                         break;
                     }
                     case 11: {
-                        //комментарий
+                        //РєРѕРјРјРµРЅС‚Р°СЂРёР№
                         Condition=RS.getString(4);
                         break;
                     }
                     case 12: {
-                        //комментарий
+                        //РєРѕРјРјРµРЅС‚Р°СЂРёР№
                         String S=RS.getString(4);
                         if (S!=null) {
                             try {
                                 Parent=new Integer(S);
                             }  catch (Exception e2) {
-                                System.out.println("Сбой преобразоования предка"+e2);
+                                System.out.println("РЎР±РѕР№ РїСЂРµРѕР±СЂР°Р·РѕРѕРІР°РЅРёСЏ РїСЂРµРґРєР°"+e2);
                             }
                         }
 
@@ -1383,13 +1383,13 @@ public class INIACRMIServer extends UnicastRemoteObject implements INIACRMIInter
             stmt.close();
            } 
         } catch (Exception e2) {
-            System.out.println("Ошибка в RecurrentRestore()"+e2);
+            System.out.println("РћС€РёР±РєР° РІ RecurrentRestore()"+e2);
         }
         return DMI;
     }
 
     public void ReadSQLDictionaries() throws RemoteException {
-        System.out.println( "Создаем новый корень" );
+        System.out.println( "РЎРѕР·РґР°РµРј РЅРѕРІС‹Р№ РєРѕСЂРµРЅСЊ" );
         try {
             INIACSession.DataRoot=null;
             INIACSession.DictionaryCollection.clear();
@@ -1400,7 +1400,7 @@ public class INIACRMIServer extends UnicastRemoteObject implements INIACRMIInter
             DataModuleInterface DMI = RecurrentRestore(0);
             //DataModuleInterface DMI = RecurrentRestore(304742);
             if (DMI==null) {
-                DMI=this.newDMI("Корень", 0, 1, true);
+                DMI=this.newDMI("РљРѕСЂРµРЅСЊ", 0, 1, true);
                 DMI.setDictionary(new Integer(-1),0,false);
             }
             
@@ -1409,12 +1409,12 @@ public class INIACRMIServer extends UnicastRemoteObject implements INIACRMIInter
             INIACSession.DMIPointer.setPos(0);
             
         } catch (Exception e2) {
-                System.out.println("Ошибка в ReadSQLDictionaries(), возможно пустая база");
+                System.out.println("РћС€РёР±РєР° РІ ReadSQLDictionaries(), РІРѕР·РјРѕР¶РЅРѕ РїСѓСЃС‚Р°СЏ Р±Р°Р·Р°");
         }
     }
 
     public void ReadDictionaries() throws RemoteException  {
-        System.out.println("Создается новый модуль сессии ");
+        System.out.println("РЎРѕР·РґР°РµС‚СЃСЏ РЅРѕРІС‹Р№ РјРѕРґСѓР»СЊ СЃРµСЃСЃРёРё ");
         //DataModuleInterface DM = newDMI("Ddd",0,1);
         //DataModuleInterface DM= new DataFolder(this,null);
         //DM.setDictionary(new Integer(-1));
@@ -1448,10 +1448,10 @@ public class INIACRMIServer extends UnicastRemoteObject implements INIACRMIInter
             if (stmt==null) {
                 stmt = statement;
             }
-            System.out.println("Выполняем запрос "+Query);
+            System.out.println("Р’С‹РїРѕР»РЅСЏРµРј Р·Р°РїСЂРѕСЃ "+Query);
             RS = stmt.executeQuery(Query);
         } catch (Exception e2) {
-            System.out.println("Ошибка в executeQuery"+e2);
+            System.out.println("РћС€РёР±РєР° РІ executeQuery"+e2);
         }
         return RS;
 
@@ -1464,10 +1464,10 @@ public class INIACRMIServer extends UnicastRemoteObject implements INIACRMIInter
             if (stmt == null) {
                 stmt = statement;
             }
-            System.out.println("Выполняем запрос "+Query);
+            System.out.println("Р’С‹РїРѕР»РЅСЏРµРј Р·Р°РїСЂРѕСЃ "+Query);
             Flag=stmt.execute(Query);
         } catch (Exception e2) {
-                System.out.println("Ошибка в executeSQL"+e2);
+                System.out.println("РћС€РёР±РєР° РІ executeSQL"+e2);
         }
         return Flag;
     }
@@ -1490,17 +1490,17 @@ public class INIACRMIServer extends UnicastRemoteObject implements INIACRMIInter
         return true;
     };*/
     public boolean DeleteDictionary (int DictionaryIndex) throws RemoteException {
-        System.out.println("Удаляем словарь");
+        System.out.println("РЈРґР°Р»СЏРµРј СЃР»РѕРІР°СЂСЊ");
         try {
             for (int i = 0; i < INIACSession.getDictionaryCollection().size(); i++) {
                 DictionaryInterface DI=(DictionaryInterface)INIACSession.getDictionaryCollection().get(i);
                 if (DI.getID().compareTo(new Integer(DictionaryIndex))==0) {
                     INIACSession.getDictionaryCollection().remove(i);
-                    System.out.println("Удалили словарь");
+                    System.out.println("РЈРґР°Р»РёР»Рё СЃР»РѕРІР°СЂСЊ");
                 } 
             }
         } catch( Exception e){
-            System.out.println("Ошибка в удалении словаря"+e.toString());
+            System.out.println("РћС€РёР±РєР° РІ СѓРґР°Р»РµРЅРёРё СЃР»РѕРІР°СЂСЏ"+e.toString());
     	}
         return true;
     };

@@ -1,7 +1,7 @@
 /*
  * InputTableModel.java
  *
- * Created on 28 Èþëü 2004 ã., 10:25
+ * Created on 28 Ð˜ÑŽÐ»ÑŒ 2004 Ð³., 10:25
  */
 import javax.swing.JTable;
 import javax.swing.table.AbstractTableModel;
@@ -83,7 +83,7 @@ public class InputTableModel extends AbstractTableModel {
                 if (col==0) { O = "1";} else {
                 if (col==1) { O = new Integer(row);} else {
                 //if (col==2) { O = Dictionary.GetQuestion(row).GetName();} 
-                if (col==2) { O = "Ïåðåäåëàþ ïîçæå";} 
+                if (col==2) { O = "ÐŸÐµÑ€ÐµÐ´ÐµÐ»Ð°ÑŽ Ð¿Ð¾Ð·Ð¶Ðµ";} 
                 
                 if (col==3) { O = "";} 
                 }}

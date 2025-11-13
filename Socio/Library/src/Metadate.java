@@ -1,7 +1,7 @@
 /*
  * MetaDate.java
  *
- * Created on 16 Март 2004 г., 18:33
+ * Created on 16 РњР°СЂС‚ 2004 Рі., 18:33
  */
 
 /**

@@ -1,7 +1,7 @@
 /*
  * JavaModuleInterface.java
  *
- * Created on 13 Март 2004 г., 18:43
+ * Created on 13 РњР°СЂС‚ 2004 Рі., 18:43
  */
 import java.rmi.Remote;
 import java.rmi.RemoteException;
@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author  Иван
+ * @author  РРІР°РЅ
  */
 public interface DataModuleInterface  extends Remote, DQAInterface {
     //public int getType() throws RemoteException;

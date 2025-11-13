@@ -1,7 +1,7 @@
 /*
- * ΐψδεσκΐκτόσ.java
+ * ΠΡΠ΄ΠµΡƒΠΊΠΠΊΡ„ΡΡƒ.java
  *
- * Created on 28 Θώνό 2006 γ., 14:53
+ * Created on 28 ΠΡΠ½Ρ 2006 Π³., 14:53
  */
 
 /**
@@ -10,7 +10,7 @@
  */
 public class Filter extends javax.swing.JFrame {
     
-    /** Creates new form ΐψδεσκΐκτόσ */
+    /** Creates new form ΠΡΠ΄ΠµΡƒΠΊΠΠΊΡ„ΡΡƒ */
     public Filter() {
         initComponents();
     }

@@ -1,7 +1,7 @@
 /*
  * Interface.java
  *
- * Created on 7 Сентябрь 2004 г., 9:22
+ * Created on 7 РЎРµРЅС‚СЏР±СЂСЊ 2004 Рі., 9:22
  */
 
 import java.rmi.Remote;

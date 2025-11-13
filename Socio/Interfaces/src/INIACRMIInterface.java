@@ -1,7 +1,7 @@
 /*
  * INIACRMIInterface.java
  *
- * Created on 6 ﬂÌ‚‡¸ 2004 „., 14:19
+ * Created on 6 –Ø–Ω–≤–∞—Ä—å 2004 –≥., 14:19
 */
 
 import java.rmi.Remote;
@@ -72,11 +72,11 @@ public interface INIACRMIInterface extends Remote, Serializable {
     public String       MakeTable() throws RemoteException;
     public void         StoreDMI(Integer ID, int type) throws RemoteException;
     public void         StoreDMI(DataModuleInterface DMI, int type) throws RemoteException;
-    public void         StoreDQ¿(DQAInterface DQA, int type) throws RemoteException;
+    public void         StoreDQ–ê(DQAInterface DQA, int type) throws RemoteException;
     public RInterface   getDMIRootPointer() throws RemoteException;    
     
     
-    //public void         DQ¿Store(Integer ID, int type) throws RemoteException;
+    //public void         DQ–êStore(Integer ID, int type) throws RemoteException;
 
     //public String MakeInsertSQL(String TableName) throws RemoteException;
     //public String MakeInsertSQL(String TableName, String StrSQL) throws RemoteException;

@@ -1,7 +1,7 @@
 /*
  * MainFramable.java
  *
- * Created on 22 ΐοπελό 2005 γ., 13:37
+ * Created on 22 ΠΠΏΡ€ΠµΠ»Ρ 2005 Π³., 13:37
  */
 
 /**

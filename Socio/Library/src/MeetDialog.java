@@ -88,7 +88,7 @@ public class MeetDialog extends javax.swing.JDialog {
         jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel2.setLayout(new java.awt.GridBagLayout());
 
-        jLabel1.setText("Имя пользователя");
+        jLabel1.setText("РРјСЏ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
@@ -97,7 +97,7 @@ public class MeetDialog extends javax.swing.JDialog {
         gridBagConstraints.weightx = 1.0;
         jPanel2.add(jLabel1, gridBagConstraints);
 
-        jLabel2.setText("Пароль");
+        jLabel2.setText("РџР°СЂРѕР»СЊ");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 2;
@@ -128,10 +128,10 @@ public class MeetDialog extends javax.swing.JDialog {
         jPanel3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel3.setLayout(new java.awt.GridBagLayout());
 
-        jButton1.setText("Зайти");
+        jButton1.setText("Р—Р°Р№С‚Рё");
         jPanel3.add(jButton1, new java.awt.GridBagConstraints());
 
-        jButton2.setText("Выйти");
+        jButton2.setText("Р’С‹Р№С‚Рё");
         jPanel3.add(jButton2, new java.awt.GridBagConstraints());
 
         gridBagConstraints = new java.awt.GridBagConstraints();

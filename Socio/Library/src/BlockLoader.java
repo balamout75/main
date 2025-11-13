@@ -1,7 +1,7 @@
 /*
  * BlockLoader.java
  *
- * Created on 26 Апрель 2005 г., 10:22
+ * Created on 26 РђРїСЂРµР»СЊ 2005 Рі., 10:22
  */
 //import java.io.InputStreamReader;
 import java.io.BufferedReader;
@@ -23,7 +23,7 @@ public class BlockLoader {
     private DataModuleInterface DM;
     private INIACRMIInterface Server;
     private String FileName="C:\f.opr";
-    private String StartStr="//\t\t\t\t\t\t\t\t\t\tДА-система 4.0 - Словарь переменных";
+    private String StartStr="//\t\t\t\t\t\t\t\t\t\tР”Рђ-СЃРёСЃС‚РµРјР° 4.0 - РЎР»РѕРІР°СЂСЊ РїРµСЂРµРјРµРЅРЅС‹С…";
     private QuestionInterface CurrQuest;
     private int DataRow;
     private DictionaryInterface CD;
@@ -42,30 +42,30 @@ public class BlockLoader {
             Server = DMI.getServer();
             Key = Server.getKey();
             Lib=aLib;
-            CD=Server.newDictionary("Новый словарь 222",Key, true);
+            CD=Server.newDictionary("РќРѕРІС‹Р№ СЃР»РѕРІР°СЂСЊ 222",Key, true);
          
             AnalyseStructure();
             //DMI.setDictionary(Server.GetDictionaryIndexOf(CD));
         } catch (Exception E) {
-            System.err.println("Ошибка в загрузке циферок "+E);	
+            System.err.println("РћС€РёР±РєР° РІ Р·Р°РіСЂСѓР·РєРµ С†РёС„РµСЂРѕРє "+E);	
         };
         
     }
    
     private boolean CreateRec(String Str) {
-        System.out.println("Строка данных "+Str );	
+        System.out.println("РЎС‚СЂРѕРєР° РґР°РЅРЅС‹С… "+Str );	
         //TAI.executeQuery()
         try {
             if (FirstRecord) {
-                //DMI = DMI.AddRoot("Новый блок данных",3);
+                //DMI = DMI.AddRoot("РќРѕРІС‹Р№ Р±Р»РѕРє РґР°РЅРЅС‹С…",3);
                 DMI.setDictionary(Key,Lib.getID(),true);
                 FirstRecord = false;
             }
             String StrSQL=DMI.makeInsertSQL();
-            System.err.println("Blockloader - Строка добавления данных"+StrSQL);
+            System.err.println("Blockloader - РЎС‚СЂРѕРєР° РґРѕР±Р°РІР»РµРЅРёСЏ РґР°РЅРЅС‹С…"+StrSQL);
             Server.executeSQL(StrSQL,null);
         } catch (Exception E) {
-            System.err.println("Blockloader - Ошибка в выполнении добавления "+E);	
+            System.err.println("Blockloader - РћС€РёР±РєР° РІ РІС‹РїРѕР»РЅРµРЅРёРё РґРѕР±Р°РІР»РµРЅРёСЏ "+E);	
         };    
         return true;
     }
@@ -105,7 +105,7 @@ public class BlockLoader {
             res=true;            
             CreateRec(DataSql);
         } catch (Exception E) {
-            System.err.println("Ошибка в загрузке циферок "+E);	
+            System.err.println("РћС€РёР±РєР° РІ Р·Р°РіСЂСѓР·РєРµ С†РёС„РµСЂРѕРє "+E);	
             res = false;
         };
         return res;
@@ -123,7 +123,7 @@ public class BlockLoader {
             Integer.parseInt(S);
             res = true;
         } catch (Exception E) {
-            System.out.println("Это не номер "+E);	
+            System.out.println("Р­С‚Рѕ РЅРµ РЅРѕРјРµСЂ "+E);	
             res = false;
         };
         return res;
@@ -170,7 +170,7 @@ public class BlockLoader {
                else CurrQuest.setQuestionType(2, true);
             CD.addElement(Key,Lib.getID(),true);
         } catch (Exception E) {
-            System.out.println("Какая то проблема в NewQuest при загрузке файла "+E);	
+            System.out.println("РљР°РєР°СЏ С‚Рѕ РїСЂРѕР±Р»РµРјР° РІ NewQuest РїСЂРё Р·Р°РіСЂСѓР·РєРµ С„Р°Р№Р»Р° "+E);	
         };
         return true;
     }
@@ -183,7 +183,7 @@ public class BlockLoader {
             //Server.getMainDictionary().getQuestion() .getQuestion(QuestID).addAnswer(Key);
             
         } catch (Exception E) {
-            System.out.println("Какая то проблема в NewAnswer при загрузке файла"+E);	
+            System.out.println("РљР°РєР°СЏ С‚Рѕ РїСЂРѕР±Р»РµРјР° РІ NewAnswer РїСЂРё Р·Р°РіСЂСѓР·РєРµ С„Р°Р№Р»Р°"+E);	
         };
         return true;
     }
@@ -212,7 +212,7 @@ public class BlockLoader {
                         }
                     } else  if (DataModule(DataStr)) {
                                 DataStr = in.readLine();
-                                System.out.println("Строка данных "+DataStr);	
+                                System.out.println("РЎС‚СЂРѕРєР° РґР°РЅРЅС‹С… "+DataStr);	
                             } else DataStr = in.readLine();
                 }
                 in.close();

@@ -12,7 +12,7 @@ import java.net.*;
 
 public class Library2Applet extends JApplet {
     public void init() {
-        System.out.println("Инициируем апплет");
+        System.out.println("РРЅРёС†РёРёСЂСѓРµРј Р°РїРїР»РµС‚");
         getContentPane().setLayout(new BorderLayout());
         getContentPane().add(new Library(this), BorderLayout.CENTER);
     }

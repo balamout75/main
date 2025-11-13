@@ -80,7 +80,7 @@ public class DualTableAdapter1 extends UnicastRemoteObject implements DualTableA
 
     public void executeQuery() {
         try {
-            System.err.println("начинаем executeQuery()");
+            System.err.println("РЅР°С‡РёРЅР°РµРј executeQuery()");
             Q1=null; Q2=null;
             Questions.clear();
             Headers.clear();
@@ -122,7 +122,7 @@ public class DualTableAdapter1 extends UnicastRemoteObject implements DualTableA
                             TypeOfTable=3;
                         }
             SQLStr=SQLStr+QuestBlock+",count(*) from "+Owner.getTableName()+" group by "+QuestBlock+" order by "+QuestBlock;
-            System.err.println("TableAdapter - Исполняю запрос "+SQLStr);
+            System.err.println("TableAdapter - РСЃРїРѕР»РЅСЏСЋ Р·Р°РїСЂРѕСЃ "+SQLStr);
             resultSet=statement.executeQuery(SQLStr);
             RootBranch=new Record("root",0);
             while (resultSet.next()) {
@@ -130,9 +130,9 @@ public class DualTableAdapter1 extends UnicastRemoteObject implements DualTableA
                  AnalyzeRow(1,Rang,Value,RootBranch);
             }
         } catch (Exception ex) {
-            System.err.println("Ошибка в построении Двумерного распределения "+ex);
+            System.err.println("РћС€РёР±РєР° РІ РїРѕСЃС‚СЂРѕРµРЅРёРё Р”РІСѓРјРµСЂРЅРѕРіРѕ СЂР°СЃРїСЂРµРґРµР»РµРЅРёСЏ "+ex);
         }
-        System.out.println("Все сделали ");
+        System.out.println("Р’СЃРµ СЃРґРµР»Р°Р»Рё ");
     }
     
     public void AnalyzeRow(int Current, int Rang, int Summ, Record Branch) {
@@ -179,7 +179,7 @@ public class DualTableAdapter1 extends UnicastRemoteObject implements DualTableA
                 else CurrentBranch.Count=CurrentBranch.Count+Summ;
             }   
         } catch (Exception ex) {
-            System.err.println("Ошибка в AnalyzeRow "+ex);
+            System.err.println("РћС€РёР±РєР° РІ AnalyzeRow "+ex);
         }    
     }
 
@@ -260,9 +260,9 @@ public class DualTableAdapter1 extends UnicastRemoteObject implements DualTableA
         }        
         ResultStr="";
         if (Coord==0) {
-            //"Заголовок столбцов"
+            //"Р—Р°РіРѕР»РѕРІРѕРє СЃС‚РѕР»Р±С†РѕРІ"
         } else if (Coord==(Range+1)) {
-                    ResultStr="Всего";
+                    ResultStr="Р’СЃРµРіРѕ";
                } else {
                     HeadRecord HR = (HeadRecord)DimensionHead.get(Coord-1);
                     RInterface RI = QI.getByPos(new Integer(HR.Name).intValue()-1);
@@ -296,7 +296,7 @@ public class DualTableAdapter1 extends UnicastRemoteObject implements DualTableA
         }  
         String ResultStr="";
         if (Coord==0) {
-            ResultStr="Всего";
+            ResultStr="Р’СЃРµРіРѕ";
         } else if (Coord==(Range+1)) {
                     if (Dimension==2) ResultStr=new Integer(getHeaderSumm(DimensionHead)).toString();
                } else {

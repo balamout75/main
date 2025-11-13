@@ -42,7 +42,7 @@ public class DimensionListHandler extends StringTransferHandler1 {
                         DP.RefreshTable();
                     }    
             } else{
-                System.out.println("Тип не тот");
+                System.out.println("РўРёРї РЅРµ С‚РѕС‚");
             }
         } catch( Exception re ) {
             System.out.println(re.toString());	   

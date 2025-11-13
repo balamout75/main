@@ -1,7 +1,7 @@
 /*
  * BlockLoader.java
  *
- * Created on 26 Апрель 2005 г., 10:22
+ * Created on 26 РђРїСЂРµР»СЊ 2005 Рі., 10:22
  */
 //import java.io.InputStreamReader;
 import java.io.BufferedReader;
@@ -23,7 +23,7 @@ public class BlockLoader2 {
     private DataModuleInterface DM;
     private INIACRMIInterface Server;
     private String FileName="C:\f.opr";
-    private String StartStr="//\t\t\t\t\t\t\t\t\t\tДА-система 4.0 - Словарь переменных";
+    private String StartStr="//\t\t\t\t\t\t\t\t\t\tР”Рђ-СЃРёСЃС‚РµРјР° 4.0 - РЎР»РѕРІР°СЂСЊ РїРµСЂРµРјРµРЅРЅС‹С…";
     private QuestionInterface CurrQuest;
     private int DataRow;
     private DictionaryInterface CD;
@@ -58,27 +58,27 @@ public class BlockLoader2 {
     public BlockLoader2(INIACRMIInterface aServer) {
         Server = aServer;
         try {
-            CD=Server.newDictionary("Новый словарь 222",Server.getKey(),true);
+            CD=Server.newDictionary("РќРѕРІС‹Р№ СЃР»РѕРІР°СЂСЊ 222",Server.getKey(),true);
             TAI = DMI.getTable();
             AnalyseStructure();
             //DMI.setDictionary(Server.GetDictionaryIndexOf(CD));
         } catch (Exception E) {
-            System.err.println("Ошибка в загрузке циферок "+E);	
+            System.err.println("РћС€РёР±РєР° РІ Р·Р°РіСЂСѓР·РєРµ С†РёС„РµСЂРѕРє "+E);	
         };
         
     }
    
     private boolean CreateRec(String Str) {
-        System.out.println("Строка данных "+Str );	
+        System.out.println("РЎС‚СЂРѕРєР° РґР°РЅРЅС‹С… "+Str );	
         //TAI.executeQuery()
         try {
             if (FirstRecord) {
-                System.err.println("Blockloader - Создаем структуру");
+                System.err.println("Blockloader - РЎРѕР·РґР°РµРј СЃС‚СЂСѓРєС‚СѓСЂСѓ");
                 //DMI.setDictionary(Server.GetDictionaryIndexOf(CD));
                 FirstRecord = false;
             }
             String StrSQL=DMI.makeInsertSQL();
-            System.err.println("Blockloader - Строка добавления данных"+StrSQL);
+            System.err.println("Blockloader - РЎС‚СЂРѕРєР° РґРѕР±Р°РІР»РµРЅРёСЏ РґР°РЅРЅС‹С…"+StrSQL);
             //DMI.
             
             //DMI.getStatement().execute(StrSQL);
@@ -88,7 +88,7 @@ public class BlockLoader2 {
             //TAI.execSQL("commit");
             
         } catch (Exception E) {
-            System.err.println("Blockloader - Ошибка в выполнении добавления "+E);	
+            System.err.println("Blockloader - РћС€РёР±РєР° РІ РІС‹РїРѕР»РЅРµРЅРёРё РґРѕР±Р°РІР»РµРЅРёСЏ "+E);	
         };    
         return true;
     }
@@ -124,7 +124,7 @@ public class BlockLoader2 {
             res=true;
             CreateRec(DataSql);
         } catch (Exception E) {
-            System.err.println("Ошибка в загрузке циферок "+E);	
+            System.err.println("РћС€РёР±РєР° РІ Р·Р°РіСЂСѓР·РєРµ С†РёС„РµСЂРѕРє "+E);	
             res = false;
         };
         return res;
@@ -142,7 +142,7 @@ public class BlockLoader2 {
             Integer.parseInt(S);
             res = S;
         } catch (Exception E) {
-            System.out.println("Это не номер "+E);	
+            System.out.println("Р­С‚Рѕ РЅРµ РЅРѕРјРµСЂ "+E);	
             res = "";
         };
         return res;
@@ -179,7 +179,7 @@ public class BlockLoader2 {
             //CD.AddQuest(CurrQuest);
             
         } catch (Exception E) {
-            System.out.println("Какая то проблема в NewQuest при загрузке файла "+E);	
+            System.out.println("РљР°РєР°СЏ С‚Рѕ РїСЂРѕР±Р»РµРјР° РІ NewQuest РїСЂРё Р·Р°РіСЂСѓР·РєРµ С„Р°Р№Р»Р° "+E);	
         };
         return true;
     }
@@ -188,7 +188,7 @@ public class BlockLoader2 {
             Integer Key = Server.getKey();
             CurrQuest.newAnswer(Str, Key,true);
         } catch (Exception E) {
-            System.out.println("Какая то проблема в NewAnswer при загрузке файла");	
+            System.out.println("РљР°РєР°СЏ С‚Рѕ РїСЂРѕР±Р»РµРјР° РІ NewAnswer РїСЂРё Р·Р°РіСЂСѓР·РєРµ С„Р°Р№Р»Р°");	
         };
         return true;
     }
@@ -208,7 +208,7 @@ public class BlockLoader2 {
            try {
                 if (!FirstFile) {in.close();EoS=true;};
                 String FileName=Path+FileNum+".csv";
-                System.out.println("Файл открывается "+FileName);	
+                System.out.println("Р¤Р°Р№Р» РѕС‚РєСЂС‹РІР°РµС‚СЃСЏ "+FileName);	
                 in = new BufferedReader( new FileReader(FileName));
                 while (i<StringNum) {
                     DataStr = in.readLine();
@@ -218,7 +218,7 @@ public class BlockLoader2 {
                 FileNum++;
                 FirstFile=false;
            } catch (Exception E) {
-                System.out.println("Файл закончился");	
+                System.out.println("Р¤Р°Р№Р» Р·Р°РєРѕРЅС‡РёР»СЃСЏ");	
                 Header=false;
                 EndStrFlag=true;
                 EoS=true;
@@ -241,8 +241,8 @@ public class BlockLoader2 {
             if (DataStr.charAt(StringPos)==';') {StringPos++;};
             Cell=S;
         } catch (Exception E) {
-            System.out.println("Какая то фигня "+E);	 
-            System.out.println("Наверное строка закончилась"+E);	 
+            System.out.println("РљР°РєР°СЏ С‚Рѕ С„РёРіРЅСЏ "+E);	 
+            System.out.println("РќР°РІРµСЂРЅРѕРµ СЃС‚СЂРѕРєР° Р·Р°РєРѕРЅС‡РёР»Р°СЃСЊ"+E);	 
             //Header=false;
         };
         
@@ -265,7 +265,7 @@ public class BlockLoader2 {
                 }
             }
         } catch (Exception E) {
-            System.out.println("Ошибка в getQuestName "+E);
+            System.out.println("РћС€РёР±РєР° РІ getQuestName "+E);
             if (!((Str.charAt(i)>='1')&(Str.charAt(i)<='9'))) {Num=Str;}
         };
         return Num;
@@ -277,7 +277,7 @@ public class BlockLoader2 {
                 Res=CurrQuest.getName().equalsIgnoreCase(Name);
             } 
         } catch (Exception E) {
-            System.out.println("Ошибка в CheckQuest "+E);	
+            System.out.println("РћС€РёР±РєР° РІ CheckQuest "+E);	
         };
         return !Res;
     }
@@ -346,15 +346,15 @@ public class BlockLoader2 {
                         }    
                     }
             }
-            System.out.println("Все сработало как надо "+DataRes); 
+            System.out.println("Р’СЃРµ СЃСЂР°Р±РѕС‚Р°Р»Рѕ РєР°Рє РЅР°РґРѕ "+DataRes); 
             DataRes="";
-            //печатаем полученую строку записываем ее в файл и записываем в таблицу
+            //РїРµС‡Р°С‚Р°РµРј РїРѕР»СѓС‡РµРЅСѓСЋ СЃС‚СЂРѕРєСѓ Р·Р°РїРёСЃС‹РІР°РµРј РµРµ РІ С„Р°Р№Р» Рё Р·Р°РїРёСЃС‹РІР°РµРј РІ С‚Р°Р±Р»РёС†Сѓ
             System.out.println(DataStr);
             StringNum++;
     	}
             }
       } catch (Exception E) {
-                System.out.println("Генеральная ошибка экспорта "+E);	
+                System.out.println("Р“РµРЅРµСЂР°Р»СЊРЅР°СЏ РѕС€РёР±РєР° СЌРєСЃРїРѕСЂС‚Р° "+E);	
       };  
     }
     

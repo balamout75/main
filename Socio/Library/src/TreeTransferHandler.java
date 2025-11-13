@@ -22,7 +22,7 @@ public class TreeTransferHandler extends StringTransferHandler1 {
     
     
     protected Transferable exportString(JComponent c) {
-        System.out.println("Что то драгает");
+        System.out.println("Р§С‚Рѕ С‚Рѕ РґСЂР°РіР°РµС‚");
         Transferable transferable=null;
         try {
             source = (JTree)c;
@@ -37,7 +37,7 @@ public class TreeTransferHandler extends StringTransferHandler1 {
                     QIArray.add(DM);
                     DataModuleTransferable mytransferable=new DataModuleTransferable(QIArray);
                     mytransferable.setSource(source);
-                    System.err.println("Что то дропает 1 "+DM.toString());
+                    System.err.println("Р§С‚Рѕ С‚Рѕ РґСЂРѕРїР°РµС‚ 1 "+DM.toString());
                     transferable=mytransferable;
                     break;
                 }
@@ -46,7 +46,7 @@ public class TreeTransferHandler extends StringTransferHandler1 {
                     QIArray.add(DM);
                     DataModuleTransferable mytransferable=new DataModuleTransferable(QIArray);
                     mytransferable.setSource(source);
-                    System.err.println("Что то дропает 2 "+DM.toString());
+                    System.err.println("Р§С‚Рѕ С‚Рѕ РґСЂРѕРїР°РµС‚ 2 "+DM.toString());
                     transferable=mytransferable;
                     break;
                 }
@@ -55,7 +55,7 @@ public class TreeTransferHandler extends StringTransferHandler1 {
                     QIArray.add(DM);
                     DictionaryMarkTransferable mytransferable=new DictionaryMarkTransferable(QIArray);
                     mytransferable.setSource(source);
-                    System.err.println("Что то дропает 6 "+DM.toString());
+                    System.err.println("Р§С‚Рѕ С‚Рѕ РґСЂРѕРїР°РµС‚ 6 "+DM.toString());
                     transferable=mytransferable;
                     break;
                 }
@@ -64,7 +64,7 @@ public class TreeTransferHandler extends StringTransferHandler1 {
                     QIArray.add(DM);
                     QuestMarkTransferable mytransferable=new QuestMarkTransferable(QIArray);
                     mytransferable.setSource(source);
-                    System.err.println("Что то дропает 7 "+DM.toString());
+                    System.err.println("Р§С‚Рѕ С‚Рѕ РґСЂРѕРїР°РµС‚ 7 "+DM.toString());
                     transferable=mytransferable;
                     break;
                 }
@@ -73,7 +73,7 @@ public class TreeTransferHandler extends StringTransferHandler1 {
                     //QIArray.add(DM);
                     AnswerMarkTransferable mytransferable=new AnswerMarkTransferable(DM);
                     mytransferable.setSource(source);
-                    System.err.println("Что то дропает 8 "+DM.toString());
+                    System.err.println("Р§С‚Рѕ С‚Рѕ РґСЂРѕРїР°РµС‚ 8 "+DM.toString());
                     transferable=mytransferable;
                     break;
                 }
@@ -93,7 +93,7 @@ public class TreeTransferHandler extends StringTransferHandler1 {
             try {
                 QIArray.add((QuestMark)Obj);
             } catch (Exception exception) {
-                System.err.println( "Ошибка типов " + exception.getMessage());
+                System.err.println( "РћС€РёР±РєР° С‚РёРїРѕРІ " + exception.getMessage());
             }
         }
         QMT=new QuestMarkTransferable(QIArray);
@@ -138,9 +138,9 @@ public class TreeTransferHandler extends StringTransferHandler1 {
                     j++;
                 }
                 if (!Flag) {
-                    //i=root.getIndex(child); // откуда
-                    i=root.getIndex(node2); // откуда
-                    j=root.getIndex(node1);  // куда
+                    //i=root.getIndex(child); // РѕС‚РєСѓРґР°
+                    i=root.getIndex(node2); // РѕС‚РєСѓРґР°
+                    j=root.getIndex(node1);  // РєСѓРґР°
                     javax.swing.tree.DefaultTreeModel DTM=(javax.swing.tree.DefaultTreeModel)tree.getModel();
                     javax.swing.tree.DefaultMutableTreeNode parent=(javax.swing.tree.DefaultMutableTreeNode)child.getParent();
                     DataModuleMark DM1=(DataModuleMark)parent.getUserObject();
@@ -166,7 +166,7 @@ public class TreeTransferHandler extends StringTransferHandler1 {
 
     protected void importString(JComponent c, Transferable transferable) {
 
-        System.err.println("Что то дропает");
+        System.err.println("Р§С‚Рѕ С‚Рѕ РґСЂРѕРїР°РµС‚");
         JTree tree = (JTree)c;
         try {
             if (true){
@@ -185,17 +185,17 @@ public class TreeTransferHandler extends StringTransferHandler1 {
                             DataModuleTransferable DMTr=(DataModuleTransferable) Obj;
                             DataModuleMark DIfo=(DataModuleMark)DMTr.GetArray().get(0);
                             switch (DIfo.getType()) {
-                                case 1: { // была ухвачена папка
+                                case 1: { // Р±С‹Р»Р° СѓС…РІР°С‡РµРЅР° РїР°РїРєР°
                                     switch (nodeInfo.getType()) {
-                                        case 1: { // папка положена в папку
-                                            Object[] options = {"Да","Нет","Отмена"};
-                                            int n = JOptionPane.showOptionDialog(null,"Вы желаете перенести папку?","Вопрос",JOptionPane.YES_NO_CANCEL_OPTION,JOptionPane.QUESTION_MESSAGE,null,options,options[1]);
-                                            //if (DIfo.getParent().equals(((DataModuleMark)nodeInfo).getParent())) { //если родители папки одинаковые
-                                            /*if (n==1) { //если родители папки одинаковые
+                                        case 1: { // РїР°РїРєР° РїРѕР»РѕР¶РµРЅР° РІ РїР°РїРєСѓ
+                                            Object[] options = {"Р”Р°","РќРµС‚","РћС‚РјРµРЅР°"};
+                                            int n = JOptionPane.showOptionDialog(null,"Р’С‹ Р¶РµР»Р°РµС‚Рµ РїРµСЂРµРЅРµСЃС‚Рё РїР°РїРєСѓ?","Р’РѕРїСЂРѕСЃ",JOptionPane.YES_NO_CANCEL_OPTION,JOptionPane.QUESTION_MESSAGE,null,options,options[1]);
+                                            //if (DIfo.getParent().equals(((DataModuleMark)nodeInfo).getParent())) { //РµСЃР»Рё СЂРѕРґРёС‚РµР»Рё РїР°РїРєРё РѕРґРёРЅР°РєРѕРІС‹Рµ
+                                            /*if (n==1) { //РµСЃР»Рё СЂРѕРґРёС‚РµР»Рё РїР°РїРєРё РѕРґРёРЅР°РєРѕРІС‹Рµ
                                                 DefaultMutableTreeNode newnode=  Lib.findBranch((DefaultMutableTreeNode)tree.getModel().getRoot(),DIfo.getID(),false);
                                                 changePos(tree,node,newnode);
                                             } else */
-                                            if (n==0) { //если нет то переписываем
+                                            if (n==0) { //РµСЃР»Рё РЅРµС‚ С‚Рѕ РїРµСЂРµРїРёСЃС‹РІР°РµРј
                                                     DefaultMutableTreeNode OldParent=Lib.findBranch((DefaultMutableTreeNode)tree.getModel().getRoot(),DIfo.getID(),true);
                                                     DefaultMutableTreeNode OldNode=  Lib.findBranch((DefaultMutableTreeNode)tree.getModel().getRoot(),DIfo.getID(),false);
                                                     DataModuleInterface OldFolder=((DataModuleMark)OldParent.getUserObject()).getDMI();
@@ -215,9 +215,9 @@ public class TreeTransferHandler extends StringTransferHandler1 {
                                     }
                                     break;
                                 }
-                                case 2: { // была ухвачен опрос
+                                case 2: { // Р±С‹Р»Р° СѓС…РІР°С‡РµРЅ РѕРїСЂРѕСЃ
                                       switch (nodeInfo.getType()) {
-                                        case 1: { // папка положена в папку
+                                        case 1: { // РїР°РїРєР° РїРѕР»РѕР¶РµРЅР° РІ РїР°РїРєСѓ
                                             DefaultMutableTreeNode OldParent=Lib.findBranch((DefaultMutableTreeNode)tree.getModel().getRoot(),DIfo.getID(),true);
                                             DefaultMutableTreeNode OldNode=  Lib.findBranch((DefaultMutableTreeNode)tree.getModel().getRoot(),DIfo.getID(),false);
                                             DataModuleInterface OldFolder=((DataModuleMark)OldParent.getUserObject()).getDMI();
@@ -239,7 +239,7 @@ public class TreeTransferHandler extends StringTransferHandler1 {
                         }
                 }
             } else{
-                System.out.println("Тип не тот");
+                System.out.println("РўРёРї РЅРµ С‚РѕС‚");
             }
         } catch( Exception re ) {
             System.out.println(re.toString());	   

@@ -1,7 +1,7 @@
 /*
  * BlockLoader.java
  *
- * Created on 26 Апрель 2005 г., 10:22
+ * Created on 26 РђРїСЂРµР»СЊ 2005 Рі., 10:22
  */
 //import java.io.InputStreamReader;
 //import java.io.BufferedReader;
@@ -62,7 +62,7 @@ public class DataLoader3 {
             System.err.println("D:/Proceed/in/N5/res.");	
             AnalyseStructure(file10,TableName,10);            
         } catch (Exception E) {
-            System.err.println("Ошибка в загрузке циферок "+E);	
+            System.err.println("РћС€РёР±РєР° РІ Р·Р°РіСЂСѓР·РєРµ С†РёС„РµСЂРѕРє "+E);	
         };
         
     }
@@ -120,10 +120,10 @@ public class DataLoader3 {
             Names=Names+"Quest126748, Row_id";
             Value=Value+DeviceNum+","+Server.getKey().toString();
             String SQLStr = "INSERT INTO "+TableName+" ("+Names+") VALUES ("+Value+")";
-            //System.out.println("Запрос   "+SQLStr);	
+            //System.out.println("Р—Р°РїСЂРѕСЃ   "+SQLStr);	
             Server.executeSQL(SQLStr, null);
         } catch (Exception E) {
-            System.err.println("Ошибка в загрузке циферок "+E);	
+            System.err.println("РћС€РёР±РєР° РІ Р·Р°РіСЂСѓР·РєРµ С†РёС„РµСЂРѕРє "+E);	
             res = false;
         }
         return res;
@@ -138,7 +138,7 @@ public class DataLoader3 {
                 DataStr = in.readLine();
                 while (DataStr!=null) {
                     DataStr=DataStr.trim();
-                    //AnalyseStr=AnalyseStr+DataStr; временно отключаем
+                    //AnalyseStr=AnalyseStr+DataStr; РІСЂРµРјРµРЅРЅРѕ РѕС‚РєР»СЋС‡Р°РµРј
                     AnalyseStr=DataStr;
                     if (AnalyseStr.endsWith(",999")) {
                         if (DataModule(AnalyseStr,TableName,DeviceNum)) {
@@ -148,7 +148,7 @@ public class DataLoader3 {
                     DataStr = in.readLine();
                 }
                 in.close();
-            } else {System.out.println("Словарь не задан");}  
+            } else {System.out.println("РЎР»РѕРІР°СЂСЊ РЅРµ Р·Р°РґР°РЅ");}  
         } catch( FileNotFoundException e){
             System.out.println("File not found  "+e);
     	} catch( Exception e){

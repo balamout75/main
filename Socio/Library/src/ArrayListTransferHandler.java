@@ -32,7 +32,7 @@ public class ArrayListTransferHandler extends TransferHandler {
     }
 
     public boolean importData(JComponent c, Transferable t) {
-        System.out.println("Загружаем данные");
+        System.out.println("Р—Р°РіСЂСѓР¶Р°РµРј РґР°РЅРЅС‹Рµ");
         JList target = null;
         ArrayList alist = null;
         if (!canImport(c, t.getTransferDataFlavors())) {

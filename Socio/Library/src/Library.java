@@ -15,7 +15,7 @@ import java.awt.*;
 /*
  * Library.java
  *
- * Created on 10 Март 2004 г., 10:09
+ * Created on 10 РњР°СЂС‚ 2004 Рі., 10:09
  */
 
 /**
@@ -113,8 +113,8 @@ public class Library extends javax.swing.JPanel  implements LibraryInterface {
     
     public void localRefresher(DQAInterface DQA, int type) {
         /*
-         новая процедура ...
-         соображения        
+         РЅРѕРІР°СЏ РїСЂРѕС†РµРґСѓСЂР° ...
+         СЃРѕРѕР±СЂР°Р¶РµРЅРёСЏ        
          * 
          */
     }    
@@ -122,7 +122,7 @@ public class Library extends javax.swing.JPanel  implements LibraryInterface {
     public void showLibrary() {
         if(!isApplet() && getFrame() != null) {
             JFrame f = getFrame();
-            f.setTitle("Социостудия");
+            f.setTitle("РЎРѕС†РёРѕСЃС‚СѓРґРёСЏ");
 
             f.getContentPane().add(this, BorderLayout.CENTER);
             f.pack();
@@ -217,8 +217,8 @@ public class Library extends javax.swing.JPanel  implements LibraryInterface {
             //Refresher.Register(this);            
             Server.Register(Refresher);
             System.out.println("....Ok");
-            System.out.println( "Сохранили словарь" );	   
-            System.out.println( "Ибо обещал" );
+            System.out.println( "РЎРѕС…СЂР°РЅРёР»Рё СЃР»РѕРІР°СЂСЊ" );	   
+            System.out.println( "РР±Рѕ РѕР±РµС‰Р°Р»" );
 	}
 	catch( Exception e )
 	{
@@ -245,7 +245,7 @@ public class Library extends javax.swing.JPanel  implements LibraryInterface {
                 setBounds(20, 20, 400, 340);
                 setSelected(true);
             } catch( Exception re ) {
-                System.out.println("Library Ошибка при открытии формы визарда нового измерения"+re.toString());	   
+                System.out.println("Library РћС€РёР±РєР° РїСЂРё РѕС‚РєСЂС‹С‚РёРё С„РѕСЂРјС‹ РІРёР·Р°СЂРґР° РЅРѕРІРѕРіРѕ РёР·РјРµСЂРµРЅРёСЏ"+re.toString());	   
             }
         }
         public InputPanel getInputPanel() throws RemoteException {
@@ -267,7 +267,7 @@ public class DimensionInternalFrame extends JInternalFrame {
                 setBounds(20, 20, 400, 340);
                 setSelected(true);
             } catch( Exception re ) {
-                System.out.println("Library Ошибка при открытии формы визарда нового измерения"+re.toString());
+                System.out.println("Library РћС€РёР±РєР° РїСЂРё РѕС‚РєСЂС‹С‚РёРё С„РѕСЂРјС‹ РІРёР·Р°СЂРґР° РЅРѕРІРѕРіРѕ РёР·РјРµСЂРµРЅРёСЏ"+re.toString());
             }
         }
         public DimensionPanel getPanel() throws RemoteException {
@@ -387,7 +387,7 @@ public class DimensionInternalFrame extends JInternalFrame {
         try {
             if (CurrentInputPanel.selectedRow!=-1) {
                     if (!ETPInited) {
-                        System.out.println("Смена рабочей панели");
+                        System.out.println("РЎРјРµРЅР° СЂР°Р±РѕС‡РµР№ РїР°РЅРµР»Рё");
                         MainEditionPanel.removeAll();
                         java.awt.GridBagConstraints gridBagConstraints1 = new java.awt.GridBagConstraints();
                         gridBagConstraints1.fill = java.awt.GridBagConstraints.BOTH;
@@ -404,7 +404,7 @@ public class DimensionInternalFrame extends JInternalFrame {
                     
             }
         } catch( Exception re ) {
-            System.out.println("Ошибка "+re.toString());
+            System.out.println("РћС€РёР±РєР° "+re.toString());
         }
     }
 
@@ -430,7 +430,7 @@ public class DimensionInternalFrame extends JInternalFrame {
                 }
             } else Res=null;
         } catch( Exception re ) {
-            System.out.println("Ошибка "+re.toString());
+            System.out.println("РћС€РёР±РєР° "+re.toString());
         }
         return Res;
     }
@@ -441,7 +441,7 @@ public class DimensionInternalFrame extends JInternalFrame {
             DQAMarkInterface DQABranch1=(DQAMarkInterface)TM2.getUserObject();
             //type = DQABranch1.getType();
             switch (operation) {
-                    case 1: { //удаление
+                    case 1: { //СѓРґР°Р»РµРЅРёРµ
                        int i=0;
                        int j=0;
                        javax.swing.tree.DefaultTreeModel DTM=(javax.swing.tree.DefaultTreeModel)jTree1.getModel();
@@ -470,7 +470,7 @@ public class DimensionInternalFrame extends JInternalFrame {
                        jTree1.updateUI();
                        break;
                     }
-                    case 2: { //добавление
+                    case 2: { //РґРѕР±Р°РІР»РµРЅРёРµ
                        int i=0;
                        int j=0;
                        javax.swing.tree.DefaultTreeModel DTM=(javax.swing.tree.DefaultTreeModel)jTree1.getModel();
@@ -505,7 +505,7 @@ public class DimensionInternalFrame extends JInternalFrame {
                     }
             }
         } catch(Exception re ) {
-            System.out.println("Фигня какая то refreshBranch "+re.toString());
+            System.out.println("Р¤РёРіРЅСЏ РєР°РєР°СЏ С‚Рѕ refreshBranch "+re.toString());
         }
 
 
@@ -520,7 +520,7 @@ public class DimensionInternalFrame extends JInternalFrame {
         gridBagConstraints.weighty = 1.0;
         parent.setLayout(new java.awt.GridBagLayout());
         parent.add(child, gridBagConstraints);
-        if (!title.isEmpty()) child.setBorder(javax.swing.BorderFactory.createTitledBorder("Детализация данных"));
+        if (!title.isEmpty()) child.setBorder(javax.swing.BorderFactory.createTitledBorder("Р”РµС‚Р°Р»РёР·Р°С†РёСЏ РґР°РЅРЅС‹С…"));
         else child.setBorder(javax.swing.BorderFactory.createEmptyBorder());
         parent.updateUI();
         return parent;
@@ -531,7 +531,7 @@ public class DimensionInternalFrame extends JInternalFrame {
         try {
             Res=Refresher.getID();
         } catch( Exception re ) {
-            System.out.println("Ошибка в getID()"+re.toString());
+            System.out.println("РћС€РёР±РєР° РІ getID()"+re.toString());
         }
         return Res;
     }
@@ -539,62 +539,62 @@ public class DimensionInternalFrame extends JInternalFrame {
 
     
     /*public JPanel DetailDataModule() {
-        return setPanelContent(DataModuleConstr,DetailPanel2,"Детализация данных");
+        return setPanelContent(DataModuleConstr,DetailPanel2,"Р”РµС‚Р°Р»РёР·Р°С†РёСЏ РґР°РЅРЅС‹С…");
     }*/
     
     public void DetailFormAutomat(int Stimul) {
         //LastState=DetailFormAutomatState;
         switch(DetailFormAutomatState) {
              case 0: {
-                 //начальное состояние. Есть только закладка Библиотека
+                 //РЅР°С‡Р°Р»СЊРЅРѕРµ СЃРѕСЃС‚РѕСЏРЅРёРµ. Р•СЃС‚СЊ С‚РѕР»СЊРєРѕ Р·Р°РєР»Р°РґРєР° Р‘РёР±Р»РёРѕС‚РµРєР°
                  switch(Stimul) {
                      
                     case 0: {
-                        //добавляем окно Детали в верхнее окно
-                        //в дереве рабочей папки выбран узел - модуль данных
-                        jTabbedPane1.addTab("Детали",setPanelContent(DataModuleConstr,DetailPanel2,"Детализация данных"));
+                        //РґРѕР±Р°РІР»СЏРµРј РѕРєРЅРѕ Р”РµС‚Р°Р»Рё РІ РІРµСЂС…РЅРµРµ РѕРєРЅРѕ
+                        //РІ РґРµСЂРµРІРµ СЂР°Р±РѕС‡РµР№ РїР°РїРєРё РІС‹Р±СЂР°РЅ СѓР·РµР» - РјРѕРґСѓР»СЊ РґР°РЅРЅС‹С…
+                        jTabbedPane1.addTab("Р”РµС‚Р°Р»Рё",setPanelContent(DataModuleConstr,DetailPanel2,"Р”РµС‚Р°Р»РёР·Р°С†РёСЏ РґР°РЅРЅС‹С…"));
                         jTabbedPane1.setSelectedComponent(DetailPanel2);
                         DetailFormAutomatState=1;
                         setToolbarMode(1);
                         break;
                     }
                     case 1: {
-                        //в дереве рабочей папки выбран узел - модуль данных
-                        jTabbedPane1.addTab("Детали", setPanelContent(DataModuleConstr,DetailPanel2,"Детализация данных"));
+                        //РІ РґРµСЂРµРІРµ СЂР°Р±РѕС‡РµР№ РїР°РїРєРё РІС‹Р±СЂР°РЅ СѓР·РµР» - РјРѕРґСѓР»СЊ РґР°РЅРЅС‹С…
+                        jTabbedPane1.addTab("Р”РµС‚Р°Р»Рё", setPanelContent(DataModuleConstr,DetailPanel2,"Р”РµС‚Р°Р»РёР·Р°С†РёСЏ РґР°РЅРЅС‹С…"));
                         jTabbedPane1.setSelectedComponent(DetailPanel2);
                         DetailFormAutomatState=1;
                         setToolbarMode(1);
                         break;
                     }
                     case 10: {
-                        //Выбрана папка
-                        jTabbedPane1.addTab("Детали", setPanelContent(FolderConstr,DetailPanel2,"Детализация данных"));
+                        //Р’С‹Р±СЂР°РЅР° РїР°РїРєР°
+                        jTabbedPane1.addTab("Р”РµС‚Р°Р»Рё", setPanelContent(FolderConstr,DetailPanel2,"Р”РµС‚Р°Р»РёР·Р°С†РёСЏ РґР°РЅРЅС‹С…"));
                         jTabbedPane1.setSelectedComponent(DetailPanel2);
-                        //в дереве рабочей папки выбран узел - модуль данных
+                        //РІ РґРµСЂРµРІРµ СЂР°Р±РѕС‡РµР№ РїР°РїРєРё РІС‹Р±СЂР°РЅ СѓР·РµР» - РјРѕРґСѓР»СЊ РґР°РЅРЅС‹С…
                         //setPanelContent(FolderConstr,LowPanel,"");
                         DetailFormAutomatState=1;
                         setToolbarMode(1);
                         break;
                     }                    
                     case 2: {
-                        //в дереве рабочей папки выбран узел - словарь
-                        jTabbedPane1.addTab("Детали", setPanelContent(DictionaryConstr,DetailPanel2,"Детализация данных"));
+                        //РІ РґРµСЂРµРІРµ СЂР°Р±РѕС‡РµР№ РїР°РїРєРё РІС‹Р±СЂР°РЅ СѓР·РµР» - СЃР»РѕРІР°СЂСЊ
+                        jTabbedPane1.addTab("Р”РµС‚Р°Р»Рё", setPanelContent(DictionaryConstr,DetailPanel2,"Р”РµС‚Р°Р»РёР·Р°С†РёСЏ РґР°РЅРЅС‹С…"));
                         jTabbedPane1.setSelectedComponent(DetailPanel2);
                         DetailFormAutomatState=1;
                         setToolbarMode(1);
                         break;
                     }
                     case 3: {
-                        //в дереве рабочей папки выбран узел - вопрос
-                        jTabbedPane1.addTab("Детали", setPanelContent(QuestConstr,DetailPanel2,"Детализация данных"));
+                        //РІ РґРµСЂРµРІРµ СЂР°Р±РѕС‡РµР№ РїР°РїРєРё РІС‹Р±СЂР°РЅ СѓР·РµР» - РІРѕРїСЂРѕСЃ
+                        jTabbedPane1.addTab("Р”РµС‚Р°Р»Рё", setPanelContent(QuestConstr,DetailPanel2,"Р”РµС‚Р°Р»РёР·Р°С†РёСЏ РґР°РЅРЅС‹С…"));
                         jTabbedPane1.setSelectedComponent(DetailPanel2);
                         DetailFormAutomatState=1;
                         setToolbarMode(1);
                         break;
                     }
                     case 4: {
-                        //в дереве рабочей папки выбран узел - ответ
-                        jTabbedPane1.addTab("Детали", setPanelContent(AnswerConstr,DetailPanel2,"Детализация данных"));
+                        //РІ РґРµСЂРµРІРµ СЂР°Р±РѕС‡РµР№ РїР°РїРєРё РІС‹Р±СЂР°РЅ СѓР·РµР» - РѕС‚РІРµС‚
+                        jTabbedPane1.addTab("Р”РµС‚Р°Р»Рё", setPanelContent(AnswerConstr,DetailPanel2,"Р”РµС‚Р°Р»РёР·Р°С†РёСЏ РґР°РЅРЅС‹С…"));
                         jTabbedPane1.setSelectedComponent(DetailPanel2);
                         DetailFormAutomatState=1;
                         setToolbarMode(1);
@@ -602,17 +602,17 @@ public class DimensionInternalFrame extends JInternalFrame {
                     }
 
                     case 6: {
-                        //в дереве рабочей папки выбран узел - фильтр блок данных
-                        jTabbedPane1.addTab("Детали", setPanelContent(DEP,DetailPanel2,"Детализация данных"));
+                        //РІ РґРµСЂРµРІРµ СЂР°Р±РѕС‡РµР№ РїР°РїРєРё РІС‹Р±СЂР°РЅ СѓР·РµР» - С„РёР»СЊС‚СЂ Р±Р»РѕРє РґР°РЅРЅС‹С…
+                        jTabbedPane1.addTab("Р”РµС‚Р°Р»Рё", setPanelContent(DEP,DetailPanel2,"Р”РµС‚Р°Р»РёР·Р°С†РёСЏ РґР°РЅРЅС‹С…"));
                         jTabbedPane1.setSelectedComponent(DetailPanel2);
-                        //непонятно ... или ссылка 
+                        //РЅРµРїРѕРЅСЏС‚РЅРѕ ... РёР»Рё СЃСЃС‹Р»РєР° 
                         DetailFormAutomatState=1;
                         setToolbarMode(3);
                         break;
                     }
                      case 8: {
-                        //Выбрано окно ввода
-                        jTabbedPane2.addTab("Детали", setPanelContent(ETP,DetailPanel2,"Детализация данных"));
+                        //Р’С‹Р±СЂР°РЅРѕ РѕРєРЅРѕ РІРІРѕРґР°
+                        jTabbedPane2.addTab("Р”РµС‚Р°Р»Рё", setPanelContent(ETP,DetailPanel2,"Р”РµС‚Р°Р»РёР·Р°С†РёСЏ РґР°РЅРЅС‹С…"));
                         jTabbedPane2.setSelectedComponent(DetailPanel2);
                         try {
                             ETP.setQuestion(CurrentInputPanel.Dictionary,CurrentInputPanel.RQI);
@@ -624,24 +624,24 @@ public class DimensionInternalFrame extends JInternalFrame {
                             setPanelContent(DMEP,LowPanel,"");
                             
                         } catch( Exception re ) {
-                            System.out.println("Ошибка в конечном автомате "+re.toString());
+                            System.out.println("РћС€РёР±РєР° РІ РєРѕРЅРµС‡РЅРѕРј Р°РІС‚РѕРјР°С‚Рµ "+re.toString());
                         }
                         DetailFormAutomatState=3;
                         setToolbarMode(2);
                         break;
                     }
                     case 9: {
-                        //Выбрано окно распределений
+                        //Р’С‹Р±СЂР°РЅРѕ РѕРєРЅРѕ СЂР°СЃРїСЂРµРґРµР»РµРЅРёР№
                         try {
                             DEP.setDictionary(CurrentDimensionPanel.Dictionary);
-                            jTabbedPane2.addTab("Детали", setPanelContent(DEP,DetailPanel2,"Детализация данных"));
+                            jTabbedPane2.addTab("Р”РµС‚Р°Р»Рё", setPanelContent(DEP,DetailPanel2,"Р”РµС‚Р°Р»РёР·Р°С†РёСЏ РґР°РЅРЅС‹С…"));
                             jTabbedPane2.setSelectedComponent(DetailPanel2);
                             if (!DMEP.getDMI().equals(CurrentDimensionPanel.getParentDMI())){
                                 DMEP.initTree(CurrentDimensionPanel.getParentRDMI());
                             }
-                            setPanelContent(DMEP,LowPanel,"Детализация данных");
+                            setPanelContent(DMEP,LowPanel,"Р”РµС‚Р°Р»РёР·Р°С†РёСЏ РґР°РЅРЅС‹С…");
                         } catch( Exception re ) {
-                            System.out.println("Ошибка в конечном автомате "+re.toString());
+                            System.out.println("РћС€РёР±РєР° РІ РєРѕРЅРµС‡РЅРѕРј Р°РІС‚РѕРјР°С‚Рµ "+re.toString());
                         }
                         DetailFormAutomatState=3;
                         setToolbarMode(1);
@@ -649,7 +649,7 @@ public class DimensionInternalFrame extends JInternalFrame {
                         break;
                     }
                     case 13: {
-                        //в дереве рабочей папки выбран узел - модуль данных
+                        //РІ РґРµСЂРµРІРµ СЂР°Р±РѕС‡РµР№ РїР°РїРєРё РІС‹Р±СЂР°РЅ СѓР·РµР» - РјРѕРґСѓР»СЊ РґР°РЅРЅС‹С…
                         setPanelContent(DMEP,LowPanel,"");
                         DetailFormAutomatState=1;
                         setToolbarMode(1);
@@ -659,37 +659,37 @@ public class DimensionInternalFrame extends JInternalFrame {
                  break;
              }
              case 1: {
-                 //Открыта закладка Детали в детализации данных
-                 //активно окно свойств словаря
+                 //РћС‚РєСЂС‹С‚Р° Р·Р°РєР»Р°РґРєР° Р”РµС‚Р°Р»Рё РІ РґРµС‚Р°Р»РёР·Р°С†РёРё РґР°РЅРЅС‹С…
+                 //Р°РєС‚РёРІРЅРѕ РѕРєРЅРѕ СЃРІРѕР№СЃС‚РІ СЃР»РѕРІР°СЂСЏ
                  switch(Stimul) {
                      case 1: {
-                        //в дереве рабочей папки выбран узел - модуль данных
+                        //РІ РґРµСЂРµРІРµ СЂР°Р±РѕС‡РµР№ РїР°РїРєРё РІС‹Р±СЂР°РЅ СѓР·РµР» - РјРѕРґСѓР»СЊ РґР°РЅРЅС‹С…
                         //if (DetailFormAutomatState==3) {jTabbedPane2.remove(DetailPanel2);}                         
-                        setPanelContent(DataModuleConstr,DetailPanel2,"Детализация данных");
+                        setPanelContent(DataModuleConstr,DetailPanel2,"Р”РµС‚Р°Р»РёР·Р°С†РёСЏ РґР°РЅРЅС‹С…");
                         jTabbedPane1.setSelectedComponent(DetailPanel2);
                         DetailFormAutomatState=1;
                         setToolbarMode(1);
                         break;
                     }
                     case 2: {
-                        //в дереве рабочей папки выбран узел - словарь
-                        jTabbedPane1.addTab("Детали", setPanelContent(DictionaryConstr,DetailPanel2,"Детализация данных"));
+                        //РІ РґРµСЂРµРІРµ СЂР°Р±РѕС‡РµР№ РїР°РїРєРё РІС‹Р±СЂР°РЅ СѓР·РµР» - СЃР»РѕРІР°СЂСЊ
+                        jTabbedPane1.addTab("Р”РµС‚Р°Р»Рё", setPanelContent(DictionaryConstr,DetailPanel2,"Р”РµС‚Р°Р»РёР·Р°С†РёСЏ РґР°РЅРЅС‹С…"));
                         jTabbedPane1.setSelectedComponent(DetailPanel2);
                         DetailFormAutomatState=1;
                         setToolbarMode(1);
                         break;
                     }
                     case 3: {
-                        //в дереве рабочей папки выбран узел - вопрос
-                        jTabbedPane1.addTab("Детали", setPanelContent(QuestConstr,DetailPanel2,"Детализация данных"));
+                        //РІ РґРµСЂРµРІРµ СЂР°Р±РѕС‡РµР№ РїР°РїРєРё РІС‹Р±СЂР°РЅ СѓР·РµР» - РІРѕРїСЂРѕСЃ
+                        jTabbedPane1.addTab("Р”РµС‚Р°Р»Рё", setPanelContent(QuestConstr,DetailPanel2,"Р”РµС‚Р°Р»РёР·Р°С†РёСЏ РґР°РЅРЅС‹С…"));
                         jTabbedPane1.setSelectedComponent(DetailPanel2);
                         DetailFormAutomatState=1;
                         setToolbarMode(1);
                         break;
                     }
                     case 4: {
-                        //в дереве рабочей папки выбран узел - ответ
-                        setPanelContent(AnswerConstr,DetailPanel2,"Детализация данных");
+                        //РІ РґРµСЂРµРІРµ СЂР°Р±РѕС‡РµР№ РїР°РїРєРё РІС‹Р±СЂР°РЅ СѓР·РµР» - РѕС‚РІРµС‚
+                        setPanelContent(AnswerConstr,DetailPanel2,"Р”РµС‚Р°Р»РёР·Р°С†РёСЏ РґР°РЅРЅС‹С…");
                         jTabbedPane1.setSelectedComponent(DetailPanel2);
                         DetailFormAutomatState=1;
                         setToolbarMode(1);
@@ -697,30 +697,30 @@ public class DimensionInternalFrame extends JInternalFrame {
                     }
                     //xxx
                     case 5: {
-                        //в дереве рабочей папки выбран узел - блок данных
+                        //РІ РґРµСЂРµРІРµ СЂР°Р±РѕС‡РµР№ РїР°РїРєРё РІС‹Р±СЂР°РЅ СѓР·РµР» - Р±Р»РѕРє РґР°РЅРЅС‹С…
                         jTabbedPane1.remove(DetailPanel2);
                         DetailFormAutomatState=0;
                         setToolbarMode(1);
                         break;
                     }
                     case 6: {
-                        //в дереве рабочей папки выбран узел - фильтр блок данных
-                        jTabbedPane1.addTab("Детали", setPanelContent(DEP,DetailPanel2,"Детализация данных"));
+                        //РІ РґРµСЂРµРІРµ СЂР°Р±РѕС‡РµР№ РїР°РїРєРё РІС‹Р±СЂР°РЅ СѓР·РµР» - С„РёР»СЊС‚СЂ Р±Р»РѕРє РґР°РЅРЅС‹С…
+                        jTabbedPane1.addTab("Р”РµС‚Р°Р»Рё", setPanelContent(DEP,DetailPanel2,"Р”РµС‚Р°Р»РёР·Р°С†РёСЏ РґР°РЅРЅС‹С…"));
                         jTabbedPane1.setSelectedComponent(DetailPanel2);
                         DetailFormAutomatState=1;
                         setToolbarMode(3);
                         break;
                     }
                     case 7: {
-                        //в дереве рабочей папки выбран узел - сумматор блоков данных
+                        //РІ РґРµСЂРµРІРµ СЂР°Р±РѕС‡РµР№ РїР°РїРєРё РІС‹Р±СЂР°РЅ СѓР·РµР» - СЃСѓРјРјР°С‚РѕСЂ Р±Р»РѕРєРѕРІ РґР°РЅРЅС‹С…
                         jTabbedPane1.remove(DetailPanel2);
                         DetailFormAutomatState=0;
                         setToolbarMode(1);
                         break;
                     }
                     case 8: {
-                        //Выбрано окно ввода
-                        jTabbedPane2.addTab("Детали", setPanelContent(ETP,DetailPanel2,"Детализация данных"));
+                        //Р’С‹Р±СЂР°РЅРѕ РѕРєРЅРѕ РІРІРѕРґР°
+                        jTabbedPane2.addTab("Р”РµС‚Р°Р»Рё", setPanelContent(ETP,DetailPanel2,"Р”РµС‚Р°Р»РёР·Р°С†РёСЏ РґР°РЅРЅС‹С…"));
                         jTabbedPane2.setSelectedComponent(DetailPanel2);
                         jTabbedPane1.remove(DetailPanel2);
                         try {
@@ -732,7 +732,7 @@ public class DimensionInternalFrame extends JInternalFrame {
                             setPanelContent(DMEP,LowPanel,"");
                             
                         } catch( Exception re ) {
-                            System.out.println("Ошибка в конечном автомате "+re.toString());
+                            System.out.println("РћС€РёР±РєР° РІ РєРѕРЅРµС‡РЅРѕРј Р°РІС‚РѕРјР°С‚Рµ "+re.toString());
                         }
                         DetailFormAutomatState=3;
                         setToolbarMode(2);
@@ -741,18 +741,18 @@ public class DimensionInternalFrame extends JInternalFrame {
                         
                     }
                     case 9: {
-                        //Выбрано окно распределений
+                        //Р’С‹Р±СЂР°РЅРѕ РѕРєРЅРѕ СЂР°СЃРїСЂРµРґРµР»РµРЅРёР№
                         try {
                             DEP.setDictionary(CurrentDimensionPanel.Dictionary);
-                            jTabbedPane2.addTab("Детали", setPanelContent(DEP,DetailPanel2,"Детализация данных"));
+                            jTabbedPane2.addTab("Р”РµС‚Р°Р»Рё", setPanelContent(DEP,DetailPanel2,"Р”РµС‚Р°Р»РёР·Р°С†РёСЏ РґР°РЅРЅС‹С…"));
                             jTabbedPane2.setSelectedComponent(DetailPanel2);
                             jTabbedPane1.remove(DetailPanel2);
                             if (!DMEP.getDMI().equals(CurrentDimensionPanel.getParentDMI())){
                                 DMEP.initTree(CurrentDimensionPanel.getParentRDMI());
                             }
-                            setPanelContent(DMEP,LowPanel,"Детализация данных");
+                            setPanelContent(DMEP,LowPanel,"Р”РµС‚Р°Р»РёР·Р°С†РёСЏ РґР°РЅРЅС‹С…");
                         } catch( Exception re ) {
-                            System.out.println("Ошибка в конечном автомате "+re.toString());
+                            System.out.println("РћС€РёР±РєР° РІ РєРѕРЅРµС‡РЅРѕРј Р°РІС‚РѕРјР°С‚Рµ "+re.toString());
                         }
                         DetailFormAutomatState=3;
                         setToolbarMode(1);
@@ -760,14 +760,14 @@ public class DimensionInternalFrame extends JInternalFrame {
                         break;
                     }
                     /*case 10: {
-                        //в дереве рабочей папки выбран узел - модуль данных
-                        setPanelContent(FolderConstr,DetailPanel2,"Детализация данных");
+                        //РІ РґРµСЂРµРІРµ СЂР°Р±РѕС‡РµР№ РїР°РїРєРё РІС‹Р±СЂР°РЅ СѓР·РµР» - РјРѕРґСѓР»СЊ РґР°РЅРЅС‹С…
+                        setPanelContent(FolderConstr,DetailPanel2,"Р”РµС‚Р°Р»РёР·Р°С†РёСЏ РґР°РЅРЅС‹С…");
                         jTabbedPane1.setSelectedComponent(DetailPanel2);
                         DetailFormAutomatState=1;
                         setToolbarMode(1);                        
                     }
                     case 11: {
-                        //в дереве рабочей папки выбран узел - модуль данных
+                        //РІ РґРµСЂРµРІРµ СЂР°Р±РѕС‡РµР№ РїР°РїРєРё РІС‹Р±СЂР°РЅ СѓР·РµР» - РјРѕРґСѓР»СЊ РґР°РЅРЅС‹С…
                         //jTabbedPane2.remove(DetailPanel2);
                         setPanelContent(DataModuleConstr,DetailPanel2,"");
                         jTabbedPane1.setSelectedComponent(DetailPanel2);
@@ -777,7 +777,7 @@ public class DimensionInternalFrame extends JInternalFrame {
                         break;
                     }*/
                     case 13: {
-                        //в дереве рабочей папки выбран узел - модуль данных
+                        //РІ РґРµСЂРµРІРµ СЂР°Р±РѕС‡РµР№ РїР°РїРєРё РІС‹Р±СЂР°РЅ СѓР·РµР» - РјРѕРґСѓР»СЊ РґР°РЅРЅС‹С…
                         //jTabbedPane2.remove(DetailPanel2);
                         setPanelContent(DMEP,LowPanel,"");
                         DetailFormAutomatState=0;
@@ -789,60 +789,60 @@ public class DimensionInternalFrame extends JInternalFrame {
                  break;
              }
              case 3: {
-                 //Открыты детали в библиотеке
-                 //активно окно свойств словаря
+                 //РћС‚РєСЂС‹С‚С‹ РґРµС‚Р°Р»Рё РІ Р±РёР±Р»РёРѕС‚РµРєРµ
+                 //Р°РєС‚РёРІРЅРѕ РѕРєРЅРѕ СЃРІРѕР№СЃС‚РІ СЃР»РѕРІР°СЂСЏ
                  switch(Stimul) {
                      case 1: {
-                        //в дереве рабочей папки выбран узел - модуль данных
+                        //РІ РґРµСЂРµРІРµ СЂР°Р±РѕС‡РµР№ РїР°РїРєРё РІС‹Р±СЂР°РЅ СѓР·РµР» - РјРѕРґСѓР»СЊ РґР°РЅРЅС‹С…
                         jTabbedPane2.remove(DetailPanel2);                         
-                        jTabbedPane1.addTab("Детали", setPanelContent(DataModuleConstr,DetailPanel2,"Детализация данных"));
+                        jTabbedPane1.addTab("Р”РµС‚Р°Р»Рё", setPanelContent(DataModuleConstr,DetailPanel2,"Р”РµС‚Р°Р»РёР·Р°С†РёСЏ РґР°РЅРЅС‹С…"));
                         jTabbedPane1.setSelectedComponent(DetailPanel2);
                         DetailFormAutomatState=1; 
                         setToolbarMode(1);
                         break;
                     }
                     case 2: {
-                        //в дереве рабочей папки выбран узел - словарь
+                        //РІ РґРµСЂРµРІРµ СЂР°Р±РѕС‡РµР№ РїР°РїРєРё РІС‹Р±СЂР°РЅ СѓР·РµР» - СЃР»РѕРІР°СЂСЊ
                         jTabbedPane2.remove(DetailPanel2);                         
-                        jTabbedPane1.addTab("Детали", setPanelContent(DictionaryConstr,DetailPanel2,"Детализация данных"));                        
+                        jTabbedPane1.addTab("Р”РµС‚Р°Р»Рё", setPanelContent(DictionaryConstr,DetailPanel2,"Р”РµС‚Р°Р»РёР·Р°С†РёСЏ РґР°РЅРЅС‹С…"));                        
                         jTabbedPane1.setSelectedComponent(DetailPanel2);                        
                         DetailFormAutomatState=1;
                         setToolbarMode(1);
                         break;
                     }
                     case 3: {
-                        //в дереве рабочей папки выбран узел - вопрос
+                        //РІ РґРµСЂРµРІРµ СЂР°Р±РѕС‡РµР№ РїР°РїРєРё РІС‹Р±СЂР°РЅ СѓР·РµР» - РІРѕРїСЂРѕСЃ
                         jTabbedPane2.remove(DetailPanel2);                         
-                        jTabbedPane1.addTab("Детали", setPanelContent(QuestConstr,DetailPanel2,"Детализация данных"));                        
+                        jTabbedPane1.addTab("Р”РµС‚Р°Р»Рё", setPanelContent(QuestConstr,DetailPanel2,"Р”РµС‚Р°Р»РёР·Р°С†РёСЏ РґР°РЅРЅС‹С…"));                        
                         jTabbedPane1.setSelectedComponent(DetailPanel2);                           
                         DetailFormAutomatState=1;
                         setToolbarMode(1);
                         break;
                     }
                     case 4: {
-                        //в дереве рабочей папки выбран узел - ответ
+                        //РІ РґРµСЂРµРІРµ СЂР°Р±РѕС‡РµР№ РїР°РїРєРё РІС‹Р±СЂР°РЅ СѓР·РµР» - РѕС‚РІРµС‚
                         jTabbedPane2.remove(DetailPanel2);                         
-                        jTabbedPane1.addTab("Детали", setPanelContent(AnswerConstr,DetailPanel2,"Детализация данных"));                        
+                        jTabbedPane1.addTab("Р”РµС‚Р°Р»Рё", setPanelContent(AnswerConstr,DetailPanel2,"Р”РµС‚Р°Р»РёР·Р°С†РёСЏ РґР°РЅРЅС‹С…"));                        
                         jTabbedPane1.setSelectedComponent(DetailPanel2);                           
                         DetailFormAutomatState=1;                        
                         setToolbarMode(1);
                         break;
                     }
                     case 5: {
-                        //в дереве рабочей папки выбран узел - блок данных
+                        //РІ РґРµСЂРµРІРµ СЂР°Р±РѕС‡РµР№ РїР°РїРєРё РІС‹Р±СЂР°РЅ СѓР·РµР» - Р±Р»РѕРє РґР°РЅРЅС‹С…
                         jTabbedPane2.remove(DetailPanel2);
                         DetailFormAutomatState=0;
                         break;
                     }
                     case 6: {
-                        //в дереве рабочей папки выбран узел - фильтр блок данных
-                        setPanelContent(DEP,DetailPanel2,"Детализация данных");
+                        //РІ РґРµСЂРµРІРµ СЂР°Р±РѕС‡РµР№ РїР°РїРєРё РІС‹Р±СЂР°РЅ СѓР·РµР» - С„РёР»СЊС‚СЂ Р±Р»РѕРє РґР°РЅРЅС‹С…
+                        setPanelContent(DEP,DetailPanel2,"Р”РµС‚Р°Р»РёР·Р°С†РёСЏ РґР°РЅРЅС‹С…");
                         DetailFormAutomatState=3;
                         setToolbarMode(3);
                         break;
                     }
                     case 7: {
-                        //в дереве рабочей папки выбран узел - сумматор блоков данных
+                        //РІ РґРµСЂРµРІРµ СЂР°Р±РѕС‡РµР№ РїР°РїРєРё РІС‹Р±СЂР°РЅ СѓР·РµР» - СЃСѓРјРјР°С‚РѕСЂ Р±Р»РѕРєРѕРІ РґР°РЅРЅС‹С…
                         jTabbedPane2.remove(DetailPanel2);
                         DetailFormAutomatState=0;
                         break;
@@ -850,7 +850,7 @@ public class DimensionInternalFrame extends JInternalFrame {
                     case 8: {
                         
                         try {
-                            setPanelContent(ETP,DetailPanel2,"Детализация данных");
+                            setPanelContent(ETP,DetailPanel2,"Р”РµС‚Р°Р»РёР·Р°С†РёСЏ РґР°РЅРЅС‹С…");
                             ETP.setQuestion(CurrentInputPanel.Dictionary,CurrentInputPanel.RQI);
                             ETP.setSelectionRows(CurrentInputPanel.h);
 
@@ -860,48 +860,48 @@ public class DimensionInternalFrame extends JInternalFrame {
                             setPanelContent(DMEP,LowPanel,"");
 
                         } catch( Exception re ) {
-                            System.out.println("Ошибка в конечном автомате "+re.toString());
+                            System.out.println("РћС€РёР±РєР° РІ РєРѕРЅРµС‡РЅРѕРј Р°РІС‚РѕРјР°С‚Рµ "+re.toString());
                         }
                         DetailFormAutomatState=3;
                         setToolbarMode(2);
                         break;
                     }
                     case 9: {
-                        //Выбрано окно распределений
+                        //Р’С‹Р±СЂР°РЅРѕ РѕРєРЅРѕ СЂР°СЃРїСЂРµРґРµР»РµРЅРёР№
                         try {
                             DEP.setDictionary(CurrentDimensionPanel.Dictionary);
-                            setPanelContent(DEP,DetailPanel2,"Детализация данных");
+                            setPanelContent(DEP,DetailPanel2,"Р”РµС‚Р°Р»РёР·Р°С†РёСЏ РґР°РЅРЅС‹С…");
                             jTabbedPane2.setSelectedComponent(DetailPanel2);
                             if (!DMEP.getDMI().equals(CurrentDimensionPanel.getParentRDMI())){
                                 DMEP.initTree(CurrentDimensionPanel.getParentRDMI());
                             }
                             setPanelContent(DMEP,LowPanel,"");
                         } catch( Exception re ) {
-                            System.out.println("Ошибка в конечном автомате "+re.toString());
+                            System.out.println("РћС€РёР±РєР° РІ РєРѕРЅРµС‡РЅРѕРј Р°РІС‚РѕРјР°С‚Рµ "+re.toString());
                         }
                         DetailFormAutomatState=3;
                         setToolbarMode(1);
                         break;
                     }
                     /*case 10: {
-                        //в дереве рабочей папки выбран узел - модуль данных
+                        //РІ РґРµСЂРµРІРµ СЂР°Р±РѕС‡РµР№ РїР°РїРєРё РІС‹Р±СЂР°РЅ СѓР·РµР» - РјРѕРґСѓР»СЊ РґР°РЅРЅС‹С…
                         jTabbedPane2.remove(DetailPanel2);
-                        setPanelContent(FolderConstr,LowPanel,"Детализация данных");
+                        setPanelContent(FolderConstr,LowPanel,"Р”РµС‚Р°Р»РёР·Р°С†РёСЏ РґР°РЅРЅС‹С…");
                         DetailFormAutomatState=0;
                         setToolbarMode(1);
                     }
                     case 11: {
-                        //в дереве рабочей папки выбран узел - модуль данных
+                        //РІ РґРµСЂРµРІРµ СЂР°Р±РѕС‡РµР№ РїР°РїРєРё РІС‹Р±СЂР°РЅ СѓР·РµР» - РјРѕРґСѓР»СЊ РґР°РЅРЅС‹С…
                         jTabbedPane2.remove(DetailPanel2);
-                        setPanelContent(DataModuleConstr,LowPanel,"Детализация данных");
+                        setPanelContent(DataModuleConstr,LowPanel,"Р”РµС‚Р°Р»РёР·Р°С†РёСЏ РґР°РЅРЅС‹С…");
                         DetailFormAutomatState=0;
                         setToolbarMode(1);
                         break;
                     }*/
                     case 13: {
-                        //в дереве рабочей папки выбран узел - модуль данных
+                        //РІ РґРµСЂРµРІРµ СЂР°Р±РѕС‡РµР№ РїР°РїРєРё РІС‹Р±СЂР°РЅ СѓР·РµР» - РјРѕРґСѓР»СЊ РґР°РЅРЅС‹С…
                         jTabbedPane2.remove(DetailPanel2);
-                        setPanelContent(DMEP,LowPanel,"Детализация данных");
+                        setPanelContent(DMEP,LowPanel,"Р”РµС‚Р°Р»РёР·Р°С†РёСЏ РґР°РЅРЅС‹С…");
                         DetailFormAutomatState=0;
                         setToolbarMode(1);
                         break;
@@ -916,7 +916,7 @@ public class DimensionInternalFrame extends JInternalFrame {
 
 
     public void CurrentRecOut(int i, int j)  {
-        jTextField2.setText(i+" из "+j);
+        jTextField2.setText(i+" РёР· "+j);
     }
     
     /** This method is called from within the constructor to
@@ -1003,7 +1003,7 @@ public class DimensionInternalFrame extends JInternalFrame {
         MainEditionPanel.setPreferredSize(new java.awt.Dimension(400, 300));
         MainEditionPanel.setLayout(new java.awt.GridBagLayout());
 
-        LEP.setBorder(javax.swing.BorderFactory.createTitledBorder("Библиотека"));
+        LEP.setBorder(javax.swing.BorderFactory.createTitledBorder("Р‘РёР±Р»РёРѕС‚РµРєР°"));
         LEP.setPreferredSize(new java.awt.Dimension(200, 300));
         LEP.setVerifyInputWhenFocusTarget(false);
         LEP.setLayout(new java.awt.GridBagLayout());
@@ -1022,9 +1022,9 @@ public class DimensionInternalFrame extends JInternalFrame {
         gridBagConstraints.weightx = 1.0;
         gridBagConstraints.weighty = 1.0;
         MainEditionPanel.add(LEP, gridBagConstraints);
-        LEP.getAccessibleContext().setAccessibleName("Результаты исследований");
+        LEP.getAccessibleContext().setAccessibleName("Р РµР·СѓР»СЊС‚Р°С‚С‹ РёСЃСЃР»РµРґРѕРІР°РЅРёР№");
 
-        jTabbedPane2.addTab("Библиотека", MainEditionPanel);
+        jTabbedPane2.addTab("Р‘РёР±Р»РёРѕС‚РµРєР°", MainEditionPanel);
         MainEditionPanel.getAccessibleContext().setAccessibleParent(jSplitPane1);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -1037,7 +1037,7 @@ public class DimensionInternalFrame extends JInternalFrame {
 
         jPanel2.setLayout(new java.awt.GridBagLayout());
 
-        LowPanel.setBorder(javax.swing.BorderFactory.createTitledBorder("Рабочий стол"));
+        LowPanel.setBorder(javax.swing.BorderFactory.createTitledBorder("Р Р°Р±РѕС‡РёР№ СЃС‚РѕР»"));
         LowPanel.setLayout(new java.awt.GridBagLayout());
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
@@ -1068,7 +1068,7 @@ public class DimensionInternalFrame extends JInternalFrame {
         gridBagConstraints.weighty = 1.0;
         jPanel5.add(jPanel3, gridBagConstraints);
 
-        DetailPanel.setBorder(javax.swing.BorderFactory.createTitledBorder("Значения"));
+        DetailPanel.setBorder(javax.swing.BorderFactory.createTitledBorder("Р—РЅР°С‡РµРЅРёСЏ"));
         DetailPanel.setLayout(new java.awt.GridBagLayout());
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
@@ -1082,7 +1082,7 @@ public class DimensionInternalFrame extends JInternalFrame {
         gridBagConstraints.weightx = 1.0;
         jPanel5.add(DetailPanel, gridBagConstraints);
 
-        jTabbedPane1.addTab("Лаборатория", jPanel5);
+        jTabbedPane1.addTab("Р›Р°Р±РѕСЂР°С‚РѕСЂРёСЏ", jPanel5);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
@@ -1113,7 +1113,7 @@ public class DimensionInternalFrame extends JInternalFrame {
         jToolBar3.setRollover(true);
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/gif/button/save_0.gif"))); // NOI18N
-        jButton1.setToolTipText("Импорт");
+        jButton1.setToolTipText("РРјРїРѕСЂС‚");
         jButton1.setBorder(null);
         jButton1.setFocusable(false);
         jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -1123,7 +1123,7 @@ public class DimensionInternalFrame extends JInternalFrame {
         jToolBar3.add(jButton1);
 
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/gif/button/load_0.gif"))); // NOI18N
-        jButton2.setToolTipText("Экспорт");
+        jButton2.setToolTipText("Р­РєСЃРїРѕСЂС‚");
         jButton2.setBorder(null);
         jButton2.setFocusable(false);
         jButton2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -1133,7 +1133,7 @@ public class DimensionInternalFrame extends JInternalFrame {
         jToolBar3.add(jButton2);
 
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/gif/button/print_0.gif"))); // NOI18N
-        jButton3.setToolTipText("Печать");
+        jButton3.setToolTipText("РџРµС‡Р°С‚СЊ");
         jButton3.setBorder(null);
         jButton3.setFocusable(false);
         jButton3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -1240,7 +1240,7 @@ public class DimensionInternalFrame extends JInternalFrame {
 
         FirstRecordButton.setFont(new java.awt.Font("Dialog", 0, 11)); // NOI18N
         FirstRecordButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/gif/button/first_0.gif"))); // NOI18N
-        FirstRecordButton.setToolTipText("Первая запись");
+        FirstRecordButton.setToolTipText("РџРµСЂРІР°СЏ Р·Р°РїРёСЃСЊ");
         FirstRecordButton.setBorder(null);
         FirstRecordButton.setFocusable(false);
         FirstRecordButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -1253,7 +1253,7 @@ public class DimensionInternalFrame extends JInternalFrame {
 
         PrevRecordButton.setFont(new java.awt.Font("Dialog", 0, 11)); // NOI18N
         PrevRecordButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/gif/button/prev_0.gif"))); // NOI18N
-        PrevRecordButton.setToolTipText("Предыдущая запись");
+        PrevRecordButton.setToolTipText("РџСЂРµРґС‹РґСѓС‰Р°СЏ Р·Р°РїРёСЃСЊ");
         PrevRecordButton.setBorder(null);
         PrevRecordButton.setFocusable(false);
         PrevRecordButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -1273,7 +1273,7 @@ public class DimensionInternalFrame extends JInternalFrame {
 
         NextRecordButton.setFont(new java.awt.Font("Dialog", 0, 11)); // NOI18N
         NextRecordButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/gif/button/next_0.gif"))); // NOI18N
-        NextRecordButton.setToolTipText("Следующая запись");
+        NextRecordButton.setToolTipText("РЎР»РµРґСѓСЋС‰Р°СЏ Р·Р°РїРёСЃСЊ");
         NextRecordButton.setBorder(null);
         NextRecordButton.setFocusable(false);
         NextRecordButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -1285,7 +1285,7 @@ public class DimensionInternalFrame extends JInternalFrame {
 
         LastRecordButton.setFont(new java.awt.Font("Dialog", 0, 11)); // NOI18N
         LastRecordButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/gif/button/last_0.gif"))); // NOI18N
-        LastRecordButton.setToolTipText("Последняя запись");
+        LastRecordButton.setToolTipText("РџРѕСЃР»РµРґРЅСЏСЏ Р·Р°РїРёСЃСЊ");
         LastRecordButton.setBorder(null);
         LastRecordButton.setFocusable(false);
         LastRecordButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -1297,7 +1297,7 @@ public class DimensionInternalFrame extends JInternalFrame {
 
         NewRecordButton.setFont(new java.awt.Font("Dialog", 0, 11)); // NOI18N
         NewRecordButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/gif/button/add_0.gif"))); // NOI18N
-        NewRecordButton.setToolTipText("Новая анкета");
+        NewRecordButton.setToolTipText("РќРѕРІР°СЏ Р°РЅРєРµС‚Р°");
         NewRecordButton.setBorder(null);
         NewRecordButton.setFocusable(false);
         NewRecordButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -1309,7 +1309,7 @@ public class DimensionInternalFrame extends JInternalFrame {
 
         DelRecordButton.setFont(new java.awt.Font("Dialog", 0, 11)); // NOI18N
         DelRecordButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/gif/button/del_0.gif"))); // NOI18N
-        DelRecordButton.setToolTipText("Удалить анкету");
+        DelRecordButton.setToolTipText("РЈРґР°Р»РёС‚СЊ Р°РЅРєРµС‚Сѓ");
         DelRecordButton.setBorder(null);
         DelRecordButton.setFocusable(false);
         DelRecordButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -1341,7 +1341,7 @@ public class DimensionInternalFrame extends JInternalFrame {
         jPanel7.setLayout(new java.awt.BorderLayout());
 
         jLabel1.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
-        jLabel1.setText("Нажмите F2 для редактирования компонента");
+        jLabel1.setText("РќР°Р¶РјРёС‚Рµ F2 РґР»СЏ СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ РєРѕРјРїРѕРЅРµРЅС‚Р°");
         jPanel7.add(jLabel1, java.awt.BorderLayout.CENTER);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -1358,7 +1358,7 @@ public class DimensionInternalFrame extends JInternalFrame {
             }
         });
 
-        jMenuItem1.setText("Сохранить");
+        jMenuItem1.setText("РЎРѕС…СЂР°РЅРёС‚СЊ");
         jMenuItem1.setEnabled(false);
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1367,7 +1367,7 @@ public class DimensionInternalFrame extends JInternalFrame {
         });
         jMenu2.add(jMenuItem1);
 
-        jMenuItem2.setText("Считать");
+        jMenuItem2.setText("РЎС‡РёС‚Р°С‚СЊ");
         jMenuItem2.setEnabled(false);
         jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1394,7 +1394,7 @@ public class DimensionInternalFrame extends JInternalFrame {
         });
         jMenu2.add(jMenuItem15);
 
-        jMenuItem17.setText("Загрузить ЛВ");
+        jMenuItem17.setText("Р—Р°РіСЂСѓР·РёС‚СЊ Р›Р’");
         jMenuItem17.setEnabled(false);
         jMenuItem17.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1403,7 +1403,7 @@ public class DimensionInternalFrame extends JInternalFrame {
         });
         jMenu2.add(jMenuItem17);
 
-        jMenuItem3.setText("Сохранить модуль данных в базу");
+        jMenuItem3.setText("РЎРѕС…СЂР°РЅРёС‚СЊ РјРѕРґСѓР»СЊ РґР°РЅРЅС‹С… РІ Р±Р°Р·Сѓ");
         jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem3ActionPerformed(evt);
@@ -1411,7 +1411,7 @@ public class DimensionInternalFrame extends JInternalFrame {
         });
         jMenu2.add(jMenuItem3);
 
-        jMenuItem4.setText("Загрузить из СУБД");
+        jMenuItem4.setText("Р—Р°РіСЂСѓР·РёС‚СЊ РёР· РЎРЈР‘Р”");
         jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem4ActionPerformed(evt);
@@ -1421,7 +1421,7 @@ public class DimensionInternalFrame extends JInternalFrame {
 
         jMenuBar1.add(jMenu2);
 
-        jMenu5.setText("Окна");
+        jMenu5.setText("РћРєРЅР°");
         jMenuBar1.add(jMenu5);
 
         add(jMenuBar1);
@@ -1429,10 +1429,10 @@ public class DimensionInternalFrame extends JInternalFrame {
 
     private void jMenuItem17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem17ActionPerformed
         try {
-            System.out.println("Считываю новый словарь ");
+            System.out.println("РЎС‡РёС‚С‹РІР°СЋ РЅРѕРІС‹Р№ СЃР»РѕРІР°СЂСЊ ");
             BlockLoader2 BL=new BlockLoader2(Server);
         } catch( Exception re ) {
-            System.out.println("Ошибка "+re.toString());	   
+            System.out.println("РћС€РёР±РєР° "+re.toString());	   
         }    
     }//GEN-LAST:event_jMenuItem17ActionPerformed
 
@@ -1460,7 +1460,7 @@ public class DimensionInternalFrame extends JInternalFrame {
         try {
             CurrentInputPanel.SetCurrentRow(new Integer(jTextField2.getText()).intValue());
         } catch( Exception re ) {
-            System.out.println("Ошибка "+re.toString());	   
+            System.out.println("РћС€РёР±РєР° "+re.toString());	   
         }  
     }//GEN-LAST:event_jTextField2ActionPerformed
 
@@ -1470,19 +1470,19 @@ public class DimensionInternalFrame extends JInternalFrame {
         try {
             OpenImportForm();
         } catch( Exception re ) {
-            System.out.println("Ошибка импорта "+re.toString());	   
+            System.out.println("РћС€РёР±РєР° РёРјРїРѕСЂС‚Р° "+re.toString());	   
         }     
             
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         //TODO add your handling code here:
-        //Вроде как сохранение чего то ..
+        //Р’СЂРѕРґРµ РєР°Рє СЃРѕС…СЂР°РЅРµРЅРёРµ С‡РµРіРѕ С‚Рѕ ..
         try {
             //Server.WriteDictionaries();
-            System.out.println("Сохраняю новый словарь ");	   
+            System.out.println("РЎРѕС…СЂР°РЅСЏСЋ РЅРѕРІС‹Р№ СЃР»РѕРІР°СЂСЊ ");	   
         } catch( Exception re ) {
-            System.out.println("Ошибка "+re.toString());	   
+            System.out.println("РћС€РёР±РєР° "+re.toString());	   
         }     
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
@@ -1498,7 +1498,7 @@ public class DimensionInternalFrame extends JInternalFrame {
             DTM.insertNodeInto(newnode, node, node.getChildCount());
             Server.WriteDictionaries();
         } catch( Exception re ) {
-            System.out.println("Ошибка "+re.toString());	   
+            System.out.println("РћС€РёР±РєР° "+re.toString());	   
         }                 
     }*/
     
@@ -1506,14 +1506,14 @@ public class DimensionInternalFrame extends JInternalFrame {
         try {
             CreateDataBlock (type, jTree1);
         } catch( Exception re ) {
-            System.out.println("Ошибка "+re.toString());	   
+            System.out.println("РћС€РёР±РєР° "+re.toString());	   
         }     
     }
 
     /*public void RecodeNode() {
         try {
             refreshBranch(node,3,1);
-            System.out.println("ддддддддддд");
+            System.out.println("РґРґРґРґРґРґРґРґРґРґРґ");
             DQAMarkInterface DQI = (DQAMarkInterface)node.getUserObject();
             DQI.setMixed(false);
             JMenuItem JP=(JMenuItem)jTreeMenuItem.getComponent(3);
@@ -1554,13 +1554,13 @@ public class DimensionInternalFrame extends JInternalFrame {
             DMI1.setParent(Data.getDMI().getID(),this.getID(),true);
             refreshBranch(node1,2);
         } catch( Exception re ) {
-            System.out.println("Ошибка "+re.toString());
+            System.out.println("РћС€РёР±РєР° "+re.toString());
         }
     }
     
     private void RenameDataBlock () {
         try {
-            CustomDialog customDialog = new CustomDialog(frame,DMI.getName(),"Имя блока данных");
+            CustomDialog customDialog = new CustomDialog(frame,DMI.getName(),"РРјСЏ Р±Р»РѕРєР° РґР°РЅРЅС‹С…");
             customDialog.pack();
             customDialog.setLocationRelativeTo(this);
             customDialog.setVisible(true);
@@ -1571,7 +1571,7 @@ public class DimensionInternalFrame extends JInternalFrame {
             Data.getDMI().setName(s,this.getID(),true);
             //Server.WriteDictionaries();
         } catch( Exception re ) {
-            System.out.println("Ошибка "+re.toString());	   
+            System.out.println("РћС€РёР±РєР° "+re.toString());	   
         }     
     }
     
@@ -1599,12 +1599,12 @@ public class DimensionInternalFrame extends JInternalFrame {
             CheckBranch(Data.getDMI(),Parent.getDMI());
             refreshBranch(parentNode,1);
         } catch( Exception re ) {
-            System.out.println("Ошибка "+re.toString());	   
+            System.out.println("РћС€РёР±РєР° "+re.toString());	   
         }     
     }
 
     public void OpenEditForm(RInterface RDMI, RInterface Parent) {
-        System.out.println("Ввод данных типа начинается");
+        System.out.println("Р’РІРѕРґ РґР°РЅРЅС‹С… С‚РёРїР° РЅР°С‡РёРЅР°РµС‚СЃСЏ");
         try {
             DataModuleInterface MyDMI=Server.getDMI(RDMI.getID());
             InputPanel inputPanel=new InputPanel(RDMI, Parent, this);
@@ -1616,8 +1616,8 @@ public class DimensionInternalFrame extends JInternalFrame {
             myInternalFrameEvent IFE=new myInternalFrameEvent();
             myInternalFrame jif = new myInternalFrame(inputPanel);
             jif.addInternalFrameListener(IFE);
-            if (MyDMI.getType()==3) {jif.setTitle("Таблица '"+MyDMI.getName()+"'");}
-            else {jif.setTitle("Фильтр '"+MyDMI.getName()+"'");}
+            if (MyDMI.getType()==3) {jif.setTitle("РўР°Р±Р»РёС†Р° '"+MyDMI.getName()+"'");}
+            else {jif.setTitle("Р¤РёР»СЊС‚СЂ '"+MyDMI.getName()+"'");}
             
             jif.show();
             desktop.add(jif);
@@ -1625,7 +1625,7 @@ public class DimensionInternalFrame extends JInternalFrame {
             try {
                 jif.setSelected(true);
             } catch (Exception e2) {
-                System.err.println("Ошибка инициализации окана 2"+e2.toString());
+                System.err.println("РћС€РёР±РєР° РёРЅРёС†РёР°Р»РёР·Р°С†РёРё РѕРєР°РЅР° 2"+e2.toString());
             }
             jif.show();
             jif.updateUI();
@@ -1633,16 +1633,16 @@ public class DimensionInternalFrame extends JInternalFrame {
             
             
         } catch( Exception re ) {
-            System.err.println("Ошибка инициализации окана 2"+re.toString());
+            System.err.println("РћС€РёР±РєР° РёРЅРёС†РёР°Р»РёР·Р°С†РёРё РѕРєР°РЅР° 2"+re.toString());
         }     
     }
 
     public void OpenExportForm(DataModuleInterface DMI) {
-        System.out.println("Экспорт данных типа начинается");
+        System.out.println("Р­РєСЃРїРѕСЂС‚ РґР°РЅРЅС‹С… С‚РёРїР° РЅР°С‡РёРЅР°РµС‚СЃСЏ");
         try {
             ExportDialog frame = new ExportDialog (this,true,DMI);
             frame.setLocationRelativeTo(this);
-            frame.setTitle("Экспорт данных");
+            frame.setTitle("Р­РєСЃРїРѕСЂС‚ РґР°РЅРЅС‹С…");
             frame.setVisible(true);
         } catch( Exception re ) {
             System.out.println(re.toString());	   
@@ -1650,16 +1650,16 @@ public class DimensionInternalFrame extends JInternalFrame {
     }
     
     private void OpenImportForm() {
-        System.out.println("Импорт данных типа начинается");
+        System.out.println("РРјРїРѕСЂС‚ РґР°РЅРЅС‹С… С‚РёРїР° РЅР°С‡РёРЅР°РµС‚СЃСЏ");
         try {
             DefaultMutableTreeNode node = (DefaultMutableTreeNode) jTree1.getLastSelectedPathComponent();
             Object nodeInfo = node.getUserObject();
             DataModuleMark Data = (DataModuleMark) nodeInfo;
             try {
-                System.out.println("Считываю новый словарь ");
+                System.out.println("РЎС‡РёС‚С‹РІР°СЋ РЅРѕРІС‹Р№ СЃР»РѕРІР°СЂСЊ ");
                 BlockLoader BL=new BlockLoader(Data.getDMI(),this);
             } catch( Exception re ) {
-                System.out.println("Ошибка импорта"+re.toString());	   
+                System.out.println("РћС€РёР±РєР° РёРјРїРѕСЂС‚Р°"+re.toString());	   
             }     
         } catch( Exception re ) {
             System.out.println(re.toString());	   
@@ -1667,11 +1667,11 @@ public class DimensionInternalFrame extends JInternalFrame {
     }
     
     public void OpenModuleImportForm(DataModuleInterface DMI, int type) {
-        System.out.println("Импорт данных типа начинается "+type);
+        System.out.println("РРјРїРѕСЂС‚ РґР°РЅРЅС‹С… С‚РёРїР° РЅР°С‡РёРЅР°РµС‚СЃСЏ "+type);
         try {
             ImportDialog frame = new ImportDialog (this,DMEP,type,DMI);
             frame.setLocationRelativeTo(this);
-            frame.setTitle("Импорт данных");
+            frame.setTitle("РРјРїРѕСЂС‚ РґР°РЅРЅС‹С…");
             frame.setVisible(true);
         } catch( Exception re ) {
             System.out.println(re.toString());	   
@@ -1679,7 +1679,7 @@ public class DimensionInternalFrame extends JInternalFrame {
     }
     
     public void OpenDimensionForm(RInterface RDMI, RInterface ParentRDMI) {
-        System.out.println("Построение измерений");
+        System.out.println("РџРѕСЃС‚СЂРѕРµРЅРёРµ РёР·РјРµСЂРµРЅРёР№");
         try {
             DataModuleInterface MyDMI=Server.getDMI(RDMI.getID());
             DimensionPanel DimensionPanel=new DimensionPanel(RDMI,ParentRDMI,this);
@@ -1700,8 +1700,8 @@ public class DimensionInternalFrame extends JInternalFrame {
             jif.add(DimensionPanel);
 
             jif.setBounds(20, 20, 200, 200);
-            if (MyDMI.getType()==3) {jif.setTitle("Распределение таблицы '"+MyDMI.getName()+"'");}
-            else {jif.setTitle("Распределение фильтра '"+MyDMI.getName()+"'");}
+            if (MyDMI.getType()==3) {jif.setTitle("Р Р°СЃРїСЂРµРґРµР»РµРЅРёРµ С‚Р°Р±Р»РёС†С‹ '"+MyDMI.getName()+"'");}
+            else {jif.setTitle("Р Р°СЃРїСЂРµРґРµР»РµРЅРёРµ С„РёР»СЊС‚СЂР° '"+MyDMI.getName()+"'");}
             jif.show();
             desktop.add(jif);
 
@@ -1709,7 +1709,7 @@ public class DimensionInternalFrame extends JInternalFrame {
             try {
                 jif.setSelected(true);
             } catch (Exception e2) {
-                System.err.println("Ошибка инициализации окана 2"+e2.toString());
+                System.err.println("РћС€РёР±РєР° РёРЅРёС†РёР°Р»РёР·Р°С†РёРё РѕРєР°РЅР° 2"+e2.toString());
             }
         } catch( Exception re ) {
             System.out.println(re.toString());	   
@@ -1727,7 +1727,7 @@ public class DimensionInternalFrame extends JInternalFrame {
                 ((ABSortTreeNode)top).add(root);
             }
         } catch(Exception re ) {
-            System.out.println("Фигня какая то в  makeAnswerBranches "+re.toString());
+            System.out.println("Р¤РёРіРЅСЏ РєР°РєР°СЏ С‚Рѕ РІ  makeAnswerBranches "+re.toString());
         }
     }
 
@@ -1742,7 +1742,7 @@ public class DimensionInternalFrame extends JInternalFrame {
                 ((ABSortTreeNode)top).add(root);
             }
         } catch(Exception re ) {
-            System.out.println("Фигня какая то в makeQuestBranches "+re.toString());
+            System.out.println("Р¤РёРіРЅСЏ РєР°РєР°СЏ С‚Рѕ РІ makeQuestBranches "+re.toString());
         }
     }
 
@@ -1794,14 +1794,14 @@ public class DimensionInternalFrame extends JInternalFrame {
                 }
             }
         } catch( Exception re ) {
-            System.out.println("ошибка в getBranch() "+re.toString());	   
+            System.out.println("РѕС€РёР±РєР° РІ getBranch() "+re.toString());	   
         }
         return jTreeRoot;
     }*/
 
     public void setToolbarMode(int i) {
         switch (i) {
-            case (1) : { //базовое значение
+            case (1) : { //Р±Р°Р·РѕРІРѕРµ Р·РЅР°С‡РµРЅРёРµ
                 jFilterAndButton1.setEnabled(false);
                 jFilterCloseButton1.setEnabled(false);
                 jFilterFormulaTextField1.setEnabled(false);
@@ -1820,7 +1820,7 @@ public class DimensionInternalFrame extends JInternalFrame {
                 jTextField2.setText("");
                 break;
             }
-            case (2) : { //значение при активном окне ввода
+            case (2) : { //Р·РЅР°С‡РµРЅРёРµ РїСЂРё Р°РєС‚РёРІРЅРѕРј РѕРєРЅРµ РІРІРѕРґР°
                 jFilterAndButton1.setEnabled(false);
                 jFilterCloseButton1.setEnabled(false);
                 jFilterFormulaTextField1.setEnabled(false);
@@ -1839,7 +1839,7 @@ public class DimensionInternalFrame extends JInternalFrame {
                 //jTextField2.setText("");
                 break;
             }
-            case (3) : { //значение для редактора фильтров
+            case (3) : { //Р·РЅР°С‡РµРЅРёРµ РґР»СЏ СЂРµРґР°РєС‚РѕСЂР° С„РёР»СЊС‚СЂРѕРІ
                 jFilterAndButton1.setEnabled(true);
                 jFilterCloseButton1.setEnabled(true);
                 jFilterFormulaTextField1.setEnabled(true);
@@ -1875,46 +1875,46 @@ public class DimensionInternalFrame extends JInternalFrame {
         try {
 
             
-            DefaultTreeModel TreeMоdel=new DefaultTreeModel(getBranch(null,null));
+            DefaultTreeModel TreeMРѕdel=new DefaultTreeModel(getBranch(null,null));
             
-            //AutomatedTreeNode  TreeNоde,TreeNоde1,TreeNоde2;
-            /*TreeNоde1=new AutomatedTreeNode(new String(""));
-            AutomatedTreeModel TreeMоdel=new AutomatedTreeModel(TreeNоde1);
-            TreeNоde1.add(getBranch(Server.getDMIRootPointer(),null));
+            //AutomatedTreeNode  TreeNРѕde,TreeNРѕde1,TreeNРѕde2;
+            /*TreeNРѕde1=new AutomatedTreeNode(new String(""));
+            AutomatedTreeModel TreeMРѕdel=new AutomatedTreeModel(TreeNРѕde1);
+            TreeNРѕde1.add(getBranch(Server.getDMIRootPointer(),null));
             
-            TreeNоde=new AutomatedTreeNode(new String("Управление правами пользователей"));
-            TreeNоde1.add(TreeNоde);
-            TreeNоde1=new AutomatedTreeNode(new String("Роли"));
-            //TreeNоde .add(TreeNоde1);
-            TreeNоde2 =new AutomatedTreeNode(new String("Оператор архива"));
-            TreeNоde1.add(TreeNоde2);
-            TreeNоde2 =new AutomatedTreeNode(new String("Администратор опроса"));
-            TreeNоde1.add(TreeNоde2);            
-            TreeNоde2 =new AutomatedTreeNode(new String("Супервизор"));
-            TreeNоde1.add(TreeNоde2); 
+            TreeNРѕde=new AutomatedTreeNode(new String("РЈРїСЂР°РІР»РµРЅРёРµ РїСЂР°РІР°РјРё РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№"));
+            TreeNРѕde1.add(TreeNРѕde);
+            TreeNРѕde1=new AutomatedTreeNode(new String("Р РѕР»Рё"));
+            //TreeNРѕde .add(TreeNРѕde1);
+            TreeNРѕde2 =new AutomatedTreeNode(new String("РћРїРµСЂР°С‚РѕСЂ Р°СЂС…РёРІР°"));
+            TreeNРѕde1.add(TreeNРѕde2);
+            TreeNРѕde2 =new AutomatedTreeNode(new String("РђРґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂ РѕРїСЂРѕСЃР°"));
+            TreeNРѕde1.add(TreeNРѕde2);            
+            TreeNРѕde2 =new AutomatedTreeNode(new String("РЎСѓРїРµСЂРІРёР·РѕСЂ"));
+            TreeNРѕde1.add(TreeNРѕde2); 
             
-            TreeNоde1=new AutomatedTreeNode(new String("Пользователи"));    
-            TreeNоde .add(TreeNоde1);
-            TreeNоde2=new AutomatedTreeNode(new String("Все"));
-            TreeNоde1.add(TreeNоde2);
-            TreeNоde2=new AutomatedTreeNode(new String("Никто"));
-            TreeNоde1.add(TreeNоde2);            
-            TreeNоde2=new AutomatedTreeNode(new String("Вася"));
-            TreeNоde1.add(TreeNоde2); 
-            jTree1.setModel(TreeMоdel);
+            TreeNРѕde1=new AutomatedTreeNode(new String("РџРѕР»СЊР·РѕРІР°С‚РµР»Рё"));    
+            TreeNРѕde .add(TreeNРѕde1);
+            TreeNРѕde2=new AutomatedTreeNode(new String("Р’СЃРµ"));
+            TreeNРѕde1.add(TreeNРѕde2);
+            TreeNРѕde2=new AutomatedTreeNode(new String("РќРёРєС‚Рѕ"));
+            TreeNРѕde1.add(TreeNРѕde2);            
+            TreeNРѕde2=new AutomatedTreeNode(new String("Р’Р°СЃСЏ"));
+            TreeNРѕde1.add(TreeNРѕde2); 
+            jTree1.setModel(TreeMРѕdel);
             
-            TreeNоde1=new AutomatedTreeNode(new String("Группы"));    
-            TreeNоde .add(TreeNоde1);
-            TreeNоde2=new AutomatedTreeNode(new String("Иркутск"));
-            TreeNоde1.add(TreeNоde2);
-            TreeNоde2=new AutomatedTreeNode(new String("Красноярск"));
-            TreeNоde1.add(TreeNоde2);            
-            TreeNоde2=new AutomatedTreeNode(new String("Новосибирск"));
-            TreeNоde1.add(TreeNоde2); 
-            jTree1.setModel(TreeMоdel);*/
+            TreeNРѕde1=new AutomatedTreeNode(new String("Р“СЂСѓРїРїС‹"));    
+            TreeNРѕde .add(TreeNРѕde1);
+            TreeNРѕde2=new AutomatedTreeNode(new String("РСЂРєСѓС‚СЃРє"));
+            TreeNРѕde1.add(TreeNРѕde2);
+            TreeNРѕde2=new AutomatedTreeNode(new String("РљСЂР°СЃРЅРѕСЏСЂСЃРє"));
+            TreeNРѕde1.add(TreeNРѕde2);            
+            TreeNРѕde2=new AutomatedTreeNode(new String("РќРѕРІРѕСЃРёР±РёСЂСЃРє"));
+            TreeNРѕde1.add(TreeNРѕde2); 
+            jTree1.setModel(TreeMРѕdel);*/
 
             jTree1.getSelectionModel().setSelectionMode(TreeSelectionModel.DISCONTIGUOUS_TREE_SELECTION);
-            jTree1.setModel(TreeMоdel);
+            jTree1.setModel(TreeMРѕdel);
             jTree1.setDragEnabled(true);
             TreeTransferHandler TTH=new TreeTransferHandler();
             TTH.Lib=this;
@@ -1950,7 +1950,7 @@ public class DimensionInternalFrame extends JInternalFrame {
                                     }  case 2: { //datamodule
                                         DataModuleMark DIfo=(DataModuleMark)nodeInfo2;
                                         DMEP.initTree(DIfo.getRContent());
-                                        System.out.println("Двойной клик на опросе "+nodeInfo2.getName());
+                                        System.out.println("Р”РІРѕР№РЅРѕР№ РєР»РёРє РЅР° РѕРїСЂРѕСЃРµ "+nodeInfo2.getName());
                                         DetailFormAutomat(13);
                                         break;
                                     } case 3: { //datablock
@@ -1976,7 +1976,7 @@ public class DimensionInternalFrame extends JInternalFrame {
                                     }
                                }
                             } catch(Exception re ) {
-                                System.out.println("Фигня какая то в словарях "+re.toString());
+                                System.out.println("Р¤РёРіРЅСЏ РєР°РєР°СЏ С‚Рѕ РІ СЃР»РѕРІР°СЂСЏС… "+re.toString());
                             }
                         }
 
@@ -2053,8 +2053,8 @@ public class DimensionInternalFrame extends JInternalFrame {
                             }
 
                         } catch(Exception re ) {
-                            if (!node.getUserObject().toString().equalsIgnoreCase("Все вопросы")) {
-                                System.out.println("Фигня какая то в словарях "+re.toString());
+                            if (!node.getUserObject().toString().equalsIgnoreCase("Р’СЃРµ РІРѕРїСЂРѕСЃС‹")) {
+                                System.out.println("Р¤РёРіРЅСЏ РєР°РєР°СЏ С‚Рѕ РІ СЃР»РѕРІР°СЂСЏС… "+re.toString());
                             }
                         }
 
@@ -2065,7 +2065,7 @@ public class DimensionInternalFrame extends JInternalFrame {
 
         } catch(Exception re ) {
 
-            System.out.println("Фигня какая то в словарях "+re.toString());
+            System.out.println("Р¤РёРіРЅСЏ РєР°РєР°СЏ С‚Рѕ РІ СЃР»РѕРІР°СЂСЏС… "+re.toString());
         }
     }
         
@@ -2077,20 +2077,20 @@ public class DimensionInternalFrame extends JInternalFrame {
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
         // TODO add your handling code here:
         try {
-            System.out.println("пишем в базу");
+            System.out.println("РїРёС€РµРј РІ Р±Р°Р·Сѓ");
             Server.StoreAllBase();
         } catch(Exception re ) {
-            System.out.println("Фигня какая то в словарях "+re.toString());
+            System.out.println("Р¤РёРіРЅСЏ РєР°РєР°СЏ С‚Рѕ РІ СЃР»РѕРІР°СЂСЏС… "+re.toString());
         }
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
         // TODO add your handling code here:
          try {
-            System.out.println("читаем ");
+            System.out.println("С‡РёС‚Р°РµРј ");
             Server.ReadSQLDictionaries();
         } catch(Exception re ) {
-            System.out.println("Фигня какая то чтении словарей "+re.toString());
+            System.out.println("Р¤РёРіРЅСЏ РєР°РєР°СЏ С‚Рѕ С‡С‚РµРЅРёРё СЃР»РѕРІР°СЂРµР№ "+re.toString());
         }
     }//GEN-LAST:event_jMenuItem4ActionPerformed
     
@@ -2118,7 +2118,7 @@ public class DimensionInternalFrame extends JInternalFrame {
         try {
             UI=Server.autorizeUser(User, Password);
         } catch(Exception re ) {
-            System.out.println("Фигня какая то чтении словарей "+re.toString());
+            System.out.println("Р¤РёРіРЅСЏ РєР°РєР°СЏ С‚Рѕ С‡С‚РµРЅРёРё СЃР»РѕРІР°СЂРµР№ "+re.toString());
         }    
         if (UI==null) return false; else return true;    
     }
@@ -2279,24 +2279,24 @@ public class DimensionInternalFrame extends JInternalFrame {
 
     public void RefreshDimensionList() throws RemoteException {
         //ReloadDataList();
-        System.out.println( "Кто то кнопку 4" );	
+        System.out.println( "РљС‚Рѕ С‚Рѕ РєРЅРѕРїРєСѓ 4" );	
     }
     
     public void RefreshDataList() throws RemoteException {
         
        // ReloadDataList();
-        System.out.println( "Кто то кнопку 4" );	
+        System.out.println( "РљС‚Рѕ С‚Рѕ РєРЅРѕРїРєСѓ 4" );	
     }
     
     public void RefreshDictionaryList() throws RemoteException {
         //ListDictionary();
         //SocioInputFrame.RefreshDictionaryList();
-        System.out.println( "Обновляем список словарей 1234213" );	
+        System.out.println( "РћР±РЅРѕРІР»СЏРµРј СЃРїРёСЃРѕРє СЃР»РѕРІР°СЂРµР№ 1234213" );	
     }
     
     public void RefreshQuestionList() throws RemoteException {
         SocioInputFrame.RefreshQuestionList();
-        System.out.println( "Обновляем список вопросов" );	
+        System.out.println( "РћР±РЅРѕРІР»СЏРµРј СЃРїРёСЃРѕРє РІРѕРїСЂРѕСЃРѕРІ" );	
     }
     
     /*private class AddListener1 {
@@ -2319,7 +2319,7 @@ public class DimensionInternalFrame extends JInternalFrame {
         jTreeMenuItemDictionary =new JPopupMenu();
         jTreeMenuItemQuestion   =new JPopupMenu();
         jTreeMenuItemAnswer     =new JPopupMenu();
-        jTreeQuestType =new JMenu("Тип вопроса:");
+        jTreeQuestType =new JMenu("РўРёРї РІРѕРїСЂРѕСЃР°:");
 
         jTreeMenuItemFree       =new JPopupMenu();
 
@@ -2328,172 +2328,172 @@ public class DimensionInternalFrame extends JInternalFrame {
         //Create the popup menu.
         //JPopupMenu popup = new JPopupMenu();
         
-        //Операции с папкой
-        menuItem1 = new JMenuItem("Создать папку");
+        //РћРїРµСЂР°С†РёРё СЃ РїР°РїРєРѕР№
+        menuItem1 = new JMenuItem("РЎРѕР·РґР°С‚СЊ РїР°РїРєСѓ");
         menuItem1.addActionListener(new ActionListener() {
              public void actionPerformed(ActionEvent e)  {
                  CreateDataBlock(1);
-                 System.out.println("Создать");	                 
+                 System.out.println("РЎРѕР·РґР°С‚СЊ");	                 
              }
         });     
         jTreeMenuItemDataFolder.add(menuItem1);
-        menuItem1 = new JMenuItem("Создать опрос");
+        menuItem1 = new JMenuItem("РЎРѕР·РґР°С‚СЊ РѕРїСЂРѕСЃ");
         menuItem1.addActionListener(new ActionListener() {
              public void actionPerformed(ActionEvent e)  {
                  CreateDataBlock(2);
-                 System.out.println("Создать");	                 
+                 System.out.println("РЎРѕР·РґР°С‚СЊ");	                 
              }
         });     
         jTreeMenuItemDataFolder.add(menuItem1);
         //popup.add(menuItem1);
-        menuItem1 = new JMenuItem("Удалить");
+        menuItem1 = new JMenuItem("РЈРґР°Р»РёС‚СЊ");
         menuItem1.addActionListener(new ActionListener() {
              public void actionPerformed(ActionEvent e)  {
                  DeleteDataBlock(null);
-                 System.out.println("Удаляем блок данных");	                 
+                 System.out.println("РЈРґР°Р»СЏРµРј Р±Р»РѕРє РґР°РЅРЅС‹С…");	                 
              }
         });  
         jTreeMenuItemDataFolder.add(menuItem1);
         //popup.add(menuItem1);
-        menuItem1 = new JMenuItem("Переименовать");
+        menuItem1 = new JMenuItem("РџРµСЂРµРёРјРµРЅРѕРІР°С‚СЊ");
         menuItem1.addActionListener(new ActionListener() {
              public void actionPerformed(ActionEvent e)  {
                  RenameDataBlock();
-                 System.out.println("Переименовываем блок данных");	                 
+                 System.out.println("РџРµСЂРµРёРјРµРЅРѕРІС‹РІР°РµРј Р±Р»РѕРє РґР°РЅРЅС‹С…");	                 
              }
         });  
         //jTreeMenuItemDataFolder.add(menuItem1);
-        menuItem1 = new JMenuItem("Перекодировать");
+        menuItem1 = new JMenuItem("РџРµСЂРµРєРѕРґРёСЂРѕРІР°С‚СЊ");
         menuItem1.addActionListener(new ActionListener() {
              public void actionPerformed(ActionEvent e)  {
                  /*RecodeNode();*/
-                 System.out.println("Перекодировать");
+                 System.out.println("РџРµСЂРµРєРѕРґРёСЂРѕРІР°С‚СЊ");
              }
         });
         jTreeMenuItemDataFolder.add(menuItem1);
         
-        //Операции с опросом
+        //РћРїРµСЂР°С†РёРё СЃ РѕРїСЂРѕСЃРѕРј
 
-        menuItem1 = new JMenuItem("Новый словарь");
+        menuItem1 = new JMenuItem("РќРѕРІС‹Р№ СЃР»РѕРІР°СЂСЊ");
         menuItem1.addActionListener(new ActionListener() {
              public void actionPerformed(ActionEvent e)  {
                  //NewDictionary();
-                 System.out.println("Создать");
+                 System.out.println("РЎРѕР·РґР°С‚СЊ");
              }
         });
         jTreeMenuItemDataModule.add(menuItem1);
 
                 
-        menuItem1 = new JMenuItem("Удалить");
+        menuItem1 = new JMenuItem("РЈРґР°Р»РёС‚СЊ");
         menuItem1.addActionListener(new ActionListener() {
              public void actionPerformed(ActionEvent e)  {
                  DeleteDataBlock(null);
-                 System.out.println("Удаляем блок данных");	                 
+                 System.out.println("РЈРґР°Р»СЏРµРј Р±Р»РѕРє РґР°РЅРЅС‹С…");	                 
              }
         });  
         jTreeMenuItemDataModule.add(menuItem1);
 
        
-        menuItem1 = new JMenuItem("Импорт");
+        menuItem1 = new JMenuItem("РРјРїРѕСЂС‚");
         menuItem1.addActionListener(new ActionListener() {
              public void actionPerformed(ActionEvent e)  {
-                System.out.println("Импорт");	                 
+                System.out.println("РРјРїРѕСЂС‚");	                 
                 //OpenModuleImportForm();
              }
         });
         jTreeMenuItemDataModule.add(menuItem1);
 
 
-        // операция с множеством даных
+        // РѕРїРµСЂР°С†РёСЏ СЃ РјРЅРѕР¶РµСЃС‚РІРѕРј РґР°РЅС‹С…
 
-        menuItem1 = new JMenuItem("Создать блок данных");
+        menuItem1 = new JMenuItem("РЎРѕР·РґР°С‚СЊ Р±Р»РѕРє РґР°РЅРЅС‹С…");
         menuItem1.addActionListener(new ActionListener() {
              public void actionPerformed(ActionEvent e)  {
                  CreateDataBlock(3);
-                 System.out.println("Создать");
+                 System.out.println("РЎРѕР·РґР°С‚СЊ");
              }
         });
         jTreeMenuItemData.add(menuItem1);
 
-        menuItem1 = new JMenuItem("Создать фильтр");
+        menuItem1 = new JMenuItem("РЎРѕР·РґР°С‚СЊ С„РёР»СЊС‚СЂ");
         menuItem1.addActionListener(new ActionListener() {
              public void actionPerformed(ActionEvent e)  {
                  CreateDataBlock(4);
-                 System.out.println("Создать");
+                 System.out.println("РЎРѕР·РґР°С‚СЊ");
              }
         });
         jTreeMenuItemData.add(menuItem1);
 
 
-        menuItem1 = new JMenuItem("Распределение");
+        menuItem1 = new JMenuItem("Р Р°СЃРїСЂРµРґРµР»РµРЅРёРµ");
         menuItem1.addActionListener(new ActionListener() {
              public void actionPerformed(ActionEvent e)  {
                 //OpenDimensionForm();
-                //System.out.println("Распределение");
+                //System.out.println("Р Р°СЃРїСЂРµРґРµР»РµРЅРёРµ");
              }
         });
         jTreeMenuItemData.add(menuItem1);
 
-        menuItem1 = new JMenuItem("Импорт");
+        menuItem1 = new JMenuItem("РРјРїРѕСЂС‚");
         menuItem1.addActionListener(new ActionListener() {
              public void actionPerformed(ActionEvent e)  {
-                System.out.println("Импорт");
+                System.out.println("РРјРїРѕСЂС‚");
                 //OpenModuleImportForm();
              }
         });
         jTreeMenuItemData.add(menuItem1);
         
-        //Операции с блоком данных 
-        menuItem1 = new JMenuItem("Новый фильтр");
+        //РћРїРµСЂР°С†РёРё СЃ Р±Р»РѕРєРѕРј РґР°РЅРЅС‹С… 
+        menuItem1 = new JMenuItem("РќРѕРІС‹Р№ С„РёР»СЊС‚СЂ");
         menuItem1.addActionListener(new ActionListener() {
              public void actionPerformed(ActionEvent e)  {
                  CreateDataBlock(4);
-                 System.out.println("Создать");	                 
+                 System.out.println("РЎРѕР·РґР°С‚СЊ");	                 
              }
         });     
         jTreeMenuItemDataBlock.add(menuItem1);
         
         //popup.add(menuItem1);
-        menuItem1 = new JMenuItem("Удалить");
+        menuItem1 = new JMenuItem("РЈРґР°Р»РёС‚СЊ");
         menuItem1.addActionListener(new ActionListener() {
              public void actionPerformed(ActionEvent e)  {
                  DeleteDataBlock(null);
-                 System.out.println("Удаляем блок данных");	                 
+                 System.out.println("РЈРґР°Р»СЏРµРј Р±Р»РѕРє РґР°РЅРЅС‹С…");	                 
              }
         });  
         jTreeMenuItemDataBlock.add(menuItem1);
         //popup.add(menuItem1);
-        menuItem1 = new JMenuItem("Переименовать");
+        menuItem1 = new JMenuItem("РџРµСЂРµРёРјРµРЅРѕРІР°С‚СЊ");
         menuItem1.addActionListener(new ActionListener() {
              public void actionPerformed(ActionEvent e)  {
                  RenameDataBlock();
-                 System.out.println("Переименовываем блок данных");	                 
+                 System.out.println("РџРµСЂРµРёРјРµРЅРѕРІС‹РІР°РµРј Р±Р»РѕРє РґР°РЅРЅС‹С…");	                 
              }
         });  
         //jTreeMenuItemDataBlock.add(menuItem1);
         
-        menuItem1 = new JMenuItem("Импорт");
+        menuItem1 = new JMenuItem("РРјРїРѕСЂС‚");
         menuItem1.addActionListener(new ActionListener() {
              public void actionPerformed(ActionEvent e)  {
-                System.out.println("Считываю новый словарь ");
+                System.out.println("РЎС‡РёС‚С‹РІР°СЋ РЅРѕРІС‹Р№ СЃР»РѕРІР°СЂСЊ ");
                 //OpenModuleImportForm();
              }
         });
         jTreeMenuItemDataBlock.add(menuItem1);        
 
-        menuItem1 = new JMenuItem("Экспорт");
+        menuItem1 = new JMenuItem("Р­РєСЃРїРѕСЂС‚");
         menuItem1.addActionListener(new ActionListener() {
              public void actionPerformed(ActionEvent e)  {
-                System.out.println("Экспорт");	                 
+                System.out.println("Р­РєСЃРїРѕСЂС‚");	                 
                 //OpenExportForm();
              }
         });
         jTreeMenuItemDataBlock.add(menuItem1);
         
-        menuItem1 = new JMenuItem("Ввод данных");
+        menuItem1 = new JMenuItem("Р’РІРѕРґ РґР°РЅРЅС‹С…");
         menuItem1.addActionListener(new ActionListener() {
              public void actionPerformed(ActionEvent e)  {
-                System.out.println("Ввод данных");	                 
+                System.out.println("Р’РІРѕРґ РґР°РЅРЅС‹С…");	                 
                 //OpenEditForm();
              }
         });
@@ -2501,57 +2501,57 @@ public class DimensionInternalFrame extends JInternalFrame {
         jTreeMenuItemDataBlock.add(menuItem1);
 
         
-        menuItem1 = new JMenuItem("Распределение");
+        menuItem1 = new JMenuItem("Р Р°СЃРїСЂРµРґРµР»РµРЅРёРµ");
         menuItem1.addActionListener(new ActionListener() {
              public void actionPerformed(ActionEvent e)  {
                 //OpenDimensionForm();
-                //System.out.println("Распределение");	                 
+                //System.out.println("Р Р°СЃРїСЂРµРґРµР»РµРЅРёРµ");	                 
              }
         });
         jTreeMenuItemDataBlock.add(menuItem1);
         
-         //Операции с блоком данных 
+         //РћРїРµСЂР°С†РёРё СЃ Р±Р»РѕРєРѕРј РґР°РЅРЅС‹С… 
         
-        menuItem1 = new JMenuItem("Удалить");
+        menuItem1 = new JMenuItem("РЈРґР°Р»РёС‚СЊ");
         menuItem1.addActionListener(new ActionListener() {
              public void actionPerformed(ActionEvent e)  {
                  //DeleteDataBlock();
-                 System.out.println("Удаляем блок данных");	                 
+                 System.out.println("РЈРґР°Р»СЏРµРј Р±Р»РѕРє РґР°РЅРЅС‹С…");	                 
              }
         });  
         jTreeMenuItemDataFilter.add(menuItem1);
-        menuItem1 = new JMenuItem("Переименовать");
+        menuItem1 = new JMenuItem("РџРµСЂРµРёРјРµРЅРѕРІР°С‚СЊ");
         menuItem1.addActionListener(new ActionListener() {
              public void actionPerformed(ActionEvent e)  {
                  RenameDataBlock();
-                 System.out.println("Переименовываем блок данных");	                 
+                 System.out.println("РџРµСЂРµРёРјРµРЅРѕРІС‹РІР°РµРј Р±Р»РѕРє РґР°РЅРЅС‹С…");	                 
              }
         });  
         jTreeMenuItemDataFilter.add(menuItem1);
         
-        menuItem1 = new JMenuItem("Экспорт");
+        menuItem1 = new JMenuItem("Р­РєСЃРїРѕСЂС‚");
         menuItem1.addActionListener(new ActionListener() {
              public void actionPerformed(ActionEvent e)  {
-                System.out.println("Экспорт");	                 
+                System.out.println("Р­РєСЃРїРѕСЂС‚");	                 
                 //OpenExportForm();
              }
         });
         jTreeMenuItemDataFilter.add(menuItem1);
         
-        menuItem1 = new JMenuItem("Ввод данных");
+        menuItem1 = new JMenuItem("Р’РІРѕРґ РґР°РЅРЅС‹С…");
         menuItem1.addActionListener(new ActionListener() {
              public void actionPerformed(ActionEvent e)  {
-                System.out.println("Ввод данных");	                 
+                System.out.println("Р’РІРѕРґ РґР°РЅРЅС‹С…");	                 
                 //OpenEditForm();
              }
         });
         jTreeMenuItemDataFilter.add(menuItem1);
         
-        menuItem1 = new JMenuItem("Распределение");
+        menuItem1 = new JMenuItem("Р Р°СЃРїСЂРµРґРµР»РµРЅРёРµ");
         menuItem1.addActionListener(new ActionListener() {
              public void actionPerformed(ActionEvent e)  {
                 //OpenDimensionForm();
-                //System.out.println("Распределение");	                 
+                //System.out.println("Р Р°СЃРїСЂРµРґРµР»РµРЅРёРµ");	                 
              }
         });
         jTreeMenuItemDataFilter.add(menuItem1);
@@ -2563,32 +2563,32 @@ public class DimensionInternalFrame extends JInternalFrame {
         
     
         JMenuItem menuItem;
-        menuItem = new JMenuItem("Новый словарь");
+        menuItem = new JMenuItem("РќРѕРІС‹Р№ СЃР»РѕРІР°СЂСЊ");
         menuItem.addActionListener(new ActionListener() {
              public void actionPerformed(ActionEvent e)  {
                  //NewDictionary();
-                 System.out.println("Новый словарь");	                 
+                 System.out.println("РќРѕРІС‹Р№ СЃР»РѕРІР°СЂСЊ");	                 
              }
         });
 
         //jTreeMenuItemRoot.add(menuItem);
         
-        menuItem = new JMenuItem("Новый вопрос");
+        menuItem = new JMenuItem("РќРѕРІС‹Р№ РІРѕРїСЂРѕСЃ");
         menuItem.addActionListener(new ActionListener() {
              public void actionPerformed(ActionEvent e)  {
                  //NewDictionary();
                  //NewQuestion();
-                 System.out.println("Добавить вопрос");	                 
+                 System.out.println("Р”РѕР±Р°РІРёС‚СЊ РІРѕРїСЂРѕСЃ");	                 
              }
         });  
         jTreeMenuItemDictionary.add(menuItem);
         
-        menuItem = new JMenuItem("Удалить словарь");
+        menuItem = new JMenuItem("РЈРґР°Р»РёС‚СЊ СЃР»РѕРІР°СЂСЊ");
         menuItem.addActionListener(new ActionListener() {
              public void actionPerformed(ActionEvent e)  {
                  try {
                     //DeleteDictionary();
-                    System.out.println("Удаляем словарь");	                 
+                    System.out.println("РЈРґР°Р»СЏРµРј СЃР»РѕРІР°СЂСЊ");	                 
                  } catch( Exception re ) {
                     System.out.println(re.toString());	   
                  }   
@@ -2597,13 +2597,13 @@ public class DimensionInternalFrame extends JInternalFrame {
         jTreeMenuItemDictionary.add(menuItem);
         jTreeMenuItemDictionary.addSeparator();
         
-        menuItem = new JMenuItem("Перекодировать словарь");
+        menuItem = new JMenuItem("РџРµСЂРµРєРѕРґРёСЂРѕРІР°С‚СЊ СЃР»РѕРІР°СЂСЊ");
         menuItem.addActionListener(new ActionListener() {
              public void actionPerformed(ActionEvent e)  {
                  try {
                     //ecodeDictionary();
                     /*RecodeNode();*/
-                    System.out.println("Перекодируем словарь");	 
+                    System.out.println("РџРµСЂРµРєРѕРґРёСЂСѓРµРј СЃР»РѕРІР°СЂСЊ");	 
                  } catch( Exception re ) {
                     System.out.println(re.toString());	   
                  }   
@@ -2612,21 +2612,21 @@ public class DimensionInternalFrame extends JInternalFrame {
         menuItem.setEnabled(false);
         jTreeMenuItemDictionary.add(menuItem);
         
-        menuItem = new JMenuItem("Новый ответ");
+        menuItem = new JMenuItem("РќРѕРІС‹Р№ РѕС‚РІРµС‚");
         menuItem.addActionListener(new ActionListener() {
              public void actionPerformed(ActionEvent e)  {
                  //NewAnswer();
-                 System.out.println("Добавить ответ");	                 
+                 System.out.println("Р”РѕР±Р°РІРёС‚СЊ РѕС‚РІРµС‚");	                 
              }
         });  
         jTreeMenuItemQuestion.add(menuItem);
         
-        menuItem = new JMenuItem("Удалить вопрос");
+        menuItem = new JMenuItem("РЈРґР°Р»РёС‚СЊ РІРѕРїСЂРѕСЃ");
         menuItem.addActionListener(new ActionListener() {
              public void actionPerformed(ActionEvent e)  {
                  try {
                     //DeleteQuest();
-                    System.out.println("Удаляем вопрос");	                 
+                    System.out.println("РЈРґР°Р»СЏРµРј РІРѕРїСЂРѕСЃ");	                 
                  } catch( Exception re ) {
                     System.out.println(re.toString());	   
                  }   
@@ -2635,11 +2635,11 @@ public class DimensionInternalFrame extends JInternalFrame {
         jTreeMenuItemQuestion.add(menuItem);
         jTreeMenuItemQuestion.addSeparator();
       
-        menuItem = new JMenuItem("Перекодировать вопрос");
+        menuItem = new JMenuItem("РџРµСЂРµРєРѕРґРёСЂРѕРІР°С‚СЊ РІРѕРїСЂРѕСЃ");
         menuItem.addActionListener(new ActionListener() {
              public void actionPerformed(ActionEvent e)  {
                  try {
-                    System.out.println("Перекодируем вопрос");
+                    System.out.println("РџРµСЂРµРєРѕРґРёСЂСѓРµРј РІРѕРїСЂРѕСЃ");
                     /*RecodeNode();*/
                  } catch( Exception re ) {
                     System.out.println(re.toString());	   
@@ -2648,20 +2648,20 @@ public class DimensionInternalFrame extends JInternalFrame {
         });  
         menuItem.setEnabled(false);
         jTreeMenuItemQuestion.add(menuItem);
-        jRadioButtonMenuItem1 = new JRadioButtonMenuItem("Альтернативный");
+        jRadioButtonMenuItem1 = new JRadioButtonMenuItem("РђР»СЊС‚РµСЂРЅР°С‚РёРІРЅС‹Р№");
         jTreeQuestType.add(jRadioButtonMenuItem1);
-        jRadioButtonMenuItem2 = new JRadioButtonMenuItem("Неальтернативный");
+        jRadioButtonMenuItem2 = new JRadioButtonMenuItem("РќРµР°Р»СЊС‚РµСЂРЅР°С‚РёРІРЅС‹Р№");
         jTreeQuestType.add(jRadioButtonMenuItem2);
-        jRadioButtonMenuItem3 = new JRadioButtonMenuItem("Иной");
+        jRadioButtonMenuItem3 = new JRadioButtonMenuItem("РРЅРѕР№");
         jTreeQuestType.add(jRadioButtonMenuItem3);
         jTreeMenuItemQuestion.add(jTreeQuestType);
         
-        menuItem = new JMenuItem("Удалить ответ");
+        menuItem = new JMenuItem("РЈРґР°Р»РёС‚СЊ РѕС‚РІРµС‚");
         menuItem.addActionListener(new ActionListener() {
              public void actionPerformed(ActionEvent e)  {
                  try {
                     //DeleteAnswer();
-                    System.out.println("Удаляем ответ");	                 
+                    System.out.println("РЈРґР°Р»СЏРµРј РѕС‚РІРµС‚");	                 
                  } catch( Exception re ) {
                     System.out.println(re.toString());	   
                  }   
@@ -2766,17 +2766,17 @@ public class DimensionInternalFrame extends JInternalFrame {
                     jRadioButtonMenuItem1.setSelected(true);
                     jRadioButtonMenuItem2.setSelected(false);
                     jRadioButtonMenuItem3.setSelected(false);
-                    jTreeQuestType.setText("Альтернативный");
+                    jTreeQuestType.setText("РђР»СЊС‚РµСЂРЅР°С‚РёРІРЅС‹Р№");
                 } else  if (Value==nonalter) {
                         jRadioButtonMenuItem2.setSelected(true);
                         jRadioButtonMenuItem1.setSelected(false);
                         jRadioButtonMenuItem3.setSelected(false);
-                        jTreeQuestType.setText("Неальтернативный");
+                        jTreeQuestType.setText("РќРµР°Р»СЊС‚РµСЂРЅР°С‚РёРІРЅС‹Р№");
                     } else {
                             jRadioButtonMenuItem3.setSelected(true);
                             jRadioButtonMenuItem1.setSelected(false);
                             jRadioButtonMenuItem2.setSelected(false);
-                            jTreeQuestType.setText("Иной");
+                            jTreeQuestType.setText("РРЅРѕР№");
                 }
         } catch( Exception re ) {
             System.out.println(re.toString());
@@ -2822,7 +2822,7 @@ public class DimensionInternalFrame extends JInternalFrame {
 
     public void RenameAnswer() {
         try {
-            //String AnswerName = MF.GetStringValue(Question.getAnswer(AnswerID).getName(),"Введите формулировку ответа");
+            //String AnswerName = MF.GetStringValue(Question.getAnswer(AnswerID).getName(),"Р’РІРµРґРёС‚Рµ С„РѕСЂРјСѓР»РёСЂРѕРІРєСѓ РѕС‚РІРµС‚Р°");
             //Question.getAnswer(AnswerID).setName(AnswerName);
         } catch( Exception re ) {
             System.out.println(re.toString());
@@ -2895,7 +2895,7 @@ public class DimensionInternalFrame extends JInternalFrame {
                 switch (type) {
                  case 1: {
                    switch (operation) {
-                    case 1: { //удаление перестановка
+                    case 1: { //СѓРґР°Р»РµРЅРёРµ РїРµСЂРµСЃС‚Р°РЅРѕРІРєР°
                        int i=0;
                        int j=0;
                        ArrayList Keys=Server.getDictionaryKeys();
@@ -2921,7 +2921,7 @@ public class DimensionInternalFrame extends JInternalFrame {
                        jTree1.updateUI();
                        break;
                     }
-                    case 2: { //удаление перестановка
+                    case 2: { //СѓРґР°Р»РµРЅРёРµ РїРµСЂРµСЃС‚Р°РЅРѕРІРєР°
 
                        int i=0;
                        int j=0;
@@ -2929,7 +2929,7 @@ public class DimensionInternalFrame extends JInternalFrame {
                        while (i<Keys.size()) {
                            j=0;
                            boolean Flag=true;
-                           System.out.println("Словарей "+TM2.getChildCount());
+                           System.out.println("РЎР»РѕРІР°СЂРµР№ "+TM2.getChildCount());
                            //QM2=null;
                            while ((j<TM2.getChildCount()-1)&Flag) {
                                 javax.swing.tree.DefaultMutableTreeNode DMT=(javax.swing.tree.DefaultMutableTreeNode)TM2.getChildAt(j);
@@ -2955,7 +2955,7 @@ public class DimensionInternalFrame extends JInternalFrame {
                    }
                  case 2: {
                    switch (operation) {
-                    case 1: { //удаление перестановка в словаре
+                    case 1: { //СѓРґР°Р»РµРЅРёРµ РїРµСЂРµСЃС‚Р°РЅРѕРІРєР° РІ СЃР»РѕРІР°СЂРµ
                        int i=0;
                        int j=0;
                        DQAInterface DQABranch1=(DQAInterface)TM2.getUserObject();
@@ -2986,7 +2986,7 @@ public class DimensionInternalFrame extends JInternalFrame {
                        jTree1.updateUI();
                        break;
                     }
-                    case 2: { //добавление
+                    case 2: { //РґРѕР±Р°РІР»РµРЅРёРµ
                        DQAInterface DQABranch1=(DQAInterface)TM2.getUserObject();
                        DictionaryMark DM = (DictionaryMark)DQABranch1;
                        Integer Key = Server.getKey();
@@ -3022,7 +3022,7 @@ public class DimensionInternalFrame extends JInternalFrame {
                    }
                  case 3: {
                    switch (operation) {
-                    case 1: { //удаление перестановка в словаре
+                    case 1: { //СѓРґР°Р»РµРЅРёРµ РїРµСЂРµСЃС‚Р°РЅРѕРІРєР° РІ СЃР»РѕРІР°СЂРµ
                        int i=0;
                        int j=0;
                        DQAInterface DQABranch1=(DQAInterface)TM2.getUserObject();
@@ -3053,11 +3053,11 @@ public class DimensionInternalFrame extends JInternalFrame {
                        jTree1.updateUI();
                        break;
                     }
-                    case 2: { //добавление
+                    case 2: { //РґРѕР±Р°РІР»РµРЅРёРµ
                        DQAInterface DQABranch1=(DQAInterface)TM2.getUserObject();
                        QuestMark QM = (QuestMark)DQABranch1;
                        Integer Key = Server.getKey();
-                       Server.getMainQuestion().newAnswer("New аnswer",Key);
+                       Server.getMainQuestion().newAnswer("New Р°nswer",Key);
                        QuestionInterface QI = QM.getQI();
                        RInterface RAI=QI.addAnswer(Key);
                        AnswerMark AM=new AnswerMark(RAI,Server.getMainQuestion().getAnswer(Key),QM.getRQI());
@@ -3092,7 +3092,7 @@ public class DimensionInternalFrame extends JInternalFrame {
                 }
 
         } catch(Exception re ) {
-            System.out.println("Фигня какая то в словарях и их ответах "+re.toString());
+            System.out.println("Р¤РёРіРЅСЏ РєР°РєР°СЏ С‚Рѕ РІ СЃР»РѕРІР°СЂСЏС… Рё РёС… РѕС‚РІРµС‚Р°С… "+re.toString());
         }
 
 

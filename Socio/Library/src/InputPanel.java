@@ -1,7 +1,7 @@
 /*
  * InputPanel.java
  *
- * Created on 29 Март 2004 г., 20:34
+ * Created on 29 РњР°СЂС‚ 2004 Рі., 20:34
  */
 
 import javax.swing.*;
@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author  Иван
+ * @author  РРІР°РЅ
  */
 public class InputPanel extends javax.swing.JPanel  implements InputPanelInterface {
     static int alter     = 1;
@@ -60,7 +60,7 @@ public ArrayList ParseString(String Str)  {
             ResultArray.add(s[i]);
             i++;
         } catch (Exception ex) {
-            System.out.println("Прошло игнорированное текстовое сообщение"+ex);
+            System.out.println("РџСЂРѕС€Р»Рѕ РёРіРЅРѕСЂРёСЂРѕРІР°РЅРЅРѕРµ С‚РµРєСЃС‚РѕРІРѕРµ СЃРѕРѕР±С‰РµРЅРёРµ"+ex);
             i++;
         }
     }
@@ -97,7 +97,7 @@ public ArrayList ParseString(String Str)  {
 
     public InputPanel(RInterface aRDMI, RInterface aParent, Library aLib) throws RemoteException {
 
-        //Звуковой сигнал
+        //Р—РІСѓРєРѕРІРѕР№ СЃРёРіРЅР°Р»
         //java.awt.Toolkit.getDefaultToolkit().beep();
 
 
@@ -119,11 +119,11 @@ public ArrayList ParseString(String Str)  {
             }
         });
         
-        //Обработка Контрол Ентер
+        //РћР±СЂР°Р±РѕС‚РєР° РљРѕРЅС‚СЂРѕР» Р•РЅС‚РµСЂ
         Action doNothing = new AbstractAction() {
             public void actionPerformed(ActionEvent e) {
                 InputFieldActionPerformed(true);
-                System.out.println("Кто Контрол ентер нажал? ");
+                System.out.println("РљС‚Рѕ РљРѕРЅС‚СЂРѕР» РµРЅС‚РµСЂ РЅР°Р¶Р°Р»? ");
             }
         };
         
@@ -151,7 +151,7 @@ public ArrayList ParseString(String Str)  {
                             initFocusValue();
                         }    
                     } catch (Exception ex) {
-                        System.err.println("Какая то ошибка "+ex);
+                        System.err.println("РљР°РєР°СЏ С‚Рѕ РѕС€РёР±РєР° "+ex);
                     }    
                 }
              }
@@ -167,7 +167,7 @@ public ArrayList ParseString(String Str)  {
             initFocusValue();
             CurrentRecOut();
         } catch (Exception ex) {
-            System.out.println("Ошибка в принципе "+ex);
+            System.out.println("РћС€РёР±РєР° РІ РїСЂРёРЅС†РёРїРµ "+ex);
         }
     }
 
@@ -178,14 +178,14 @@ public ArrayList ParseString(String Str)  {
             initFocusValue();
             jTable1.updateUI();
         } catch (Exception ex) {
-            System.out.println("Ошибка в jButton3ActionPerformed "+ex.toString());
+            System.out.println("РћС€РёР±РєР° РІ jButton3ActionPerformed "+ex.toString());
         }
     }
 
     public void CurrentRecOut()  {
         try { 
             int i=TM.getCurrRow()+1;
-            //jTextField2.setText(i+" из "+TM.Size());
+            //jTextField2.setText(i+" РёР· "+TM.Size());
             //Lib.
             Lib.CurrentRecOut(i,TM.Size());
         } catch (Exception ex) {
@@ -199,7 +199,7 @@ public ArrayList ParseString(String Str)  {
             DictionaryInterface DI=Server.getMainDictionary();
             Integer I=RQI.getID();
             QI=DI.getQuestion(I);
-            System.out.println("Вопрос "+QI.getName());
+            System.out.println("Р’РѕРїСЂРѕСЃ "+QI.getName());
             int i=0;
             String Str="";
             try {
@@ -279,7 +279,7 @@ public ArrayList ParseString(String Str)  {
         setPreferredSize(new java.awt.Dimension(550, 300));
         setLayout(new java.awt.GridBagLayout());
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Ввод данных"));
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Р’РІРѕРґ РґР°РЅРЅС‹С…"));
         jPanel1.setLayout(new java.awt.BorderLayout());
 
         jScrollPane1.setViewportView(jTable1);
@@ -305,9 +305,9 @@ public ArrayList ParseString(String Str)  {
             Integer i = new Integer(code);
             Integer AnswerID=QI.getByPos(i-1).getID();
             AnswerInterface AI=Server.getMainQuestion().getAnswer(AnswerID);
-            if (!(AI.getTextable()|(S.length==1))) ResultCode=3; //Недопустимые текстовые данные 
+            if (!(AI.getTextable()|(S.length==1))) ResultCode=3; //РќРµРґРѕРїСѓСЃС‚РёРјС‹Рµ С‚РµРєСЃС‚РѕРІС‹Рµ РґР°РЅРЅС‹Рµ 
         } catch (Exception e2) {
-            ResultCode=2; // Несуществую
+            ResultCode=2; // РќРµСЃСѓС‰РµСЃС‚РІСѓСЋ
         }
         return ResultCode;
     }
@@ -328,7 +328,7 @@ public ArrayList ParseString(String Str)  {
             } 
             initFocusValue();        
         } catch (Exception e2) {
-            System.out.println("Ошибка в NextStep "+e2);
+            System.out.println("РћС€РёР±РєР° РІ NextStep "+e2);
         }    
     }
     
@@ -346,8 +346,8 @@ public ArrayList ParseString(String Str)  {
                         int h=new Integer(s[0]);
                         ResultCode=CheckPair(s, QI);
                     } catch (Exception e2) {
-                        System.out.println("Не число"+e2);
-                        ResultCode=1; //нет значения кода ответа
+                        System.out.println("РќРµ С‡РёСЃР»Рѕ"+e2);
+                        ResultCode=1; //РЅРµС‚ Р·РЅР°С‡РµРЅРёСЏ РєРѕРґР° РѕС‚РІРµС‚Р°
                     }
                 } else if (QI.getQuestionType()==nonalter) {
                     ArrayList Current = new ArrayList();
@@ -383,33 +383,33 @@ public ArrayList ParseString(String Str)  {
                 }       
                 case 1: {   
                     //NextStep(Str);
-                    JOptionPane.showMessageDialog(this, "Нет значения кода ответа", "Ошибка ввода", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(this, "РќРµС‚ Р·РЅР°С‡РµРЅРёСЏ РєРѕРґР° РѕС‚РІРµС‚Р°", "РћС€РёР±РєР° РІРІРѕРґР°", JOptionPane.ERROR_MESSAGE);
                     break;
                 }                       
                 case 2: {   
                     //NextStep(Str);
-                    JOptionPane.showMessageDialog(this, "Введен код несуществующего ответа", "Ошибка ввода", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(this, "Р’РІРµРґРµРЅ РєРѕРґ РЅРµСЃСѓС‰РµСЃС‚РІСѓСЋС‰РµРіРѕ РѕС‚РІРµС‚Р°", "РћС€РёР±РєР° РІРІРѕРґР°", JOptionPane.ERROR_MESSAGE);
                     break;
                 }                                       
                 case 3: {   
                     //NextStep(Str);
-                    JOptionPane.showMessageDialog(this, "Введено недопустимое текстовое значение", "Ошибка ввода", JOptionPane.ERROR_MESSAGE);                    
+                    JOptionPane.showMessageDialog(this, "Р’РІРµРґРµРЅРѕ РЅРµРґРѕРїСѓСЃС‚РёРјРѕРµ С‚РµРєСЃС‚РѕРІРѕРµ Р·РЅР°С‡РµРЅРёРµ", "РћС€РёР±РєР° РІРІРѕРґР°", JOptionPane.ERROR_MESSAGE);                    
                     break;
                 }                                       
                 case 5: {   
                     //NextStep(Str);
-                    JOptionPane.showMessageDialog(this, "Превышено допустимое число ответов", "Ошибка ввода", JOptionPane.ERROR_MESSAGE);                    
+                    JOptionPane.showMessageDialog(this, "РџСЂРµРІС‹С€РµРЅРѕ РґРѕРїСѓСЃС‚РёРјРѕРµ С‡РёСЃР»Рѕ РѕС‚РІРµС‚РѕРІ", "РћС€РёР±РєР° РІРІРѕРґР°", JOptionPane.ERROR_MESSAGE);                    
                     break;
                 }     
                 case 6: {   
                     //NextStep(Str);
-                    JOptionPane.showMessageDialog(this, "Ответ содержит повторяющиеся значения", "Ошибка ввода", JOptionPane.ERROR_MESSAGE);                    
+                    JOptionPane.showMessageDialog(this, "РћС‚РІРµС‚ СЃРѕРґРµСЂР¶РёС‚ РїРѕРІС‚РѕСЂСЏСЋС‰РёРµСЃСЏ Р·РЅР°С‡РµРЅРёСЏ", "РћС€РёР±РєР° РІРІРѕРґР°", JOptionPane.ERROR_MESSAGE);                    
                     break;
                 }                         
             } 
             ChangeFactor=table;
         } catch (Exception ex) {
-            System.out.println("Ошибка в обработке InputField "+ex);
+            System.out.println("РћС€РёР±РєР° РІ РѕР±СЂР°Р±РѕС‚РєРµ InputField "+ex);
             ChangeFactor=1;
             initFocusValue();
         }
@@ -429,8 +429,8 @@ public ArrayList ParseString(String Str)  {
                         int h=new Integer(s[0]);
                         ResultCode=CheckPair(s, QI);
                     } catch (Exception e2) {
-                        System.out.println("Не число"+e2);
-                        ResultCode=1; //нет значения кода ответа
+                        System.out.println("РќРµ С‡РёСЃР»Рѕ"+e2);
+                        ResultCode=1; //РЅРµС‚ Р·РЅР°С‡РµРЅРёСЏ РєРѕРґР° РѕС‚РІРµС‚Р°
                     }
                 } else if (QI.getQuestionType()==nonalter) {
                     ArrayList Current = new ArrayList();
@@ -464,33 +464,33 @@ public ArrayList ParseString(String Str)  {
                 }       
                 case 1: {   
                     //NextStep(Str);
-                    JOptionPane.showMessageDialog(this, "Нет значения кода ответа", "Ошибка ввода", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(this, "РќРµС‚ Р·РЅР°С‡РµРЅРёСЏ РєРѕРґР° РѕС‚РІРµС‚Р°", "РћС€РёР±РєР° РІРІРѕРґР°", JOptionPane.ERROR_MESSAGE);
                     break;
                 }                       
                 case 2: {   
                     //NextStep(Str);
-                    JOptionPane.showMessageDialog(this, "Введен код несуществующего ответа", "Ошибка ввода", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(this, "Р’РІРµРґРµРЅ РєРѕРґ РЅРµСЃСѓС‰РµСЃС‚РІСѓСЋС‰РµРіРѕ РѕС‚РІРµС‚Р°", "РћС€РёР±РєР° РІРІРѕРґР°", JOptionPane.ERROR_MESSAGE);
                     break;
                 }                                       
                 case 3: {   
                     //NextStep(Str);
-                    JOptionPane.showMessageDialog(this, "Введено недопустимое текстовое значение", "Ошибка ввода", JOptionPane.ERROR_MESSAGE);                    
+                    JOptionPane.showMessageDialog(this, "Р’РІРµРґРµРЅРѕ РЅРµРґРѕРїСѓСЃС‚РёРјРѕРµ С‚РµРєСЃС‚РѕРІРѕРµ Р·РЅР°С‡РµРЅРёРµ", "РћС€РёР±РєР° РІРІРѕРґР°", JOptionPane.ERROR_MESSAGE);                    
                     break;
                 }                                       
                 case 5: {   
                     //NextStep(Str);
-                    JOptionPane.showMessageDialog(this, "Превышено допустимое число ответов", "Ошибка ввода", JOptionPane.ERROR_MESSAGE);                    
+                    JOptionPane.showMessageDialog(this, "РџСЂРµРІС‹С€РµРЅРѕ РґРѕРїСѓСЃС‚РёРјРѕРµ С‡РёСЃР»Рѕ РѕС‚РІРµС‚РѕРІ", "РћС€РёР±РєР° РІРІРѕРґР°", JOptionPane.ERROR_MESSAGE);                    
                     break;
                 }     
                 case 6: {   
                     //NextStep(Str);
-                    JOptionPane.showMessageDialog(this, "Ответ содержит повторяющиеся значения", "Ошибка ввода", JOptionPane.ERROR_MESSAGE);                    
+                    JOptionPane.showMessageDialog(this, "РћС‚РІРµС‚ СЃРѕРґРµСЂР¶РёС‚ РїРѕРІС‚РѕСЂСЏСЋС‰РёРµСЃСЏ Р·РЅР°С‡РµРЅРёСЏ", "РћС€РёР±РєР° РІРІРѕРґР°", JOptionPane.ERROR_MESSAGE);                    
                     break;
                 }                         
             } 
             ChangeFactor=table;
         } catch (Exception ex) {
-            System.out.println("Ошибка в обработке InputField "+ex);
+            System.out.println("РћС€РёР±РєР° РІ РѕР±СЂР°Р±РѕС‚РєРµ InputField "+ex);
             ChangeFactor=1;
             initFocusValue();
         }
@@ -513,7 +513,7 @@ public ArrayList ParseString(String Str)  {
             initFocusValue();
             jTable1.updateUI();
         } catch (Exception ex) {
-            System.out.println("Ошибка в jButton3ActionPerformed");
+            System.out.println("РћС€РёР±РєР° РІ jButton3ActionPerformed");
         }
     }
 
@@ -525,7 +525,7 @@ public ArrayList ParseString(String Str)  {
             initFocusValue();
             jTable1.updateUI();
         } catch (Exception ex) {
-            System.out.println("Ошибка в jButton3ActionPerformed");
+            System.out.println("РћС€РёР±РєР° РІ jButton3ActionPerformed");
         }
     }
 
@@ -536,7 +536,7 @@ public ArrayList ParseString(String Str)  {
             initFocusValue();
             jTable1.updateUI();
         } catch (Exception ex) {
-            System.out.println("Ошибка в jButton3ActionPerformed");
+            System.out.println("РћС€РёР±РєР° РІ jButton3ActionPerformed");
         }
     }
 
@@ -548,7 +548,7 @@ public ArrayList ParseString(String Str)  {
             initFocusValue();
             jTable1.updateUI();
         } catch (Exception ex) {
-            System.out.println("Ошибка в jButton3ActionPerformed");
+            System.out.println("РћС€РёР±РєР° РІ jButton3ActionPerformed");
         }
     }
 
@@ -558,7 +558,7 @@ public ArrayList ParseString(String Str)  {
             NextRecord();
             CurrentRecOut();
         } catch (Exception ex) {
-            System.out.println("Ошибка в jButton3ActionPerformed");
+            System.out.println("РћС€РёР±РєР° РІ jButton3ActionPerformed");
         }
     }
 
@@ -567,7 +567,7 @@ public ArrayList ParseString(String Str)  {
            NewRecord();
            CurrentRecOut();
         } catch (Exception ex) {
-            System.out.println("Ошибка в jButton3ActionPerformed"+ex);
+            System.out.println("РћС€РёР±РєР° РІ jButton3ActionPerformed"+ex);
         }
     }
 
@@ -590,7 +590,7 @@ public ArrayList ParseString(String Str)  {
         }
             
         } catch (Exception ex) {
-            System.out.println("Ошибка в jButton3ActionPerformed");
+            System.out.println("РћС€РёР±РєР° РІ jButton3ActionPerformed");
         }
     }        
     
@@ -601,17 +601,17 @@ public ArrayList ParseString(String Str)  {
             initFocusValue();
             jTable1.updateUI();
         } catch (Exception ex) {
-            System.out.println("Ошибка в jButton3ActionPerformed"+ex);
+            System.out.println("РћС€РёР±РєР° РІ jButton3ActionPerformed"+ex);
         }
     }
         
     public boolean setCurrent(int S) throws RemoteException {
-        System.out.println("Текущий номер записи "+S);
+        System.out.println("РўРµРєСѓС‰РёР№ РЅРѕРјРµСЂ Р·Р°РїРёСЃРё "+S);
         return true;
     };
     
     public boolean setSize(int S) throws RemoteException {
-        System.out.println("Всего записей "+S);
+        System.out.println("Р’СЃРµРіРѕ Р·Р°РїРёСЃРµР№ "+S);
         return true;
     };
     

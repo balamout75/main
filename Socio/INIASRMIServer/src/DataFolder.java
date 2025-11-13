@@ -18,12 +18,12 @@ import java.io.Serializable;
 /*
  * DataModul.java
  *
- * Created on 13 Март 2004 г., 18:41
+ * Created on 13 РњР°СЂС‚ 2004 Рі., 18:41
  */
 
 /**
  *
- * @author  Иван
+ * @author  РРІР°РЅ
  */
 public class DataFolder extends UnicastRemoteObject implements DataModuleInterface, Serializable {
     public String  Name="";
@@ -130,14 +130,14 @@ public class DataFolder extends UnicastRemoteObject implements DataModuleInterfa
             Server=aServer;
             ParentID=aParentID;
             DataCollection = new ArrayList();
-            Name = "Блоки данных";
-            System.out.println( "Новый блок/группа" );
+            Name = "Р‘Р»РѕРєРё РґР°РЅРЅС‹С…";
+            System.out.println( "РќРѕРІС‹Р№ Р±Р»РѕРє/РіСЂСѓРїРїР°" );
             TableConnectors = new ArrayList();
             this.ID=ID;
             //if (Flag) Server.StoreDMI(this, 0);        
             //if (Flag) Server.StoreDMI(this, 4);  
         } catch (Exception e) {
-                System.out.println("Ошибка создания DataBlock" +e.getMessage());            
+                System.out.println("РћС€РёР±РєР° СЃРѕР·РґР°РЅРёСЏ DataBlock" +e.getMessage());            
         }            
             //MakeTable();
     }    
@@ -208,7 +208,7 @@ public class DataFolder extends UnicastRemoteObject implements DataModuleInterfa
                 
             } else Str="";
         } catch (Exception e) {
-            System.out.println("Datamodule - Ошибка создания имени файла данных" + 	e.getMessage());            
+            System.out.println("Datamodule - РћС€РёР±РєР° СЃРѕР·РґР°РЅРёСЏ РёРјРµРЅРё С„Р°Р№Р»Р° РґР°РЅРЅС‹С…" + 	e.getMessage());            
             Str="";
 	}    
         return Str;
@@ -277,7 +277,7 @@ public class DataFolder extends UnicastRemoteObject implements DataModuleInterfa
                         Server.StoreDMI(this.ID, 2);
                         Server.StoreDMI(Q.getID(), 13); 
                     }
-                    System.out.println("Удалили успешно 1");
+                    System.out.println("РЈРґР°Р»РёР»Рё СѓСЃРїРµС€РЅРѕ 1");
                     Flag=false;
                     --index;
                     cleanModulePos();
@@ -303,7 +303,7 @@ public class DataFolder extends UnicastRemoteObject implements DataModuleInterfa
                         Server.StoreDMI(this.ID, 2);
                         Server.StoreDMI(Q.getID(), 13); 
                     }
-                    System.out.println("Удалили успешно 2");
+                    System.out.println("РЈРґР°Р»РёР»Рё СѓСЃРїРµС€РЅРѕ 2");
                     cleanModulePos();
                     --index;
                 }
@@ -327,7 +327,7 @@ public class DataFolder extends UnicastRemoteObject implements DataModuleInterfa
                 }
             }
         } catch( Exception e){
-            System.out.println("Ошибка "+e.toString());
+            System.out.println("РћС€РёР±РєР° "+e.toString());
     	}
         return Res;
     }
@@ -359,7 +359,7 @@ public class DataFolder extends UnicastRemoteObject implements DataModuleInterfa
     
     
     public Integer getDictionary() throws RemoteException {
-        System.out.println("Что то ведь делается");	
+        System.out.println("Р§С‚Рѕ С‚Рѕ РІРµРґСЊ РґРµР»Р°РµС‚СЃСЏ");	
         TableName = "V"+Server.MakeTable();        
         return DictionaryID;
         
@@ -482,7 +482,7 @@ public class DataFolder extends UnicastRemoteObject implements DataModuleInterfa
             query=query+Key+")";
         } catch (Exception E) {
             System.out.println(query);
-            System.out.println("Ошибка создания Скрипта1 создания новой записи "+E);	
+            System.out.println("РћС€РёР±РєР° СЃРѕР·РґР°РЅРёСЏ РЎРєСЂРёРїС‚Р°1 СЃРѕР·РґР°РЅРёСЏ РЅРѕРІРѕР№ Р·Р°РїРёСЃРё "+E);	
         }
         
         return query;

@@ -44,9 +44,9 @@ public class JDBCAdapter extends AbstractTableModel {
             values=Controller.FirstRow() ;
         }
         catch (Exception ex) {
-            System.err.println("таблица пуста "+ex);
+            System.err.println("С‚Р°Р±Р»РёС†Р° РїСѓСЃС‚Р° "+ex);
             if (values==null) {values = new Vector();
-                values.add(new String ("пусто"));
+                values.add(new String ("РїСѓСЃС‚Рѕ"));
             }
         }
     }
@@ -100,12 +100,12 @@ public class JDBCAdapter extends AbstractTableModel {
         try {
             switch(column) {
             case 0: {Value="N"; break;}
-            case 1: {Value="Вопрос"; break;}
-            case 2: {Value="Тип"; break;}
-            case 3: {Value="Ответ"; break;}
+            case 1: {Value="Р’РѕРїСЂРѕСЃ"; break;}
+            case 2: {Value="РўРёРї"; break;}
+            case 3: {Value="РћС‚РІРµС‚"; break;}
             }
         } catch (Exception ex) {
-            System.err.println("Что то глюк в колумнНаме");
+            System.err.println("Р§С‚Рѕ С‚Рѕ РіР»СЋРє РІ РєРѕР»СѓРјРЅРќР°РјРµ");
         }
         return Value;
     } 
@@ -121,7 +121,7 @@ public class JDBCAdapter extends AbstractTableModel {
         try {
             Count = Dictionary.getSize();
         } catch (Exception ex){
-            System.err.println("Ошибка в поиске колонок ");    
+            System.err.println("РћС€РёР±РєР° РІ РїРѕРёСЃРєРµ РєРѕР»РѕРЅРѕРє ");    
         }
         return Count;
     }
@@ -144,9 +144,9 @@ public class JDBCAdapter extends AbstractTableModel {
                     }
             case 2: {
                       switch(QI.getQuestionType()) {
-                        case 1: {Value=new String("Текст А"); break;}
-                        case 2: {Value=new String("Текст Н"); break;}
-                        case 3: {Value=new String("Другое"); break;}
+                        case 1: {Value=new String("РўРµРєСЃС‚ Рђ"); break;}
+                        case 2: {Value=new String("РўРµРєСЃС‚ Рќ"); break;}
+                        case 3: {Value=new String("Р”СЂСѓРіРѕРµ"); break;}
                       }
                       break;
                     }
@@ -158,13 +158,13 @@ public class JDBCAdapter extends AbstractTableModel {
                             Value=Str;
                         } else Value="";
                       } catch (Exception ex) {
-                        System.err.println("Ошибка в отбражении значения переменной "+ex.toString());
+                        System.err.println("РћС€РёР±РєР° РІ РѕС‚Р±СЂР°Р¶РµРЅРёРё Р·РЅР°С‡РµРЅРёСЏ РїРµСЂРµРјРµРЅРЅРѕР№ "+ex.toString());
                       }
                       break;
                     }
             }
         } catch (Exception ex) {
-            System.err.println("Ошибка в отбражении значений ячеек 2 "+ex.toString());
+            System.err.println("РћС€РёР±РєР° РІ РѕС‚Р±СЂР°Р¶РµРЅРёРё Р·РЅР°С‡РµРЅРёР№ СЏС‡РµРµРє 2 "+ex.toString());
             Value="";
         }
         return Value;
@@ -172,7 +172,7 @@ public class JDBCAdapter extends AbstractTableModel {
     
     public boolean Reload() throws RemoteException {
         values = Controller.getRow(1);
-        System.err.println("Перечитываем");
+        System.err.println("РџРµСЂРµС‡РёС‚С‹РІР°РµРј");
         return true;
     }
     
@@ -180,7 +180,7 @@ public class JDBCAdapter extends AbstractTableModel {
         try {
             Controller.updateTable(value.toString(),row+1,fixMode);
             values.setElementAt(value,row+1);
-            System.err.println("Печатаем что то в таблицу");
+            System.err.println("РџРµС‡Р°С‚Р°РµРј С‡С‚Рѕ С‚Рѕ РІ С‚Р°Р±Р»РёС†Сѓ");
         } catch (Exception e){
             System.err.println(e);
         }

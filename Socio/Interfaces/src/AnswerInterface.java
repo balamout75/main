@@ -4,7 +4,7 @@ import java.rmi.RemoteException;
 /*
  * AnswerInterface.java
  *
- * Created on 29 Февраль 2004 г., 20:06
+ * Created on 29 Р¤РµРІСЂР°Р»СЊ 2004 Рі., 20:06
  */
 
 /**

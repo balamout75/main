@@ -9,7 +9,7 @@ import javax.swing.tree.*;
 
 /**
  *
- * @author  Иван
+ * @author  РРІР°РЅ
  */
 //public class QuestionEditorPanel extends javax.swing.JPanel implements DNDCompInterface{
 public class EditorTreePanel extends javax.swing.JPanel {
@@ -52,10 +52,10 @@ public class EditorTreePanel extends javax.swing.JPanel {
             initComponents();
             Lib = aLib;
             Server = Lib.Server;
-            DefaultMutableTreeNode top = new DefaultMutableTreeNode(new String("Свойства блока данных"));
-            DefaultTreeModel TreeMоdel=new DefaultTreeModel(top);
+            DefaultMutableTreeNode top = new DefaultMutableTreeNode(new String("РЎРІРѕР№СЃС‚РІР° Р±Р»РѕРєР° РґР°РЅРЅС‹С…"));
+            DefaultTreeModel TreeMРѕdel=new DefaultTreeModel(top);
             jTree1.getSelectionModel().setSelectionMode(TreeSelectionModel.SINGLE_TREE_SELECTION);
-            jTree1.setModel(TreeMоdel);
+            jTree1.setModel(TreeMРѕdel);
         } catch( Exception e )	{
             System.out.println( e.toString() );
         }
@@ -77,7 +77,7 @@ public class EditorTreePanel extends javax.swing.JPanel {
         jScrollPane4 = new javax.swing.JScrollPane();
         jTree1 = new javax.swing.JTree();
 
-        setBorder(javax.swing.BorderFactory.createTitledBorder("Детализация данных"));
+        setBorder(javax.swing.BorderFactory.createTitledBorder("Р”РµС‚Р°Р»РёР·Р°С†РёСЏ РґР°РЅРЅС‹С…"));
         setLayout(new java.awt.GridBagLayout());
 
         DictionaryPanel.setPreferredSize(new java.awt.Dimension(0, 0));
@@ -117,7 +117,7 @@ public class EditorTreePanel extends javax.swing.JPanel {
 
    
     public void setSelectionRow(int i){
-        System.out.println("Что то выделяем");
+        System.out.println("Р§С‚Рѕ С‚Рѕ РІС‹РґРµР»СЏРµРј");
         int [] rows = {i};
         setSelectionRows(rows);
     }
@@ -125,7 +125,7 @@ public class EditorTreePanel extends javax.swing.JPanel {
     public void setSelectionRows(int [] rows){
         try {
             JTreeFocus=false;
-            System.out.println("Что то выделяем )) ");
+            System.out.println("Р§С‚Рѕ С‚Рѕ РІС‹РґРµР»СЏРµРј )) ");
             int                  numRows = rows.length;
             for(int counter = 0; counter < numRows; counter++) {
                     if (rows[counter]!=0) {
@@ -164,7 +164,7 @@ public class EditorTreePanel extends javax.swing.JPanel {
   
     private void makeAnswerBranches(DefaultMutableTreeNode top,RInterface RQI) {
         try {
-            System.out.println("Строим дерево в ETP ");
+            System.out.println("РЎС‚СЂРѕРёРј РґРµСЂРµРІРѕ РІ ETP ");
             //QuestionInterface QI=Server.getMainDictionary().getQuestion(RQI.getID());
             CheckBoxAnswerMark AM;
             //CheckBoxNode CBN;
@@ -173,13 +173,13 @@ public class EditorTreePanel extends javax.swing.JPanel {
                 AM=new CheckBoxAnswerMark(RAI,Server.getMainQuestion().getAnswer(RAI.getID()),RQI);
                 //CBN=new CheckBoxNode(Server.getMainQuestion().getAnswer(RAI.getID()).getName(),false);
                 DefaultMutableTreeNode root=new DefaultMutableTreeNode(AM);
-                //javax.swing.JCheckBox JCB = new javax.swing.JCheckBox("жжжж");
+                //javax.swing.JCheckBox JCB = new javax.swing.JCheckBox("Р¶Р¶Р¶Р¶");
                 //DefaultMutableTreeNode root2=new DefaultMutableTreeNode(JCB);
                 top.add(root);
                 //top.add(root2);
             }
         } catch(Exception re ) {
-            System.out.println("Фигня какая то в словарях и их ответах "+re.toString());	   
+            System.out.println("Р¤РёРіРЅСЏ РєР°РєР°СЏ С‚Рѕ РІ СЃР»РѕРІР°СЂСЏС… Рё РёС… РѕС‚РІРµС‚Р°С… "+re.toString());	   
         }
     }
 
@@ -199,7 +199,7 @@ public class EditorTreePanel extends javax.swing.JPanel {
                 } if (checkBoxNode.isSelected()) checkBoxNode.setSelected(false);
             }
         } catch (Exception ex) {
-                System.out.println("Ошибка в ETP clearSelection"+ex.toString());
+                System.out.println("РћС€РёР±РєР° РІ ETP clearSelection"+ex.toString());
         }
     }
 
@@ -221,7 +221,7 @@ public class EditorTreePanel extends javax.swing.JPanel {
             jTree1.updateUI();
             Lib.CurrentInputPanel.setValue(ValStr);
         } catch (Exception ex) {
-            System.out.println("Ошибка в ETP getCheckedNodes"+ex.toString());
+            System.out.println("РћС€РёР±РєР° РІ ETP getCheckedNodes"+ex.toString());
         }
         //return Res;
     }
@@ -233,9 +233,9 @@ public class EditorTreePanel extends javax.swing.JPanel {
                 //if (QI.getType()==alter) clearSelection(checkBoxNode);
                 getCheckedNodes();
             } catch (Exception ex) {
-                System.out.println("Ошибка в jList1"+ex.toString());
+                System.out.println("РћС€РёР±РєР° РІ jList1"+ex.toString());
             }
-            System.out.println("Отметили что то");
+            System.out.println("РћС‚РјРµС‚РёР»Рё С‡С‚Рѕ С‚Рѕ");
         }
     }
 
@@ -246,9 +246,9 @@ public class EditorTreePanel extends javax.swing.JPanel {
             QI=Server.getMainDictionary().getQuestion(RQI.getID());
             DefaultMutableTreeNode top = new DefaultMutableTreeNode(QM);
             makeAnswerBranches(top,RQI);
-            DefaultTreeModel TreeMоdel=new DefaultTreeModel(top);
+            DefaultTreeModel TreeMРѕdel=new DefaultTreeModel(top);
             jTree1.getSelectionModel().setSelectionMode(TreeSelectionModel.SINGLE_TREE_SELECTION);
-            jTree1.setModel(TreeMоdel);
+            jTree1.setModel(TreeMРѕdel);
             jTree1.setDragEnabled(true);
             jTree1.setEditable(true);
             jTree1.setTransferHandler(new TreeTransferHandler());
@@ -268,7 +268,7 @@ public class EditorTreePanel extends javax.swing.JPanel {
             
         } catch(Exception re ) {
             
-            System.out.println("Фигня какая ETP "+re.toString());
+            System.out.println("Р¤РёРіРЅСЏ РєР°РєР°СЏ ETP "+re.toString());
         }
     }  
     

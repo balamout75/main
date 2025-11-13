@@ -49,7 +49,7 @@ public class AnswerMark implements DQAMarkInterface, Comparable {
     public String toString() {
         String Res="";
         try {
-            if (AI!=null) Res=(LocalPos+1)+"."+AI.getName(); else Res= LocalPos+".   < Нет ответа >";
+            if (AI!=null) Res=(LocalPos+1)+"."+AI.getName(); else Res= LocalPos+".   < РќРµС‚ РѕС‚РІРµС‚Р° >";
         } catch( Exception re ) {
             System.out.println(re.toString());	   
         }     
@@ -60,7 +60,7 @@ public class AnswerMark implements DQAMarkInterface, Comparable {
     public String getName() {
         String Res="";
         try {
-            if (AI!=null) Res=AI.getName(); else Res="Нет ответа";
+            if (AI!=null) Res=AI.getName(); else Res="РќРµС‚ РѕС‚РІРµС‚Р°";
             //Res=AI.getName();
         } catch( Exception re ) {
             System.out.println(re.toString());

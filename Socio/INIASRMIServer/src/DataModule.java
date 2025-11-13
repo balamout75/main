@@ -18,12 +18,12 @@ import java.sql.*;
 /*
  * DataModul.java
  *
- * Created on 13 Март 2004 г., 18:41
+ * Created on 13 РњР°СЂС‚ 2004 Рі., 18:41
  */
 
 /**
  *
- * @author  Иван
+ * @author  РРІР°РЅ
  */
 public class DataModule extends UnicastRemoteObject implements DataModuleInterface, Serializable {
     private String Name="";
@@ -118,15 +118,15 @@ public class DataModule extends UnicastRemoteObject implements DataModuleInterfa
             Server=aServer;
             ParentID=aParentID;
             DataCollection = new ArrayList();
-            Name = "Блоки данных";
-            System.out.println( "Новый блок/группа" );
+            Name = "Р‘Р»РѕРєРё РґР°РЅРЅС‹С…";
+            System.out.println( "РќРѕРІС‹Р№ Р±Р»РѕРє/РіСЂСѓРїРїР°" );
             TableConnectors = new ArrayList();
             this.ID=ID;
             //if (Flag) Server.StoreDMI(this, 0);        
             //if (Flag) Server.StoreDMI(this, 4);  
             //if (Flag) Server.DMIStore(ID, 0);        
         } catch (Exception e) {
-                System.out.println("Ошибка создания DataBlock" +e.getMessage());            
+                System.out.println("РћС€РёР±РєР° СЃРѕР·РґР°РЅРёСЏ DataBlock" +e.getMessage());            
         }            
             //MakeTable();
     }    
@@ -187,7 +187,7 @@ public class DataModule extends UnicastRemoteObject implements DataModuleInterfa
                         Server.StoreDMI(this.ID, 2);
                         Server.StoreDMI(Q.getID(), 13); 
                     }
-                    System.out.println("Удалили успешно 1");
+                    System.out.println("РЈРґР°Р»РёР»Рё СѓСЃРїРµС€РЅРѕ 1");
                     Flag=false;
                     --index;
                     cleanModulePos();
@@ -213,7 +213,7 @@ public class DataModule extends UnicastRemoteObject implements DataModuleInterfa
                         Server.StoreDMI(Q.getID(), 13); 
                     }
                     if (Fl) Server.StoreDMI(Q.getID(), 13); 
-                    System.out.println("Удалили успешно 2");
+                    System.out.println("РЈРґР°Р»РёР»Рё СѓСЃРїРµС€РЅРѕ 2");
                     cleanModulePos();
                     --index;
                 }
@@ -238,7 +238,7 @@ public class DataModule extends UnicastRemoteObject implements DataModuleInterfa
                 }
             }
         } catch( Exception e){
-            System.out.println("Ошибка "+e.toString());
+            System.out.println("РћС€РёР±РєР° "+e.toString());
     	}
         return Res;
     } 
@@ -295,17 +295,17 @@ public class DataModule extends UnicastRemoteObject implements DataModuleInterfa
             ++index;
         }
         try {
-            System.out.println("Datamodule - Строка создания таблицы Суммы" + Str);
+            System.out.println("Datamodule - РЎС‚СЂРѕРєР° СЃРѕР·РґР°РЅРёСЏ С‚Р°Р±Р»РёС†С‹ РЎСѓРјРјС‹" + Str);
             Server.executeSQL(Str,null);
             Server.executeSQL("commit",null);
             return Str;
         } catch (Exception e) {
-            System.out.println("Datamodule - Ошибка создания имени файла данных" + 	e.getMessage());
+            System.out.println("Datamodule - РћС€РёР±РєР° СЃРѕР·РґР°РЅРёСЏ РёРјРµРЅРё С„Р°Р№Р»Р° РґР°РЅРЅС‹С…" + 	e.getMessage());
             e.printStackTrace();
             return "";
           }    
-        //ПОлучаем уникальный номер
-        //Соллекция вопросов формирующая DataModel
+        //РџРћР»СѓС‡Р°РµРј СѓРЅРёРєР°Р»СЊРЅС‹Р№ РЅРѕРјРµСЂ
+        //РЎРѕР»Р»РµРєС†РёСЏ РІРѕРїСЂРѕСЃРѕРІ С„РѕСЂРјРёСЂСѓСЋС‰Р°СЏ DataModel
         //return Str;
     }
     
@@ -349,11 +349,11 @@ public class DataModule extends UnicastRemoteObject implements DataModuleInterfa
             }
             return Str;
         } catch (Exception e) {
-            System.out.println("Datamodule - Ошибка создания имени файла данных" + 	e.getMessage());            
+            System.out.println("Datamodule - РћС€РёР±РєР° СЃРѕР·РґР°РЅРёСЏ РёРјРµРЅРё С„Р°Р№Р»Р° РґР°РЅРЅС‹С…" + 	e.getMessage());            
             return "";
 	}
-        //ПОлучаем уникальный номер
-        //Соллекция вопросов формирующая DataModel
+        //РџРћР»СѓС‡Р°РµРј СѓРЅРёРєР°Р»СЊРЅС‹Р№ РЅРѕРјРµСЂ
+        //РЎРѕР»Р»РµРєС†РёСЏ РІРѕРїСЂРѕСЃРѕРІ С„РѕСЂРјРёСЂСѓСЋС‰Р°СЏ DataModel
         //return Str;
     }
     
@@ -373,7 +373,7 @@ public class DataModule extends UnicastRemoteObject implements DataModuleInterfa
                 
             } else Str="";
         } catch (Exception e) {
-            System.out.println("Datamodule - Ошибка создания имени файла данных" + 	e.getMessage());            
+            System.out.println("Datamodule - РћС€РёР±РєР° СЃРѕР·РґР°РЅРёСЏ РёРјРµРЅРё С„Р°Р№Р»Р° РґР°РЅРЅС‹С…" + 	e.getMessage());            
             Str="";
 	}    
         return Str;
@@ -381,8 +381,8 @@ public class DataModule extends UnicastRemoteObject implements DataModuleInterfa
     
     public String makeMesureSQL () throws RemoteException {
         String Str = "Select count(*) from "+TableName;
-        //ПОлучаем уникальный номер
-        //Соллекция вопросов формирующая DataModel
+        //РџРћР»СѓС‡Р°РµРј СѓРЅРёРєР°Р»СЊРЅС‹Р№ РЅРѕРјРµСЂ
+        //РЎРѕР»Р»РµРєС†РёСЏ РІРѕРїСЂРѕСЃРѕРІ С„РѕСЂРјРёСЂСѓСЋС‰Р°СЏ DataModel
         return Str;
     }
 
@@ -427,7 +427,7 @@ public class DataModule extends UnicastRemoteObject implements DataModuleInterfa
           if ((S>-1)&(S!=DictionaryID)) {
             DictionaryID = S;
             //TableName = "V"+Server.MakeTable();
-            System.out.println("Datamodule - правильный SetDictionary DataModule");
+            System.out.println("Datamodule - РїСЂР°РІРёР»СЊРЅС‹Р№ SetDictionary DataModule");
             if (Flag) Server.StoreDMI(ID, 3);        
             //makeCreateSQL();
           };
@@ -436,7 +436,7 @@ public class DataModule extends UnicastRemoteObject implements DataModuleInterfa
     }
     
     public Integer getDictionary() throws RemoteException {
-        System.out.println("Что то ведь делается");	
+        System.out.println("Р§С‚Рѕ С‚Рѕ РІРµРґСЊ РґРµР»Р°РµС‚СЃСЏ");	
         return DictionaryID;
         
     }
@@ -477,7 +477,7 @@ public class DataModule extends UnicastRemoteObject implements DataModuleInterfa
     }
     
     public boolean createTable() throws RemoteException {
-        System.out.println("Datamodule - правильный SetDictionary");	
+        System.out.println("Datamodule - РїСЂР°РІРёР»СЊРЅС‹Р№ SetDictionary");	
         TableName = Server.MakeTable();
         makeCreateSQL();
         Server.StoreDMI(ID, 6);
@@ -545,7 +545,7 @@ public class DataModule extends UnicastRemoteObject implements DataModuleInterfa
             
         } catch (Exception E) {
             System.out.println(query);
-            System.out.println("Ошибка создания Скрипта1 создания новой записи "+E);	
+            System.out.println("РћС€РёР±РєР° СЃРѕР·РґР°РЅРёСЏ РЎРєСЂРёРїС‚Р°1 СЃРѕР·РґР°РЅРёСЏ РЅРѕРІРѕР№ Р·Р°РїРёСЃРё "+E);	
         }
         
         return query;

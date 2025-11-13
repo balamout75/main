@@ -80,7 +80,7 @@ public class DQATreeCellRenderer extends DefaultTreeCellRenderer {
                             }
                     } catch (Exception E) {
                             icon=IconQ1;
-                            System.out.println("Ошибка в назначении иконки 1 "+E);
+                            System.out.println("РћС€РёР±РєР° РІ РЅР°Р·РЅР°С‡РµРЅРёРё РёРєРѕРЅРєРё 1 "+E);
                     }
                     break;
                 }
@@ -88,7 +88,7 @@ public class DQATreeCellRenderer extends DefaultTreeCellRenderer {
               }
         } catch (Exception E) {
             icon=IconQ1;
-            System.out.println("Ошибка в назначении иконки 2 "+E);
+            System.out.println("РћС€РёР±РєР° РІ РЅР°Р·РЅР°С‡РµРЅРёРё РёРєРѕРЅРєРё 2 "+E);
         }
         if (icon!=null) {
             nonLeafRenderer.setOpenIcon(icon);

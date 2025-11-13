@@ -7,7 +7,7 @@ import javax.swing.tree.*;
 
 /**
  *
- * @author  Иван
+ * @author  РРІР°РЅ
  */
 //public class QuestionEditorPanel extends javax.swing.JPanel implements DNDCompInterface{
 public class ConstrainsDataBlock extends javax.swing.JPanel {
@@ -72,7 +72,7 @@ public class ConstrainsDataBlock extends javax.swing.JPanel {
         jScrollPane4 = new javax.swing.JScrollPane();
 
 
-        //setBorder(javax.swing.BorderFactory.createTitledBorder("Детализация данных"));
+        //setBorder(javax.swing.BorderFactory.createTitledBorder("Р”РµС‚Р°Р»РёР·Р°С†РёСЏ РґР°РЅРЅС‹С…"));
         setLayout(new java.awt.GridBagLayout());
 
         DictionaryPanel.setPreferredSize(new java.awt.Dimension(0, 0));
@@ -114,11 +114,11 @@ public class ConstrainsDataBlock extends javax.swing.JPanel {
 
     private void makeAnswerBranches(DefaultMutableTreeNode top) {
         try {
-            top.add(new DefaultMutableTreeNode(new String("ЗНаименование")));
-            top.add(new DefaultMutableTreeNode(new String("Дата начала")));
-            top.add(new DefaultMutableTreeNode(new String("Дата завершения")));
+            top.add(new DefaultMutableTreeNode(new String("Р—РќР°РёРјРµРЅРѕРІР°РЅРёРµ")));
+            top.add(new DefaultMutableTreeNode(new String("Р”Р°С‚Р° РЅР°С‡Р°Р»Р°")));
+            top.add(new DefaultMutableTreeNode(new String("Р”Р°С‚Р° Р·Р°РІРµСЂС€РµРЅРёСЏ")));
         } catch(Exception re ) {
-            System.out.println("Фигня какая то в словарях и их ответах "+re.toString());
+            System.out.println("Р¤РёРіРЅСЏ РєР°РєР°СЏ С‚Рѕ РІ СЃР»РѕРІР°СЂСЏС… Рё РёС… РѕС‚РІРµС‚Р°С… "+re.toString());
         }
     }
 
@@ -127,15 +127,15 @@ public class ConstrainsDataBlock extends javax.swing.JPanel {
     private void makeTree() {
         try {
             jTree1 = new javax.swing.JTree();
-            DefaultMutableTreeNode top = new DefaultMutableTreeNode(new String("Свойства опроса"));
+            DefaultMutableTreeNode top = new DefaultMutableTreeNode(new String("РЎРІРѕР№СЃС‚РІР° РѕРїСЂРѕСЃР°"));
             makeAnswerBranches(top);
-            DefaultTreeModel TreeMоdel=new DefaultTreeModel(top);
+            DefaultTreeModel TreeMРѕdel=new DefaultTreeModel(top);
             jTree1.getSelectionModel().setSelectionMode(TreeSelectionModel.SINGLE_TREE_SELECTION);
-            jTree1.setModel(TreeMоdel);
+            jTree1.setModel(TreeMРѕdel);
             jTree1.setDragEnabled(true);
             jTree1.setEditable(true);
         } catch(Exception re ) {
-            System.out.println("Фигня какая ETP "+re.toString());
+            System.out.println("Р¤РёРіРЅСЏ РєР°РєР°СЏ ETP "+re.toString());
         }
     }
 

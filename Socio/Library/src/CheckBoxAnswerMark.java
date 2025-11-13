@@ -39,7 +39,7 @@ public class CheckBoxAnswerMark  {
         String Res="";
         try {
             //Res=(RAI.getPos()+1)+"."+AI.getName();
-            //System.out.println("Нормальный toString()");
+            //System.out.println("РќРѕСЂРјР°Р»СЊРЅС‹Р№ toString()");
             Res= getClass().getName() + "[" + text + "/" + selected + "]";
         } catch( Exception re ) {
             System.out.println(re.toString());	   

@@ -64,7 +64,7 @@ public class SocioInputListHandler extends StringTransferHandler1 {
                     }    
                 }
             } else{
-                System.out.println("Тип не тот");
+                System.out.println("РўРёРї РЅРµ С‚РѕС‚");
             }
         } catch( Exception re ) {
             System.out.println(re.toString());	   

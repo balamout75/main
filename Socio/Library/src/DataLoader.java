@@ -1,7 +1,7 @@
 /*
  * BlockLoader.java
  *
- * Created on 26 Апрель 2005 г., 10:22
+ * Created on 26 РђРїСЂРµР»СЊ 2005 Рі., 10:22
  */
 //import java.io.InputStreamReader;
 //import java.io.BufferedReader;
@@ -67,7 +67,7 @@ public class DataLoader {
             AnalyseStructure();
             AnalyseData();
         } catch (Exception E) {
-            System.err.println("Ошибка в загрузке циферок "+E);	
+            System.err.println("РћС€РёР±РєР° РІ Р·Р°РіСЂСѓР·РєРµ С†РёС„РµСЂРѕРє "+E);	
         };
         
     }
@@ -85,7 +85,7 @@ public class DataLoader {
                 j++;
             }
         } catch (Exception E) {
-            System.err.println("Ошибка в AnalyseStructure()"+E);	
+            System.err.println("РћС€РёР±РєР° РІ AnalyseStructure()"+E);	
         }   
     }
     
@@ -108,13 +108,13 @@ public class DataLoader {
                     int j=0; 
                     while (j<MultipleStringValues.length) {
                         if (!MultipleStringValues[j].equalsIgnoreCase("{")&&!MultipleStringValues[j].equalsIgnoreCase("}")) 
-                            //тут возможен лексический контроль
+                            //С‚СѓС‚ РІРѕР·РјРѕР¶РµРЅ Р»РµРєСЃРёС‡РµСЃРєРёР№ РєРѕРЅС‚СЂРѕР»СЊ
                             ThisValue=ThisValue+" "+MultipleStringValues[j];
                         j++;
                     }
                     CurrValue=ThisValue.trim();
-                } else { //отработка альтернативной переменной
-                    //тут возможен лексический контроль
+                } else { //РѕС‚СЂР°Р±РѕС‚РєР° Р°Р»СЊС‚РµСЂРЅР°С‚РёРІРЅРѕР№ РїРµСЂРµРјРµРЅРЅРѕР№
+                    //С‚СѓС‚ РІРѕР·РјРѕР¶РµРЅ Р»РµРєСЃРёС‡РµСЃРєРёР№ РєРѕРЅС‚СЂРѕР»СЊ
                 }
                 QuestNames.add(QuestName);
                 Values.add("'"+CurrValue+"'");
@@ -131,10 +131,10 @@ public class DataLoader {
             Names=Names+"Row_id";
             Value=Value+Server.getKey().toString();
             String SQLStr = "INSERT INTO "+DMI.getTableName()+" ("+Names+") VALUES ("+Value+")";
-            System.out.println("Запрос   "+SQLStr);	
+            System.out.println("Р—Р°РїСЂРѕСЃ   "+SQLStr);	
             Server.executeSQL(SQLStr, null);
         } catch (Exception E) {
-            System.err.println("Ошибка в загрузке циферок "+E);	
+            System.err.println("РћС€РёР±РєР° РІ Р·Р°РіСЂСѓР·РєРµ С†РёС„РµСЂРѕРє "+E);	
             res = false;
         }
         return res;
@@ -149,14 +149,14 @@ public class DataLoader {
                 int i=0;
                 while (DataStr!=null) {
                     DataStr=DataStr.trim();
-                    System.out.println(i+" cтрока данных "+DataStr);	
+                    System.out.println(i+" cС‚СЂРѕРєР° РґР°РЅРЅС‹С… "+DataStr);	
                     if (DataModule(DataStr)) {
-                        //System.out.println(i+" cтрока данных "+DataStr);	
+                        //System.out.println(i+" cС‚СЂРѕРєР° РґР°РЅРЅС‹С… "+DataStr);	
                     }
                     DataStr = in.readLine();
                 }
                 in.close();
-            } else {System.out.println("Словарь не задан");}  
+            } else {System.out.println("РЎР»РѕРІР°СЂСЊ РЅРµ Р·Р°РґР°РЅ");}  
         } catch( FileNotFoundException e){
             System.out.println("File not found");
     	} catch( Exception e){
@@ -189,21 +189,21 @@ public class DataLoader {
             Server = DMI.getServer();
             AnalyseStructure();
         } catch (Exception E) {
-            System.err.println("Ошибка в загрузке циферок "+E);	
+            System.err.println("РћС€РёР±РєР° РІ Р·Р°РіСЂСѓР·РєРµ С†РёС„РµСЂРѕРє "+E);	
         };
         
     }
    
     private String CreateRec(String Str) {
-        System.out.println("Строка данных "+Str );	
+        System.out.println("РЎС‚СЂРѕРєР° РґР°РЅРЅС‹С… "+Str );	
         String Res="";
         try {
             String StrSQL=DMI.makeInsertSQL();
-            System.err.println("Dataloader - Строка добавления данных"+StrSQL);
+            System.err.println("Dataloader - РЎС‚СЂРѕРєР° РґРѕР±Р°РІР»РµРЅРёСЏ РґР°РЅРЅС‹С…"+StrSQL);
             Res=StrSQL.substring(StrSQL.indexOf("values (")+8,StrSQL.lastIndexOf(")") );
             Server.executeSQL(StrSQL,null);
         } catch (Exception E) {
-            System.err.println("Dataloader - Ошибка в выполнении добавления "+E);	
+            System.err.println("Dataloader - РћС€РёР±РєР° РІ РІС‹РїРѕР»РЅРµРЅРёРё РґРѕР±Р°РІР»РµРЅРёСЏ "+E);	
         }
         return Res;
     }
@@ -226,7 +226,7 @@ public class DataLoader {
             S="";
             while (i<=Str.length()) {
                 if (i>82) 
-                     System.err.println("здесь");
+                     System.err.println("Р·РґРµСЃСЊ");
                 //if ((i<Str.length())&(Str.charAt(i)!=',')) {
                 if ((i>=Str.length())|(Str.charAt(i)==',')) {
                     S=S+Str.charAt(i);
@@ -253,7 +253,7 @@ public class DataLoader {
             DataRow ++;
             res=true;            
         } catch (Exception E) {
-            System.err.println("Ошибка в загрузке циферок "+E);	
+            System.err.println("РћС€РёР±РєР° РІ Р·Р°РіСЂСѓР·РєРµ С†РёС„РµСЂРѕРє "+E);	
             res = false;
         }
         return res;
@@ -268,11 +268,11 @@ public class DataLoader {
                 while (DataStr!=null) {
                     if (DataModule(DataStr)) {
                         DataStr = in.readLine();
-                        System.out.println("Строка данных "+DataStr);	
+                        System.out.println("РЎС‚СЂРѕРєР° РґР°РЅРЅС‹С… "+DataStr);	
                     } else DataStr = in.readLine();
                 }
                 in.close();
-            } else {System.out.println("Словарь не задан");}  
+            } else {System.out.println("РЎР»РѕРІР°СЂСЊ РЅРµ Р·Р°РґР°РЅ");}  
         }   catch( FileNotFoundException e){
             System.out.println("File not found");
     	}   catch( Exception e){

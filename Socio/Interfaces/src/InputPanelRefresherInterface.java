@@ -1,7 +1,7 @@
 /*
  * InputPanelRefresherInterface.java
  *
- * Created on 14 Сентябрь 2004 г., 16:43
+ * Created on 14 РЎРµРЅС‚СЏР±СЂСЊ 2004 Рі., 16:43
  */
 import java.rmi.RemoteException;
 import java.rmi.Remote;

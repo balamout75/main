@@ -61,14 +61,14 @@ public class ListTransferHandler extends StringTransferHandler1 {
                     for (int i = 0; i < TB.GetArray().size(); i++) {
                         QuestMark QM = (QuestMark) TB.GetArray().get(i);
                         QuestionInterface QI= QM.getQI();
-                        //RInterface RQI=null;//æ = 
+                        //RInterface RQI=null;//Ð¶ = 
                         RInterface RQI=list.getDict().addElement(QI.getID(),Lib.getID(),true);
                         QuestListContent QLC=new QuestListContent(RQI,QM.getQI());
                         list.addElement(QLC);
                     }    
                 }
             } else{
-                System.out.println("Òèï íå òîò");
+                System.out.println("Ð¢Ð¸Ð¿ Ð½Ðµ Ñ‚Ð¾Ñ‚");
             }
         } catch( Exception re ) {
             System.out.println(re.toString());	   

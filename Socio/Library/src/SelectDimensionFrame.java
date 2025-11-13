@@ -1,12 +1,12 @@
 /*
  * SelectDimensionFrame.java
  *
- * Created on 9 Декабрь 2005 г., 14:42
+ * Created on 9 Р”РµРєР°Р±СЂСЊ 2005 Рі., 14:42
  */
 import java.rmi.RemoteException;
 /**
  *
- * @author  Иван
+ * @author  РРІР°РЅ
  */
 public class SelectDimensionFrame extends javax.swing.JFrame {
     private SelectDimensionPanel    SDP;
@@ -52,7 +52,7 @@ public class SelectDimensionFrame extends javax.swing.JFrame {
     public static void main(String args[]) {
         try {
             SelectDimensionFrame frame = new SelectDimensionFrame(null,null);
-            frame.setTitle("Такая вот невидаль");
+            frame.setTitle("РўР°РєР°СЏ РІРѕС‚ РЅРµРІРёРґР°Р»СЊ");
             frame.setVisible(true);
         } catch( Exception e )
 	{

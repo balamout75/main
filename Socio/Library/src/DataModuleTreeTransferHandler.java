@@ -24,7 +24,7 @@ public class DataModuleTreeTransferHandler extends StringTransferHandler1 {
     }
 
     protected Transferable exportString(JComponent c) {
-        System.out.println("Что то драгает");
+        System.out.println("Р§С‚Рѕ С‚Рѕ РґСЂР°РіР°РµС‚");
         Transferable transferable=null;
         try {
             source = (JTree)c;
@@ -39,7 +39,7 @@ public class DataModuleTreeTransferHandler extends StringTransferHandler1 {
                     QIArray.add(DM);
                     DataModuleTransferable mytransferable=new DataModuleTransferable(QIArray);
                     mytransferable.setSource(source);
-                    System.err.println("Что то дропает 2 "+DM.toString());
+                    System.err.println("Р§С‚Рѕ С‚Рѕ РґСЂРѕРїР°РµС‚ 2 "+DM.toString());
                     transferable=mytransferable;
                     break;
                 }
@@ -48,7 +48,7 @@ public class DataModuleTreeTransferHandler extends StringTransferHandler1 {
                     QIArray.add(DM);
                     DictionaryMarkTransferable mytransferable=new DictionaryMarkTransferable(QIArray);
                     mytransferable.setSource(source);
-                    System.err.println("Что то дропает 6 "+DM.toString());
+                    System.err.println("Р§С‚Рѕ С‚Рѕ РґСЂРѕРїР°РµС‚ 6 "+DM.toString());
                     transferable=mytransferable;
                     break;
                 }
@@ -57,7 +57,7 @@ public class DataModuleTreeTransferHandler extends StringTransferHandler1 {
                     QIArray.add(DM);
                     QuestMarkTransferable mytransferable=new QuestMarkTransferable(QIArray);
                     mytransferable.setSource(source);
-                    System.err.println("Что то дропает 7 "+DM.toString());
+                    System.err.println("Р§С‚Рѕ С‚Рѕ РґСЂРѕРїР°РµС‚ 7 "+DM.toString());
                     transferable=mytransferable;
                     break;
                 }
@@ -66,7 +66,7 @@ public class DataModuleTreeTransferHandler extends StringTransferHandler1 {
                     //QIArray.add(DM);
                     AnswerMarkTransferable mytransferable=new AnswerMarkTransferable(DM);
                     mytransferable.setSource(source);
-                    System.err.println("Что то дропает 8 "+DM.toString());
+                    System.err.println("Р§С‚Рѕ С‚Рѕ РґСЂРѕРїР°РµС‚ 8 "+DM.toString());
                     transferable=mytransferable;
                     break;
                 }
@@ -79,7 +79,7 @@ public class DataModuleTreeTransferHandler extends StringTransferHandler1 {
     }
 
     protected void importString(JComponent c, Transferable transferable) {
-        System.err.println("Что то дропает");
+        System.err.println("Р§С‚Рѕ С‚Рѕ РґСЂРѕРїР°РµС‚");
         JTree tree = (JTree)c;
         //jTree list = (QuestListExp)c;
         try {
@@ -110,7 +110,7 @@ public class DataModuleTreeTransferHandler extends StringTransferHandler1 {
                     node = (ABSortTreeNode) tree.getLastSelectedPathComponent();
                     nodeInfo = (DQAMarkInterface)node.getUserObject();
                 } catch( Exception re ) {
-                    System.err.println("Пустое поле в пытошной "+re.toString());
+                    System.err.println("РџСѓСЃС‚РѕРµ РїРѕР»Рµ РІ РїС‹С‚РѕС€РЅРѕР№ "+re.toString());
                     System.err.println(re.toString());
                 }
                 switch (MessageType) {
@@ -119,7 +119,7 @@ public class DataModuleTreeTransferHandler extends StringTransferHandler1 {
                             DictionaryMarkTransferable DMTr=(DictionaryMarkTransferable) Obj;
                             if (DMEP.DItop==null) {
                                 DictionaryMark DM1=(DictionaryMark)DMTr.GetArray().get(0);
-                                System.out.println("В пытошной новый словарь "+DM1.getName());
+                                System.out.println("Р’ РїС‹С‚РѕС€РЅРѕР№ РЅРѕРІС‹Р№ СЃР»РѕРІР°СЂСЊ "+DM1.getName());
                                 DictionaryInterface OldDI = DM1.getQI();
                                 DictionaryInterface NewDI = DMEP.getServer().newDictionary(DM1.getName(),true);
                                 int i=0;
@@ -146,16 +146,16 @@ public class DataModuleTreeTransferHandler extends StringTransferHandler1 {
                             break;
                         }
                         case 2: {
-                            System.out.println("В пытошной новый вопрос ");
+                            System.out.println("Р’ РїС‹С‚РѕС€РЅРѕР№ РЅРѕРІС‹Р№ РІРѕРїСЂРѕСЃ ");
                             Object Obj=transferable.getTransferData(QuestionFlavor);
                             QuestMarkTransferable DMTr=(QuestMarkTransferable) Obj;
-                            if (DMTr.getSource().equals(tree)) { ////если перемещения внутренние
+                            if (DMTr.getSource().equals(tree)) { ////РµСЃР»Рё РїРµСЂРµРјРµС‰РµРЅРёСЏ РІРЅСѓС‚СЂРµРЅРЅРёРµ
                               if (nodeInfo.getType()==7) {
                                 QuestMark QMGuest=(QuestMark)DMTr.GetArray().get(0);
                                 QuestMark QMHome=(QuestMark)node.getUserObject();
                                 ABSortTreeNode root=(ABSortTreeNode)node.getParent();
-                                int GuestIndex=QMGuest.getLocalPos(); // откуда
-                                int HomeIndex =QMHome .getLocalPos(); // куда
+                                int GuestIndex=QMGuest.getLocalPos(); // РѕС‚РєСѓРґР°
+                                int HomeIndex =QMHome .getLocalPos(); // РєСѓРґР°
                                 javax.swing.tree.TreeNode[] TN = node.getPath();
                                 DictionaryMark DM=(DictionaryMark)root.getUserObject();
                                 DM.setMixed(true);
@@ -182,13 +182,13 @@ public class DataModuleTreeTransferHandler extends StringTransferHandler1 {
                                         }
                                         QMGuest.setLocalPos(HomeIndex);
                                     }
-                                DMEP.getServer().StoreDQА(DM.getQI(),2);
+                                DMEP.getServer().StoreDQРђ(DM.getQI(),2);
                                 root.sortChildren(Collection.toArray());
                                 tree.setSelectionPath(new javax.swing.tree.TreePath(TN));
                                 tree.updateUI();
                               } 
                             } else {
-                                System.out.println("В пытошной вопрос из другого опроса");
+                                System.out.println("Р’ РїС‹С‚РѕС€РЅРѕР№ РІРѕРїСЂРѕСЃ РёР· РґСЂСѓРіРѕРіРѕ РѕРїСЂРѕСЃР°");
                                 if (nodeInfo.getType()==0) {
                                     QuestMark QM=(QuestMark)DMTr.GetArray().get(0);
                                     QuestionInterface QI = DMEP.getServer().getMainDictionary().getQuestion(QM.getID());
@@ -234,15 +234,15 @@ public class DataModuleTreeTransferHandler extends StringTransferHandler1 {
                                             CurQI.addElement(Key,DMEP.getLibrary().getID(),true);
                                             i++;
                                         }
-                                        DMEP.getServer().StoreDQА(DM.getQI(),2);
+                                        DMEP.getServer().StoreDQРђ(DM.getQI(),2);
                                         DMEP.refreshBranch(parent, 2);
-                                        //сохраняем словарь
+                                        //СЃРѕС…СЂР°РЅСЏРµРј СЃР»РѕРІР°СЂСЊ
                                     } 
                             }
                             break;
                         }
                         case 3: {
-                            System.out.println("В пытошной новый ответ");
+                            System.out.println("Р’ РїС‹С‚РѕС€РЅРѕР№ РЅРѕРІС‹Р№ РѕС‚РІРµС‚");
                             Object Obj=transferable.getTransferData(AnswerFlavor);
                             AnswerMarkTransferable DMTr=(AnswerMarkTransferable) Obj;
                             if (DMTr.getSource().equals(tree)) {
@@ -250,8 +250,8 @@ public class DataModuleTreeTransferHandler extends StringTransferHandler1 {
                                 AnswerMark AMGuest=(AnswerMark)DMTr.GetAnswerMark();
                                 AnswerMark AMHome =(AnswerMark)node.getUserObject();
                                 ABSortTreeNode root=(ABSortTreeNode)node.getParent();
-                                int GuestIndex=AMGuest.getLocalPos(); // откуда
-                                int HomeIndex =AMHome .getLocalPos(); // куда
+                                int GuestIndex=AMGuest.getLocalPos(); // РѕС‚РєСѓРґР°
+                                int HomeIndex =AMHome .getLocalPos(); // РєСѓРґР°
                                 javax.swing.tree.TreeNode[] TN = node.getPath();
                                 QuestMark QM=(QuestMark)root.getUserObject();
                                 QM.setMixed(true);
@@ -278,13 +278,13 @@ public class DataModuleTreeTransferHandler extends StringTransferHandler1 {
                                         }
                                         AMGuest.setLocalPos(HomeIndex);
                                     }
-                                DMEP.getServer().StoreDQА(QM.getQI(),3);
+                                DMEP.getServer().StoreDQРђ(QM.getQI(),3);
                                 root.sortChildren(Collection.toArray());
                                 tree.setSelectionPath(new javax.swing.tree.TreePath(TN));
                                 tree.updateUI();
                               }
                             } else {
-                                System.out.println("В пытошной ответ из другого опроса");
+                                System.out.println("Р’ РїС‹С‚РѕС€РЅРѕР№ РѕС‚РІРµС‚ РёР· РґСЂСѓРіРѕРіРѕ РѕРїСЂРѕСЃР°");
                                 if (nodeInfo.getType()==7) {
                                     AnswerMark AM=(AnswerMark)DMTr.GetAnswerMark();
                                     QuestMark QM=(QuestMark)nodeInfo;
@@ -308,26 +308,26 @@ public class DataModuleTreeTransferHandler extends StringTransferHandler1 {
                                         DMEP.getServer().getMainQuestion().newAnswer(NewAM.getName(),Key,false);
                                         RInterface RAI=QM.getQI().addElement(Key,DMEP.getLibrary().getID(),false);
                                         RAI.setPos(Index+1);
-                                        DMEP.getServer().StoreDQА(QM.getQI(),3);
-                                        //сохраняем ответ
+                                        DMEP.getServer().StoreDQРђ(QM.getQI(),3);
+                                        //СЃРѕС…СЂР°РЅСЏРµРј РѕС‚РІРµС‚
                                         DMEP.refreshBranch(parent, 2);
                                     }
                             }
                             break;
                         }
                         case 4: {
-                            System.out.println("Бросили в пытошную модуль данных");
+                            System.out.println("Р‘СЂРѕСЃРёР»Рё РІ РїС‹С‚РѕС€РЅСѓСЋ РјРѕРґСѓР»СЊ РґР°РЅРЅС‹С…");
                             Object Obj=transferable.getTransferData(DataModuleFlavor);
                             DataModuleTransferable DMTr=(DataModuleTransferable) Obj;
                             DataModuleMark DM1= (DataModuleMark)DMTr.GetArray().get(0);
                             DMEP.getLibrary().DetailFormAutomat(0);
-                            System.out.println("В пытошной модуль данных "+DM1.getName());
+                            System.out.println("Р’ РїС‹С‚РѕС€РЅРѕР№ РјРѕРґСѓР»СЊ РґР°РЅРЅС‹С… "+DM1.getName());
                             DMEP.initTree(DM1.getRContent());
                             break;
                         }
                     }
             } else{
-                System.out.println("Тип не тот");
+                System.out.println("РўРёРї РЅРµ С‚РѕС‚");
             }
         } catch( Exception re ) {
             System.out.println(re.toString());

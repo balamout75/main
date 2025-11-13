@@ -1,7 +1,7 @@
 /*
  * DictionaryManager.java
  *
- * Created on 15 ﬂÌ‚‡¸ 2004 „., 19:37
+ * Created on 15 –Ø–Ω–≤–∞—Ä—å 2004 –≥., 19:37
  */
 import java.rmi.server.UnicastRemoteObject;
 import java.rmi.RemoteException;
@@ -59,8 +59,8 @@ public class DictionaryManager extends UnicastRemoteObject implements Dictionary
         ClientCollection = new ArrayList();
         DictionaryName = Name;
         if (Flag) {
-            Server.StoreDQ¿(this, 0);
-            Server.StoreDQ¿(this, 1);
+            Server.StoreDQ–ê(this, 0);
+            Server.StoreDQ–ê(this, 1);
         }
     }
 
@@ -93,8 +93,8 @@ public class DictionaryManager extends UnicastRemoteObject implements Dictionary
         QuestCollection.add(CurrQuest);
         System.out.println(QuestCollection.size());
         if (Flag) {
-            Server.StoreDQ¿(CurrQuest, 0);
-            Server.StoreDQ¿(CurrQuest, 1);
+            Server.StoreDQ–ê(CurrQuest, 0);
+            Server.StoreDQ–ê(CurrQuest, 1);
         }
         return CurrQuest;
     };
@@ -106,7 +106,7 @@ public class DictionaryManager extends UnicastRemoteObject implements Dictionary
         RInterface QI=null;
         while ((index<QuestCollection.size())&!SimFlag){
             QI=(RInterface)QuestCollection.get(index);
-            //System.out.println("ÕÓÏÂ ÔÓÁËˆËË ‚ÓÔÓÒ‡  "+QI.getPos());
+            //System.out.println("–ù–æ–º–µ—Ä –ø–æ–∑–∏—Ü–∏–∏ –≤–æ–ø—Ä–æ—Å–∞  "+QI.getPos());
             SimFlag=((Pos.compareTo(QI.getPos()))==0); 
             ++index;
          }
@@ -121,7 +121,7 @@ public class DictionaryManager extends UnicastRemoteObject implements Dictionary
         RInterface QI=null;
         while ((index<QuestCollection.size())&!SimFlag){
             QI=(RInterface)QuestCollection.get(index);
-            //System.out.println("ÕÓÏÂ ÔÓÁËˆËË ‚ÓÔÓÒ‡  "+QI.getID());
+            //System.out.println("–ù–æ–º–µ—Ä –ø–æ–∑–∏—Ü–∏–∏ –≤–æ–ø—Ä–æ—Å–∞  "+QI.getID());
             SimFlag=((IDKey.compareTo(QI.getID()))==0); 
             ++index;
          }
@@ -156,10 +156,10 @@ public class DictionaryManager extends UnicastRemoteObject implements Dictionary
                     --index;
                     cleanQuestionPos();
                     if (Fl) {
-                        Server.StoreDQ¿(this, 2);
-                        Server.StoreDQ¿(Server.getMainDictionary().getQuestion(Q.getID()), 13);
+                        Server.StoreDQ–ê(this, 2);
+                        Server.StoreDQ–ê(Server.getMainDictionary().getQuestion(Q.getID()), 13);
                     }
-                    //Server.StoreDQ¿(this, 2);
+                    //Server.StoreDQ–ê(this, 2);
                 }
             ++index;
           }
@@ -179,8 +179,8 @@ public class DictionaryManager extends UnicastRemoteObject implements Dictionary
                     QuestCollection.remove(Q);
                     cleanQuestionPos();
                     if (Fl) {
-                        Server.StoreDQ¿(this, 2);
-                        Server.StoreDQ¿(Server.getMainDictionary().getQuestion(Q.getID()), 13);
+                        Server.StoreDQ–ê(this, 2);
+                        Server.StoreDQ–ê(Server.getMainDictionary().getQuestion(Q.getID()), 13);
                     }
                     --index;
                 }
@@ -199,7 +199,7 @@ public class DictionaryManager extends UnicastRemoteObject implements Dictionary
         int ResultFlag=Server.askArbitr(this,2,LibID);
         if (ResultFlag==0) {  
             DictionaryName=aName;
-            if (Flag) Server.StoreDQ¿(this, 1);
+            if (Flag) Server.StoreDQ–ê(this, 1);
         }
         return ResultFlag;
     };
@@ -232,7 +232,7 @@ public class DictionaryManager extends UnicastRemoteObject implements Dictionary
                 }
             }
         } catch( Exception e){
-            System.out.println("Œ¯Ë·Í‡ "+e.toString());
+            System.out.println("–û—à–∏–±–∫–∞ "+e.toString());
     	}     
         return Res;
     }
@@ -244,7 +244,7 @@ public class DictionaryManager extends UnicastRemoteObject implements Dictionary
             RQM=new RPointer(Key);
             RQM.setPos(new Integer(QuestCollection.size()));
             QuestCollection.add(RQM);
-            if (Flag) Server.StoreDQ¿(this, 2);
+            if (Flag) Server.StoreDQ–ê(this, 2);
         }
         return RQM;
     }

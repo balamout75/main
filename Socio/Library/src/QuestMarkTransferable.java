@@ -1,7 +1,7 @@
 /*
  * QuestMarkTransferable.java
  *
- * Created on 11 Сентябрь 2006 г., 19:40
+ * Created on 11 РЎРµРЅС‚СЏР±СЂСЊ 2006 Рі., 19:40
  */
 import java.awt.datatransfer.*;
 import java.io.*;

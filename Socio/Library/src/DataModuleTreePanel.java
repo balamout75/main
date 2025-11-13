@@ -1,7 +1,7 @@
 /*
  * DictionaryTreePanel.java
  *
- * Created on 17 Сентябрь 2008 г., 17:55
+ * Created on 17 РЎРµРЅС‚СЏР±СЂСЊ 2008 Рі., 17:55
  */
 
 
@@ -26,7 +26,7 @@ public class DataModuleTreePanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setBorder(javax.swing.BorderFactory.createTitledBorder("Свойства словаря"));
+        setBorder(javax.swing.BorderFactory.createTitledBorder("РЎРІРѕР№СЃС‚РІР° СЃР»РѕРІР°СЂСЏ"));
     }// </editor-fold>//GEN-END:initComponents
 
 

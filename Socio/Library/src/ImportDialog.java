@@ -1,7 +1,7 @@
 /*
  * NewJDialog.java
  *
- * Created on 20 ΐοπελό 2009 γ., 14:47
+ * Created on 20 ΠΠΏΡ€ΠµΠ»Ρ 2009 Π³., 14:47
  */
 
 

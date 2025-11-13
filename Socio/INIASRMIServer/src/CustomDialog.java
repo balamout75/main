@@ -21,9 +21,9 @@ class CustomDialog extends JDialog {
         //final SocioInput dd = parent;
 
         magicWord = aWord.toUpperCase();
-        setTitle("Введите переменную");
+        setTitle("Р’РІРµРґРёС‚Рµ РїРµСЂРµРјРµРЅРЅСѓСЋ");
 
-        //final String msgString1 = "Введите ";
+        //final String msgString1 = "Р’РІРµРґРёС‚Рµ ";
         //final String msgString2 = "(The answer is \"" + magicWord + "\".)";
         final JTextField textField = new JTextField(10);
         Object[] array = {aName, aWord, textField};

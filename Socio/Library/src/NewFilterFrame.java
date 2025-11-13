@@ -1,13 +1,13 @@
 /*
  * NewFilterFrame.java
  *
- * Created on 9 Δεκΰαπό 2005 γ., 12:41
+ * Created on 9 Π”ΠµΠΊΠ°Π±Ρ€Ρ 2005 Π³., 12:41
  */
 import java.rmi.RemoteException;
 
 /**
  *
- * @author  Θβΰν
+ * @author  ΠΠ²Π°Π½
  */
 public class NewFilterFrame extends javax.swing.JFrame {
     private NewFilter           newFilter;

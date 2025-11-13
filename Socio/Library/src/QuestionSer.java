@@ -2,7 +2,7 @@ import java.io.Serializable;
 /*
  * QuestionSer.java
  *
- * Created on 1 Март 2004 г., 10:08
+ * Created on 1 РњР°СЂС‚ 2004 Рі., 10:08
  */
 
 /**

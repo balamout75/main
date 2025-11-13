@@ -1,12 +1,12 @@
 /*
  * InputForm.java
  *
- * Created on 30 Март 2004 г., 23:25
+ * Created on 30 РњР°СЂС‚ 2004 Рі., 23:25
  */
 
 /**
  *
- * @author  Иван
+ * @author  РРІР°РЅ
  */
 import java.rmi.RemoteException;
 
@@ -19,7 +19,7 @@ public class InputForm extends javax.swing.JFrame {
     public InputForm(RInterface aRDMI, RInterface aParent) throws RemoteException {
         RDMI = aRDMI;
         Parent = aParent;
-        setTitle("Ввод данных");
+        setTitle("Р’РІРѕРґ РґР°РЅРЅС‹С…");
         initComponents();
         tuneComponent();
     }

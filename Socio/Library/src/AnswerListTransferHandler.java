@@ -63,7 +63,7 @@ public class AnswerListTransferHandler extends AnswerStringTransferHandler {
                     }    */
                 }
             } else{
-                System.out.println("Тип не тот");
+                System.out.println("РўРёРї РЅРµ С‚РѕС‚");
             }
         } catch( Exception re ) {
             System.out.println(re.toString());	   

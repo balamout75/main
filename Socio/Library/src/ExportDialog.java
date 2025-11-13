@@ -1,7 +1,7 @@
 /*
  * ExportDialog.java
  *
- * Created on 21 ΐοπελό 2009 γ., 14:07
+ * Created on 21 ΠΠΏΡ€ΠµΠ»Ρ 2009 Π³., 14:07
  */
 
 

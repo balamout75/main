@@ -1,7 +1,7 @@
 /*
  * SocioRefreshClient.java
  *
- * Created on 17 ίνβΰπό 2004 γ., 19:49
+ * Created on 17 Π―Π½Π²Π°Ρ€Ρ 2004 Π³., 19:49
  */
 import java.rmi.server.UnicastRemoteObject;
 import java.rmi.RemoteException;

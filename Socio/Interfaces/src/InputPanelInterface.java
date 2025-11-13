@@ -1,7 +1,7 @@
 /*
  * InputPanelInterface.java
  *
- * Created on 14 Сентябрь 2004 г., 10:50
+ * Created on 14 РЎРµРЅС‚СЏР±СЂСЊ 2004 Рі., 10:50
  */
 
 /**

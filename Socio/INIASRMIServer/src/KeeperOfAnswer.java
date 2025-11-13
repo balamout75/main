@@ -6,7 +6,7 @@ import java.util.ArrayList;
 /*
  * Question.java
  *
- * Created on 12 ﬂÌ‚‡¸ 2004 „., 15:35
+ * Created on 12 –Ø–Ω–≤–∞—Ä—å 2004 –≥., 15:35
  */
 
 /**
@@ -28,13 +28,13 @@ public class KeeperOfAnswer extends UnicastRemoteObject implements Keeper {
     public DQAInterface newChild(String Str, Integer Key, boolean Flag) throws java.rmi.RemoteException {
         Answer CurrAnswer = null;
         try {
-            System.out.println( "ÕÓ‚˚È ÓÚ‚ÂÚ" );
+            System.out.println( "–ù–æ–≤—ã–π –æ—Ç–≤–µ—Ç" );
             CurrAnswer = new Answer(Server, Str, Key, Flag);
             CurrAnswer.setServer(Server);
             Answers.add(CurrAnswer);
             if (Flag) {
-                Server.StoreDQ¿(CurrAnswer, 0);
-                Server.StoreDQ¿(CurrAnswer, 1);
+                Server.StoreDQ–ê(CurrAnswer, 0);
+                Server.StoreDQ–ê(CurrAnswer, 1);
             }
         } catch( Exception re ) {
             System.out.println(re.toString());	   

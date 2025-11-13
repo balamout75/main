@@ -1,7 +1,7 @@
 /*
  * SocioInputInterface.java
  *
- * Created on 17 ίνβΰπό 2004 γ., 19:53
+ * Created on 17 Π―Π½Π²Π°Ρ€Ρ 2004 Π³., 19:53
  */
 import java.rmi.Remote;
 import java.rmi.RemoteException;

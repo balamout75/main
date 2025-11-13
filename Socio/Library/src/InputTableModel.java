@@ -1,7 +1,7 @@
 /*
  * InputTableModel.java
  *
- * Created on 28 Июль 2004 г., 10:25
+ * Created on 28 РСЋР»СЊ 2004 Рі., 10:25
  */
 import javax.swing.JTable;
 import javax.swing.table.AbstractTableModel;
@@ -35,7 +35,7 @@ public class InputTableModel extends AbstractTableModel {
        
         public InputTableModel(DictionaryInterface aDictionary)  throws RemoteException {
             Dictionary = aDictionary;
-            //System.out.println("Зачем то печатаем имя "+Dictionary.GetName());
+            //System.out.println("Р—Р°С‡РµРј С‚Рѕ РїРµС‡Р°С‚Р°РµРј РёРјСЏ "+Dictionary.GetName());
         }
         
         public int getColumnCount() {
@@ -69,7 +69,7 @@ public class InputTableModel extends AbstractTableModel {
                 if (col==0) { O = "1";} else {
                 if (col==1) { O = new Integer(row);} else {
                 //if (col==2) { O = Dictionary.GetQuestion(row).GetName();} 
-                if (col==2) { O = "Вот такая фигня ";}     
+                if (col==2) { O = "Р’РѕС‚ С‚Р°РєР°СЏ С„РёРіРЅСЏ ";}     
                 if (col==3) { O = "";} 
                 }}
             } catch( Exception re ) {

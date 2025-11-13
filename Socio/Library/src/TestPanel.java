@@ -1,7 +1,7 @@
 /*
  * TestPanel.java
  *
- * Created on 21 Сентябрь 2008 г., 17:29
+ * Created on 21 РЎРµРЅС‚СЏР±СЂСЊ 2008 Рі., 17:29
  */
 
 
@@ -37,10 +37,10 @@ public class TestPanel extends javax.swing.JPanel {
         jFilterFormulaPanel = new javax.swing.JPanel();
         jFilterFormulaTextField = new javax.swing.JTextField();
 
-        setBorder(javax.swing.BorderFactory.createTitledBorder("Свойства Фильтра"));
+        setBorder(javax.swing.BorderFactory.createTitledBorder("РЎРІРѕР№СЃС‚РІР° Р¤РёР»СЊС‚СЂР°"));
         setLayout(new java.awt.GridBagLayout());
 
-        jFilterOperatorPanel.setBorder(javax.swing.BorderFactory.createTitledBorder("Операторы"));
+        jFilterOperatorPanel.setBorder(javax.swing.BorderFactory.createTitledBorder("РћРїРµСЂР°С‚РѕСЂС‹"));
 
         jFilterAndButton.setText("&");
         jFilterAndButton.setFocusable(false);
@@ -73,7 +73,7 @@ public class TestPanel extends javax.swing.JPanel {
         gridBagConstraints.weightx = 1.0;
         add(jFilterOperatorPanel, gridBagConstraints);
 
-        jFilterNamePanel.setBorder(javax.swing.BorderFactory.createTitledBorder("Название"));
+        jFilterNamePanel.setBorder(javax.swing.BorderFactory.createTitledBorder("РќР°Р·РІР°РЅРёРµ"));
         jFilterNamePanel.setLayout(new javax.swing.BoxLayout(jFilterNamePanel, javax.swing.BoxLayout.LINE_AXIS));
 
         jFilterNameTextField.setText("jTextField1");
@@ -85,7 +85,7 @@ public class TestPanel extends javax.swing.JPanel {
         gridBagConstraints.weightx = 1.0;
         add(jFilterNamePanel, gridBagConstraints);
 
-        jFilterFormulaPanel.setBorder(javax.swing.BorderFactory.createTitledBorder("Формула"));
+        jFilterFormulaPanel.setBorder(javax.swing.BorderFactory.createTitledBorder("Р¤РѕСЂРјСѓР»Р°"));
         jFilterFormulaPanel.setLayout(new javax.swing.BoxLayout(jFilterFormulaPanel, javax.swing.BoxLayout.LINE_AXIS));
 
         jFilterFormulaTextField.setText("jTextField3");

@@ -1,4 +1,3 @@
-
 import java.rmi.RemoteException;
 import java.util.ArrayList;
 
@@ -40,7 +39,7 @@ public class User implements UserInterface, DQAInterface {
 
     public boolean setName(String aName, boolean Flag) throws RemoteException {
         Name=aName;
-        if (Flag) Server.StoreDQ¿(this, 1);        
+        if (Flag) Server.StoreDQ–ê(this, 1);        
         return true;        
     }
 
@@ -86,7 +85,7 @@ public class User implements UserInterface, DQAInterface {
 
     public boolean setPassword(String Password, boolean Flag) throws RemoteException {
         this.Password = Password;
-        if (Flag) Server.StoreDQ¿(this, 3);
+        if (Flag) Server.StoreDQ–ê(this, 3);
         return true;
     }
 
@@ -125,7 +124,7 @@ public class User implements UserInterface, DQAInterface {
             RA=new RPointer(IDKey);
             RA.setPos(new Integer(DataCollection.size()));
             DataCollection.add(RA);
-            if (Flag) Server.StoreDQ¿(this, 3);
+            if (Flag) Server.StoreDQ–ê(this, 3);
         }
         return RA;
     }

@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author  Иван
+ * @author  РРІР°РЅ
  */
 public class DataModuleEditorPanel extends javax.swing.JPanel {
     static int alter     = 1;
@@ -80,26 +80,26 @@ public class DataModuleEditorPanel extends javax.swing.JPanel {
             nodeInfo = (DQAMarkInterface)node.getUserObject();
             QuestMark QM = (QuestMark)nodeInfo;
             if (Value.equalsIgnoreCase("1")) {
-                jTreeQuestType.setText("Альтернативный");
+                jTreeQuestType.setText("РђР»СЊС‚РµСЂРЅР°С‚РёРІРЅС‹Р№");
                 if (jRadioButtonMenuItem1.isSelected()) {
                     jRadioButtonMenuItem2.setSelected(false);
                     jRadioButtonMenuItem3.setSelected(false);
-                    System.out.println("Делаем текущий вопрос альтернативным");
+                    System.out.println("Р”РµР»Р°РµРј С‚РµРєСѓС‰РёР№ РІРѕРїСЂРѕСЃ Р°Р»СЊС‚РµСЂРЅР°С‚РёРІРЅС‹Рј");
                     QM.getQI().setQuestionType(alter, true);
                 } else jRadioButtonMenuItem1.setSelected(true);
             } else  if (Value.equalsIgnoreCase("2")) {
-                        jTreeQuestType.setText("Неальтернативный");
+                        jTreeQuestType.setText("РќРµР°Р»СЊС‚РµСЂРЅР°С‚РёРІРЅС‹Р№");
                         if (jRadioButtonMenuItem2.isSelected()) {
                             jRadioButtonMenuItem1.setSelected(false);
                             jRadioButtonMenuItem3.setSelected(false);
-                            System.out.println("Делаем текущий вопрос неальтернативным");
+                            System.out.println("Р”РµР»Р°РµРј С‚РµРєСѓС‰РёР№ РІРѕРїСЂРѕСЃ РЅРµР°Р»СЊС‚РµСЂРЅР°С‚РёРІРЅС‹Рј");
                             QM.getQI().setQuestionType(nonalter, true);
                         } else jRadioButtonMenuItem2.setSelected(true);
-                    } else {jTreeQuestType.setText("Иной");
+                    } else {jTreeQuestType.setText("РРЅРѕР№");
                             if (jRadioButtonMenuItem3.isSelected()) {
                                 jRadioButtonMenuItem1.setSelected(false);
                                 jRadioButtonMenuItem2.setSelected(false);
-                                System.out.println("Делаем текущий вопрос свободным");
+                                System.out.println("Р”РµР»Р°РµРј С‚РµРєСѓС‰РёР№ РІРѕРїСЂРѕСЃ СЃРІРѕР±РѕРґРЅС‹Рј");
                                 QM.getQI().setQuestionType(free, true);
                             } else jRadioButtonMenuItem3.setSelected(true);
                     }}
@@ -186,7 +186,7 @@ public class DataModuleEditorPanel extends javax.swing.JPanel {
             DQAMarkInterface DQABranch1=(DQAMarkInterface)node.getUserObject();
             QuestMark QM = (QuestMark)DQABranch1;
             Integer Key = Server.getKey();
-            Server.getMainQuestion().newAnswer("New аnswer",Key,true);
+            Server.getMainQuestion().newAnswer("New Р°nswer",Key,true);
             QuestionInterface QI = QM.getQI();
             QI.addElement(Key,Lib.getID(),true);
             refreshBranch(node,2);
@@ -224,7 +224,7 @@ public class DataModuleEditorPanel extends javax.swing.JPanel {
             Integer Key = Server.getKey();
             Server.getMainDictionary().newQuestion("New question",Key,true);
             DictionaryInterface DI = DM.getQI();
-            //"Новый вопрос" который работает
+            //"РќРѕРІС‹Р№ РІРѕРїСЂРѕСЃ" РєРѕС‚РѕСЂС‹Р№ СЂР°Р±РѕС‚Р°РµС‚
             DI.addElement(Key,Lib.getID(),true);
             refreshBranch(node,2);
         } catch( Exception re ) {
@@ -239,17 +239,17 @@ public class DataModuleEditorPanel extends javax.swing.JPanel {
                     jRadioButtonMenuItem1.setSelected(true);
                     jRadioButtonMenuItem2.setSelected(false);
                     jRadioButtonMenuItem3.setSelected(false);
-                    jTreeQuestType.setText("Альтернативный");
+                    jTreeQuestType.setText("РђР»СЊС‚РµСЂРЅР°С‚РёРІРЅС‹Р№");
                 } else  if (Value==nonalter) {
                         jRadioButtonMenuItem2.setSelected(true);
                         jRadioButtonMenuItem1.setSelected(false);
                         jRadioButtonMenuItem3.setSelected(false);
-                        jTreeQuestType.setText("Неальтернативный");
+                        jTreeQuestType.setText("РќРµР°Р»СЊС‚РµСЂРЅР°С‚РёРІРЅС‹Р№");
                     } else {
                             jRadioButtonMenuItem3.setSelected(true);
                             jRadioButtonMenuItem1.setSelected(false);
                             jRadioButtonMenuItem2.setSelected(false);
-                            jTreeQuestType.setText("Иной");
+                            jTreeQuestType.setText("РРЅРѕР№");
                 }
         } catch( Exception re ) {
             System.out.println(re.toString());
@@ -296,7 +296,7 @@ public class DataModuleEditorPanel extends javax.swing.JPanel {
                 ((ABSortTreeNode)top).add(root);
             }
         } catch(Exception re ) {
-            System.out.println("Фигня какая то в словарях и их ответах "+re.toString());
+            System.out.println("Р¤РёРіРЅСЏ РєР°РєР°СЏ С‚Рѕ РІ СЃР»РѕРІР°СЂСЏС… Рё РёС… РѕС‚РІРµС‚Р°С… "+re.toString());
         }
     }
 
@@ -311,7 +311,7 @@ public class DataModuleEditorPanel extends javax.swing.JPanel {
                 ((ABSortTreeNode)top).add(root);
             }
         } catch(Exception re ) {
-            System.out.println("Фигня какая то в словарях и их ответах "+re.toString());
+            System.out.println("Р¤РёРіРЅСЏ РєР°РєР°СЏ С‚Рѕ РІ СЃР»РѕРІР°СЂСЏС… Рё РёС… РѕС‚РІРµС‚Р°С… "+re.toString());
         }
     }
 
@@ -357,21 +357,21 @@ public class DataModuleEditorPanel extends javax.swing.JPanel {
                 DataRoot=Server.getDMI(RDMI.getID());
                 DItop=null;
                 top=(ABSortTreeNode)getBranch(RDMI);
-                AutomatedTreeModel TreeMоdel= new AutomatedTreeModel(top);
-                jTree1.setModel(TreeMоdel);
+                AutomatedTreeModel TreeMРѕdel= new AutomatedTreeModel(top);
+                jTree1.setModel(TreeMРѕdel);
             }
         } catch(Exception re ) {
-            System.out.println("Фигня какая то в словарях "+re.toString());
+            System.out.println("Р¤РёРіРЅСЏ РєР°РєР°СЏ С‚Рѕ РІ СЃР»РѕРІР°СЂСЏС… "+re.toString());
         }
     }
 
     public void setTree(DataModuleInterface DMI) {
-        System.out.println("Переиничиваем дерево");
+        System.out.println("РџРµСЂРµРёРЅРёС‡РёРІР°РµРј РґРµСЂРµРІРѕ");
 
     }
 
     public void setTree() {
-        System.out.println("Переиничиваем дерево");
+        System.out.println("РџРµСЂРµРёРЅРёС‡РёРІР°РµРј РґРµСЂРµРІРѕ");
     }
 
     public DictionaryInterface  cloneDictionary(DictionaryInterface aDI) {
@@ -388,7 +388,7 @@ public class DataModuleEditorPanel extends javax.swing.JPanel {
 
     private void makeTree() {
         try {
-            DefaultMutableTreeNode top = new DefaultMutableTreeNode(" - пусто - ");
+            DefaultMutableTreeNode top = new DefaultMutableTreeNode(" - РїСѓСЃС‚Рѕ - ");
             //jTree1.setModel(new DefaultTreeModel(null));
             jTree1.getSelectionModel().setSelectionMode(TreeSelectionModel.DISCONTIGUOUS_TREE_SELECTION);
             jTree1.setDragEnabled(true);
@@ -426,12 +426,12 @@ public class DataModuleEditorPanel extends javax.swing.JPanel {
                                         //Lib.DetailFormAutomat(0);
                                         DataModuleMark Data = (DataModuleMark) nodeInfo2;
                                         //Lib.OpenEditForm(Data.getDMI(),DataRoot);
-                                        System.out.println("Двойной клик на опросе "+nodeInfo2.getName());
+                                        System.out.println("Р”РІРѕР№РЅРѕР№ РєР»РёРє РЅР° РѕРїСЂРѕСЃРµ "+nodeInfo2.getName());
                                         break;
                                     }
                                 }
                             } catch(Exception re ) {
-                                System.out.println("Фигня какая то в словарях "+re.toString());
+                                System.out.println("Р¤РёРіРЅСЏ РєР°РєР°СЏ С‚Рѕ РІ СЃР»РѕРІР°СЂСЏС… "+re.toString());
                             }
                         }
 
@@ -549,8 +549,8 @@ public class DataModuleEditorPanel extends javax.swing.JPanel {
                             }
 
                         } catch(Exception re ) {
-                            if (!node.getUserObject().toString().equalsIgnoreCase("Все вопросы")) {
-                                System.out.println("Фигня какая то в словарях "+re.toString());
+                            if (!node.getUserObject().toString().equalsIgnoreCase("Р’СЃРµ РІРѕРїСЂРѕСЃС‹")) {
+                                System.out.println("Р¤РёРіРЅСЏ РєР°РєР°СЏ С‚Рѕ РІ СЃР»РѕРІР°СЂСЏС… "+re.toString());
                             }
                         }
 
@@ -561,12 +561,12 @@ public class DataModuleEditorPanel extends javax.swing.JPanel {
 
         } catch(Exception re ) {
 
-            System.out.println("Фигня какая то в словарях "+re.toString());
+            System.out.println("Р¤РёРіРЅСЏ РєР°РєР°СЏ С‚Рѕ РІ СЃР»РѕРІР°СЂСЏС… "+re.toString());
         }
     }
 
     private void OpenEditForm() {
-        System.out.println("Ввод данных типа начинается");
+        System.out.println("Р’РІРѕРґ РґР°РЅРЅС‹С… С‚РёРїР° РЅР°С‡РёРЅР°РµС‚СЃСЏ");
         try {
             DefaultMutableTreeNode node1 = (DefaultMutableTreeNode) jTree1.getLastSelectedPathComponent();
             //DefaultMutableTreeNode node2 = node1.getPreviousNode();
@@ -576,7 +576,7 @@ public class DataModuleEditorPanel extends javax.swing.JPanel {
             //DataModuleMark Data2 = (DataModuleMark) nodeInfo2;
             Lib.OpenEditForm(Data1.getRContent(),RDMI);
         } catch( Exception re ) {
-            System.err.println("Ошибка инициализации окана 2"+re.toString());
+            System.err.println("РћС€РёР±РєР° РёРЅРёС†РёР°Р»РёР·Р°С†РёРё РѕРєР°РЅР° 2"+re.toString());
         }
     }
 
@@ -590,7 +590,7 @@ public class DataModuleEditorPanel extends javax.swing.JPanel {
             DQAMarkInterface DQABranch1=(DQAMarkInterface)TM2.getUserObject();
             //type = DQABranch1.getType();
             switch (operation) {
-                    case 1: { //удаление
+                    case 1: { //СѓРґР°Р»РµРЅРёРµ
                        int i=0;
                        int j=0;
                        javax.swing.tree.DefaultTreeModel DTM=(javax.swing.tree.DefaultTreeModel)jTree1.getModel();
@@ -619,7 +619,7 @@ public class DataModuleEditorPanel extends javax.swing.JPanel {
                        jTree1.updateUI();
                        break;
                     }
-                    case 2: { //добавление
+                    case 2: { //РґРѕР±Р°РІР»РµРЅРёРµ
                        int i=0;
                        int j=0;
                        javax.swing.tree.DefaultTreeModel DTM=(javax.swing.tree.DefaultTreeModel)jTree1.getModel();
@@ -654,7 +654,7 @@ public class DataModuleEditorPanel extends javax.swing.JPanel {
                     }
             }
         } catch(Exception re ) {
-            System.out.println("Фигня какая то refreshBranch "+re.toString());
+            System.out.println("Р¤РёРіРЅСЏ РєР°РєР°СЏ С‚Рѕ refreshBranch "+re.toString());
         }
       
           
@@ -693,7 +693,7 @@ public class DataModuleEditorPanel extends javax.swing.JPanel {
                        jTree1.updateUI();
                        break;
                     }
-                    case 2: { //добавление
+                    case 2: { //РґРѕР±Р°РІР»РµРЅРёРµ
                        int i=0;
                        int j=0;
                        //AutomatedTreeModel DTM=(javax.swing.tree.DefaultTreeModel)jTree1.getModel();
@@ -712,7 +712,7 @@ public class DataModuleEditorPanel extends javax.swing.JPanel {
                            i++;
                            if (Flag) {
                                DQAMarkInterface DMM=DQABranch1.makeNewChildMark(RDMI.getID(),RDMI,Server);
-                               //DefaultMutableTreeNode root=new DвывefaultMutableTreeNode(DMM);
+                               //DefaultMutableTreeNode root=new DРІС‹РІefaultMutableTreeNode(DMM);
                                DefaultMutableTreeNode root=new ABSortTreeNode(DMM);   
                                if (type==0) {
                                    makeAnswerBranches(root,DMM.getRContent());
@@ -725,7 +725,7 @@ public class DataModuleEditorPanel extends javax.swing.JPanel {
                     }
             }
         } catch(Exception re ) {
-            System.out.println("Фигня какая то в словарях и их ответах "+re.toString());
+            System.out.println("Р¤РёРіРЅСЏ РєР°РєР°СЏ С‚Рѕ РІ СЃР»РѕРІР°СЂСЏС… Рё РёС… РѕС‚РІРµС‚Р°С… "+re.toString());
         }
 
 
@@ -807,7 +807,7 @@ public class DataModuleEditorPanel extends javax.swing.JPanel {
     }
 
     private void OpenDictionaryImportForm() {
-        System.out.println("начинается импорт словаря");
+        System.out.println("РЅР°С‡РёРЅР°РµС‚СЃСЏ РёРјРїРѕСЂС‚ СЃР»РѕРІР°СЂСЏ");
         try {
             //DefaultMutableTreeNode node = (DefaultMutableTreeNode) jTree1.getLastSelectedPathComponent();
             //Object nodeInfo = node.getUserObject();
@@ -820,7 +820,7 @@ public class DataModuleEditorPanel extends javax.swing.JPanel {
     }
 
     private void OpenModuleImportForm(int type) {
-        System.out.println("начинается иморт данных");
+        System.out.println("РЅР°С‡РёРЅР°РµС‚СЃСЏ РёРјРѕСЂС‚ РґР°РЅРЅС‹С…");
         try {
             //DefaultMutableTreeNode node = (DefaultMutableTreeNode) jTree1.getLastSelectedPathComponent();
             //Object nodeInfo = node.getUserObject();
@@ -869,7 +869,7 @@ public class DataModuleEditorPanel extends javax.swing.JPanel {
             DMI.setParent(Data.getDMI().getID(),Lib.getID(),true);
             refreshBranch(node1,2);
         } catch( Exception re ) {
-            System.out.println("Ошибка "+re.toString());
+            System.out.println("РћС€РёР±РєР° "+re.toString());
         }
     }
 
@@ -889,13 +889,13 @@ public class DataModuleEditorPanel extends javax.swing.JPanel {
             DTM.insertNodeInto(newnode, node, node.getChildCount());
             Server.WriteDictionaries();
         } catch( Exception re ) {
-            System.out.println("Ошибка "+re.toString());
+            System.out.println("РћС€РёР±РєР° "+re.toString());
         }
     }*/
 
 
     private void OpenExportForm() {
-        System.out.println("Экспорт данных типа начинается");
+        System.out.println("Р­РєСЃРїРѕСЂС‚ РґР°РЅРЅС‹С… С‚РёРїР° РЅР°С‡РёРЅР°РµС‚СЃСЏ");
         try {
             DataModuleMark Data = (DataModuleMark) nodeInfo;
             DataModuleInterface DMI=Data.getDMI();
@@ -906,7 +906,7 @@ public class DataModuleEditorPanel extends javax.swing.JPanel {
     }
 
     public void OpenDimensionForm() {
-        System.out.println("Построение измерений");
+        System.out.println("РџРѕСЃС‚СЂРѕРµРЅРёРµ РёР·РјРµСЂРµРЅРёР№");
         try {
             DataModuleMark Data = (DataModuleMark) nodeInfo;
             Lib.OpenDimensionForm(Data.getRContent(),RDMI);
@@ -928,134 +928,134 @@ public class DataModuleEditorPanel extends javax.swing.JPanel {
         jTreeMenuItemDictionary =new JPopupMenu();
         jTreeMenuItemQuestion   =new JPopupMenu();
         jTreeMenuItemAnswer     =new JPopupMenu();
-        jTreeQuestType =new JMenu("Тип вопроса:");
+        jTreeQuestType =new JMenu("РўРёРї РІРѕРїСЂРѕСЃР°:");
 
 
         //Create the popup menu.
         //JPopupMenu popup = new JPopupMenu();
 
-        //Операции с опросом
+        //РћРїРµСЂР°С†РёРё СЃ РѕРїСЂРѕСЃРѕРј
 
-        menuItem1 = new JMenuItem("Новый словарь");
+        menuItem1 = new JMenuItem("РќРѕРІС‹Р№ СЃР»РѕРІР°СЂСЊ");
         menuItem1.addActionListener(new ActionListener() {
              public void actionPerformed(ActionEvent e)  {
                  NewDictionary();
-                 System.out.println("Создать");
+                 System.out.println("РЎРѕР·РґР°С‚СЊ");
              }
         });
         jTreeMenuItemDataModule.add(menuItem1);
 
 
-        menuItem1 = new JMenuItem("Удалить");
+        menuItem1 = new JMenuItem("РЈРґР°Р»РёС‚СЊ");
         menuItem1.addActionListener(new ActionListener() {
              public void actionPerformed(ActionEvent e)  {
                  //DeleteDataBlock();
-                 System.out.println("Удаляем блок данных");
+                 System.out.println("РЈРґР°Р»СЏРµРј Р±Р»РѕРє РґР°РЅРЅС‹С…");
              }
         });
         jTreeMenuItemDataModule.add(menuItem1);
 
 
-        menuItem1 = new JMenuItem("Импортировать словарь");
+        menuItem1 = new JMenuItem("РРјРїРѕСЂС‚РёСЂРѕРІР°С‚СЊ СЃР»РѕРІР°СЂСЊ");
         menuItem1.addActionListener(new ActionListener() {
              public void actionPerformed(ActionEvent e)  {
-                System.out.println("Импорт");
+                System.out.println("РРјРїРѕСЂС‚");
                 OpenDictionaryImportForm();
              }
         });
         jTreeMenuItemDataModule.add(menuItem1);
 
 
-        // операция с множеством даных
+        // РѕРїРµСЂР°С†РёСЏ СЃ РјРЅРѕР¶РµСЃС‚РІРѕРј РґР°РЅС‹С…
 
-        menuItem1 = new JMenuItem("Создать блок данных");
+        menuItem1 = new JMenuItem("РЎРѕР·РґР°С‚СЊ Р±Р»РѕРє РґР°РЅРЅС‹С…");
         menuItem1.addActionListener(new ActionListener() {
              public void actionPerformed(ActionEvent e)  {
                  CreateDataBlock(3,jTree1);
-                 System.out.println("Создать");
+                 System.out.println("РЎРѕР·РґР°С‚СЊ");
              }
         });
         jTreeMenuItemData.add(menuItem1);
 
-        menuItem1 = new JMenuItem("Создать фильтр");
+        menuItem1 = new JMenuItem("РЎРѕР·РґР°С‚СЊ С„РёР»СЊС‚СЂ");
         menuItem1.addActionListener(new ActionListener() {
              public void actionPerformed(ActionEvent e)  {
                  CreateDataBlock(5,jTree1);
-                 System.out.println("Создать");
+                 System.out.println("РЎРѕР·РґР°С‚СЊ");
              }
         });
         jTreeMenuItemData.add(menuItem1);
 
 
-        menuItem1 = new JMenuItem("Распределение");
+        menuItem1 = new JMenuItem("Р Р°СЃРїСЂРµРґРµР»РµРЅРёРµ");
         menuItem1.addActionListener(new ActionListener() {
              public void actionPerformed(ActionEvent e)  {
                 OpenDimensionForm();
-                //System.out.println("Распределение");
+                //System.out.println("Р Р°СЃРїСЂРµРґРµР»РµРЅРёРµ");
              }
         });
         jTreeMenuItemData.add(menuItem1);
 
-        menuItem1 = new JMenuItem("Импорт в новый блок данных");
+        menuItem1 = new JMenuItem("РРјРїРѕСЂС‚ РІ РЅРѕРІС‹Р№ Р±Р»РѕРє РґР°РЅРЅС‹С…");
         menuItem1.addActionListener(new ActionListener() {
              public void actionPerformed(ActionEvent e)  {
-                System.out.println("Импорт");
+                System.out.println("РРјРїРѕСЂС‚");
                 OpenModuleImportForm(2);
              }
         });
         jTreeMenuItemData.add(menuItem1);
 
-        //Операции с блоком данных
-        menuItem1 = new JMenuItem("Новый фильтр");
+        //РћРїРµСЂР°С†РёРё СЃ Р±Р»РѕРєРѕРј РґР°РЅРЅС‹С…
+        menuItem1 = new JMenuItem("РќРѕРІС‹Р№ С„РёР»СЊС‚СЂ");
         menuItem1.addActionListener(new ActionListener() {
              public void actionPerformed(ActionEvent e)  {
                  CreateDataBlock(4,jTree1);
-                 System.out.println("Создать");
+                 System.out.println("РЎРѕР·РґР°С‚СЊ");
              }
         });
         jTreeMenuItemDataBlock.add(menuItem1);
 
         //popup.add(menuItem1);
-        menuItem1 = new JMenuItem("Удалить");
+        menuItem1 = new JMenuItem("РЈРґР°Р»РёС‚СЊ");
         menuItem1.addActionListener(new ActionListener() {
              public void actionPerformed(ActionEvent e)  {
                  Lib.DeleteDataBlock(jTree1);
-                 System.out.println("Удаляем блок данных");
+                 System.out.println("РЈРґР°Р»СЏРµРј Р±Р»РѕРє РґР°РЅРЅС‹С…");
              }
         });
         jTreeMenuItemDataBlock.add(menuItem1);
         //popup.add(menuItem1);
-        menuItem1 = new JMenuItem("Переименовать");
+        menuItem1 = new JMenuItem("РџРµСЂРµРёРјРµРЅРѕРІР°С‚СЊ");
         menuItem1.addActionListener(new ActionListener() {
              public void actionPerformed(ActionEvent e)  {
                  //RenameDataBlock();
-                 System.out.println("Переименовываем блок данных");
+                 System.out.println("РџРµСЂРµРёРјРµРЅРѕРІС‹РІР°РµРј Р±Р»РѕРє РґР°РЅРЅС‹С…");
              }
         });
         //jTreeMenuItemDataBlock.add(menuItem1);
 
-        menuItem1 = new JMenuItem("Импорт в существующий блок данных");
+        menuItem1 = new JMenuItem("РРјРїРѕСЂС‚ РІ СЃСѓС‰РµСЃС‚РІСѓСЋС‰РёР№ Р±Р»РѕРє РґР°РЅРЅС‹С…");
         menuItem1.addActionListener(new ActionListener() {
              public void actionPerformed(ActionEvent e)  {
-                System.out.println("Считываю новый словарь ");
+                System.out.println("РЎС‡РёС‚С‹РІР°СЋ РЅРѕРІС‹Р№ СЃР»РѕРІР°СЂСЊ ");
                 OpenModuleImportForm(3);
              }
         });
         jTreeMenuItemDataBlock.add(menuItem1);
 
-        menuItem1 = new JMenuItem("Экспорт");
+        menuItem1 = new JMenuItem("Р­РєСЃРїРѕСЂС‚");
         menuItem1.addActionListener(new ActionListener() {
              public void actionPerformed(ActionEvent e)  {
-                System.out.println("Экспорт");
+                System.out.println("Р­РєСЃРїРѕСЂС‚");
                 OpenExportForm();
              }
         });
         jTreeMenuItemDataBlock.add(menuItem1);
 
-        menuItem1 = new JMenuItem("Ввод данных");
+        menuItem1 = new JMenuItem("Р’РІРѕРґ РґР°РЅРЅС‹С…");
         menuItem1.addActionListener(new ActionListener() {
              public void actionPerformed(ActionEvent e)  {
-                System.out.println("Ввод данных");
+                System.out.println("Р’РІРѕРґ РґР°РЅРЅС‹С…");
                 OpenEditForm();
              }
         });
@@ -1063,67 +1063,67 @@ public class DataModuleEditorPanel extends javax.swing.JPanel {
         jTreeMenuItemDataBlock.add(menuItem1);
 
 
-        menuItem1 = new JMenuItem("Распределение");
+        menuItem1 = new JMenuItem("Р Р°СЃРїСЂРµРґРµР»РµРЅРёРµ");
         menuItem1.addActionListener(new ActionListener() {
              public void actionPerformed(ActionEvent e)  {
                 OpenDimensionForm();
-                //System.out.println("Распределение");
+                //System.out.println("Р Р°СЃРїСЂРµРґРµР»РµРЅРёРµ");
              }
         });
         jTreeMenuItemDataBlock.add(menuItem1);
 
-         //Операции с блоком данных
+         //РћРїРµСЂР°С†РёРё СЃ Р±Р»РѕРєРѕРј РґР°РЅРЅС‹С…
 
-        menuItem1 = new JMenuItem("Новый фильтр");
+        menuItem1 = new JMenuItem("РќРѕРІС‹Р№ С„РёР»СЊС‚СЂ");
         menuItem1.addActionListener(new ActionListener() {
              public void actionPerformed(ActionEvent e)  {
                  CreateDataBlock(4,jTree1);
-                 System.out.println("Создать");
+                 System.out.println("РЎРѕР·РґР°С‚СЊ");
              }
         });
         jTreeMenuItemDataFilter.add(menuItem1);
 
 
-        menuItem1 = new JMenuItem("Удалить");
+        menuItem1 = new JMenuItem("РЈРґР°Р»РёС‚СЊ");
         menuItem1.addActionListener(new ActionListener() {
              public void actionPerformed(ActionEvent e)  {
                  Lib.DeleteDataBlock(jTree1);
-                 System.out.println("Удаляем блок данных");
+                 System.out.println("РЈРґР°Р»СЏРµРј Р±Р»РѕРє РґР°РЅРЅС‹С…");
              }
         });
         jTreeMenuItemDataFilter.add(menuItem1);
-        menuItem1 = new JMenuItem("Переименовать");
+        menuItem1 = new JMenuItem("РџРµСЂРµРёРјРµРЅРѕРІР°С‚СЊ");
         menuItem1.addActionListener(new ActionListener() {
              public void actionPerformed(ActionEvent e)  {
                  //RenameDataBlock();
-                 System.out.println("Переименовываем блок данных");
+                 System.out.println("РџРµСЂРµРёРјРµРЅРѕРІС‹РІР°РµРј Р±Р»РѕРє РґР°РЅРЅС‹С…");
              }
         });
         jTreeMenuItemDataFilter.add(menuItem1);
 
-        menuItem1 = new JMenuItem("Экспорт");
+        menuItem1 = new JMenuItem("Р­РєСЃРїРѕСЂС‚");
         menuItem1.addActionListener(new ActionListener() {
              public void actionPerformed(ActionEvent e)  {
-                System.out.println("Экспорт");
+                System.out.println("Р­РєСЃРїРѕСЂС‚");
                 OpenExportForm();
              }
         });
         jTreeMenuItemDataFilter.add(menuItem1);
 
-        menuItem1 = new JMenuItem("Ввод данных");
+        menuItem1 = new JMenuItem("Р’РІРѕРґ РґР°РЅРЅС‹С…");
         menuItem1.addActionListener(new ActionListener() {
              public void actionPerformed(ActionEvent e)  {
-                System.out.println("Ввод данных");
+                System.out.println("Р’РІРѕРґ РґР°РЅРЅС‹С…");
                 OpenEditForm();
              }
         });
         jTreeMenuItemDataFilter.add(menuItem1);
 
-        menuItem1 = new JMenuItem("Распределение");
+        menuItem1 = new JMenuItem("Р Р°СЃРїСЂРµРґРµР»РµРЅРёРµ");
         menuItem1.addActionListener(new ActionListener() {
              public void actionPerformed(ActionEvent e)  {
                 OpenDimensionForm();
-                //System.out.println("Распределение");
+                //System.out.println("Р Р°СЃРїСЂРµРґРµР»РµРЅРёРµ");
              }
         });
         jTreeMenuItemDataFilter.add(menuItem1);
@@ -1135,32 +1135,32 @@ public class DataModuleEditorPanel extends javax.swing.JPanel {
 
 
         JMenuItem menuItem;
-        menuItem = new JMenuItem("Новый словарь");
+        menuItem = new JMenuItem("РќРѕРІС‹Р№ СЃР»РѕРІР°СЂСЊ");
         menuItem.addActionListener(new ActionListener() {
              public void actionPerformed(ActionEvent e)  {
                  NewDictionary();
-                 System.out.println("Новый словарь");
+                 System.out.println("РќРѕРІС‹Р№ СЃР»РѕРІР°СЂСЊ");
              }
         });
 
         //jTreeMenuItemRoot.add(menuItem);
 
-        menuItem = new JMenuItem("Новый вопрос");
+        menuItem = new JMenuItem("РќРѕРІС‹Р№ РІРѕРїСЂРѕСЃ");
         menuItem.addActionListener(new ActionListener() {
              public void actionPerformed(ActionEvent e)  {
                  //NewDictionary();
                  NewQuestion();
-                 System.out.println("Добавить вопрос");
+                 System.out.println("Р”РѕР±Р°РІРёС‚СЊ РІРѕРїСЂРѕСЃ");
              }
         });
         jTreeMenuItemDictionary.add(menuItem);
 
-        menuItem = new JMenuItem("Удалить словарь");
+        menuItem = new JMenuItem("РЈРґР°Р»РёС‚СЊ СЃР»РѕРІР°СЂСЊ");
         menuItem.addActionListener(new ActionListener() {
              public void actionPerformed(ActionEvent e)  {
                  try {
                     DeleteDictionary();
-                    System.out.println("Удаляем словарь");
+                    System.out.println("РЈРґР°Р»СЏРµРј СЃР»РѕРІР°СЂСЊ");
                  } catch( Exception re ) {
                     System.out.println(re.toString());
                  }
@@ -1169,12 +1169,12 @@ public class DataModuleEditorPanel extends javax.swing.JPanel {
         jTreeMenuItemDictionary.add(menuItem);
         jTreeMenuItemDictionary.addSeparator();
 
-        menuItem = new JMenuItem("Перекодировать словарь");
+        menuItem = new JMenuItem("РџРµСЂРµРєРѕРґРёСЂРѕРІР°С‚СЊ СЃР»РѕРІР°СЂСЊ");
         menuItem.addActionListener(new ActionListener() {
              public void actionPerformed(ActionEvent e)  {
                  try {
                     RecodeDictionary();
-                    System.out.println("Перекодируем словарь");
+                    System.out.println("РџРµСЂРµРєРѕРґРёСЂСѓРµРј СЃР»РѕРІР°СЂСЊ");
                  } catch( Exception re ) {
                     System.out.println(re.toString());
                  }
@@ -1183,21 +1183,21 @@ public class DataModuleEditorPanel extends javax.swing.JPanel {
         menuItem.setEnabled(false);
         jTreeMenuItemDictionary.add(menuItem);
 
-        menuItem = new JMenuItem("Новый ответ");
+        menuItem = new JMenuItem("РќРѕРІС‹Р№ РѕС‚РІРµС‚");
         menuItem.addActionListener(new ActionListener() {
              public void actionPerformed(ActionEvent e)  {
                  NewAnswer();
-                 System.out.println("Добавить ответ");
+                 System.out.println("Р”РѕР±Р°РІРёС‚СЊ РѕС‚РІРµС‚");
              }
         });
         jTreeMenuItemQuestion.add(menuItem);
 
-        menuItem = new JMenuItem("Удалить вопрос");
+        menuItem = new JMenuItem("РЈРґР°Р»РёС‚СЊ РІРѕРїСЂРѕСЃ");
         menuItem.addActionListener(new ActionListener() {
              public void actionPerformed(ActionEvent e)  {
                  try {
                     DeleteQuest();
-                    System.out.println("Удаляем вопрос");
+                    System.out.println("РЈРґР°Р»СЏРµРј РІРѕРїСЂРѕСЃ");
                  } catch( Exception re ) {
                     System.out.println(re.toString());
                  }
@@ -1206,12 +1206,12 @@ public class DataModuleEditorPanel extends javax.swing.JPanel {
         jTreeMenuItemQuestion.add(menuItem);
         jTreeMenuItemQuestion.addSeparator();
 
-        menuItem = new JMenuItem("Перекодировать вопрос");
+        menuItem = new JMenuItem("РџРµСЂРµРєРѕРґРёСЂРѕРІР°С‚СЊ РІРѕРїСЂРѕСЃ");
         menuItem.addActionListener(new ActionListener() {
              public void actionPerformed(ActionEvent e)  {
                  try {
                     RecodeQuestion();
-                    System.out.println("Перекодируем вопрос");
+                    System.out.println("РџРµСЂРµРєРѕРґРёСЂСѓРµРј РІРѕРїСЂРѕСЃ");
                  } catch( Exception re ) {
                     System.out.println(re.toString());
                  }
@@ -1219,20 +1219,20 @@ public class DataModuleEditorPanel extends javax.swing.JPanel {
         });
         menuItem.setEnabled(false);
         jTreeMenuItemQuestion.add(menuItem);
-        jRadioButtonMenuItem1 = new JRadioButtonMenuItem("Альтернативная");
+        jRadioButtonMenuItem1 = new JRadioButtonMenuItem("РђР»СЊС‚РµСЂРЅР°С‚РёРІРЅР°СЏ");
         jTreeQuestType.add(jRadioButtonMenuItem1);
-        jRadioButtonMenuItem2 = new JRadioButtonMenuItem("Неальтернативная");
+        jRadioButtonMenuItem2 = new JRadioButtonMenuItem("РќРµР°Р»СЊС‚РµСЂРЅР°С‚РёРІРЅР°СЏ");
         jTreeQuestType.add(jRadioButtonMenuItem2);
-        jRadioButtonMenuItem3 = new JRadioButtonMenuItem("Иная");
+        jRadioButtonMenuItem3 = new JRadioButtonMenuItem("РРЅР°СЏ");
         jTreeQuestType.add(jRadioButtonMenuItem3);
         jTreeMenuItemQuestion.add(jTreeQuestType);
 
-        menuItem = new JMenuItem("Удалить ответ");
+        menuItem = new JMenuItem("РЈРґР°Р»РёС‚СЊ РѕС‚РІРµС‚");
         menuItem.addActionListener(new ActionListener() {
              public void actionPerformed(ActionEvent e)  {
                  try {
                     DeleteAnswer();
-                    System.out.println("Удаляем ответ");
+                    System.out.println("РЈРґР°Р»СЏРµРј РѕС‚РІРµС‚");
                  } catch( Exception re ) {
                     System.out.println(re.toString());
                  }
@@ -1270,7 +1270,7 @@ public class DataModuleEditorPanel extends javax.swing.JPanel {
     }
 
     public void Register () {
- 	System.out.println( "Зарегистрировался" );
+ 	System.out.println( "Р—Р°СЂРµРіРёСЃС‚СЂРёСЂРѕРІР°Р»СЃСЏ" );
     }
 
     public void DeleteAnswer() {
@@ -1312,7 +1312,7 @@ public class DataModuleEditorPanel extends javax.swing.JPanel {
 
     public void RenameAnswer() {
         try {
-            //String AnswerName = MF.GetStringValue(Question.getAnswer(AnswerID).getName(),"Введите формулировку ответа");
+            //String AnswerName = MF.GetStringValue(Question.getAnswer(AnswerID).getName(),"Р’РІРµРґРёС‚Рµ С„РѕСЂРјСѓР»РёСЂРѕРІРєСѓ РѕС‚РІРµС‚Р°");
             //Question.getAnswer(AnswerID).setName(AnswerName);
         } catch( Exception re ) {
             System.out.println(re.toString());
@@ -1324,7 +1324,7 @@ public class DataModuleEditorPanel extends javax.swing.JPanel {
             refreshBranch(node,1);
             QuestMark QM = (QuestMark)node.getUserObject();
             QM.setMixed(false);
-            Server.StoreDQА(QM.getQI(),3);
+            Server.StoreDQРђ(QM.getQI(),3);
             JMenuItem JP=(JMenuItem)jTreeMenu.getComponent(3);
             JP.setEnabled(false);
         } catch( Exception re ) {
@@ -1346,7 +1346,7 @@ public class DataModuleEditorPanel extends javax.swing.JPanel {
             }*/
 
             DM.setMixed(false);
-            Server.StoreDQА(DM.getQI(),2);            
+            Server.StoreDQРђ(DM.getQI(),2);            
             JMenuItem JP=(JMenuItem)jTreeMenu.getComponent(3);
             JP.setEnabled(false);
         } catch( Exception re ) {
@@ -1356,7 +1356,7 @@ public class DataModuleEditorPanel extends javax.swing.JPanel {
 
     public void importDictionary() {
         try {
-            System.out.println("Считываю новый словарь ");
+            System.out.println("РЎС‡РёС‚С‹РІР°СЋ РЅРѕРІС‹Р№ СЃР»РѕРІР°СЂСЊ ");
             //makeTree();
         } catch( Exception re ) {
             System.out.println(re.toString());
@@ -1371,7 +1371,7 @@ public class DataModuleEditorPanel extends javax.swing.JPanel {
 
     private void jTree1InputMethodTextChanged(java.awt.event.InputMethodEvent evt) {//GEN-FIRST:event_jTree1InputMethodTextChanged
         // TODO add your handling code here:
-        System.out.println("Что то вводим");
+        System.out.println("Р§С‚Рѕ С‚Рѕ РІРІРѕРґРёРј");
     }//GEN-LAST:event_jTree1InputMethodTextChanged
 
     

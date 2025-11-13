@@ -1,7 +1,7 @@
 /*
  * QuestionEditorFrame.java
  *
- * Created on 18 Апрель 2005 г., 16:07
+ * Created on 18 РђРїСЂРµР»СЊ 2005 Рі., 16:07
  */
 import java.rmi.RemoteException;
 /**
@@ -60,7 +60,7 @@ public class QuestionEditorFrame extends javax.swing.JFrame implements MainFrama
             customDialog.setLocationRelativeTo(this);
             customDialog.setVisible(true);
             String s = customDialog.getValidatedText();
-            System.out.println("Что то там ввели новое" );	
+            System.out.println("Р§С‚Рѕ С‚Рѕ С‚Р°Рј РІРІРµР»Рё РЅРѕРІРѕРµ" );	
             if (s != null) Res = s;	   
             
         } catch(Exception re ) {

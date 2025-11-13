@@ -1,7 +1,7 @@
 /*
  * BlockLoader.java
  *
- * Created on 26 Апрель 2005 г., 10:22
+ * Created on 26 РђРїСЂРµР»СЊ 2005 Рі., 10:22
  */
 //import java.io.InputStreamReader;
 //import java.io.BufferedReader;
@@ -75,21 +75,21 @@ public class DataLoaderXML {
             AnalyseStructure();
             AnalyseData();
         } catch (Exception E) {
-            System.err.println("Ошибка в загрузке циферок "+E);	
+            System.err.println("РћС€РёР±РєР° РІ Р·Р°РіСЂСѓР·РєРµ С†РёС„РµСЂРѕРє "+E);	
         };
         
     }
    
     /*private String CreateRec(String Str) {
-        System.out.println("Строка данных "+Str );	
+        System.out.println("РЎС‚СЂРѕРєР° РґР°РЅРЅС‹С… "+Str );	
         String Res="";
         try {
             String StrSQL=DMI.makeInsertSQL();
-            System.err.println("Blockloader - Строка добавления данных"+StrSQL);
+            System.err.println("Blockloader - РЎС‚СЂРѕРєР° РґРѕР±Р°РІР»РµРЅРёСЏ РґР°РЅРЅС‹С…"+StrSQL);
             Res=StrSQL.substring(StrSQL.indexOf("values (")+8,StrSQL.lastIndexOf(")") );
             Server.executeSQL(StrSQL,null);
         } catch (Exception E) {
-            System.err.println("Blockloader - Ошибка в выполнении добавления "+E);	
+            System.err.println("Blockloader - РћС€РёР±РєР° РІ РІС‹РїРѕР»РЅРµРЅРёРё РґРѕР±Р°РІР»РµРЅРёСЏ "+E);	
         }
         return Res;
     }*/
@@ -106,7 +106,7 @@ public class DataLoaderXML {
                 j++;
             }
         } catch (Exception E) {
-            System.err.println("Ошибка в AnalyseStructure()"+E);	
+            System.err.println("РћС€РёР±РєР° РІ AnalyseStructure()"+E);	
         }   
     }
     
@@ -161,10 +161,10 @@ public class DataLoaderXML {
             Names=Names+"Row_id";
             Value=Value+Server.getKey().toString();
             String SQLStr = "INSERT INTO "+DMI.getTableName()+" ("+Names+") VALUES ("+Value+")";
-            System.out.println("Запрос   "+SQLStr);	
+            System.out.println("Р—Р°РїСЂРѕСЃ   "+SQLStr);	
             Server.executeSQL(SQLStr, null);
         } catch (Exception E) {
-            System.err.println("Ошибка в загрузке циферок "+E);	
+            System.err.println("РћС€РёР±РєР° РІ Р·Р°РіСЂСѓР·РєРµ С†РёС„РµСЂРѕРє "+E);	
             res = false;
         }
         return res;
@@ -202,15 +202,15 @@ public class DataLoaderXML {
                         }
                     }
                     DataStr=DataStr+"999";
-                    //System.out.println("Строка на загрузку:"+DataStr);
-                    System.out.println(j+" cтрока данных "+DataStr);
+                    //System.out.println("РЎС‚СЂРѕРєР° РЅР° Р·Р°РіСЂСѓР·РєСѓ:"+DataStr);
+                    System.out.println(j+" cС‚СЂРѕРєР° РґР°РЅРЅС‹С… "+DataStr);
                     if (DataModule(DataStr)) {
-                        System.out.println("Успешно");	
+                        System.out.println("РЈСЃРїРµС€РЅРѕ");	
                     }
                 }    
             }
         } catch( Exception e){
-            System.out.println("Ошибка в XMLAnalyseStructure"); 
+            System.out.println("РћС€РёР±РєР° РІ XMLAnalyseStructure"); 
         } 
     }
 }

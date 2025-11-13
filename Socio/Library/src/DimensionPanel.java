@@ -1,7 +1,7 @@
 /*
  * InputPanel.java
  *
- * Created on 29 Март 2004 г., 20:34
+ * Created on 29 РњР°СЂС‚ 2004 Рі., 20:34
  */
 //import java.awt.event.KeyEvent;
 import javax.swing.*;
@@ -17,7 +17,7 @@ import java.awt.event.*;
 
 /**
  *
- * @author  Иван
+ * @author  РРІР°РЅ
  */
 public class DimensionPanel extends javax.swing.JPanel  {
     static int alter     = 1;
@@ -28,8 +28,8 @@ public class DimensionPanel extends javax.swing.JPanel  {
     static int box       = 2;
     static int list      = 3;
 
-    private String MessageX = "Ось Х";
-    private String MessageY = "Ось Y";
+    private String MessageX = "РћСЃСЊ РҐ";
+    private String MessageY = "РћСЃСЊ Y";
     
     //private InputTableModel myModel;
     private DimensionAdapter TModel;
@@ -150,7 +150,7 @@ public DimensionPanel(RInterface aRDMI, RInterface aParentRDMI, Library aLib) th
     }    
     
     public void RefreshTable() throws RemoteException {
-        System.out.println( "Обновление списка вопросов" );	   
+        System.out.println( "РћР±РЅРѕРІР»РµРЅРёРµ СЃРїРёСЃРєР° РІРѕРїСЂРѕСЃРѕРІ" );	   
         try {
             //TM.changeDimension(RQX, RQY);
             TModel.changeDimension(RQX, RQY);
@@ -160,8 +160,8 @@ public DimensionPanel(RInterface aRDMI, RInterface aParentRDMI, Library aLib) th
     
     public void DataModuleSizeOut()  {
         try { 
-            //jLabel2.setText("Всего записей : "+TModel.getRowCount());
-            //jLabel2.setText("Всего записей : "+TM.Size());
+            //jLabel2.setText("Р’СЃРµРіРѕ Р·Р°РїРёСЃРµР№ : "+TModel.getRowCount());
+            //jLabel2.setText("Р’СЃРµРіРѕ Р·Р°РїРёСЃРµР№ : "+TM.Size());
         } catch (Exception ex) {
             System.out.println(ex);
         } 
@@ -169,7 +169,7 @@ public DimensionPanel(RInterface aRDMI, RInterface aParentRDMI, Library aLib) th
     
     public void CurrentRecOut()  {
         try { 
-            //jLabel2.setText("Всего записей : "+TModel.getRowCount());
+            //jLabel2.setText("Р’СЃРµРіРѕ Р·Р°РїРёСЃРµР№ : "+TModel.getRowCount());
             //int i=TM.getCurrRow()+1;
             //jTextField2.setText(""+i);
         } catch (Exception ex) {
@@ -240,7 +240,7 @@ public DimensionPanel(RInterface aRDMI, RInterface aParentRDMI, Library aLib) th
         setPreferredSize(new java.awt.Dimension(550, 300));
         setLayout(new java.awt.GridBagLayout());
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Распределение"));
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Р Р°СЃРїСЂРµРґРµР»РµРЅРёРµ"));
         jPanel1.setLayout(new java.awt.BorderLayout());
 
         jTable1.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
@@ -275,16 +275,16 @@ public DimensionPanel(RInterface aRDMI, RInterface aParentRDMI, Library aLib) th
         gridBagConstraints.weighty = 1.0;
         add(jPanel1, gridBagConstraints);
 
-        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder("Детализация данных"));
+        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder("Р”РµС‚Р°Р»РёР·Р°С†РёСЏ РґР°РЅРЅС‹С…"));
         jPanel3.setLayout(new java.awt.GridBagLayout());
 
         jPanel4.setLayout(new java.awt.GridBagLayout());
 
-        jPanel7.setBorder(javax.swing.BorderFactory.createTitledBorder("Строки"));
+        jPanel7.setBorder(javax.swing.BorderFactory.createTitledBorder("РЎС‚СЂРѕРєРё"));
         jPanel7.setLayout(new java.awt.GridBagLayout());
 
         jList1.setModel(new javax.swing.AbstractListModel() {
-            String[] strings = { "Ось Y" };
+            String[] strings = { "РћСЃСЊ Y" };
             public int getSize() { return strings.length; }
             public Object getElementAt(int i) { return strings[i]; }
         });
@@ -303,7 +303,7 @@ public DimensionPanel(RInterface aRDMI, RInterface aParentRDMI, Library aLib) th
         jPanel7.add(jList1, gridBagConstraints);
 
         jList2.setModel(new javax.swing.AbstractListModel() {
-            String[] strings = { "Ось X" };
+            String[] strings = { "РћСЃСЊ X" };
             public int getSize() { return strings.length; }
             public Object getElementAt(int i) { return strings[i]; }
         });
@@ -326,7 +326,7 @@ public DimensionPanel(RInterface aRDMI, RInterface aParentRDMI, Library aLib) th
         gridBagConstraints.weightx = 1.0;
         jPanel4.add(jPanel7, gridBagConstraints);
 
-        jLabel1.setText("Строки");
+        jLabel1.setText("РЎС‚СЂРѕРєРё");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
@@ -349,7 +349,7 @@ public DimensionPanel(RInterface aRDMI, RInterface aParentRDMI, Library aLib) th
 
         jPanel2.setLayout(new java.awt.GridBagLayout());
 
-        jButton1.setText("Обновить");
+        jButton1.setText("РћР±РЅРѕРІРёС‚СЊ");
         jButton1.setFocusable(false);
         jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
@@ -365,7 +365,7 @@ public DimensionPanel(RInterface aRDMI, RInterface aParentRDMI, Library aLib) th
         gridBagConstraints.weightx = 1.0;
         jPanel2.add(jPanel5, gridBagConstraints);
 
-        jCheckBox1.setText("В процентах");
+        jCheckBox1.setText("Р’ РїСЂРѕС†РµРЅС‚Р°С…");
         jCheckBox1.setFocusable(false);
         jCheckBox1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
@@ -400,7 +400,7 @@ public DimensionPanel(RInterface aRDMI, RInterface aParentRDMI, Library aLib) th
         gridBagConstraints.weightx = 1.0;
         jPanel2.add(jPanel6, gridBagConstraints);
 
-        jCheckBox2.setText("Свернуть");
+        jCheckBox2.setText("РЎРІРµСЂРЅСѓС‚СЊ");
         jCheckBox2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBox2ActionPerformed(evt);
@@ -421,12 +421,12 @@ public DimensionPanel(RInterface aRDMI, RInterface aParentRDMI, Library aLib) th
 
     private void jTable1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTable1FocusLost
         // TODO add your handling code here:
-        //System.out.println("Выбрано 1");
+        //System.out.println("Р’С‹Р±СЂР°РЅРѕ 1");
     }//GEN-LAST:event_jTable1FocusLost
 
     private void jTable1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTable1FocusGained
         // TODO add your handling code here:
-        //System.out.println("Выбрано 2");
+        //System.out.println("Р’С‹Р±СЂР°РЅРѕ 2");
     }//GEN-LAST:event_jTable1FocusGained
 
     private void jTable1CaretPositionChanged(java.awt.event.InputMethodEvent evt) {//GEN-FIRST:event_jTable1CaretPositionChanged
@@ -436,20 +436,20 @@ public DimensionPanel(RInterface aRDMI, RInterface aParentRDMI, Library aLib) th
 
    
     /*public void setLabel () {
-        jLabel1.setText("Всего записей :"+RecordCount);
-        jLabel2.setText("Текущая запись :"+CurrentRecord);
+        jLabel1.setText("Р’СЃРµРіРѕ Р·Р°РїРёСЃРµР№ :"+RecordCount);
+        jLabel2.setText("РўРµРєСѓС‰Р°СЏ Р·Р°РїРёСЃСЊ :"+CurrentRecord);
     }*/
     
     
     private void jTable1PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jTable1PropertyChange
         // TODO add your handling code here:
-        System.out.println("Изменился контент таблицы ");
-        //Что надоо сделать.. Берем из словаря информацию о столбце
-        //Создаем скрипт /insert
-        //Берем из Сервера JDBC адаптер и выполняем скрипт
-        //Переделваем датамодель
-        //Сегодня !!!
-        //Надо сделать что-то с дата модулем ))) Дома сделаю
+        System.out.println("РР·РјРµРЅРёР»СЃСЏ РєРѕРЅС‚РµРЅС‚ С‚Р°Р±Р»РёС†С‹ ");
+        //Р§С‚Рѕ РЅР°РґРѕРѕ СЃРґРµР»Р°С‚СЊ.. Р‘РµСЂРµРј РёР· СЃР»РѕРІР°СЂСЏ РёРЅС„РѕСЂРјР°С†РёСЋ Рѕ СЃС‚РѕР»Р±С†Рµ
+        //РЎРѕР·РґР°РµРј СЃРєСЂРёРїС‚ /insert
+        //Р‘РµСЂРµРј РёР· РЎРµСЂРІРµСЂР° JDBC Р°РґР°РїС‚РµСЂ Рё РІС‹РїРѕР»РЅСЏРµРј СЃРєСЂРёРїС‚
+        //РџРµСЂРµРґРµР»РІР°РµРј РґР°С‚Р°РјРѕРґРµР»СЊ
+        //РЎРµРіРѕРґРЅСЏ !!!
+        //РќР°РґРѕ СЃРґРµР»Р°С‚СЊ С‡С‚Рѕ-С‚Рѕ СЃ РґР°С‚Р° РјРѕРґСѓР»РµРј ))) Р”РѕРјР° СЃРґРµР»Р°СЋ
         
     }//GEN-LAST:event_jTable1PropertyChange
 
@@ -458,7 +458,7 @@ private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRS
     try {
         RefreshTable();
     } catch (Exception ex) {
-            System.out.println("Ошибка в jButton1 ctionPerformed");
+            System.out.println("РћС€РёР±РєР° РІ jButton1 ctionPerformed");
     }
 }//GEN-LAST:event_jButton1ActionPerformed
 

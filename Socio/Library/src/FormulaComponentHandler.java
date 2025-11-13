@@ -33,7 +33,7 @@ public class FormulaComponentHandler extends StringTransferHandler1 {
                 if (AM.RAI!=null) list.setText(list.getText()+" @"+(AM.getRQI().getPos()+1)+"{"+(AM.RAI.getPos()+1)+"}");
                 else list.setText(list.getText()+" @"+(AM.getRQI().getPos()+1)+"{0}");
             } else{
-                System.out.println("Тип не тот");
+                System.out.println("РўРёРї РЅРµ С‚РѕС‚");
             }
         } catch( Exception re ) {
             System.out.println(re.toString());	   

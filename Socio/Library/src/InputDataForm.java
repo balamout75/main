@@ -1,7 +1,7 @@
 /*
  * InputDataForm.java
  *
- * Created on 27 Èþëü 2004 ã., 13:02
+ * Created on 27 Ð˜ÑŽÐ»ÑŒ 2004 Ð³., 13:02
  */
 
 /**

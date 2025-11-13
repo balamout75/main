@@ -1,7 +1,7 @@
 /*
  * JavaModuleInterface.java
  *
- * Created on 13 Март 2004 г., 18:43
+ * Created on 13 РњР°СЂС‚ 2004 Рі., 18:43
  */
 import java.rmi.Remote;
 import java.rmi.RemoteException;
@@ -11,7 +11,7 @@ import java.rmi.RemoteException;
 
 /**
  *
- * @author  Иван
+ * @author  РРІР°РЅ
  */
 public interface UserInterface  extends Remote{
     public Integer  getRootID(int i)                        throws RemoteException;

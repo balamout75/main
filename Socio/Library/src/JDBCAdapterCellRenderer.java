@@ -47,7 +47,7 @@ public class JDBCAdapterCellRenderer extends DefaultTableCellRenderer
             }
             this.setText(value.toString());
           } catch (Exception ex) {
-            System.err.println("Что то глюк в JDBCAdapterCellRenderer "+ex);
+            System.err.println("Р§С‚Рѕ С‚Рѕ РіР»СЋРє РІ JDBCAdapterCellRenderer "+ex);
           }
           return this;
         }

@@ -1,7 +1,7 @@
 /*
  * Socioinput.java
  *
- * Created on 11 Декабрь 2003 г., 20:01
+ * Created on 11 Р”РµРєР°Р±СЂСЊ 2003 Рі., 20:01
  */
 import java.rmi.Naming;
 import java.rmi.NotBoundException;
@@ -20,7 +20,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author  Иван
+ * @author  РРІР°РЅ
  */
 public class Repository extends javax.swing.JFrame {
     
@@ -39,9 +39,9 @@ public class Repository extends javax.swing.JFrame {
             //Dictionary=iNIACRMIInterface.GetEntity(Refresher);
             //Dict=iNIACRMIInterface.GetEntity(Refresher);
             //QuestArray = Dictionary.GetQuestArray();
-            //System.out.println( "Сохранили словарь" );	   
+            //System.out.println( "РЎРѕС…СЂР°РЅРёР»Рё СЃР»РѕРІР°СЂСЊ" );	   
             //System.out.println(QuestArray.size());
-            //System.out.println( "Функционально работает3" );	   
+            //System.out.println( "Р¤СѓРЅРєС†РёРѕРЅР°Р»СЊРЅРѕ СЂР°Р±РѕС‚Р°РµС‚3" );	   
             
 	}
 	catch( Exception e )
@@ -237,11 +237,11 @@ public class Repository extends javax.swing.JFrame {
     private void tuneComponent() {
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"Вид","А", "B"},
-                {"A","Студенты", "Возраст 18-29"},
-                {"E","Возраст 18-29", "Студенты"},
-                {"I","Возраст 50 >>", "Союз правых сил"},
-                {"O","Возраст 18-29", "Студенты"},
+                {"Р’РёРґ","Рђ", "B"},
+                {"A","РЎС‚СѓРґРµРЅС‚С‹", "Р’РѕР·СЂР°СЃС‚ 18-29"},
+                {"E","Р’РѕР·СЂР°СЃС‚ 18-29", "РЎС‚СѓРґРµРЅС‚С‹"},
+                {"I","Р’РѕР·СЂР°СЃС‚ 50 >>", "РЎРѕСЋР· РїСЂР°РІС‹С… СЃРёР»"},
+                {"O","Р’РѕР·СЂР°СЃС‚ 18-29", "РЎС‚СѓРґРµРЅС‚С‹"},
             },
             new String [] {
                 "Title 1","Title 1","Title 2"
@@ -250,9 +250,9 @@ public class Repository extends javax.swing.JFrame {
         
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"Вопрос 1", "Bопрос 2"},
-                {"Возраст", "Специальность"},
-                {"Возраст", "Кому вы отдали предпочтение на прошедших выборах"},
+                {"Р’РѕРїСЂРѕСЃ 1", "BРѕРїСЂРѕСЃ 2"},
+                {"Р’РѕР·СЂР°СЃС‚", "РЎРїРµС†РёР°Р»СЊРЅРѕСЃС‚СЊ"},
+                {"Р’РѕР·СЂР°СЃС‚", "РљРѕРјСѓ РІС‹ РѕС‚РґР°Р»Рё РїСЂРµРґРїРѕС‡С‚РµРЅРёРµ РЅР° РїСЂРѕС€РµРґС€РёС… РІС‹Р±РѕСЂР°С…"},
              },
             new String [] {
                 "Title 1","Title 1"
@@ -281,7 +281,7 @@ public class Repository extends javax.swing.JFrame {
     public static void main(String[] args) {
         SocioInput frame = new SocioInput(null);
         //Self=frame;
-        frame.setTitle("Такая вот невидаль");
+        frame.setTitle("РўР°РєР°СЏ РІРѕС‚ РЅРµРІРёРґР°Р»СЊ");
         frame.setVisible(true);
     }
     

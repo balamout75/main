@@ -46,12 +46,12 @@ public class TableAdapter extends UnicastRemoteObject implements TableAdapterInt
             System.err.println(ex);
         }
         System.out.println(SQLSelectString);
-        System.out.println("Сделали  SQL запрос");
+        System.out.println("Р РЋР Т‘Р ВµР В»Р В°Р В»Р С‘  SQL Р В·Р В°Р С—РЎР‚Р С•РЎРѓ");
       }
 
     public void executeQuery() {
         try {
-            System.err.println("TableAdapter - Исполняю запрос "+SQLSelectString);
+            System.err.println("TableAdapter - Р пїЅРЎРѓР С—Р С•Р В»Р Р…РЎРЏРЎР‹ Р В·Р В°Р С—РЎР‚Р С•РЎРѓ "+SQLSelectString);
             SQLSelectString = Owner.makeSelectSQL();
             resultSet=statement.executeQuery(SQLSelectString);
             metaData = resultSet.getMetaData();
@@ -75,15 +75,15 @@ public class TableAdapter extends UnicastRemoteObject implements TableAdapterInt
                 try {
                     String VarName  = ErrorMSG.substring(ErrorMSG.indexOf('"')+1, ErrorMSG.lastIndexOf('"'));
                     String AlterSQL = "ALTER TABLE "+ Owner.getTableName()+" ADD "+VarName+" VARCHAR(256)";
-                    System.out.println("Добавляем столбец "+AlterSQL);
+                    System.out.println("Р вЂќР С•Р В±Р В°Р Р†Р В»РЎРЏР ВµР С РЎРѓРЎвЂљР С•Р В»Р В±Р ВµРЎвЂ  "+AlterSQL);
                     statement.execute(AlterSQL);
                     executeQuery();
                 } catch (Exception ex) {
-                    System.err.println("Ошибка при добавлении колонки "+ex);
+                    System.err.println("Р С›РЎв‚¬Р С‘Р В±Р С”Р В° Р С—РЎР‚Р С‘ Р Т‘Р С•Р В±Р В°Р Р†Р В»Р ВµР Р…Р С‘Р С‘ Р С”Р С•Р В»Р С•Р Р…Р С”Р С‘ "+ex);
                 }
             }
         } catch (Exception ex) {
-            System.err.println("Ошибка в TableAdapter.executeQuery()"+ex);
+            System.err.println("Р С›РЎв‚¬Р С‘Р В±Р С”Р В° Р Р† TableAdapter.executeQuery()"+ex);
         }
     }
     
@@ -115,7 +115,7 @@ public class TableAdapter extends UnicastRemoteObject implements TableAdapterInt
             CurrRow=0;
             Res=(Vector)rows.get(CurrRow);
         } catch (Exception Ex) {
-            System.err.println("TableAdapter - ошибка в первой строке "+Ex);
+            System.err.println("TableAdapter - Р С•РЎв‚¬Р С‘Р В±Р С”Р В° Р Р† Р С—Р ВµРЎР‚Р Р†Р С•Р в„– РЎРѓРЎвЂљРЎР‚Р С•Р С”Р Вµ "+Ex);
         }
         
         return Res;
@@ -131,7 +131,7 @@ public class TableAdapter extends UnicastRemoteObject implements TableAdapterInt
             CurrRow=getRowCount()-1;
             Res=(Vector)rows.get(CurrRow);
         } catch (Exception Ex) {
-            System.err.println("TableAdapter - Ошибка в добавлении строки "+Ex);
+            System.err.println("TableAdapter - Р С›РЎв‚¬Р С‘Р В±Р С”Р В° Р Р† Р Т‘Р С•Р В±Р В°Р Р†Р В»Р ВµР Р…Р С‘Р С‘ РЎРѓРЎвЂљРЎР‚Р С•Р С”Р С‘ "+Ex);
         }
         return Res;
     }       
@@ -148,7 +148,7 @@ public class TableAdapter extends UnicastRemoteObject implements TableAdapterInt
             }
             Res=(Vector)rows.get(CurrRow);
         } catch (Exception Ex) {
-            System.err.println("TableAdapter - Ошибка в добавлении строки "+Ex);
+            System.err.println("TableAdapter - Р С›РЎв‚¬Р С‘Р В±Р С”Р В° Р Р† Р Т‘Р С•Р В±Р В°Р Р†Р В»Р ВµР Р…Р С‘Р С‘ РЎРѓРЎвЂљРЎР‚Р С•Р С”Р С‘ "+Ex);
         }
         return Res;
     }
@@ -212,7 +212,7 @@ public class TableAdapter extends UnicastRemoteObject implements TableAdapterInt
         try {
             return rows.size();
         } catch (Exception E) {
-            System.out.println("Ошибка создания Скрипта3 создания новой записи "+E);
+            System.out.println("Р С›РЎв‚¬Р С‘Р В±Р С”Р В° РЎРѓР С•Р В·Р Т‘Р В°Р Р…Р С‘РЎРЏ Р РЋР С”РЎР‚Р С‘Р С—РЎвЂљР В°3 РЎРѓР С•Р В·Р Т‘Р В°Р Р…Р С‘РЎРЏ Р Р…Р С•Р Р†Р С•Р в„– Р В·Р В°Р С—Р С‘РЎРѓР С‘ "+E);
             return 0;
         }
     }
@@ -230,8 +230,8 @@ public class TableAdapter extends UnicastRemoteObject implements TableAdapterInt
         try {
             Res=columnNames[Column-1];
         } catch (Exception e){
-            System.err.println("Колонки " + Column);
-            System.err.println("Гдюк в колумннаме" + e);
+            System.err.println("Р С™Р С•Р В»Р С•Р Р…Р С”Р С‘ " + Column);
+            System.err.println("Р вЂњР Т‘РЎР‹Р С” Р Р† Р С”Р С•Р В»РЎС“Р СР Р…Р Р…Р В°Р СР Вµ" + e);
         }
         return Res;
     }
@@ -241,12 +241,12 @@ public class TableAdapter extends UnicastRemoteObject implements TableAdapterInt
             boolean execute = statement.execute(Owner.makeUpdateSQL(Value, getColumnNames(FieldNum+1),(String)((Object)((Vector)rows.get(CurrRow)).get(0).toString())));
             if (fixMode==1) {
                 String query=Owner.makeFixSQL(Value, getColumnNames(FieldNum+1),(String)((Object)((Vector)rows.get(CurrRow)).get(0).toString()));
-                System.err.println("Ответ фиксируем " + query);
+                System.err.println("Р С›РЎвЂљР Р†Р ВµРЎвЂљ РЎвЂћР С‘Р С”РЎРѓР С‘РЎР‚РЎС“Р ВµР С " + query);
                 statement.execute(query);
             }
             ((Vector)rows.get(CurrRow)).set(FieldNum,Value);
         } catch (Exception E){
-            System.err.println("Ошибка при проведении апдейта "+E);
+            System.err.println("Р С›РЎв‚¬Р С‘Р В±Р С”Р В° Р С—РЎР‚Р С‘ Р С—РЎР‚Р С•Р Р†Р ВµР Т‘Р ВµР Р…Р С‘Р С‘ Р В°Р С—Р Т‘Р ВµР в„–РЎвЂљР В° "+E);
         }
     }
     

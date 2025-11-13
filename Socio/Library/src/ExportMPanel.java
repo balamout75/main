@@ -1,7 +1,7 @@
 /*
  * ImportPanel.java
  *
- * Created on 6 Март 2009 г., 11:19
+ * Created on 6 РњР°СЂС‚ 2009 Рі., 11:19
  */
 import java.util.Vector;
 import java.awt.event.*;
@@ -20,7 +20,7 @@ import javax.xml.transform.stream.StreamResult;
 
 /**
  *
- * @author Иван
+ * @author РРІР°РЅ
  */
 public class ExportMPanel extends javax.swing.JPanel {
 
@@ -192,7 +192,7 @@ public class ExportMPanel extends javax.swing.JPanel {
         jPanel1.setLayout(new java.awt.GridBagLayout());
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel1.setText("Формат файла:");
+        jLabel1.setText("Р¤РѕСЂРјР°С‚ С„Р°Р№Р»Р°:");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 0;
@@ -202,7 +202,7 @@ public class ExportMPanel extends javax.swing.JPanel {
         jPanel1.add(jLabel1, gridBagConstraints);
 
         jComboBox1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Text (Windows ANSI)", "Опрос 3D" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Text (Windows ANSI)", "РћРїСЂРѕСЃ 3D" }));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 0;
@@ -212,7 +212,7 @@ public class ExportMPanel extends javax.swing.JPanel {
         jPanel1.add(jComboBox1, gridBagConstraints);
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel2.setText("Имя файла:");
+        jLabel2.setText("РРјСЏ С„Р°Р№Р»Р°:");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 1;
@@ -237,7 +237,7 @@ public class ExportMPanel extends javax.swing.JPanel {
         jPanel1.add(jTextField1, gridBagConstraints);
 
         jButton1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jButton1.setText("Обзор");
+        jButton1.setText("РћР±Р·РѕСЂ");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -261,7 +261,7 @@ public class ExportMPanel extends javax.swing.JPanel {
         jPanel2.setLayout(new java.awt.GridBagLayout());
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel3.setText("Что вы хотите импортировать:");
+        jLabel3.setText("Р§С‚Рѕ РІС‹ С…РѕС‚РёС‚Рµ РёРјРїРѕСЂС‚РёСЂРѕРІР°С‚СЊ:");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 0;
@@ -271,7 +271,7 @@ public class ExportMPanel extends javax.swing.JPanel {
         jPanel2.add(jLabel3, gridBagConstraints);
 
         jRadioButton1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jRadioButton1.setText("Только данные");
+        jRadioButton1.setText("РўРѕР»СЊРєРѕ РґР°РЅРЅС‹Рµ");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 1;
@@ -281,7 +281,7 @@ public class ExportMPanel extends javax.swing.JPanel {
         jPanel2.add(jRadioButton1, gridBagConstraints);
 
         jRadioButton2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jRadioButton2.setText("Только словарь");
+        jRadioButton2.setText("РўРѕР»СЊРєРѕ СЃР»РѕРІР°СЂСЊ");
         jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jRadioButton2ActionPerformed(evt);
@@ -296,7 +296,7 @@ public class ExportMPanel extends javax.swing.JPanel {
         jPanel2.add(jRadioButton2, gridBagConstraints);
 
         jRadioButton3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jRadioButton3.setText("Словарь и данные");
+        jRadioButton3.setText("РЎР»РѕРІР°СЂСЊ Рё РґР°РЅРЅС‹Рµ");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 3;
@@ -317,7 +317,7 @@ public class ExportMPanel extends javax.swing.JPanel {
         jPanel3.setLayout(new java.awt.GridBagLayout());
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel4.setText("Разделитель элементов данных");
+        jLabel4.setText("Р Р°Р·РґРµР»РёС‚РµР»СЊ СЌР»РµРјРµРЅС‚РѕРІ РґР°РЅРЅС‹С…");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
@@ -325,7 +325,7 @@ public class ExportMPanel extends javax.swing.JPanel {
         jPanel3.add(jLabel4, gridBagConstraints);
 
         jComboBox2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Пробел", "Табуляция", "Конец строки" }));
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "РџСЂРѕР±РµР»", "РўР°Р±СѓР»СЏС†РёСЏ", "РљРѕРЅРµС† СЃС‚СЂРѕРєРё" }));
         jComboBox2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox2ActionPerformed(evt);
@@ -337,7 +337,7 @@ public class ExportMPanel extends javax.swing.JPanel {
         jPanel3.add(jComboBox2, gridBagConstraints);
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel5.setText("Разделитель документов");
+        jLabel5.setText("Р Р°Р·РґРµР»РёС‚РµР»СЊ РґРѕРєСѓРјРµРЅС‚РѕРІ");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 1;
@@ -347,7 +347,7 @@ public class ExportMPanel extends javax.swing.JPanel {
         jPanel3.add(jLabel5, gridBagConstraints);
 
         jComboBox3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Конец строки", "Пробел", "Табуляция" }));
+        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "РљРѕРЅРµС† СЃС‚СЂРѕРєРё", "РџСЂРѕР±РµР»", "РўР°Р±СѓР»СЏС†РёСЏ" }));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 1;
@@ -356,7 +356,7 @@ public class ExportMPanel extends javax.swing.JPanel {
         jPanel3.add(jComboBox3, gridBagConstraints);
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel6.setText("Разделитель в формате даты");
+        jLabel6.setText("Р Р°Р·РґРµР»РёС‚РµР»СЊ РІ С„РѕСЂРјР°С‚Рµ РґР°С‚С‹");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 2;
@@ -366,7 +366,7 @@ public class ExportMPanel extends javax.swing.JPanel {
         jPanel3.add(jLabel6, gridBagConstraints);
 
         jComboBox4.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Точка", "/" }));
+        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "РўРѕС‡РєР°", "/" }));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 2;
@@ -375,7 +375,7 @@ public class ExportMPanel extends javax.swing.JPanel {
         jPanel3.add(jComboBox4, gridBagConstraints);
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel7.setText("Разделитель в дробной части числа");
+        jLabel7.setText("Р Р°Р·РґРµР»РёС‚РµР»СЊ РІ РґСЂРѕР±РЅРѕР№ С‡Р°СЃС‚Рё С‡РёСЃР»Р°");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 3;
@@ -385,7 +385,7 @@ public class ExportMPanel extends javax.swing.JPanel {
         jPanel3.add(jLabel7, gridBagConstraints);
 
         jComboBox5.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Точка", "Запятая" }));
+        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "РўРѕС‡РєР°", "Р—Р°РїСЏС‚Р°СЏ" }));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 3;
@@ -400,7 +400,7 @@ public class ExportMPanel extends javax.swing.JPanel {
         gridBagConstraints.weightx = 1.0;
         add(jPanel3, gridBagConstraints);
 
-        jButton2.setText("Сохранить");
+        jButton2.setText("РЎРѕС…СЂР°РЅРёС‚СЊ");
         jButton2.setEnabled(false);
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -409,7 +409,7 @@ public class ExportMPanel extends javax.swing.JPanel {
         });
         jPanel7.add(jButton2);
 
-        jButton3.setText("Отменить");
+        jButton3.setText("РћС‚РјРµРЅРёС‚СЊ");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -447,7 +447,7 @@ public class ExportMPanel extends javax.swing.JPanel {
         gridBagConstraints.weightx = 1.0;
         jPanel4.add(jProgressBar1, gridBagConstraints);
 
-        jLabel8.setText("Статус :");
+        jLabel8.setText("РЎС‚Р°С‚СѓСЃ :");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
@@ -480,7 +480,7 @@ public class ExportMPanel extends javax.swing.JPanel {
     }    
     
     private void ExportDaFile() {
-        System.out.println("Вроде что то сохраняю");
+        System.out.println("Р’СЂРѕРґРµ С‡С‚Рѕ С‚Рѕ СЃРѕС…СЂР°РЅСЏСЋ");
         try {
             Buffer = "";
             out = new BufferedWriter(new FileWriter(file));
@@ -491,11 +491,11 @@ public class ExportMPanel extends javax.swing.JPanel {
             for (int i = 0; i < QuestRecordArray.size(); i++) {
                 QuestRecord QR=(QuestRecord) QuestRecordArray.get(i);
                 if (QR.getQuestType() == alter) {
-                    out.write("//	Альтернативная текстовая переменная");
+                    out.write("//	РђР»СЊС‚РµСЂРЅР°С‚РёРІРЅР°СЏ С‚РµРєСЃС‚РѕРІР°СЏ РїРµСЂРµРјРµРЅРЅР°СЏ");
                     out.newLine();
                     out.write((i + 1) + ".at\t");
                 } else {
-                    out.write("//	Неальтернативная текстовая переменная");
+                    out.write("//	РќРµР°Р»СЊС‚РµСЂРЅР°С‚РёРІРЅР°СЏ С‚РµРєСЃС‚РѕРІР°СЏ РїРµСЂРµРјРµРЅРЅР°СЏ");
                     out.newLine();
                     out.write((i + 1) + ".nt\t");
                 }
@@ -538,7 +538,7 @@ public class ExportMPanel extends javax.swing.JPanel {
                     i++;
                 }
             } catch (Exception e2) {
-                System.out.println("Неудается записать " + e2);
+                System.out.println("РќРµСѓРґР°РµС‚СЃСЏ Р·Р°РїРёСЃР°С‚СЊ " + e2);
             }
             out.close();
         } catch (Exception e2) {
@@ -557,7 +557,7 @@ public class ExportMPanel extends javax.swing.JPanel {
                 Buffer = S;
             }*/
         } catch (Exception e2) {
-            System.out.println("Ошибка в Writer" + e2.toString());
+            System.out.println("РћС€РёР±РєР° РІ Writer" + e2.toString());
         }
     }
     
@@ -581,7 +581,7 @@ public class ExportMPanel extends javax.swing.JPanel {
                 
             }
         } catch (Exception e2) {
-            System.out.println("Ошибка в WriteOprosFormat " + e2.toString());
+            System.out.println("РћС€РёР±РєР° РІ WriteOprosFormat " + e2.toString());
         }
     }
     
@@ -603,7 +603,7 @@ public class ExportMPanel extends javax.swing.JPanel {
                 Res = code;
             }
         } catch (Exception e2) {
-            System.out.println("Ошибка в WriteOprosFormat " + e2.toString());
+            System.out.println("РћС€РёР±РєР° РІ WriteOprosFormat " + e2.toString());
         }
         return Res;
     }
@@ -631,7 +631,7 @@ public class ExportMPanel extends javax.swing.JPanel {
                 j++;
             }
         } catch (Exception E) {
-            System.err.println("Ошибка в AnalyseStructure()" + E);            
+            System.err.println("РћС€РёР±РєР° РІ AnalyseStructure()" + E);            
         }        
     }
     
@@ -646,20 +646,20 @@ public class ExportMPanel extends javax.swing.JPanel {
             int i = 1;
             TM.executeQuery();
             try {
-                out.write("Выгружено анкет - " + TM.Size());
+                out.write("Р’С‹РіСЂСѓР¶РµРЅРѕ Р°РЅРєРµС‚ - " + TM.Size());
                 out.newLine();
                 out.newLine();
-                out.write("АО 1600514");
+                out.write("РђРћ 1600514");
                 out.newLine();                
-                out.write("==/ОПРОС");
+                out.write("==/РћРџР РћРЎ");
                 out.newLine();                
                 out.write("00/ROSXXXXX");
                 out.newLine();                
-                out.write("02/ДАТА");
+                out.write("02/Р”РђРўРђ");
                 out.newLine();                
-                out.write("UN/ИСХОДЯЩИЙ НОМЕР");
+                out.write("UN/РРЎРҐРћР”РЇР©РР™ РќРћРњР•Р ");
                 out.newLine();                
-                out.write("04/НАСЕЛЕННЫЙ ПУНКТ");
+                out.write("04/РќРђРЎР•Р›Р•РќРќР«Р™ РџРЈРќРљРў");
                 out.newLine();                
                 jProgressBar1.setStringPainted(true); 
                 jProgressBar1.setMinimum(0);
@@ -701,7 +701,7 @@ public class ExportMPanel extends javax.swing.JPanel {
                                 }
                             }
                         } else {
-                            System.out.println("Пропускаем");
+                            System.out.println("РџСЂРѕРїСѓСЃРєР°РµРј");
                         }
                         j++;
                     }
@@ -713,11 +713,11 @@ public class ExportMPanel extends javax.swing.JPanel {
                 }
                 out.write("===");
                 out.newLine();                
-                out.write("подпись");
+                out.write("РїРѕРґРїРёСЃСЊ");
                 out.newLine();                
             } catch (Exception e2) {
-                System.out.println("Неудается записать " + e2);
-                out.write("Ошибка записи " + e2);
+                System.out.println("РќРµСѓРґР°РµС‚СЃСЏ Р·Р°РїРёСЃР°С‚СЊ " + e2);
+                out.write("РћС€РёР±РєР° Р·Р°РїРёСЃРё " + e2);
                 out.newLine();                
             }
             out.close();
@@ -816,7 +816,7 @@ public class ExportMPanel extends javax.swing.JPanel {
                                 }
                             }
                         } else {
-                            System.out.println("Пропускаем");
+                            System.out.println("РџСЂРѕРїСѓСЃРєР°РµРј");
                         }
                         anketa.appendChild(quest);
                     }
@@ -848,7 +848,7 @@ public class ExportMPanel extends javax.swing.JPanel {
                     answer.setAttribute("c", "950");
                     quest.appendChild(answer);
                     anketa.appendChild(quest);
-                    ///допы
+                    ///РґРѕРїС‹
                     */
                     i++;
                     opros.appendChild(anketa);
@@ -860,8 +860,8 @@ public class ExportMPanel extends javax.swing.JPanel {
                 transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "2");
                 transformer.transform(new DOMSource(doc), new StreamResult(file));
             } catch (Exception e2) {
-                System.out.println("Неудается записать " + e2);
-                out.write("Ошибка записи " + e2);
+                System.out.println("РќРµСѓРґР°РµС‚СЃСЏ Р·Р°РїРёСЃР°С‚СЊ " + e2);
+                out.write("РћС€РёР±РєР° Р·Р°РїРёСЃРё " + e2);
                 out.newLine();                
             }
         } catch (Exception e2) {
@@ -886,13 +886,13 @@ public class ExportMPanel extends javax.swing.JPanel {
             int i=1;
             TM.executeQuery();
             try {
-               out.write("Выгружено анкет - "+TM.Size());out.newLine(); out.newLine();
-               out.write("АО 1600514"); out.newLine(); 
-               out.write("==/ОПРОС"); out.newLine(); 
+               out.write("Р’С‹РіСЂСѓР¶РµРЅРѕ Р°РЅРєРµС‚ - "+TM.Size());out.newLine(); out.newLine();
+               out.write("РђРћ 1600514"); out.newLine(); 
+               out.write("==/РћРџР РћРЎ"); out.newLine(); 
                out.write("00/ROSXXXXX"); out.newLine();                
-               out.write("02/ДАТА"); out.newLine();                
-               out.write("UN/ИСХОДЯЩИЙ НОМЕР"); out.newLine();                
-               out.write("04/НАСЕЛЕННЫЙ ПУНКТ"); out.newLine();                
+               out.write("02/Р”РђРўРђ"); out.newLine();                
+               out.write("UN/РРЎРҐРћР”РЇР©РР™ РќРћРњР•Р "); out.newLine();                
+               out.write("04/РќРђРЎР•Р›Р•РќРќР«Р™ РџРЈРќРљРў"); out.newLine();                
                
                while (i<=TM.Size()) {
                    Vector V=TM.getRow(i);
@@ -929,7 +929,7 @@ public class ExportMPanel extends javax.swing.JPanel {
                             }
                        }
                        } else {
-                           System.out.println("Пропускаем");
+                           System.out.println("РџСЂРѕРїСѓСЃРєР°РµРј");
                        }
                    }
                    Writer(new String("999"));
@@ -939,10 +939,10 @@ public class ExportMPanel extends javax.swing.JPanel {
                    i++;
                }
                out.write("==="); out.newLine(); 
-               out.write("подпись"); out.newLine();                
+               out.write("РїРѕРґРїРёСЃСЊ"); out.newLine();                
             } catch (Exception e2) {
-                System.out.println("Неудается записать "+e2);
-                out.write("Ошибка записи "+e2);out.newLine();                
+                System.out.println("РќРµСѓРґР°РµС‚СЃСЏ Р·Р°РїРёСЃР°С‚СЊ "+e2);
+                out.write("РћС€РёР±РєР° Р·Р°РїРёСЃРё "+e2);out.newLine();                
             }
             out.close();
     } catch (Exception e2) {
@@ -964,28 +964,28 @@ public class ExportMPanel extends javax.swing.JPanel {
             Server = DMI.getServer();
             switch (DMI.getType()) {
                 case 1: {
-                    //"Свойства папки "
+                    //"РЎРІРѕР№СЃС‚РІР° РїР°РїРєРё "
                     jRadioButton1.setEnabled(false);
                     jRadioButton2.setEnabled(true);
                     jRadioButton3.setEnabled(true);
                     break;
                 }
                 case 2: {
-                    //" Модуль данных"
+                    //" РњРѕРґСѓР»СЊ РґР°РЅРЅС‹С…"
                     jRadioButton1.setEnabled(true);
                     jRadioButton2.setEnabled(true);
                     jRadioButton3.setEnabled(false);
                     break;
                 }
                 case 3: {
-                    //" Блок данных "
+                    //" Р‘Р»РѕРє РґР°РЅРЅС‹С… "
                     jRadioButton1.setEnabled(true);
                     jRadioButton2.setEnabled(false);
                     jRadioButton3.setEnabled(false);
                     break;
                 }
                 case 4: {
-                    //" Фильтр данных "
+                    //" Р¤РёР»СЊС‚СЂ РґР°РЅРЅС‹С… "
                     break;
                 }
             }
@@ -1036,12 +1036,12 @@ private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRS
 
 private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
 // TODO add your handling code here:
-    System.out.println("начинаем отработку" + typeofExport);
+    System.out.println("РЅР°С‡РёРЅР°РµРј РѕС‚СЂР°Р±РѕС‚РєСѓ" + typeofExport);
     jButton2.setEnabled(false);
     switch (typeofExport) {
         case 1: {
             try {
-                //DataModuleInterface DBI=DMI.AddRoot("Новый блок",3);
+                //DataModuleInterface DBI=DMI.AddRoot("РќРѕРІС‹Р№ Р±Р»РѕРє",3);
                 ExportDaFile();
                 //Server.WriteDictionaries();
             } catch (Exception re) {

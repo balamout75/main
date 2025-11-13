@@ -1,12 +1,12 @@
 /*
  * SelectDimensionPanel.java
  *
- * Created on 8 Декабрь 2005 г., 11:54
+ * Created on 8 Р”РµРєР°Р±СЂСЊ 2005 Рі., 11:54
  */
 import java.rmi.RemoteException;
 /**
  *
- * @author  Иван
+ * @author  РРІР°РЅ
  */
 public class SelectDimensionPanel extends javax.swing.JPanel {
     private DataModuleInterface  DataModule;
@@ -45,7 +45,7 @@ public class SelectDimensionPanel extends javax.swing.JPanel {
 
         setLayout(new java.awt.GridBagLayout());
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Переменные"));
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("РџРµСЂРµРјРµРЅРЅС‹Рµ"));
         jPanel1.add(jList1);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -55,7 +55,7 @@ public class SelectDimensionPanel extends javax.swing.JPanel {
         gridBagConstraints.weighty = 1.0;
         add(jPanel1, gridBagConstraints);
 
-        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder("Измерения"));
+        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder("РР·РјРµСЂРµРЅРёСЏ"));
         jPanel3.add(jList2);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -64,9 +64,9 @@ public class SelectDimensionPanel extends javax.swing.JPanel {
         gridBagConstraints.weighty = 1.0;
         add(jPanel3, gridBagConstraints);
 
-        jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder("Настройки"));
+        jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder("РќР°СЃС‚СЂРѕР№РєРё"));
 
-        jToggleButton1.setText("Выполнить");
+        jToggleButton1.setText("Р’С‹РїРѕР»РЅРёС‚СЊ");
         jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jToggleButton1ActionPerformed(evt);
@@ -74,7 +74,7 @@ public class SelectDimensionPanel extends javax.swing.JPanel {
         });
         jPanel4.add(jToggleButton1);
 
-        jToggleButton2.setText("Настройки");
+        jToggleButton2.setText("РќР°СЃС‚СЂРѕР№РєРё");
         jToggleButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jToggleButton2ActionPerformed(evt);
@@ -96,7 +96,7 @@ public class SelectDimensionPanel extends javax.swing.JPanel {
 private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
 // TODO add your handling code here:
 // TODO add your handling code here:
-//Открываем форму создания распределения
+//РћС‚РєСЂС‹РІР°РµРј С„РѕСЂРјСѓ СЃРѕР·РґР°РЅРёСЏ СЂР°СЃРїСЂРµРґРµР»РµРЅРёСЏ
         try {
             //DefaultMutableTreeNode node = (DefaultMutableTreeNode) jTree1.getLastSelectedPathComponent();
             //Object nodeInfo = node.getUserObject();
@@ -105,7 +105,7 @@ private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GE
             //DualMesureForm();
             //System.out.println(Server.GetDictionary(jComboBox1.getSelectedIndex()).getSQLConstructor());
         } catch( Exception re ) {
-            System.out.println("Library Ошибка при открытии формы визарда нового измерения"+re.toString());	   
+            System.out.println("Library РћС€РёР±РєР° РїСЂРё РѕС‚РєСЂС‹С‚РёРё С„РѕСЂРјС‹ РІРёР·Р°СЂРґР° РЅРѕРІРѕРіРѕ РёР·РјРµСЂРµРЅРёСЏ"+re.toString());	   
         }        
 }//GEN-LAST:event_jToggleButton1ActionPerformed
     

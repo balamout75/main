@@ -90,12 +90,12 @@ public class JDBCAdapter extends AbstractTableModel {
         try {
             switch(column) {
             case 0: {Value="N"; break;}
-            case 1: {Value="Вопрос"; break;}
-            case 2: {Value="Ответ"; break;}
-            case 3: {Value="Ответ"; break;}
+            case 1: {Value="Р’РѕРїСЂРѕСЃ"; break;}
+            case 2: {Value="РћС‚РІРµС‚"; break;}
+            case 3: {Value="РћС‚РІРµС‚"; break;}
             }
         } catch (Exception ex) {
-            System.err.println("Что то глюк в колумнНаме");
+            System.err.println("Р§С‚Рѕ С‚Рѕ РіР»СЋРє РІ РєРѕР»СѓРјРЅРќР°РјРµ");
         }
         return Value;
     } 
@@ -111,7 +111,7 @@ public class JDBCAdapter extends AbstractTableModel {
         try {
             Count = Dictionary.getSize();
         } catch (Exception ex){
-            System.err.println("Ошибка в поиске колонок ");    
+            System.err.println("РћС€РёР±РєР° РІ РїРѕРёСЃРєРµ РєРѕР»РѕРЅРѕРє ");    
         }
         return Count;
         
@@ -129,12 +129,12 @@ public class JDBCAdapter extends AbstractTableModel {
             case 0: {Value=new Integer(aRow); break;}
             //case 1: {Value=Dictionary.GetQuestion(aRow).GetName(); break;}
             case 1: {Value=new Integer(aRow); break;}
-            //case 2: {Value=new String("а"); break;}
+            //case 2: {Value=new String("Р°"); break;}
             case 2: {Value=values.elementAt(aRow+1).toString(); break;}
             }
             
         } catch (Exception ex) {
-            System.err.println("Ошибка в отбражении значений ячеек ");
+            System.err.println("РћС€РёР±РєР° РІ РѕС‚Р±СЂР°Р¶РµРЅРёРё Р·РЅР°С‡РµРЅРёР№ СЏС‡РµРµРє ");
         }
         return Value;
     }
@@ -144,17 +144,17 @@ public class JDBCAdapter extends AbstractTableModel {
         values = Controller.getRow(1);
         //resultSet = Controller.executeQuery();
         //Controller.Reload();
-        System.err.println("Перечитываем");
+        System.err.println("РџРµСЂРµС‡РёС‚С‹РІР°РµРј");
         return true;
     }
     
     public void setValueAt(Object value, int row, int column) {
         try {
-            //System.err.println("Чейто редактируем"+row+" "+Controller.getColumnName(row)+" "+values.elementAt(row).toString());
+            //System.err.println("Р§РµР№С‚Рѕ СЂРµРґР°РєС‚РёСЂСѓРµРј"+row+" "+Controller.getColumnName(row)+" "+values.elementAt(row).toString());
             Controller.updateTable(value.toString(),row+1, 2);
-            //System.err.println("Чейто редактируем"+row+" "+Controller.getColumnName(row)+" "+values.elementAt(row+1).toString()+" "+value);
+            //System.err.println("Р§РµР№С‚Рѕ СЂРµРґР°РєС‚РёСЂСѓРµРј"+row+" "+Controller.getColumnName(row)+" "+values.elementAt(row+1).toString()+" "+value);
             values.setElementAt(value,row+1);
-            System.err.println("Печатаем что то в таблицу");
+            System.err.println("РџРµС‡Р°С‚Р°РµРј С‡С‚Рѕ С‚Рѕ РІ С‚Р°Р±Р»РёС†Сѓ");
         } catch (Exception e){
             System.err.println(e);
         }

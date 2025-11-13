@@ -6,7 +6,7 @@ import java.io.Serializable;
 /*
  * Question.java
  *
- * Created on 12 ﬂÌ‚‡¸ 2004 „., 15:35
+ * Created on 12 –Ø–Ω–≤–∞—Ä—å 2004 –≥., 15:35
  */
 
 /**
@@ -38,7 +38,7 @@ public class QuestionManager extends UnicastRemoteObject implements QuestionInte
 
     public void setBase(Integer aBase, boolean Flag) throws java.rmi.RemoteException {
         Base=aBase;
-        if (Flag) Server.StoreDQ¿(this, 4);
+        if (Flag) Server.StoreDQ–ê(this, 4);
     };
 
     public Integer getMaxAnswerCount() throws java.rmi.RemoteException {
@@ -47,7 +47,7 @@ public class QuestionManager extends UnicastRemoteObject implements QuestionInte
 
     public void setMaxAnswerCount(Integer aMaxAnswerCount, boolean Flag) throws java.rmi.RemoteException {
         MaxAnswerCount=aMaxAnswerCount;
-        if (Flag) Server.StoreDQ¿(this, 5);
+        if (Flag) Server.StoreDQ–ê(this, 5);
     };
 
     public Integer getPos() throws java.rmi.RemoteException {
@@ -98,8 +98,8 @@ public class QuestionManager extends UnicastRemoteObject implements QuestionInte
                     --index;
                     cleanAnswersPos();
                     if (Flag) {
-                        Server.StoreDQ¿(this, 3);
-                        Server.StoreDQ¿(Server.getMainQuestion().getAnswer(Q.getID()), 13);
+                        Server.StoreDQ–ê(this, 3);
+                        Server.StoreDQ–ê(Server.getMainQuestion().getAnswer(Q.getID()), 13);
                     }
                 }
             ++index;
@@ -121,8 +121,8 @@ public class QuestionManager extends UnicastRemoteObject implements QuestionInte
                     cleanAnswersPos();
                     --index;
                     if (Flag) {
-                        Server.StoreDQ¿(this, 3);
-                        Server.StoreDQ¿(Server.getMainQuestion().getAnswer(Q.getID()), 13);
+                        Server.StoreDQ–ê(this, 3);
+                        Server.StoreDQ–ê(Server.getMainQuestion().getAnswer(Q.getID()), 13);
                     }
                 }
             ++index;
@@ -134,7 +134,7 @@ public class QuestionManager extends UnicastRemoteObject implements QuestionInte
 
     public void setQuestionType(int aType, boolean Flag) throws java.rmi.RemoteException {
         Type = aType;
-        if (Flag) Server.StoreDQ¿(this, 2);
+        if (Flag) Server.StoreDQ–ê(this, 2);
     };
     
     public int getQuestionType() throws java.rmi.RemoteException {
@@ -143,7 +143,7 @@ public class QuestionManager extends UnicastRemoteObject implements QuestionInte
     
     public void setRepetition(int aType, boolean Flag) throws java.rmi.RemoteException {
         RepetitionType = aType;
-        if (Flag) Server.StoreDQ¿(this, 6); 
+        if (Flag) Server.StoreDQ–ê(this, 6); 
         
     };
     
@@ -171,14 +171,14 @@ public class QuestionManager extends UnicastRemoteObject implements QuestionInte
     public AnswerInterface newAnswer(String Str, Integer Key, boolean Flag) throws java.rmi.RemoteException {
         Answer CurrAnswer = null;
         try {
-            System.out.println( "ÕÓ‚˚È ÓÚ‚ÂÚ" );
+            System.out.println( "–ù–æ–≤—ã–π –æ—Ç–≤–µ—Ç" );
             //Integer Keys = Server.getKey();
             CurrAnswer = new Answer(Server, Str, Key, Flag);
             CurrAnswer.setServer(Server);
             Answers.add(CurrAnswer);
             if (Flag) {
-                Server.StoreDQ¿(CurrAnswer, 0);
-                Server.StoreDQ¿(CurrAnswer, 1);
+                Server.StoreDQ–ê(CurrAnswer, 0);
+                Server.StoreDQ–ê(CurrAnswer, 1);
             }
             //UpdateClient();
             //ClientRefresher.Refresh();
@@ -195,7 +195,7 @@ public class QuestionManager extends UnicastRemoteObject implements QuestionInte
             RA=new RPointer(Key);
             RA.setPos(new Integer(Answers.size()));
             Answers.add(RA);
-            if (Flag) Server.StoreDQ¿(this, 3);
+            if (Flag) Server.StoreDQ–ê(this, 3);
         }
         return RA;
     }
@@ -239,7 +239,7 @@ public class QuestionManager extends UnicastRemoteObject implements QuestionInte
         int ResultFlag=Server.askArbitr(this,2,LibID);
         if (ResultFlag==0) { 
             Name = Str;
-            if (Flag) Server.StoreDQ¿(this, 1);
+            if (Flag) Server.StoreDQ–ê(this, 1);
         } return ResultFlag;
     };
     
@@ -257,7 +257,7 @@ public class QuestionManager extends UnicastRemoteObject implements QuestionInte
                 }
             }
         } catch( Exception e){
-            System.out.println("Œ¯Ë·Í‡ "+e.toString());
+            System.out.println("–û—à–∏–±–∫–∞ "+e.toString());
     	}     
         return Res;
     }

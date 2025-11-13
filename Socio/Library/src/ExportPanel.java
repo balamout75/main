@@ -1,7 +1,7 @@
 /*
  * InputPanel.java
  *
- * Created on 29 Март 2004 г., 20:34
+ * Created on 29 РњР°СЂС‚ 2004 Рі., 20:34
  */
 import javax.swing.table.AbstractTableModel;
 import javax.swing.table.TableModel;
@@ -35,7 +35,7 @@ import java.io.FileWriter;
 
 /**
  *
- * @author  Иван
+ * @author  РРІР°РЅ
  */
 public class ExportPanel extends javax.swing.JPanel  implements InputPanelInterface {
     static int alter     = 1;
@@ -122,7 +122,7 @@ public ExportPanel(DataModuleInterface aDataModule) throws RemoteException {
                             DictionaryInterface DI=Server.getMainDictionary();
                             Integer I=RQI.getID();
                             QI=DI.getQuestion(I);
-                            System.out.println("Вопрос "+QI.getName());
+                            System.out.println("Р’РѕРїСЂРѕСЃ "+QI.getName());
                             ArrayList AnswerArray= QI.getKeys();
                             int i=0;
                             LM.removeAllElements();
@@ -189,8 +189,8 @@ public ExportPanel(DataModuleInterface aDataModule) throws RemoteException {
 
     public void DataModuleSizeOut()  {
         try { 
-            //jLabel2.setText("Всего записей : "+TModel.getRowCount());
-            jLabel2.setText("Всего записей : "+TM.Size());
+            //jLabel2.setText("Р’СЃРµРіРѕ Р·Р°РїРёСЃРµР№ : "+TModel.getRowCount());
+            jLabel2.setText("Р’СЃРµРіРѕ Р·Р°РїРёСЃРµР№ : "+TM.Size());
         } catch (Exception ex) {
             System.out.println(ex);
         } 
@@ -198,7 +198,7 @@ public ExportPanel(DataModuleInterface aDataModule) throws RemoteException {
     
     public void CurrentRecOut()  {
         try { 
-            //jLabel2.setText("Всего записей : "+TModel.getRowCount());
+            //jLabel2.setText("Р’СЃРµРіРѕ Р·Р°РїРёСЃРµР№ : "+TModel.getRowCount());
             int i=TM.getCurrRow()+1;
             jTextField2.setText(""+i);
         } catch (Exception ex) {
@@ -212,7 +212,7 @@ public ExportPanel(DataModuleInterface aDataModule) throws RemoteException {
             DictionaryInterface DI=Server.getMainDictionary();
             Integer I=RQI.getID();
             QI=DI.getQuestion(I);
-            System.out.println("Вопрос "+QI.getName());
+            System.out.println("Р’РѕРїСЂРѕСЃ "+QI.getName());
             ArrayList AnswerArray= QI.getKeys();
             int i=0;
             String Str="";
@@ -380,13 +380,13 @@ public ExportPanel(DataModuleInterface aDataModule) throws RemoteException {
         setPreferredSize(new java.awt.Dimension(550, 300));
         setLayout(new java.awt.GridBagLayout());
 
-        jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder("Статистика"));
+        jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder("РЎС‚Р°С‚РёСЃС‚РёРєР°"));
         jPanel5.setLayout(new java.awt.GridLayout(1, 0));
 
-        jLabel1.setText("Текущая запись : <not calculated>");
+        jLabel1.setText("РўРµРєСѓС‰Р°СЏ Р·Р°РїРёСЃСЊ : <not calculated>");
         jPanel5.add(jLabel1);
 
-        jLabel2.setText("Всего записей : <not calculated>");
+        jLabel2.setText("Р’СЃРµРіРѕ Р·Р°РїРёСЃРµР№ : <not calculated>");
         jPanel5.add(jLabel2);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -397,7 +397,7 @@ public ExportPanel(DataModuleInterface aDataModule) throws RemoteException {
 
         jSplitPane1.setOrientation(javax.swing.JSplitPane.VERTICAL_SPLIT);
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Ввод данных"));
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Р’РІРѕРґ РґР°РЅРЅС‹С…"));
         jPanel1.setLayout(new java.awt.BorderLayout());
 
         jTable1.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
@@ -426,7 +426,7 @@ public ExportPanel(DataModuleInterface aDataModule) throws RemoteException {
 
         jSplitPane1.setLeftComponent(jPanel1);
 
-        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder("Детализация данных"));
+        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder("Р”РµС‚Р°Р»РёР·Р°С†РёСЏ РґР°РЅРЅС‹С…"));
         jPanel3.setLayout(new java.awt.GridBagLayout());
 
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
@@ -531,7 +531,7 @@ public ExportPanel(DataModuleInterface aDataModule) throws RemoteException {
 
         jButton7.setFocusable(false);
         jButton7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton7.setLabel("Экспорт");
+        jButton7.setLabel("Р­РєСЃРїРѕСЂС‚");
         jButton7.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -559,11 +559,11 @@ public ExportPanel(DataModuleInterface aDataModule) throws RemoteException {
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
         /*
-        Есть несколько вариантов этого компонента
-        1. Если неальтернативный то в зависимости от выбранного варианта впечатываем 
-        в текстовую форму значение кода.
-        2. Если альтернативный то впечатываем несколько вариантов
-        3. Если свободный то впечатываем значение
+        Р•СЃС‚СЊ РЅРµСЃРєРѕР»СЊРєРѕ РІР°СЂРёР°РЅС‚РѕРІ СЌС‚РѕРіРѕ РєРѕРјРїРѕРЅРµРЅС‚Р°
+        1. Р•СЃР»Рё РЅРµР°Р»СЊС‚РµСЂРЅР°С‚РёРІРЅС‹Р№ С‚Рѕ РІ Р·Р°РІРёСЃРёРјРѕСЃС‚Рё РѕС‚ РІС‹Р±СЂР°РЅРЅРѕРіРѕ РІР°СЂРёР°РЅС‚Р° РІРїРµС‡Р°С‚С‹РІР°РµРј 
+        РІ С‚РµРєСЃС‚РѕРІСѓСЋ С„РѕСЂРјСѓ Р·РЅР°С‡РµРЅРёРµ РєРѕРґР°.
+        2. Р•СЃР»Рё Р°Р»СЊС‚РµСЂРЅР°С‚РёРІРЅС‹Р№ С‚Рѕ РІРїРµС‡Р°С‚С‹РІР°РµРј РЅРµСЃРєРѕР»СЊРєРѕ РІР°СЂРёР°РЅС‚РѕРІ
+        3. Р•СЃР»Рё СЃРІРѕР±РѕРґРЅС‹Р№ С‚Рѕ РІРїРµС‡Р°С‚С‹РІР°РµРј Р·РЅР°С‡РµРЅРёРµ
         */
         try {
             ChangeFactor=box;
@@ -587,7 +587,7 @@ public ExportPanel(DataModuleInterface aDataModule) throws RemoteException {
                 }    
                 initFocusValue();
                 //rowSM.setLeadSelectionIndex(selectedRow);
-                System.out.println("О "+rowSM.getMaxSelectionIndex());
+                System.out.println("Рћ "+rowSM.getMaxSelectionIndex());
             } else if (QI.getQuestionType()==nonalter) {
                 //Str=jTextField1.getText();
                 TModel.setValueAt(jTextField1.getText(), selectedRow , 2);
@@ -617,7 +617,7 @@ public ExportPanel(DataModuleInterface aDataModule) throws RemoteException {
                     //initFocusValue();
                 }    
                 initFocusValue();
-                //System.out.println("Все типтоп ");
+                //System.out.println("Р’СЃРµ С‚РёРїС‚РѕРї ");
             } else if (QI.getQuestionType()==free) {
                 //Integer Num = new Integer(TModel.getValueAt(selectedRow,2).toString());
                 //jList1.setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION );
@@ -625,21 +625,21 @@ public ExportPanel(DataModuleInterface aDataModule) throws RemoteException {
             } 
             ChangeFactor=table;
         } catch (Exception ex) {
-            System.out.println("Ошибка в обработке jTextField1");
+            System.out.println("РћС€РёР±РєР° РІ РѕР±СЂР°Р±РѕС‚РєРµ jTextField1");
             ChangeFactor=1;
             initFocusValue();
         } 
-        System.out.println("Набрано что то в jTextField1");
+        System.out.println("РќР°Р±СЂР°РЅРѕ С‡С‚Рѕ С‚Рѕ РІ jTextField1");
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jList1ValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_jList1ValueChanged
         // TODO add your handling code here:
         /*
-        Есть несколько вариантов этого компонента
-        1. Если неальтернативный то в зависимости от выбранного варианта впечатываем 
-        в текстовую форму значение кода.
-        2. Если альтернативный то впечатываем несколько вариантов
-        3. Если свободный то впечатываем значение
+        Р•СЃС‚СЊ РЅРµСЃРєРѕР»СЊРєРѕ РІР°СЂРёР°РЅС‚РѕРІ СЌС‚РѕРіРѕ РєРѕРјРїРѕРЅРµРЅС‚Р°
+        1. Р•СЃР»Рё РЅРµР°Р»СЊС‚РµСЂРЅР°С‚РёРІРЅС‹Р№ С‚Рѕ РІ Р·Р°РІРёСЃРёРјРѕСЃС‚Рё РѕС‚ РІС‹Р±СЂР°РЅРЅРѕРіРѕ РІР°СЂРёР°РЅС‚Р° РІРїРµС‡Р°С‚С‹РІР°РµРј 
+        РІ С‚РµРєСЃС‚РѕРІСѓСЋ С„РѕСЂРјСѓ Р·РЅР°С‡РµРЅРёРµ РєРѕРґР°.
+        2. Р•СЃР»Рё Р°Р»СЊС‚РµСЂРЅР°С‚РёРІРЅС‹Р№ С‚Рѕ РІРїРµС‡Р°С‚С‹РІР°РµРј РЅРµСЃРєРѕР»СЊРєРѕ РІР°СЂРёР°РЅС‚РѕРІ
+        3. Р•СЃР»Рё СЃРІРѕР±РѕРґРЅС‹Р№ С‚Рѕ РІРїРµС‡Р°С‚С‹РІР°РµРј Р·РЅР°С‡РµРЅРёРµ
         */
         if (JList1Focus) {
         try {
@@ -666,7 +666,7 @@ public ExportPanel(DataModuleInterface aDataModule) throws RemoteException {
                 //selectedRow ++;
                 rowSM.setSelectionInterval(selectedRow, selectedRow);
                 //initFocusValue();
-                //System.out.println("Все типтоп ");
+                //System.out.println("Р’СЃРµ С‚РёРїС‚РѕРї ");
             } else if (QI.getQuestionType()==free) {
                 //Integer Num = new Integer(TModel.getValueAt(selectedRow,2).toString());
                 //jList1.setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION );
@@ -674,21 +674,21 @@ public ExportPanel(DataModuleInterface aDataModule) throws RemoteException {
             } 
             ChangeFactor=table;
         } catch (Exception ex) {
-            System.out.println("Ошибка в jButton3ActionPerformed");
+            System.out.println("РћС€РёР±РєР° РІ jButton3ActionPerformed");
             ChangeFactor=table;
         } 
-        System.out.println("Выбрано что то в jList1");
+        System.out.println("Р’С‹Р±СЂР°РЅРѕ С‡С‚Рѕ С‚Рѕ РІ jList1");
         }
     }//GEN-LAST:event_jList1ValueChanged
 
     private void jTable1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTable1FocusLost
         // TODO add your handling code here:
-        //System.out.println("Выбрано 1");
+        //System.out.println("Р’С‹Р±СЂР°РЅРѕ 1");
     }//GEN-LAST:event_jTable1FocusLost
 
     private void jTable1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTable1FocusGained
         // TODO add your handling code here:
-        //System.out.println("Выбрано 2");
+        //System.out.println("Р’С‹Р±СЂР°РЅРѕ 2");
     }//GEN-LAST:event_jTable1FocusGained
 
     private void jTable1CaretPositionChanged(java.awt.event.InputMethodEvent evt) {//GEN-FIRST:event_jTable1CaretPositionChanged
@@ -704,7 +704,7 @@ public ExportPanel(DataModuleInterface aDataModule) throws RemoteException {
             initFocusValue();
             //TModel.Reload(); 
         } catch (Exception ex) {
-            System.out.println("Ошибка в jButton3ActionPerformed");
+            System.out.println("РћС€РёР±РєР° РІ jButton3ActionPerformed");
         }
     }//GEN-LAST:event_jButton5ActionPerformed
 
@@ -716,7 +716,7 @@ public ExportPanel(DataModuleInterface aDataModule) throws RemoteException {
             initFocusValue();
             //TModel.Reload(); 
         } catch (Exception ex) {
-            System.out.println("Ошибка в jButton3ActionPerformed");
+            System.out.println("РћС€РёР±РєР° РІ jButton3ActionPerformed");
         }        // TODO add your handling code here:
     }//GEN-LAST:event_jButton4ActionPerformed
 
@@ -728,7 +728,7 @@ public ExportPanel(DataModuleInterface aDataModule) throws RemoteException {
             initFocusValue();
             //TModel.Reload(); 
         } catch (Exception ex) {
-            System.out.println("Ошибка в jButton3ActionPerformed");
+            System.out.println("РћС€РёР±РєР° РІ jButton3ActionPerformed");
         }
     }//GEN-LAST:event_jButton2ActionPerformed
 
@@ -740,7 +740,7 @@ public ExportPanel(DataModuleInterface aDataModule) throws RemoteException {
             initFocusValue();
             //TModel.Reload(); 
         } catch (Exception ex) {
-            System.out.println("Ошибка в jButton3ActionPerformed");
+            System.out.println("РћС€РёР±РєР° РІ jButton3ActionPerformed");
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -756,7 +756,7 @@ public ExportPanel(DataModuleInterface aDataModule) throws RemoteException {
             initFocusValue();
               
         } catch (Exception ex) {
-            System.out.println("Ошибка в jButton3ActionPerformed");
+            System.out.println("РћС€РёР±РєР° РІ jButton3ActionPerformed");
         }
     }        
     
@@ -765,13 +765,13 @@ public ExportPanel(DataModuleInterface aDataModule) throws RemoteException {
         try {
            NewRecord();
         } catch (Exception ex) {
-            System.out.println("Ошибка в jButton3ActionPerformed"+ex);
+            System.out.println("РћС€РёР±РєР° РІ jButton3ActionPerformed"+ex);
         }
     }//GEN-LAST:event_jButton6ActionPerformed
 
     /*public void setLabel () {
-        jLabel1.setText("Всего записей :"+RecordCount);
-        jLabel2.setText("Текущая запись :"+CurrentRecord);
+        jLabel1.setText("Р’СЃРµРіРѕ Р·Р°РїРёСЃРµР№ :"+RecordCount);
+        jLabel2.setText("РўРµРєСѓС‰Р°СЏ Р·Р°РїРёСЃСЊ :"+CurrentRecord);
     }*/
     
     private void NextRecord() {                                         
@@ -782,7 +782,7 @@ public ExportPanel(DataModuleInterface aDataModule) throws RemoteException {
             initFocusValue();
             //TModel.Reload(); 
         } catch (Exception ex) {
-            System.out.println("Ошибка в jButton3ActionPerformed"+ex);
+            System.out.println("РћС€РёР±РєР° РІ jButton3ActionPerformed"+ex);
         }
     }
     
@@ -791,19 +791,19 @@ public ExportPanel(DataModuleInterface aDataModule) throws RemoteException {
         try {
             NextRecord();
         } catch (Exception ex) {
-            System.out.println("Ошибка в jButton3ActionPerformed");
+            System.out.println("РћС€РёР±РєР° РІ jButton3ActionPerformed");
         }
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jTable1PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jTable1PropertyChange
         // TODO add your handling code here:
-        System.out.println("Изменился контент таблицы ");
-        //Что надоо сделать.. Берем из словаря информацию о столбце
-        //Создаем скрипт /insert
-        //Берем из Сервера JDBC адаптер и выполняем скрипт
-        //Переделваем датамодель
-        //Сегодня !!!
-        //Надо сделать что-то с дата модулем ))) Дома сделаю
+        System.out.println("РР·РјРµРЅРёР»СЃСЏ РєРѕРЅС‚РµРЅС‚ С‚Р°Р±Р»РёС†С‹ ");
+        //Р§С‚Рѕ РЅР°РґРѕРѕ СЃРґРµР»Р°С‚СЊ.. Р‘РµСЂРµРј РёР· СЃР»РѕРІР°СЂСЏ РёРЅС„РѕСЂРјР°С†РёСЋ Рѕ СЃС‚РѕР»Р±С†Рµ
+        //РЎРѕР·РґР°РµРј СЃРєСЂРёРїС‚ /insert
+        //Р‘РµСЂРµРј РёР· РЎРµСЂРІРµСЂР° JDBC Р°РґР°РїС‚РµСЂ Рё РІС‹РїРѕР»РЅСЏРµРј СЃРєСЂРёРїС‚
+        //РџРµСЂРµРґРµР»РІР°РµРј РґР°С‚Р°РјРѕРґРµР»СЊ
+        //РЎРµРіРѕРґРЅСЏ !!!
+        //РќР°РґРѕ СЃРґРµР»Р°С‚СЊ С‡С‚Рѕ-С‚Рѕ СЃ РґР°С‚Р° РјРѕРґСѓР»РµРј ))) Р”РѕРјР° СЃРґРµР»Р°СЋ
         
     }//GEN-LAST:event_jTable1PropertyChange
 
@@ -814,13 +814,13 @@ private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-F
             //CurrentRecOut();
             //TModel.Reload(); 
         } catch (Exception ex) {
-            System.out.println("Ошибка в jButton3ActionPerformed");
+            System.out.println("РћС€РёР±РєР° РІ jButton3ActionPerformed");
             CurrentRecOut();
     }
 }//GEN-LAST:event_jTextField2ActionPerformed
 
 private void ExportDaFile(String FileName) {
-    System.out.println("Вроде что то сохраняю");
+    System.out.println("Р’СЂРѕРґРµ С‡С‚Рѕ С‚Рѕ СЃРѕС…СЂР°РЅСЏСЋ");
     try {
             ArrayList AnswerArray;
             AnswerInterface A;
@@ -833,11 +833,11 @@ private void ExportDaFile(String FileName) {
                 DictionaryInterface DI=Server.getMainDictionary();
                 QI=DI.getQuestion(RQI.getID());
                 if (QI.getQuestionType()==alter) {
-                    out.write("//	Альтернативная текстовая переменная");
+                    out.write("//	РђР»СЊС‚РµСЂРЅР°С‚РёРІРЅР°СЏ С‚РµРєСЃС‚РѕРІР°СЏ РїРµСЂРµРјРµРЅРЅР°СЏ");
                     out.newLine();
                     out.write((i+1)+".at\t");
                 } else {
-                    out.write("//	Неальтернативная текстовая переменная");
+                    out.write("//	РќРµР°Р»СЊС‚РµСЂРЅР°С‚РёРІРЅР°СЏ С‚РµРєСЃС‚РѕРІР°СЏ РїРµСЂРµРјРµРЅРЅР°СЏ");
                     out.newLine();
                     out.write((i+1)+".nt\t");
                 }
@@ -876,7 +876,7 @@ private void ExportDaFile(String FileName) {
                    i++;
                }
             } catch (Exception e2) {
-                System.out.println("Неудается записать "+e2);
+                System.out.println("РќРµСѓРґР°РµС‚СЃСЏ Р·Р°РїРёСЃР°С‚СЊ "+e2);
             }
             out.close();
     } catch (Exception e2) {
@@ -890,12 +890,12 @@ private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRS
 }//GEN-LAST:event_jButton7ActionPerformed
     
     public boolean setCurrent(int S) throws RemoteException {
-        System.out.println("Текущий номер записи "+S);
-        jLabel1.setText("Текущий номер записи "+S);
+        System.out.println("РўРµРєСѓС‰РёР№ РЅРѕРјРµСЂ Р·Р°РїРёСЃРё "+S);
+        jLabel1.setText("РўРµРєСѓС‰РёР№ РЅРѕРјРµСЂ Р·Р°РїРёСЃРё "+S);
         return true;
     };
     public boolean setSize(int S) throws RemoteException {
-        System.out.println("Всего записей "+S);
+        System.out.println("Р’СЃРµРіРѕ Р·Р°РїРёСЃРµР№ "+S);
         return true;
     };
     

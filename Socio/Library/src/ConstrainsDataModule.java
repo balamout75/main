@@ -10,7 +10,7 @@ import java.awt.*;
 
 /**
  *
- * @author  Иван
+ * @author  РРІР°РЅ
  */
 //public class QuestionEditorPanel extends javax.swing.JPanel implements DNDCompInterface{
 public class ConstrainsDataModule extends javax.swing.JPanel {
@@ -82,7 +82,7 @@ public class ConstrainsDataModule extends javax.swing.JPanel {
         jScrollPane4 = new javax.swing.JScrollPane();
 
 
-        //setBorder(javax.swing.BorderFactory.createTitledBorder("Детализация данных"));
+        //setBorder(javax.swing.BorderFactory.createTitledBorder("Р”РµС‚Р°Р»РёР·Р°С†РёСЏ РґР°РЅРЅС‹С…"));
         setLayout(new java.awt.GridBagLayout());
 
         DictionaryPanel.setPreferredSize(new java.awt.Dimension(0, 0));
@@ -131,19 +131,19 @@ public class ConstrainsDataModule extends javax.swing.JPanel {
             if (I!=null) top.add(new DefaultMutableTreeNode(new DMIProperty(5,DMI.getQuota().toString(),DMI)));
             else top.add(new DefaultMutableTreeNode(new DMIProperty(5,"0",DMI)));*/
         } catch(Exception re ) {
-            System.out.println("Фигня какая то в словарях и их ответах "+re.toString());
+            System.out.println("Р¤РёРіРЅСЏ РєР°РєР°СЏ С‚Рѕ РІ СЃР»РѕРІР°СЂСЏС… Рё РёС… РѕС‚РІРµС‚Р°С… "+re.toString());
         }
     }
 
     private void makeTree() {
         try {
             jTree1.removeAll();
-            DefaultMutableTreeNode top = new DefaultMutableTreeNode(new DMIProperty(1,"Свойства вопроса",DMI));
+            DefaultMutableTreeNode top = new DefaultMutableTreeNode(new DMIProperty(1,"РЎРІРѕР№СЃС‚РІР° РІРѕРїСЂРѕСЃР°",DMI));
             makeAnswerBranches(top);
-            DefaultTreeModel TreeMоdel=new DefaultTreeModel(top);
+            DefaultTreeModel TreeMРѕdel=new DefaultTreeModel(top);
 
             jTree1.getSelectionModel().setSelectionMode(TreeSelectionModel.SINGLE_TREE_SELECTION);
-            jTree1.setModel(TreeMоdel);
+            jTree1.setModel(TreeMРѕdel);
             jTree1.setDragEnabled(true);
             DMITreeCellRenderer  CQR=new DMITreeCellRenderer  ();
             DMITreeCellEditor    CQE=new DMITreeCellEditor    (jTree1);
@@ -153,7 +153,7 @@ public class ConstrainsDataModule extends javax.swing.JPanel {
 
             
         } catch(Exception re ) {
-            System.out.println("Фигня какая ETP "+re.toString());
+            System.out.println("Р¤РёРіРЅСЏ РєР°РєР°СЏ ETP "+re.toString());
         }
     }
 
@@ -195,7 +195,7 @@ public class ConstrainsDataModule extends javax.swing.JPanel {
                 }
               }
         } catch (Exception E) {
-            System.out.println("Ошибка в определении свойств DataModuleProperty "+E);
+            System.out.println("РћС€РёР±РєР° РІ РѕРїСЂРµРґРµР»РµРЅРёРё СЃРІРѕР№СЃС‚РІ DataModuleProperty "+E);
         }
     }
 
@@ -203,23 +203,23 @@ public class ConstrainsDataModule extends javax.swing.JPanel {
         String Header="";
         switch (this.getProperyIndex()) {
                 case 1:{
-                    Header="Свойства опроса ";
+                    Header="РЎРІРѕР№СЃС‚РІР° РѕРїСЂРѕСЃР° ";
                     break;
                 }
                 case 2:{
-                    Header="Аннотация ";
+                    Header="РђРЅРЅРѕС‚Р°С†РёСЏ ";
                     break;
                 }
                 case 3:{
-                    Header="Дата началао опроса ";
+                    Header="Р”Р°С‚Р° РЅР°С‡Р°Р»Р°Рѕ РѕРїСЂРѕСЃР° ";
                     break;
                 }
                 case 4:{
-                    Header="Дата завершения опроса ";
+                    Header="Р”Р°С‚Р° Р·Р°РІРµСЂС€РµРЅРёСЏ РѕРїСЂРѕСЃР° ";
                     break;
                 }
                 case 5:{
-                    Header="Выборка ";
+                    Header="Р’С‹Р±РѕСЂРєР° ";
                     break;
                 }
               }
@@ -266,7 +266,7 @@ public class ConstrainsDataModule extends javax.swing.JPanel {
                 }
               }
         } catch (Exception E) {
-            System.out.println("Ошибка в назначении иконки"+E);
+            System.out.println("РћС€РёР±РєР° РІ РЅР°Р·РЅР°С‡РµРЅРёРё РёРєРѕРЅРєРё"+E);
         }
         if (icon!=null) {
             nonLeafRenderer.setOpenIcon(icon);
@@ -360,7 +360,7 @@ public class ConstrainsDataModule extends javax.swing.JPanel {
                 }
              }
             } catch (Exception E) {
-                System.out.println("Ошибка в назначении иконки 2"+E);
+                System.out.println("РћС€РёР±РєР° РІ РЅР°Р·РЅР°С‡РµРЅРёРё РёРєРѕРЅРєРё 2"+E);
             }
             if(editingIcon != null)
                 offset = renderer.getIconTextGap() +

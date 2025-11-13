@@ -7,12 +7,12 @@ import java.io.Serializable;
 /*
  * DataModul.java
  *
- * Created on 13 Март 2004 г., 18:41
+ * Created on 13 РњР°СЂС‚ 2004 Рі., 18:41
  */
 
 /**
  *
- * @author  Иван
+ * @author  РРІР°РЅ
  */
 public class DataFilter extends UnicastRemoteObject implements DataModuleInterface, Serializable {
     public String Name="";
@@ -98,12 +98,12 @@ public class DataFilter extends UnicastRemoteObject implements DataModuleInterfa
             Server=aServer;
             ParentID=aParentID;
             DataCollection = new ArrayList();
-            Name = "Блоки данных";
-            System.out.println( "Новый блок/группа" );
+            Name = "Р‘Р»РѕРєРё РґР°РЅРЅС‹С…";
+            System.out.println( "РќРѕРІС‹Р№ Р±Р»РѕРє/РіСЂСѓРїРїР°" );
             TableConnectors = new ArrayList();
             this.ID=ID;
         } catch (Exception e) {
-                System.out.println("Ошибка создания DataBlock" +e.getMessage());            
+                System.out.println("РћС€РёР±РєР° СЃРѕР·РґР°РЅРёСЏ DataBlock" +e.getMessage());            
         }            
             //MakeTable();
     }    
@@ -122,7 +122,7 @@ public class DataFilter extends UnicastRemoteObject implements DataModuleInterfa
     /*public void AddRoot(DataModuleInterface DMI) throws RemoteException {
     }   */
     
-    ///////////// анализатор строки фильтра
+    ///////////// Р°РЅР°Р»РёР·Р°С‚РѕСЂ СЃС‚СЂРѕРєРё С„РёР»СЊС‚СЂР°
     private boolean SkipSpace(String Str) {
         boolean res;
         try {
@@ -228,7 +228,7 @@ public class DataFilter extends UnicastRemoteObject implements DataModuleInterfa
         try {
             QID=Server.getDictionary(getDictionary()).getByPos(QIndex).getID();
         } catch (Exception E) {
-            System.out.println( "Ошибка в преобразовании QuestName" );
+            System.out.println( "РћС€РёР±РєР° РІ РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёРё QuestName" );
         }
         return QID;
     }
@@ -239,16 +239,16 @@ public class DataFilter extends UnicastRemoteObject implements DataModuleInterfa
         String Code="";
         int OpenCounter=0;
         boolean Error=false;
-        int State=0; //начальная стадия
+        int State=0; //РЅР°С‡Р°Р»СЊРЅР°СЏ СЃС‚Р°РґРёСЏ
         FilterAnalyzeI=new Integer(0);
         do {
             switch(State) {
-                case 0: { //Начало. Может последовать либо скобка, либо символ вопроса
+                case 0: { //РќР°С‡Р°Р»Рѕ. РњРѕР¶РµС‚ РїРѕСЃР»РµРґРѕРІР°С‚СЊ Р»РёР±Рѕ СЃРєРѕР±РєР°, Р»РёР±Рѕ СЃРёРјРІРѕР» РІРѕРїСЂРѕСЃР°
                     if (SkipSpace(S)) {
                         if (FirstBracket1(S)) {
                             OpenCounter++;
                             Str=Str+"(";
-                        } else if (SingleOperand(S)) { //отрицание
+                        } else if (SingleOperand(S)) { //РѕС‚СЂРёС†Р°РЅРёРµ
                                     Str=Str+" not ";
                                } else if (QuestBegin(S)) {
                                          State=1;
@@ -257,7 +257,7 @@ public class DataFilter extends UnicastRemoteObject implements DataModuleInterfa
                     } else State=7;
                     break;
                 }
-                case 1: {//Состоялся символ вопроса. Считываем его код
+                case 1: {//РЎРѕСЃС‚РѕСЏР»СЃСЏ СЃРёРјРІРѕР» РІРѕРїСЂРѕСЃР°. РЎС‡РёС‚С‹РІР°РµРј РµРіРѕ РєРѕРґ
                     if (SkipSpace(S)) {
                         if (FirstNum(S)) {
                             Code=""+S.charAt(FilterAnalyzeI-1);
@@ -266,21 +266,21 @@ public class DataFilter extends UnicastRemoteObject implements DataModuleInterfa
                     } else State=7;    
                     break;
                 }
-                case 2: {//Состоялся один из символов номера вопроса
+                case 2: {//РЎРѕСЃС‚РѕСЏР»СЃСЏ РѕРґРёРЅ РёР· СЃРёРјРІРѕР»РѕРІ РЅРѕРјРµСЂР° РІРѕРїСЂРѕСЃР°
                     if (SkipSpace(S)) {
                         if (FirstNum(S)) {
-                            System.out.println( "Новый блок/группа" );
+                            System.out.println( "РќРѕРІС‹Р№ Р±Р»РѕРє/РіСЂСѓРїРїР°" );
                             Code=Code+S.charAt(FilterAnalyzeI-1);
                         } else if (FirstBracket2(S)) {
                                 //Str=Str+"Contains (Quest"+getQuestID(Integer.parseInt(Code)-1);
                                 Str=Str+"Quest"+getQuestID(Integer.parseInt(Code)-1);
-                                //Тут можно проанализировать что за вопрос
+                                //РўСѓС‚ РјРѕР¶РЅРѕ РїСЂРѕР°РЅР°Р»РёР·РёСЂРѕРІР°С‚СЊ С‡С‚Рѕ Р·Р° РІРѕРїСЂРѕСЃ
                                 State=3;
                                } else {Error=true; State=7;}
                     } else State=7;        
                     break;
                 }
-                case 3: {//Состоялся символ ответа. Считываем его код
+                case 3: {//РЎРѕСЃС‚РѕСЏР»СЃСЏ СЃРёРјРІРѕР» РѕС‚РІРµС‚Р°. РЎС‡РёС‚С‹РІР°РµРј РµРіРѕ РєРѕРґ
                     if (SkipSpace(S)) {
                         if (FirstNum(S)) {
                             Code=""+S.charAt(FilterAnalyzeI-1);
@@ -292,7 +292,7 @@ public class DataFilter extends UnicastRemoteObject implements DataModuleInterfa
                     } else State=7;               
                     break;
                 }
-                case 4: { //Состоялся один из символов номера ответа 
+                case 4: { //РЎРѕСЃС‚РѕСЏР»СЃСЏ РѕРґРёРЅ РёР· СЃРёРјРІРѕР»РѕРІ РЅРѕРјРµСЂР° РѕС‚РІРµС‚Р° 
                     if (SkipSpace(S)) {
                         if (FirstNum(S)) {
                             Code=Code+S.charAt(FilterAnalyzeI-1);
@@ -306,7 +306,7 @@ public class DataFilter extends UnicastRemoteObject implements DataModuleInterfa
                     } else State=7;                                       
                     break;
                 }
-                case 5: { //Состоялся символ пустого ответа 
+                case 5: { //РЎРѕСЃС‚РѕСЏР»СЃСЏ СЃРёРјРІРѕР» РїСѓСЃС‚РѕРіРѕ РѕС‚РІРµС‚Р° 
                     if (SkipSpace(S)) {                    
                         if (CloseBracket2(S)) {
                             if (Code.equalsIgnoreCase("0")) Str=Str+" is null "; 
@@ -316,7 +316,7 @@ public class DataFilter extends UnicastRemoteObject implements DataModuleInterfa
                     } else State=7;                                                               
                     break;
                 }
-                case 6: { //Состоялось закрытие символа ответа
+                case 6: { //РЎРѕСЃС‚РѕСЏР»РѕСЃСЊ Р·Р°РєСЂС‹С‚РёРµ СЃРёРјРІРѕР»Р° РѕС‚РІРµС‚Р°
                     if (SkipSpace(S)) {                                        
                         if (CloseBracket1(S)) {
                             Str=Str+")";
@@ -336,11 +336,11 @@ public class DataFilter extends UnicastRemoteObject implements DataModuleInterfa
         System.out.println(Str);	   
         return Str;
       } catch (Exception E) {
-          System.out.println("Ошибка в строке условий "+E.toString());                    
+          System.out.println("РћС€РёР±РєР° РІ СЃС‚СЂРѕРєРµ СѓСЃР»РѕРІРёР№ "+E.toString());                    
           return "";
       }  
     };
-    ///////////// анализатор строки фильтра завершение
+    ///////////// Р°РЅР°Р»РёР·Р°С‚РѕСЂ СЃС‚СЂРѕРєРё С„РёР»СЊС‚СЂР° Р·Р°РІРµСЂС€РµРЅРёРµ
     
     
     
@@ -371,21 +371,21 @@ public class DataFilter extends UnicastRemoteObject implements DataModuleInterfa
         Condition = AnalyseFilterString(Comment);
         if (!Condition.equalsIgnoreCase("")) {
             if (!TableName.equalsIgnoreCase("")) {
-                System.out.println("Удаляем старую таблицу");
+                System.out.println("РЈРґР°Р»СЏРµРј СЃС‚Р°СЂСѓСЋ С‚Р°Р±Р»РёС†Сѓ");
             }
         }
         TableName = "V"+Server.MakeTable();
         Server.StoreDMI(ID, 6);
-        System.out.println("Создаем таблицу");                    
+        System.out.println("РЎРѕР·РґР°РµРј С‚Р°Р±Р»РёС†Сѓ");                    
         String Str = "create view "+TableName+" as select * from "+Server.getDMI(ParentID).getTableName();
         if (!Comment.equalsIgnoreCase("")) Str=Str+" where ("+Condition+")";
         try {
-            System.out.println("Datamodule - Строка создания таблицы " + Str);            
+            System.out.println("Datamodule - РЎС‚СЂРѕРєР° СЃРѕР·РґР°РЅРёСЏ С‚Р°Р±Р»РёС†С‹ " + Str);            
             Server.executeSQL(Str,null);
             Server.executeSQL("commit",null);
             return Str;
         } catch (Exception e) {
-            System.out.println("Datamodule - Ошибка создания имени файла данных" + 	e.getMessage());            
+            System.out.println("Datamodule - РћС€РёР±РєР° СЃРѕР·РґР°РЅРёСЏ РёРјРµРЅРё С„Р°Р№Р»Р° РґР°РЅРЅС‹С…" + 	e.getMessage());            
             e.printStackTrace();
             return "";
         }
@@ -423,29 +423,29 @@ public class DataFilter extends UnicastRemoteObject implements DataModuleInterfa
             }
             return Str;
         } catch (Exception e) {
-            System.out.println("Datamodule - Ошибка создания имени файла данных" + 	e.getMessage());            
+            System.out.println("Datamodule - РћС€РёР±РєР° СЃРѕР·РґР°РЅРёСЏ РёРјРµРЅРё С„Р°Р№Р»Р° РґР°РЅРЅС‹С…" + 	e.getMessage());            
             return "";
 	}
-        //ПОлучаем уникальный номер
-        //Соллекция вопросов формирующая DataModel
+        //РџРћР»СѓС‡Р°РµРј СѓРЅРёРєР°Р»СЊРЅС‹Р№ РЅРѕРјРµСЂ
+        //РЎРѕР»Р»РµРєС†РёСЏ РІРѕРїСЂРѕСЃРѕРІ С„РѕСЂРјРёСЂСѓСЋС‰Р°СЏ DataModel
         //return Str;
     }
     
     public String CreateView(String aStr) throws RemoteException {
         String Str = "Create view "+TableName+" "+aStr;
         try { 
-            System.out.println("Datamodule - Строка создания View "+Str);            
+            System.out.println("Datamodule - РЎС‚СЂРѕРєР° СЃРѕР·РґР°РЅРёСЏ View "+Str);            
             Server.executeSQL(Str,null);
             Server.executeSQL("commit",null);
             Server.StoreDMI(ID, 6);
             return Str;
         } catch (Exception e) {
-            System.out.println("Datamodule - Ошибка создания имени файла данных" + 	e.getMessage());            
+            System.out.println("Datamodule - РћС€РёР±РєР° СЃРѕР·РґР°РЅРёСЏ РёРјРµРЅРё С„Р°Р№Р»Р° РґР°РЅРЅС‹С…" + 	e.getMessage());            
             e.printStackTrace();
             return "";
 	}
-        //ПОлучаем уникальный номер
-        //Соллекция вопросов формирующая DataModel
+        //РџРћР»СѓС‡Р°РµРј СѓРЅРёРєР°Р»СЊРЅС‹Р№ РЅРѕРјРµСЂ
+        //РЎРѕР»Р»РµРєС†РёСЏ РІРѕРїСЂРѕСЃРѕРІ С„РѕСЂРјРёСЂСѓСЋС‰Р°СЏ DataModel
         //return Str;
     }
     
@@ -464,7 +464,7 @@ public class DataFilter extends UnicastRemoteObject implements DataModuleInterfa
                 
             } else Str="";
         } catch (Exception e) {
-            System.out.println("Datamodule - Ошибка создания имени файла данных" + 	e.getMessage());            
+            System.out.println("Datamodule - РћС€РёР±РєР° СЃРѕР·РґР°РЅРёСЏ РёРјРµРЅРё С„Р°Р№Р»Р° РґР°РЅРЅС‹С…" + 	e.getMessage());            
             Str="";
 	}    
         return Str;
@@ -475,7 +475,7 @@ public class DataFilter extends UnicastRemoteObject implements DataModuleInterfa
         return Str;
     }
     
-    //Добавить новое значение в таблицу
+    //Р”РѕР±Р°РІРёС‚СЊ РЅРѕРІРѕРµ Р·РЅР°С‡РµРЅРёРµ РІ С‚Р°Р±Р»РёС†Сѓ
     
     public RInterface addElement(Integer Key, Integer LibID, boolean Flag) throws RemoteException {
         RPointer Root=null;
@@ -530,7 +530,7 @@ public class DataFilter extends UnicastRemoteObject implements DataModuleInterfa
                         Server.StoreDMI(this.ID, 2);
                         Server.StoreDMI(Q.getID(), 13); 
                     }
-                    System.out.println("Удалили успешно 1");
+                    System.out.println("РЈРґР°Р»РёР»Рё СѓСЃРїРµС€РЅРѕ 1");
                     Flag=false;
                     --index;
                     cleanModulePos();
@@ -556,7 +556,7 @@ public class DataFilter extends UnicastRemoteObject implements DataModuleInterfa
                         Server.StoreDMI(Q.getID(), 13); 
                     }
                     cleanModulePos();
-                    System.out.println("Удалили успешно 2");
+                    System.out.println("РЈРґР°Р»РёР»Рё СѓСЃРїРµС€РЅРѕ 2");
                     --index;
                 }
             ++index;
@@ -579,7 +579,7 @@ public class DataFilter extends UnicastRemoteObject implements DataModuleInterfa
                 }
             }
         } catch( Exception e){
-            System.out.println("Ошибка "+e.toString());
+            System.out.println("РћС€РёР±РєР° "+e.toString());
     	}
         return Res;
     } 
@@ -610,7 +610,7 @@ public class DataFilter extends UnicastRemoteObject implements DataModuleInterfa
     }        
     
     public Integer getDictionary() throws RemoteException {
-        System.out.println("Что то ведь делается");	
+        System.out.println("Р§С‚Рѕ С‚Рѕ РІРµРґСЊ РґРµР»Р°РµС‚СЃСЏ");	
         return DictionaryID;
         
     }
@@ -719,7 +719,7 @@ public class DataFilter extends UnicastRemoteObject implements DataModuleInterfa
             
         } catch (Exception E) {
             System.out.println(query);
-            System.out.println("Ошибка создания Скрипта1 создания новой записи "+E);	
+            System.out.println("РћС€РёР±РєР° СЃРѕР·РґР°РЅРёСЏ РЎРєСЂРёРїС‚Р°1 СЃРѕР·РґР°РЅРёСЏ РЅРѕРІРѕР№ Р·Р°РїРёСЃРё "+E);	
         }
         
         return query;

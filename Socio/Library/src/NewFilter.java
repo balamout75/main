@@ -1,7 +1,7 @@
 /*
  * NewFilter.java
  *
- * Created on 9 Декабрь 2005 г., 10:55
+ * Created on 9 Р”РµРєР°Р±СЂСЊ 2005 Рі., 10:55
  */
 import java.rmi.RemoteException;
 //import java.rmi.Naming;
@@ -18,7 +18,7 @@ import javax.swing.*;
 import java.util.ArrayList;
 
 /**
- * @author  Иван
+ * @author  РРІР°РЅ
  */
 public class NewFilter extends javax.swing.JPanel {
     private DataModuleInterface  DataModule;
@@ -69,10 +69,10 @@ public class NewFilter extends javax.swing.JPanel {
 
         setLayout(new java.awt.GridBagLayout());
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Словарь"));
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("РЎР»РѕРІР°СЂСЊ"));
         jPanel1.setLayout(new java.awt.GridBagLayout());
 
-        jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder("Переменная"));
+        jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder("РџРµСЂРµРјРµРЅРЅР°СЏ"));
         jPanel4.setLayout(new java.awt.BorderLayout());
 
         jList1.addListSelectionListener(new javax.swing.event.ListSelectionListener() {
@@ -90,7 +90,7 @@ public class NewFilter extends javax.swing.JPanel {
         gridBagConstraints.weighty = 1.0;
         jPanel1.add(jPanel4, gridBagConstraints);
 
-        jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder("Значения"));
+        jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder("Р—РЅР°С‡РµРЅРёСЏ"));
         jPanel5.setLayout(new java.awt.BorderLayout());
 
         jScrollPane2.setViewportView(jList2);
@@ -111,7 +111,7 @@ public class NewFilter extends javax.swing.JPanel {
         gridBagConstraints.weighty = 1.0;
         add(jPanel1, gridBagConstraints);
 
-        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Формула"));
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Р¤РѕСЂРјСѓР»Р°"));
         jPanel2.setLayout(new java.awt.BorderLayout());
 
         jTextField1.setText("jTextField1");
@@ -129,7 +129,7 @@ public class NewFilter extends javax.swing.JPanel {
         gridBagConstraints.weightx = 1.0;
         add(jPanel2, gridBagConstraints);
 
-        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Название фильтра"));
+        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "РќР°Р·РІР°РЅРёРµ С„РёР»СЊС‚СЂР°"));
         jPanel3.setLayout(new java.awt.BorderLayout());
 
         jTextField2.setText("jTextField2");
@@ -142,7 +142,7 @@ public class NewFilter extends javax.swing.JPanel {
         gridBagConstraints.weightx = 1.0;
         add(jPanel3, gridBagConstraints);
 
-        jButton1.setText("Постоить распределение");
+        jButton1.setText("РџРѕСЃС‚РѕРёС‚СЊ СЂР°СЃРїСЂРµРґРµР»РµРЅРёРµ");
         jToolBar1.add(jButton1);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -158,20 +158,20 @@ public class NewFilter extends javax.swing.JPanel {
     private void jList1ValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_jList1ValueChanged
         // TODO add your handling code here:
         QuestIndex = jList1.getSelectedIndex();
-        System.out.println("Печатаем список вопросов");
+        System.out.println("РџРµС‡Р°С‚Р°РµРј СЃРїРёСЃРѕРє РІРѕРїСЂРѕСЃРѕРІ");
         try {
-            //ПОтом надо подставить сюда натуральный DictionaryClass
+            //РџРћС‚РѕРј РЅР°РґРѕ РїРѕРґСЃС‚Р°РІРёС‚СЊ СЃСЋРґР° РЅР°С‚СѓСЂР°Р»СЊРЅС‹Р№ DictionaryClass
             //System.out.println(QuestIndex+"-"+Dictionary.GetQuestSize());
             if ((QuestIndex>=0)&(QuestIndex<Dictionary.getSize())) {
                 //RefreshAnswerList();
-            } else {System.out.println( "Чето не так jList1ValueChanged");}   
+            } else {System.out.println( "Р§РµС‚Рѕ РЅРµ С‚Р°Рє jList1ValueChanged");}   
         } catch( Exception re ) {
             System.out.println(re.toString());	   
         }         
     }//GEN-LAST:event_jList1ValueChanged
     
       /* public void RefreshQuestionList() throws RemoteException {
-        System.out.println( "Обновление списка вопросов" );	   
+        System.out.println( "РћР±РЅРѕРІР»РµРЅРёРµ СЃРїРёСЃРєР° РІРѕРїСЂРѕСЃРѕРІ" );	   
         try {
             ArrayList QuestArray = Dictionary.GetQuestArray();
             int i=0;
@@ -184,17 +184,17 @@ public class NewFilter extends javax.swing.JPanel {
             };
             //if (listQuestion.size()>0) then 
             QuestIndex = -1;
-            System.out.println( "Функционально работает" );	   
+            System.out.println( "Р¤СѓРЅРєС†РёРѕРЅР°Р»СЊРЅРѕ СЂР°Р±РѕС‚Р°РµС‚" );	   
         } catch( Exception re ) {
         System.out.println(re.toString());	   }
     }*/
     
     /*public void RefreshAnswerList() throws RemoteException {
-        System.out.println("Функциональность ответов");
+        System.out.println("Р¤СѓРЅРєС†РёРѕРЅР°Р»СЊРЅРѕСЃС‚СЊ РѕС‚РІРµС‚РѕРІ");
         try {
             //QuestionInterface Q = Dictionary.getQuestion(QuestIndex);
             ArrayList AnswerArray=Q.GetAnswerArray();
-            System.out.println("Размер пула ответов"+AnswerArray.size());	   
+            System.out.println("Р Р°Р·РјРµСЂ РїСѓР»Р° РѕС‚РІРµС‚РѕРІ"+AnswerArray.size());	   
             int AI=0;    
             listAnswer.clear();
             while (AI<AnswerArray.size() ) {
@@ -203,7 +203,7 @@ public class NewFilter extends javax.swing.JPanel {
                 listAnswer.addElement(Answer.getName());
                 AI++;
             };
-            System.out.println( "Выведен список ответов" );	   
+            System.out.println( "Р’С‹РІРµРґРµРЅ СЃРїРёСЃРѕРє РѕС‚РІРµС‚РѕРІ" );	   
             AnswerIndex = -1;
         } catch( Exception re ) {
             System.out.println(re.toString());	   

@@ -74,7 +74,7 @@ public class DQATreeCellEditor extends DefaultTreeCellEditor {
             DQA = (DQAMarkInterface)node.getUserObject();
             DQA.setName(realEditor.getCellEditorValue().toString(),Lib.getID(),true);
         } catch (Exception ex) {
-            System.out.println("Ошибка в именовании "+ex);
+            System.out.println("РћС€РёР±РєР° РІ РёРјРµРЅРѕРІР°РЅРёРё "+ex);
         }
         return DQA;
     }
@@ -121,7 +121,7 @@ public class DQATreeCellEditor extends DefaultTreeCellEditor {
                         }
                     } catch (Exception E) {
                             editingIcon=IconQ1;
-                            System.out.println("Ошибка в назначении иконки"+E);
+                            System.out.println("РћС€РёР±РєР° РІ РЅР°Р·РЅР°С‡РµРЅРёРё РёРєРѕРЅРєРё"+E);
                     }
                     break;
                 } case 8: {//A
@@ -130,7 +130,7 @@ public class DQATreeCellEditor extends DefaultTreeCellEditor {
                 }
              }
             } catch (Exception E) {
-                System.out.println("Ошибка в назначении иконки 2"+E);
+                System.out.println("РћС€РёР±РєР° РІ РЅР°Р·РЅР°С‡РµРЅРёРё РёРєРѕРЅРєРё 2"+E);
             }
             if(editingIcon != null)
                 offset = renderer.getIconTextGap() +

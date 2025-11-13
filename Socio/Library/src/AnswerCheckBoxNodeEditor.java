@@ -75,7 +75,7 @@ class AnswerCheckBoxNodeEditor extends AbstractCellEditor implements TreeCellEdi
           if (alter) {
             if (checkBoxNode.isSelected()) {
                 if (lastCheckBoxNode!=null) lastCheckBoxNode.setSelected(false);
-                System.out.println("Расселектили"+lastCheckBoxNode);
+                System.out.println("Р Р°СЃСЃРµР»РµРєС‚РёР»Рё"+lastCheckBoxNode);
                 ETP.EtpChanged(checkBoxNode);
             } else {
                 ETP.EtpChanged(checkBoxNode);
@@ -89,7 +89,7 @@ class AnswerCheckBoxNodeEditor extends AbstractCellEditor implements TreeCellEdi
                     //if (AnswerCount>0) AnswerCount--;
                     //checkBoxNode.setSelected(false);
                     checkBoxNode.setSelected(false);
-                    System.out.println("Приготовимся");
+                    System.out.println("РџСЂРёРіРѕС‚РѕРІРёРјСЃСЏ");
                 }
             } else {
                 if (AnswerCount>0) AnswerCount--;
@@ -101,7 +101,7 @@ class AnswerCheckBoxNodeEditor extends AbstractCellEditor implements TreeCellEdi
           lastStatus=checkBoxNode.isSelected();
         }
     } catch (Exception ex) {
-        System.out.println("Генеральная ошибка 2"+ex);
+        System.out.println("Р“РµРЅРµСЂР°Р»СЊРЅР°СЏ РѕС€РёР±РєР° 2"+ex);
     }  
   }
   
@@ -117,7 +117,7 @@ class AnswerCheckBoxNodeEditor extends AbstractCellEditor implements TreeCellEdi
           if (itemEvent.getStateChange() == ItemEvent.DESELECTED) {
           }*/
           
-          System.out.println("событие "+itemEvent.getStateChange());
+          System.out.println("СЃРѕР±С‹С‚РёРµ "+itemEvent.getStateChange());
           if (stopCellEditing()) {
             
             if (lastCheckBoxNode==null) Action();
@@ -126,7 +126,7 @@ class AnswerCheckBoxNodeEditor extends AbstractCellEditor implements TreeCellEdi
             cancelCellEditing();
           }
        } catch (Exception ex) {
-            System.out.println("Генеральная ошибка 1"+ex);
+            System.out.println("Р“РµРЅРµСЂР°Р»СЊРЅР°СЏ РѕС€РёР±РєР° 1"+ex);
        }
       }
     };

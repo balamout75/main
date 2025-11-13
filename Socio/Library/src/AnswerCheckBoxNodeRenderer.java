@@ -103,7 +103,7 @@ class AnswerCheckBoxNodeRenderer implements TreeCellRenderer {
                         } catch (Exception E) {
                             nonLeafRenderer.setOpenIcon(Icon1);
                             nonLeafRenderer.setClosedIcon(Icon1);
-                            System.out.println("Ошибка в назначении иконки"+E);
+                            System.out.println("РћС€РёР±РєР° РІ РЅР°Р·РЅР°С‡РµРЅРёРё РёРєРѕРЅРєРё"+E);
                         }
                         returnValue = nonLeafRenderer.getTreeCellRendererComponent(tree,value, selected, expanded, leaf, row, hasFocus);
                    }
@@ -136,7 +136,7 @@ class AnswerCheckBoxNodeRenderer implements TreeCellRenderer {
                 } catch (Exception E) {
                     nonLeafRenderer.setOpenIcon(Icon1);
                     nonLeafRenderer.setClosedIcon(Icon1);
-                    System.out.println("Ошибка в назначении иконки"+E);
+                    System.out.println("РћС€РёР±РєР° РІ РЅР°Р·РЅР°С‡РµРЅРёРё РёРєРѕРЅРєРё"+E);
                 }
             }
         } 

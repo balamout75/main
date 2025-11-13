@@ -1,7 +1,7 @@
 /*
  * QuestMark.java
  *
- * Created on 7 Сентябрь 2006 г., 15:54
+ * Created on 7 РЎРµРЅС‚СЏР±СЂСЊ 2006 Рі., 15:54
  */
 //import java.awt.*;
 //import java.io.*;

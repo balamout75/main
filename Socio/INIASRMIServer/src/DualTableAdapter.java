@@ -89,7 +89,7 @@ public class DualTableAdapter extends UnicastRemoteObject implements DualTableAd
     
     public void executeQuery() {
         try {
-            System.err.println("начинаем executeQuery()");
+            System.err.println("РЅР°С‡РёРЅР°РµРј executeQuery()");
             Q1=null; Q2=null;
             Questions.clear();
             Headers.clear();
@@ -183,7 +183,7 @@ public class DualTableAdapter extends UnicastRemoteObject implements DualTableAd
                     " Group by "+QuestBlock+" Order by "+QuestBlock;
                     
                     
-            System.err.println("TableAdapter - Исполняю запрос "+SQLStr);
+            System.err.println("TableAdapter - РСЃРїРѕР»РЅСЏСЋ Р·Р°РїСЂРѕСЃ "+SQLStr);
             resultSet=statement.executeQuery(SQLStr);
             RootBranch=new Record("root",0);
             AllSumm=0;
@@ -192,9 +192,9 @@ public class DualTableAdapter extends UnicastRemoteObject implements DualTableAd
                  AnalyzeRow(1,Rang,Value,RootBranch);
             }
         } catch (Exception ex) {
-            System.err.println("Ошибка в построении Двумерного распределения "+ex);
+            System.err.println("РћС€РёР±РєР° РІ РїРѕСЃС‚СЂРѕРµРЅРёРё Р”РІСѓРјРµСЂРЅРѕРіРѕ СЂР°СЃРїСЂРµРґРµР»РµРЅРёСЏ "+ex);
         }
-        System.out.println("Все сделали ");
+        System.out.println("Р’СЃРµ СЃРґРµР»Р°Р»Рё ");
     }
     
     public void AnalyzeRow(int Current, int Rang, int Summ, Record Branch) {
@@ -241,7 +241,7 @@ public class DualTableAdapter extends UnicastRemoteObject implements DualTableAd
                 else CurrentBranch.Count=CurrentBranch.Count+Summ;
             }   
         } catch (Exception ex) {
-            System.err.println("Ошибка в AnalyzeRow "+ex);
+            System.err.println("РћС€РёР±РєР° РІ AnalyzeRow "+ex);
         }    
     }
             
@@ -355,9 +355,9 @@ public class DualTableAdapter extends UnicastRemoteObject implements DualTableAd
         }        
         ResultStr="";
         if (Coord==0) {
-            //"Заголовок столбцов"
+            //"Р—Р°РіРѕР»РѕРІРѕРє СЃС‚РѕР»Р±С†РѕРІ"
         } else if (Coord==(Range+1)) {
-                    ResultStr="Всего";
+                    ResultStr="Р’СЃРµРіРѕ";
                } else {
                     HeadRecord HR = (HeadRecord)DimensionHead.get(Coord-1);
                     RInterface RI = QI.getByPos(new Integer(HR.Name).intValue()-1);
@@ -391,7 +391,7 @@ public class DualTableAdapter extends UnicastRemoteObject implements DualTableAd
         }  
         String ResultStr="";
         if (Coord==0) {
-            ResultStr="Всего";
+            ResultStr="Р’СЃРµРіРѕ";
         } else if (Coord==(Range+1)) {
                     if (Dimension==2) {
                         if (Mode==1) ResultStr=Total.toString();
@@ -438,7 +438,7 @@ public class DualTableAdapter extends UnicastRemoteObject implements DualTableAd
         }  
         String ResultStr="";
         if (Coord==0) {
-            ResultStr="Всего";
+            ResultStr="Р’СЃРµРіРѕ";
         } else if (Coord==(Range+1)) {
                     if (Dimension==2) ResultStr=new Integer(getHeaderSumm(DimensionHead)).toString();
                } else {
@@ -460,7 +460,7 @@ public class DualTableAdapter extends UnicastRemoteObject implements DualTableAd
         }    
         if (Coord==0) {
             try {
-                //ResultStr="РОРР";
+                //ResultStr="Р РћР Р ";
                 ResultStr=getHeader(RequestList,2);
             } catch (Exception ex) {
                 ResultStr="#";

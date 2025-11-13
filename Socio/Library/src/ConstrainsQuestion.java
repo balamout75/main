@@ -8,7 +8,7 @@ import java.awt.*;
 
 /**
  *
- * @author  Иван
+ * @author  РРІР°РЅ
  */
 //public class QuestionEditorPanel extends javax.swing.JPanel implements DNDCompInterface{
 public class ConstrainsQuestion extends javax.swing.JPanel {
@@ -79,7 +79,7 @@ public class ConstrainsQuestion extends javax.swing.JPanel {
         jScrollPane4 = new javax.swing.JScrollPane();
         
 
-        //setBorder(javax.swing.BorderFactory.createTitledBorder("Детализация данных"));
+        //setBorder(javax.swing.BorderFactory.createTitledBorder("Р”РµС‚Р°Р»РёР·Р°С†РёСЏ РґР°РЅРЅС‹С…"));
         setLayout(new java.awt.GridBagLayout());
 
         DictionaryPanel.setPreferredSize(new java.awt.Dimension(0, 0));
@@ -125,7 +125,7 @@ public class ConstrainsQuestion extends javax.swing.JPanel {
             top.add(new DefaultMutableTreeNode(new QuestionProperty(3,QI.getMaxAnswerCount().toString(),QI)));
             top.add(new DefaultMutableTreeNode(new QuestionProperty(4,Integer.toString(QI.getRepetitionType()),QI)));
         } catch(Exception re ) {
-            System.out.println("Фигня какая то в QuestConstrains"+re.toString());
+            System.out.println("Р¤РёРіРЅСЏ РєР°РєР°СЏ С‚Рѕ РІ QuestConstrains"+re.toString());
         }
     }
 
@@ -136,9 +136,9 @@ public class ConstrainsQuestion extends javax.swing.JPanel {
             jTree1.removeAll();
             DefaultMutableTreeNode top = new DefaultMutableTreeNode(new QuestionProperty(1,"",null));
             makeAnswerBranches(top);
-            DefaultTreeModel TreeMоdel=new DefaultTreeModel(top);
+            DefaultTreeModel TreeMРѕdel=new DefaultTreeModel(top);
             jTree1.getSelectionModel().setSelectionMode(TreeSelectionModel.SINGLE_TREE_SELECTION);
-            jTree1.setModel(TreeMоdel);
+            jTree1.setModel(TreeMРѕdel);
             jTree1.setDragEnabled(true);
             CQTreeCellRenderer  CQR=new CQTreeCellRenderer  ();
             CQTreeCellEditor    CQE=new CQTreeCellEditor    (jTree1);
@@ -162,7 +162,7 @@ public class ConstrainsQuestion extends javax.swing.JPanel {
 
         } catch(Exception re ) {
 
-            System.out.println("Фигня какая ETP "+re.toString());
+            System.out.println("Р¤РёРіРЅСЏ РєР°РєР°СЏ ETP "+re.toString());
         }
     }
 
@@ -211,7 +211,7 @@ public class QuestionProperty  {
                 }                    
               }
         } catch (Exception E) {
-            System.out.println("Ошибка в определении свойств QuestionProperty "+E);
+            System.out.println("РћС€РёР±РєР° РІ РѕРїСЂРµРґРµР»РµРЅРёРё СЃРІРѕР№СЃС‚РІ QuestionProperty "+E);
         }
     }
 
@@ -219,19 +219,19 @@ public class QuestionProperty  {
         String Header="";
         switch (this.getProperyIndex()) {
                 case 1:{
-                    Header="Свойства вопроса ";
+                    Header="РЎРІРѕР№СЃС‚РІР° РІРѕРїСЂРѕСЃР° ";
                     break;
                 }
                 case 2:{
-                    Header="Базовое число ";
+                    Header="Р‘Р°Р·РѕРІРѕРµ С‡РёСЃР»Рѕ ";
                     break;
                 }
                 case 3:{
-                    Header="Максимальное число ответов ";
+                    Header="РњР°РєСЃРёРјР°Р»СЊРЅРѕРµ С‡РёСЃР»Рѕ РѕС‚РІРµС‚РѕРІ ";
                     break;
                 }
                 case 4:{
-                    Header="Повторяющаяся переменная ";
+                    Header="РџРѕРІС‚РѕСЂСЏСЋС‰Р°СЏСЃСЏ РїРµСЂРµРјРµРЅРЅР°СЏ ";
                     break;
                 }
               }
@@ -281,7 +281,7 @@ public class CQTreeCellRenderer extends DefaultTreeCellRenderer {
                 }    
               }
         } catch (Exception E) {
-            System.out.println("Ошибка в назначении иконки"+E);
+            System.out.println("РћС€РёР±РєР° РІ РЅР°Р·РЅР°С‡РµРЅРёРё РёРєРѕРЅРєРё"+E);
         }
         if (icon!=null) {
             nonLeafRenderer.setOpenIcon(icon);
@@ -378,7 +378,7 @@ public class CQTreeCellEditor extends DefaultTreeCellEditor {
                 }
              }
             } catch (Exception E) {
-                System.out.println("Ошибка в назначении иконки 2"+E);
+                System.out.println("РћС€РёР±РєР° РІ РЅР°Р·РЅР°С‡РµРЅРёРё РёРєРѕРЅРєРё 2"+E);
             }
             if(editingIcon != null)
                 offset = renderer.getIconTextGap() +

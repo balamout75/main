@@ -39,10 +39,10 @@ public class JDBCAdapterCellRenderer2 extends DefaultTableCellRenderer
                 Integer i = new Integer(code);
                 Integer AnswerID=QI.getByPos(i-1).getID();
                 CurrentAI=Server.getMainQuestion().getAnswer(AnswerID);
-                if (!(CurrentAI.getTextable()|(S.length==1))) ResultCode=3; //Недопустимые текстовые данные 
+                if (!(CurrentAI.getTextable()|(S.length==1))) ResultCode=3; //РќРµРґРѕРїСѓСЃС‚РёРјС‹Рµ С‚РµРєСЃС‚РѕРІС‹Рµ РґР°РЅРЅС‹Рµ 
             }
         } catch (Exception e2) {
-            ResultCode=2; // Несуществую
+            ResultCode=2; // РќРµСЃСѓС‰РµСЃС‚РІСѓСЋ
         }
         return ResultCode;
     }    
@@ -66,7 +66,7 @@ public class JDBCAdapterCellRenderer2 extends DefaultTableCellRenderer
                         ResultCode=CheckPair(s, QI);
                         ResultString=Str + ": "+CurrentAI.getName();
                     } catch (Exception e2) {
-                        ResultCode=1; //нет значения кода ответа
+                        ResultCode=1; //РЅРµС‚ Р·РЅР°С‡РµРЅРёСЏ РєРѕРґР° РѕС‚РІРµС‚Р°
                     }
                 } else if (QI.getQuestionType()==2) {
                     ArrayList Current = new ArrayList();
@@ -93,20 +93,20 @@ public class JDBCAdapterCellRenderer2 extends DefaultTableCellRenderer
                     break;
                 }       
                 case 1: {   
-                    //"Нет значения кода ответа"
+                    //"РќРµС‚ Р·РЅР°С‡РµРЅРёСЏ РєРѕРґР° РѕС‚РІРµС‚Р°"
                 }                       
                 case 2: {   
-                    //"Введен код несуществующего ответа"
+                    //"Р’РІРµРґРµРЅ РєРѕРґ РЅРµСЃСѓС‰РµСЃС‚РІСѓСЋС‰РµРіРѕ РѕС‚РІРµС‚Р°"
                 }                                       
                 case 3: {   
-                    //"Введено недопустимое текстовое значение"                    
+                    //"Р’РІРµРґРµРЅРѕ РЅРµРґРѕРїСѓСЃС‚РёРјРѕРµ С‚РµРєСЃС‚РѕРІРѕРµ Р·РЅР°С‡РµРЅРёРµ"                    
                     this.setForeground(Color5);                    
                     ResultString=Str;
                     break;
                 }                                       
                 case 4: {   
                     this.setForeground(Color5); 
-                    ResultString="< нет ответа >";
+                    ResultString="< РЅРµС‚ РѕС‚РІРµС‚Р° >";
                     break;
                 } 
             } 
@@ -114,7 +114,7 @@ public class JDBCAdapterCellRenderer2 extends DefaultTableCellRenderer
             else this.setText(ResultString);
             
         } catch (Exception ex) {
-            System.out.println("Ошибка в обработке InputField "+ex);
+            System.out.println("РћС€РёР±РєР° РІ РѕР±СЂР°Р±РѕС‚РєРµ InputField "+ex);
         }
         return ReturnComponent;
     }

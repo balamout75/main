@@ -45,12 +45,12 @@ public class DimensionAdapter extends AbstractTableModel {
             //DictionaryInterface DI=Server.getMainDictionary();
             //Integer I=RQI1.getID();
             //QuestionInterface QI1=DI.getQuestion(I);
-            //System.out.println("Вопрос "+QI1.getName());
+            //System.out.println("Р’РѕРїСЂРѕСЃ "+QI1.getName());
             
             
         }
         catch (Exception ex) {
-            System.err.println("фигня какая то"+ex);
+            System.err.println("С„РёРіРЅСЏ РєР°РєР°СЏ С‚Рѕ"+ex);
         }
        
     }
@@ -64,7 +64,7 @@ public class DimensionAdapter extends AbstractTableModel {
                  else setMode(3);
         }    
         catch (Exception ex) {
-            System.err.println("фигня какая то"+ex);
+            System.err.println("С„РёРіРЅСЏ РєР°РєР°СЏ С‚Рѕ"+ex);
         }    
     }
     
@@ -73,7 +73,7 @@ public class DimensionAdapter extends AbstractTableModel {
             Controller.setClearence(p1);
         }    
         catch (Exception ex) {
-            System.err.println("фигня какая то"+ex);
+            System.err.println("С„РёРіРЅСЏ РєР°РєР°СЏ С‚Рѕ"+ex);
         }    
     }    
     
@@ -88,7 +88,7 @@ public class DimensionAdapter extends AbstractTableModel {
             return true;
         }
         catch (Exception ex) {
-            System.err.println("фигня какая то"+ex);
+            System.err.println("С„РёРіРЅСЏ РєР°РєР°СЏ С‚Рѕ"+ex);
             return false;
         }
     }
@@ -98,7 +98,7 @@ public class DimensionAdapter extends AbstractTableModel {
         try {
             i=Controller.getColumnCount();
         } catch (Exception ex) {
-            System.err.println("Что то глюк в ColumnCount");
+            System.err.println("Р§С‚Рѕ С‚Рѕ РіР»СЋРє РІ ColumnCount");
         }
         return i;
         //System.err.println(values.size());
@@ -111,7 +111,7 @@ public class DimensionAdapter extends AbstractTableModel {
         try {
             i=Controller.getRowCount();
         } catch (Exception ex) {
-            System.err.println("Что то глюк RowCount");
+            System.err.println("Р§С‚Рѕ С‚Рѕ РіР»СЋРє RowCount");
         }
         return i;
     }
@@ -126,7 +126,7 @@ public class DimensionAdapter extends AbstractTableModel {
                 Value = (Object) Controller.getItem(aRow, aColumn, 1);
 
         } catch (Exception ex) {
-            System.err.println("Ошибка в отбражении значений ячейки "+ex.toString());
+            System.err.println("РћС€РёР±РєР° РІ РѕС‚Р±СЂР°Р¶РµРЅРёРё Р·РЅР°С‡РµРЅРёР№ СЏС‡РµР№РєРё "+ex.toString());
             Value=new String("x");
         }    
         return Value;
@@ -143,13 +143,13 @@ public class DimensionAdapter extends AbstractTableModel {
                     RInterface RAI=Q1.getByPos(aColumn-1);
                     String S = Server.getMainQuestion().getAnswer(RAI.getID()).getName();
                     Value=S;
-                } else {Value="Всего";}    
+                } else {Value="Р’СЃРµРіРѕ";}    
             } else if (aColumn==0) {
                        if (aRow!=(getRowCount()-1)) {
                             RInterface RAI=Q2.getByPos(aRow-1);
                             String S = Server.getMainQuestion().getAnswer(RAI.getID()).getName();
                             Value=S;
-                       } else {Value="Всего";}         
+                       } else {Value="Р’СЃРµРіРѕ";}         
                    } else {
                         try {
                             if (!Percent) {
@@ -170,13 +170,13 @@ public class DimensionAdapter extends AbstractTableModel {
                                         Value = myNumberFormat.format(Res);
                                    }
                         } catch (Exception ex) {
-                            System.err.println("Ошибка в отбражении значений ячейки "+ex.toString());
+                            System.err.println("РћС€РёР±РєР° РІ РѕС‚Р±СЂР°Р¶РµРЅРёРё Р·РЅР°С‡РµРЅРёР№ СЏС‡РµР№РєРё "+ex.toString());
                             Value=new String("x");
                         }    
                    }
             
         } catch (Exception ex) {
-            System.err.println("Ошибка в отбражении значений ячеек "+ex.toString());
+            System.err.println("РћС€РёР±РєР° РІ РѕС‚Р±СЂР°Р¶РµРЅРёРё Р·РЅР°С‡РµРЅРёР№ СЏС‡РµРµРє "+ex.toString());
             Value=new String("ww");
         }
         return Value;
@@ -188,7 +188,7 @@ public class DimensionAdapter extends AbstractTableModel {
         //values = Controller.getRow(1);
         //resultSet = Controller.executeQuery();
         //Controller.Reload();
-        System.err.println("Перечитываем");
+        System.err.println("РџРµСЂРµС‡РёС‚С‹РІР°РµРј");
         return true;
     }
     

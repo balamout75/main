@@ -1,7 +1,7 @@
 /*
  * Socioinput.java
  *
- * Created on 11 Декабрь 2003 г., 20:01
+ * Created on 11 Р”РµРєР°Р±СЂСЊ 2003 Рі., 20:01
  */
 import java.rmi.Naming;
 import java.rmi.NotBoundException;
@@ -20,7 +20,7 @@ import javax.swing.JPopupMenu;
 
 /**
  *
- * @author  Иван
+ * @author  РРІР°РЅ
  */
 public class SocioInput extends javax.swing.JFrame implements SocioInputInterface, DNDCompInterface {
     
@@ -257,16 +257,16 @@ public class SocioInput extends javax.swing.JFrame implements SocioInputInterfac
     
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
 // TODO add your handling code here:
-        //..Переименовываем словарь
+        //..РџРµСЂРµРёРјРµРЅРѕРІС‹РІР°РµРј СЃР»РѕРІР°СЂСЊ
         try {
             //iNIACRMIInterface.NewQuest();
             //iNIACRMIInterface.Register();
-            CustomDialog customDialog = new CustomDialog(this,Server.getDictionary(DictionaryIndex).getName(),"Название словаря");
+            CustomDialog customDialog = new CustomDialog(this,Server.getDictionary(DictionaryIndex).getName(),"РќР°Р·РІР°РЅРёРµ СЃР»РѕРІР°СЂСЏ");
             customDialog.pack();
             customDialog.setLocationRelativeTo(this);
             customDialog.setVisible(true);
             String s = customDialog.getValidatedText();
-            System.out.println("Что то там ввели новое" );	
+            System.out.println("Р§С‚Рѕ С‚Рѕ С‚Р°Рј РІРІРµР»Рё РЅРѕРІРѕРµ" );	
             if (s != null) {
                 try {
                     Server.getDictionary(DictionaryIndex).setName(s,0,true);
@@ -282,7 +282,7 @@ public class SocioInput extends javax.swing.JFrame implements SocioInputInterfac
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         //TODO add your handling code here:
-        //Удаляем этот словарь 
+        //РЈРґР°Р»СЏРµРј СЌС‚РѕС‚ СЃР»РѕРІР°СЂСЊ 
         try {
             DeleteDictionary();
         } catch( Exception re ) {
@@ -297,7 +297,7 @@ public class SocioInput extends javax.swing.JFrame implements SocioInputInterfac
     
     private void RenameDictionary() throws RemoteException {                                           
             DictionaryInterface DI = Server.getDictionary(DictionaryIndex);
-            CustomDialog customDialog = new CustomDialog(this,DI.getName(),"Название словаря");
+            CustomDialog customDialog = new CustomDialog(this,DI.getName(),"РќР°Р·РІР°РЅРёРµ СЃР»РѕРІР°СЂСЏ");
             customDialog.pack();
             customDialog.setLocationRelativeTo(this);
             customDialog.setVisible(true);
@@ -314,19 +314,19 @@ public class SocioInput extends javax.swing.JFrame implements SocioInputInterfac
     
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
         // TODO add your handling code here:
-        System.out.println("Печатаю какую то хрень ");	
+        System.out.println("РџРµС‡Р°С‚Р°СЋ РєР°РєСѓСЋ С‚Рѕ С…СЂРµРЅСЊ ");	
         QuestionEditorForm();
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     private void jMenu2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu2ActionPerformed
         // TODO add your handling code here:
-        // Открытие нового окна              
+        // РћС‚РєСЂС‹С‚РёРµ РЅРѕРІРѕРіРѕ РѕРєРЅР°              
     }//GEN-LAST:event_jMenu2ActionPerformed
 
     private void QuestionEditorForm() {
         try {
             QuestionEditorFrame questionEditorFrame = new QuestionEditorFrame(Server);
-            questionEditorFrame.setTitle("Редактирование словарей");
+            questionEditorFrame.setTitle("Р РµРґР°РєС‚РёСЂРѕРІР°РЅРёРµ СЃР»РѕРІР°СЂРµР№");
             questionEditorFrame.setDictionary(Server.getMainDictionary());
             questionEditorFrame.setVisible(true);
         } catch( Exception re ) {
@@ -348,7 +348,7 @@ public class SocioInput extends javax.swing.JFrame implements SocioInputInterfac
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
-        // Добавление вопроса в словарь
+        // Р”РѕР±Р°РІР»РµРЅРёРµ РІРѕРїСЂРѕСЃР° РІ СЃР»РѕРІР°СЂСЊ
         try {
             //System.out.println(DictionaryIndex+"-"+Server.GetDictionarySize());
             //System.out.println(re.toString());	   
@@ -362,16 +362,16 @@ public class SocioInput extends javax.swing.JFrame implements SocioInputInterfac
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void NewDictionary() {
-        System.out.println( "Кто то кнопку 6 нажал" );	
+        System.out.println( "РљС‚Рѕ С‚Рѕ РєРЅРѕРїРєСѓ 6 РЅР°Р¶Р°Р»" );	
         try {
             //iNIACRMIInterface.NewQuest();
             //iNIACRMIInterface.Register();
-            CustomDialog customDialog = new CustomDialog(this,"","Название словаря");
+            CustomDialog customDialog = new CustomDialog(this,"","РќР°Р·РІР°РЅРёРµ СЃР»РѕРІР°СЂСЏ");
             customDialog.pack();
             customDialog.setLocationRelativeTo(this);
             customDialog.setVisible(true);
             String s = customDialog.getValidatedText();
-            System.out.println("Что то там ввели новое" );	
+            System.out.println("Р§С‚Рѕ С‚Рѕ С‚Р°Рј РІРІРµР»Рё РЅРѕРІРѕРµ" );	
             if (s != null) {
                 try {
                     System.out.println(s);	   
@@ -399,11 +399,11 @@ public class SocioInput extends javax.swing.JFrame implements SocioInputInterfac
         System.out.println( "Lets Connect" );
     }//GEN-LAST:event_jMenuItem1ActionPerformed
     /*public void Functionality2() throws RemoteException {
-        System.out.println("Функциональность ответов");
+        System.out.println("Р¤СѓРЅРєС†РёРѕРЅР°Р»СЊРЅРѕСЃС‚СЊ РѕС‚РІРµС‚РѕРІ");
         try {
             //QuestArray.get(index
             AnswerInterface Answer;
-            System.out.println("Размер пула ответов"+AnswerArray.GetAnswerSize());	   
+            System.out.println("Р Р°Р·РјРµСЂ РїСѓР»Р° РѕС‚РІРµС‚РѕРІ"+AnswerArray.GetAnswerSize());	   
             int AnswerIndex=0;    
             listAnswer.clear();
             while (AnswerIndex<AnswerArray.GetAnswerSize() ) {
@@ -413,7 +413,7 @@ public class SocioInput extends javax.swing.JFrame implements SocioInputInterfac
                 AnswerIndex++;
             };
             //if (listQuestion.size()>0) then 
-            System.out.println( "Выведен список ответов" );	   
+            System.out.println( "Р’С‹РІРµРґРµРЅ СЃРїРёСЃРѕРє РѕС‚РІРµС‚РѕРІ" );	   
         } catch( Exception re ) {
             System.out.println(re.toString());	   
         }
@@ -425,10 +425,10 @@ public class SocioInput extends javax.swing.JFrame implements SocioInputInterfac
 /*public void RefreshDictionary() throws RemoteException {
         
         
-        System.out.println("Функциональность djghjctfz");
+        System.out.println("Р¤СѓРЅРєС†РёРѕРЅР°Р»СЊРЅРѕСЃС‚СЊ djghjctfz");
         try {
             QuestionInterface Quest;
-            System.out.println("Функциональность 1");
+            System.out.println("Р¤СѓРЅРєС†РёРѕРЅР°Р»СЊРЅРѕСЃС‚СЊ 1");
             DictionaryInterface dd = Server.GetMainDictionary();
             //QuestArray = Server.GetMainDictionary().GetQuestArray();
             //System.out.println(Server.GetMainDictionary().GetQuestSize());	   
@@ -441,7 +441,7 @@ public class SocioInput extends javax.swing.JFrame implements SocioInputInterfac
             };
             //if (listQuestion.size()>0) then 
         
-            System.out.println( "Фун" );	   
+            System.out.println( "Р¤СѓРЅ" );	   
         } catch( Exception re ) {
             System.out.println(re.toString());	   
         }
@@ -501,12 +501,12 @@ public class SocioInput extends javax.swing.JFrame implements SocioInputInterfac
     public static void main(String[] args) {
         SocioInput frame = new SocioInput(null);
         //Self=frame;
-        frame.setTitle("Такая вот невидаль");
+        frame.setTitle("РўР°РєР°СЏ РІРѕС‚ РЅРµРІРёРґР°Р»СЊ");
         frame.setVisible(true);
     }
     
     public void Register () {
- 	System.out.println( "Зарегистрировался" );	   
+ 	System.out.println( "Р—Р°СЂРµРіРёСЃС‚СЂРёСЂРѕРІР°Р»СЃСЏ" );	   
     }
     
     public void QuestRefresh() throws RemoteException { }
@@ -514,7 +514,7 @@ public class SocioInput extends javax.swing.JFrame implements SocioInputInterfac
     public void RefreshAnswerList() throws RemoteException {};
     
     public void RefreshQuestionList() throws RemoteException {
-        System.out.println( "Обновление списка вопросов 1" );	   
+        System.out.println( "РћР±РЅРѕРІР»РµРЅРёРµ СЃРїРёСЃРєР° РІРѕРїСЂРѕСЃРѕРІ 1" );	   
         try {
             if (DictionaryIndex.intValue()!=-1) {
                 listQuestion.clear();
@@ -523,15 +523,15 @@ public class SocioInput extends javax.swing.JFrame implements SocioInputInterfac
                 int i=0;
                 while (i<Keys.size()) {
                     RInterface RQM=DI.getByPos(new Integer(i));
-                    System.out.println("Печатаю вопросы "+RQM.getID()+" "+RQM.getPos());	   
+                    System.out.println("РџРµС‡Р°С‚Р°СЋ РІРѕРїСЂРѕСЃС‹ "+RQM.getID()+" "+RQM.getPos());	   
                     QuestListContent QLC=new QuestListContent(RQM,Server.getMainDictionary().getQuestion(RQM.getID()));
                     listQuestion.addElement(QLC);
                     i++;
                 };
-                System.out.println( "Функционально работает" );	   
+                System.out.println( "Р¤СѓРЅРєС†РёРѕРЅР°Р»СЊРЅРѕ СЂР°Р±РѕС‚Р°РµС‚" );	   
             } 
         } catch( Exception re ) {
-            System.out.println("Ошибка оформления списка "+re.toString());	   
+            System.out.println("РћС€РёР±РєР° РѕС„РѕСЂРјР»РµРЅРёСЏ СЃРїРёСЃРєР° "+re.toString());	   
         }
     }
     
@@ -591,7 +591,7 @@ public class SocioInput extends javax.swing.JFrame implements SocioInputInterfac
     };
     
     public void RecodeDictionary() {
-        //Пытаемся перекодировать словарь .. 
+        //РџС‹С‚Р°РµРјСЃСЏ РїРµСЂРµРєРѕРґРёСЂРѕРІР°С‚СЊ СЃР»РѕРІР°СЂСЊ .. 
         try {
             //DictionaryInterface DI=Server.GetDictionary(DictionaryIndex);
             //DI.ClearQuest();
@@ -599,9 +599,9 @@ public class SocioInput extends javax.swing.JFrame implements SocioInputInterfac
             while (i<listQuestion.size()) {
                     QuestListContent QLM = (QuestListContent) listQuestion.get(i);
                     RInterface RQI=QLM.getRInterface();
-                    //System.out.println("До изменения "+RQI.getID()+" "+RQI.getPos());	   
+                    //System.out.println("Р”Рѕ РёР·РјРµРЅРµРЅРёСЏ "+RQI.getID()+" "+RQI.getPos());	   
                     RQI.setPos(new Integer(i));
-                    //System.out.println("После изменения"+RQI.getID()+" "+RQI.getPos());	   
+                    //System.out.println("РџРѕСЃР»Рµ РёР·РјРµРЅРµРЅРёСЏ"+RQI.getID()+" "+RQI.getPos());	   
                     i++;
             };
         } catch( Exception re ) {
@@ -634,19 +634,19 @@ public class SocioInput extends javax.swing.JFrame implements SocioInputInterfac
         JMenuItem menuItem;
         //Create the popup menu.
         JPopupMenu popup = new JPopupMenu();
-        menuItem = new JMenuItem("Перекодировать");
+        menuItem = new JMenuItem("РџРµСЂРµРєРѕРґРёСЂРѕРІР°С‚СЊ");
         menuItem.addActionListener(new ActionListener() {
              public void actionPerformed(ActionEvent e)  {
                  RecodeDictionary();
-                 System.out.println("Перекодируем");	                 
+                 System.out.println("РџРµСЂРµРєРѕРґРёСЂСѓРµРј");	                 
              }
         });  
         popup.add(menuItem);
-        menuItem = new JMenuItem("Удалить вопрос");
+        menuItem = new JMenuItem("РЈРґР°Р»РёС‚СЊ РІРѕРїСЂРѕСЃ");
          menuItem.addActionListener(new ActionListener() {
              public void actionPerformed(ActionEvent e)  {
                  DeleteFromDictionary();
-                 System.out.println("Удаляем вопрос");	                 
+                 System.out.println("РЈРґР°Р»СЏРµРј РІРѕРїСЂРѕСЃ");	                 
              }
         });  
         popup.add(menuItem);
@@ -682,32 +682,32 @@ public class SocioInput extends javax.swing.JFrame implements SocioInputInterfac
         JMenuItem menuItem;
         //Create the popup menu.
         JPopupMenu popup = new JPopupMenu();
-        menuItem = new JMenuItem("Добавить");
+        menuItem = new JMenuItem("Р”РѕР±Р°РІРёС‚СЊ");
         menuItem.addActionListener(new ActionListener() {
              public void actionPerformed(ActionEvent e)  {
                  NewDictionary();
-                 System.out.println("Добавить");	                 
+                 System.out.println("Р”РѕР±Р°РІРёС‚СЊ");	                 
              }
         });  
         popup.add(menuItem);
-        menuItem = new JMenuItem("Переименовать");
+        menuItem = new JMenuItem("РџРµСЂРµРёРјРµРЅРѕРІР°С‚СЊ");
         menuItem.addActionListener(new ActionListener() {
              public void actionPerformed(ActionEvent e)  {
                  try {
                     RenameDictionary();
-                    System.out.println("Переименовать");	                 
+                    System.out.println("РџРµСЂРµРёРјРµРЅРѕРІР°С‚СЊ");	                 
                  } catch( Exception re ) {
                     System.out.println(re.toString());	   
                  }                  
              }
         });  
         popup.add(menuItem);
-        menuItem = new JMenuItem("Удалить");
+        menuItem = new JMenuItem("РЈРґР°Р»РёС‚СЊ");
         menuItem.addActionListener(new ActionListener() {
              public void actionPerformed(ActionEvent e)  {
                  try {
                     DeleteDictionary();
-                    System.out.println("Удалить");	                 
+                    System.out.println("РЈРґР°Р»РёС‚СЊ");	                 
                  } catch( Exception re ) {
                     System.out.println(re.toString());	   
                  }   

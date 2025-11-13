@@ -19,11 +19,11 @@ public class InputPanelRefresh extends UnicastRemoteObject implements InputPanel
     }
     
     public void Refresh (int Size) throws RemoteException {
-        System.out.println("Произошли изменения");
+        System.out.println("РџСЂРѕРёР·РѕС€Р»Рё РёР·РјРµРЅРµРЅРёСЏ");
     }
     
     public void Refresh () throws RemoteException {
-        System.out.println("Произошли изменения");
+        System.out.println("РџСЂРѕРёР·РѕС€Р»Рё РёР·РјРµРЅРµРЅРёСЏ");
     }
     
     public void InputPanelRefresher(InputPanelInterface aParent) throws RemoteException {

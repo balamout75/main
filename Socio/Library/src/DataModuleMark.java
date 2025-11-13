@@ -23,11 +23,11 @@ public class DataModuleMark implements DQAMarkInterface, Comparable{
 
         }
 
-        public DataModuleMark(RInterface ‡RDMI, DataModuleInterface aDMI, DataModuleMark aParent) {
+        public DataModuleMark(RInterface –∞RDMI, DataModuleInterface aDMI, DataModuleMark aParent) {
             try {            
                 Parent = aParent;
                 DMI  = aDMI;
-                RDMI = ‡RDMI;
+                RDMI = –∞RDMI;
                 LocalPos=RDMI.getPos();
             } catch( Exception re ) {
                 System.out.println(re.toString());

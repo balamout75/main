@@ -1,7 +1,7 @@
 /*
  * TransferBlock.java
  *
- * Created on 22 ΐοπελό 2005 γ., 9:19
+ * Created on 22 ΠΠΏΡ€ΠµΠ»Ρ 2005 Π³., 9:19
  */
 
 import java.awt.*;

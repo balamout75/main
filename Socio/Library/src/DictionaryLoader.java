@@ -1,7 +1,7 @@
 /*
  * BlockLoader.java
  *
- * Created on 26 Апрель 2005 г., 10:22
+ * Created on 26 РђРїСЂРµР»СЊ 2005 Рі., 10:22
  */
 //import java.io.InputStreamReader;
 //import java.io.BufferedReader;
@@ -23,7 +23,7 @@ public class DictionaryLoader {
     //private DataModuleInterface DM;
     private INIACRMIInterface Server;
     //private String FileName="C:\f.opr";
-    //private String StartStr="//\t\t\t\t\t\t\t\t\t\tДА-система 4.0 - Словарь переменных";
+    //private String StartStr="//\t\t\t\t\t\t\t\t\t\tР”Рђ-СЃРёСЃС‚РµРјР° 4.0 - РЎР»РѕРІР°СЂСЊ РїРµСЂРµРјРµРЅРЅС‹С…";
     private QuestionInterface CurrQuest;
     //private int DataRow;
     private DictionaryInterface CD;
@@ -40,10 +40,10 @@ public class DictionaryLoader {
             Server = aServer;
             Key = Server.getKey();
             file =aFile;
-            CD=Server.newDictionary("Новый словарь ))",Key, true);
+            CD=Server.newDictionary("РќРѕРІС‹Р№ СЃР»РѕРІР°СЂСЊ ))",Key, true);
             AnalyseStructure();
         } catch (Exception E) {
-            System.err.println("Ошибка в загрузке словаря "+E);	
+            System.err.println("РћС€РёР±РєР° РІ Р·Р°РіСЂСѓР·РєРµ СЃР»РѕРІР°СЂСЏ "+E);	
         };
         
     }
@@ -107,7 +107,7 @@ public class DictionaryLoader {
                else CurrQuest.setQuestionType(2, true);
             CD.addElement(Key,0,true);
         } catch (Exception E) {
-            System.out.println("Какая то проблема в NewQuest при загрузке файла "+E);	
+            System.out.println("РљР°РєР°СЏ С‚Рѕ РїСЂРѕР±Р»РµРјР° РІ NewQuest РїСЂРё Р·Р°РіСЂСѓР·РєРµ С„Р°Р№Р»Р° "+E);	
         };
         return true;
     }
@@ -118,7 +118,7 @@ public class DictionaryLoader {
             Server.getMainQuestion().newAnswer(Str,Key,true);
             CurrQuest.addElement(Key,0,true);
         } catch (Exception E) {
-            System.out.println("Какая то проблема в NewAnswer при загрузке файла"+E);	
+            System.out.println("РљР°РєР°СЏ С‚Рѕ РїСЂРѕР±Р»РµРјР° РІ NewAnswer РїСЂРё Р·Р°РіСЂСѓР·РєРµ С„Р°Р№Р»Р°"+E);	
         };
         return true;
     }

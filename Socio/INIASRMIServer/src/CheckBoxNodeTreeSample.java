@@ -1,10 +1,3 @@
-/*
-Definitive Guide to Swing for Java 2, Second Edition
-By John Zukowski
-ISBN: 1-893115-78-X
-Publisher: APress
-*/
-
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Component;
@@ -180,7 +173,7 @@ class CheckBoxNodeEditor extends AbstractCellEditor implements TreeCellEditor {
       public void itemStateChanged(ItemEvent itemEvent) {
         if (stopCellEditing()) {
           fireEditingStopped();
-          System.out.println("Что то отредактировали "+checkBoxNode.isSelected());
+          System.out.println("Р§С‚Рѕ С‚Рѕ РѕС‚СЂРµРґР°РєС‚РёСЂРѕРІР°Р»Рё "+checkBoxNode.isSelected());
         }
       }
     };

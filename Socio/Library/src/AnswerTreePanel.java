@@ -1,7 +1,7 @@
 /*
  * AnswerTreePanel.java
  *
- * Created on 17 Сентябрь 2008 г., 17:53
+ * Created on 17 РЎРµРЅС‚СЏР±СЂСЊ 2008 Рі., 17:53
  */
 
 
@@ -28,7 +28,7 @@ public class AnswerTreePanel extends javax.swing.JPanel {
 
         jLabel1 = new javax.swing.JLabel();
 
-        setBorder(javax.swing.BorderFactory.createTitledBorder(" Свойства вопроса"));
+        setBorder(javax.swing.BorderFactory.createTitledBorder(" РЎРІРѕР№СЃС‚РІР° РІРѕРїСЂРѕСЃР°"));
 
         jLabel1.setText("jLabel1");
         add(jLabel1);

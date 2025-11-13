@@ -1,7 +1,7 @@
 /*
  * ImportPanel.java
  *
- * Created on 6 Март 2009 г., 11:19
+ * Created on 6 РњР°СЂС‚ 2009 Рі., 11:19
  */
 import javax.swing.*;
 import java.awt.event.*;
@@ -9,7 +9,7 @@ import java.awt.event.*;
 
 /**
  *
- * @author  Иван
+ * @author  РРІР°РЅ
  */
 public class ImportPanel extends javax.swing.JPanel {
     private DataModuleInterface DMI;
@@ -78,7 +78,7 @@ public class ImportPanel extends javax.swing.JPanel {
         jPanel1.setLayout(new java.awt.GridBagLayout());
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel1.setText("Формат файла:");
+        jLabel1.setText("Р¤РѕСЂРјР°С‚ С„Р°Р№Р»Р°:");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 0;
@@ -98,7 +98,7 @@ public class ImportPanel extends javax.swing.JPanel {
         jPanel1.add(jComboBox1, gridBagConstraints);
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel2.setText("Имя файла:");
+        jLabel2.setText("РРјСЏ С„Р°Р№Р»Р°:");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 1;
@@ -123,7 +123,7 @@ public class ImportPanel extends javax.swing.JPanel {
         jPanel1.add(jTextField1, gridBagConstraints);
 
         jButton1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jButton1.setText("Обзор");
+        jButton1.setText("РћР±Р·РѕСЂ");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -147,7 +147,7 @@ public class ImportPanel extends javax.swing.JPanel {
         jPanel2.setLayout(new java.awt.GridBagLayout());
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel3.setText("Что вы хотите импортировать:");
+        jLabel3.setText("Р§С‚Рѕ РІС‹ С…РѕС‚РёС‚Рµ РёРјРїРѕСЂС‚РёСЂРѕРІР°С‚СЊ:");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 0;
@@ -157,7 +157,7 @@ public class ImportPanel extends javax.swing.JPanel {
         jPanel2.add(jLabel3, gridBagConstraints);
 
         jRadioButton1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jRadioButton1.setText("Только данные");
+        jRadioButton1.setText("РўРѕР»СЊРєРѕ РґР°РЅРЅС‹Рµ");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 1;
@@ -167,7 +167,7 @@ public class ImportPanel extends javax.swing.JPanel {
         jPanel2.add(jRadioButton1, gridBagConstraints);
 
         jRadioButton2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jRadioButton2.setText("Только словарь");
+        jRadioButton2.setText("РўРѕР»СЊРєРѕ СЃР»РѕРІР°СЂСЊ");
         jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jRadioButton2ActionPerformed(evt);
@@ -182,7 +182,7 @@ public class ImportPanel extends javax.swing.JPanel {
         jPanel2.add(jRadioButton2, gridBagConstraints);
 
         jRadioButton3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jRadioButton3.setText("Словарь и данные");
+        jRadioButton3.setText("РЎР»РѕРІР°СЂСЊ Рё РґР°РЅРЅС‹Рµ");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 3;
@@ -203,7 +203,7 @@ public class ImportPanel extends javax.swing.JPanel {
         jPanel3.setLayout(new java.awt.GridBagLayout());
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel4.setText("Разделитель элементов данных");
+        jLabel4.setText("Р Р°Р·РґРµР»РёС‚РµР»СЊ СЌР»РµРјРµРЅС‚РѕРІ РґР°РЅРЅС‹С…");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
@@ -211,7 +211,7 @@ public class ImportPanel extends javax.swing.JPanel {
         jPanel3.add(jLabel4, gridBagConstraints);
 
         jComboBox2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Пробел", "Табуляция", "Конец строки" }));
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "РџСЂРѕР±РµР»", "РўР°Р±СѓР»СЏС†РёСЏ", "РљРѕРЅРµС† СЃС‚СЂРѕРєРё" }));
         jComboBox2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox2ActionPerformed(evt);
@@ -223,7 +223,7 @@ public class ImportPanel extends javax.swing.JPanel {
         jPanel3.add(jComboBox2, gridBagConstraints);
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel5.setText("Разделитель документов");
+        jLabel5.setText("Р Р°Р·РґРµР»РёС‚РµР»СЊ РґРѕРєСѓРјРµРЅС‚РѕРІ");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 1;
@@ -233,7 +233,7 @@ public class ImportPanel extends javax.swing.JPanel {
         jPanel3.add(jLabel5, gridBagConstraints);
 
         jComboBox3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Конец строки", "Пробел", "Табуляция" }));
+        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "РљРѕРЅРµС† СЃС‚СЂРѕРєРё", "РџСЂРѕР±РµР»", "РўР°Р±СѓР»СЏС†РёСЏ" }));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 1;
@@ -242,7 +242,7 @@ public class ImportPanel extends javax.swing.JPanel {
         jPanel3.add(jComboBox3, gridBagConstraints);
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel6.setText("Разделитель в формате даты");
+        jLabel6.setText("Р Р°Р·РґРµР»РёС‚РµР»СЊ РІ С„РѕСЂРјР°С‚Рµ РґР°С‚С‹");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 2;
@@ -252,7 +252,7 @@ public class ImportPanel extends javax.swing.JPanel {
         jPanel3.add(jLabel6, gridBagConstraints);
 
         jComboBox4.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Точка", "/" }));
+        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "РўРѕС‡РєР°", "/" }));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 2;
@@ -261,7 +261,7 @@ public class ImportPanel extends javax.swing.JPanel {
         jPanel3.add(jComboBox4, gridBagConstraints);
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel7.setText("Разделитель в дробной части числа");
+        jLabel7.setText("Р Р°Р·РґРµР»РёС‚РµР»СЊ РІ РґСЂРѕР±РЅРѕР№ С‡Р°СЃС‚Рё С‡РёСЃР»Р°");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 3;
@@ -271,7 +271,7 @@ public class ImportPanel extends javax.swing.JPanel {
         jPanel3.add(jLabel7, gridBagConstraints);
 
         jComboBox5.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Точка", "Запятая" }));
+        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "РўРѕС‡РєР°", "Р—Р°РїСЏС‚Р°СЏ" }));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 3;
@@ -288,7 +288,7 @@ public class ImportPanel extends javax.swing.JPanel {
 
         jPanel7.setLayout(new java.awt.GridBagLayout());
 
-        jButton2.setText("Готово");
+        jButton2.setText("Р“РѕС‚РѕРІРѕ");
         jButton2.setEnabled(false);
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -297,7 +297,7 @@ public class ImportPanel extends javax.swing.JPanel {
         });
         jPanel7.add(jButton2, new java.awt.GridBagConstraints());
 
-        jButton3.setText("Отменить");
+        jButton3.setText("РћС‚РјРµРЅРёС‚СЊ");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -305,7 +305,7 @@ public class ImportPanel extends javax.swing.JPanel {
         });
         jPanel7.add(jButton3, new java.awt.GridBagConstraints());
 
-        jButton4.setText("Из опроса 3Д");
+        jButton4.setText("РР· РѕРїСЂРѕСЃР° 3Р”");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
@@ -316,7 +316,7 @@ public class ImportPanel extends javax.swing.JPanel {
         gridBagConstraints.gridy = 1;
         jPanel7.add(jButton4, gridBagConstraints);
 
-        jButton5.setText("Общая загрузка");
+        jButton5.setText("РћР±С‰Р°СЏ Р·Р°РіСЂСѓР·РєР°");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton5ActionPerformed(evt);
@@ -327,7 +327,7 @@ public class ImportPanel extends javax.swing.JPanel {
         gridBagConstraints.gridy = 1;
         jPanel7.add(jButton5, gridBagConstraints);
 
-        jButton6.setText("XML Парча");
+        jButton6.setText("XML РџР°СЂС‡Р°");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton6ActionPerformed(evt);
@@ -374,7 +374,7 @@ private void tuneComponents() {
        Server = DMI.getServer();
        switch(type) {
        case 1: {
-            //"Свойства папки "
+            //"РЎРІРѕР№СЃС‚РІР° РїР°РїРєРё "
             jRadioButton1.setEnabled(false);
             jRadioButton2.setEnabled(true);
             jRadioButton2.setSelected(true);
@@ -382,7 +382,7 @@ private void tuneComponents() {
             break;
         }
         case 2: {
-            //" Модуль данных"
+            //" РњРѕРґСѓР»СЊ РґР°РЅРЅС‹С…"
             jRadioButton1.setEnabled(true);
             jRadioButton1.setSelected(true);            
             jRadioButton2.setEnabled(false);
@@ -390,14 +390,14 @@ private void tuneComponents() {
             break;
         }
         case 3: {
-            //" Блок данных "
+            //" Р‘Р»РѕРє РґР°РЅРЅС‹С… "
             jRadioButton1.setEnabled(true);
             jRadioButton2.setEnabled(false);
             jRadioButton3.setEnabled(false);
             break;
         }
         case 4: {
-            //" Фильтр данных "
+            //" Р¤РёР»СЊС‚СЂ РґР°РЅРЅС‹С… "
             break;
         }
        }
@@ -434,7 +434,7 @@ private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRS
 }//GEN-LAST:event_jButton3ActionPerformed
 
 private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-    System.out.println("начинаем отработку"+typeofExport);
+    System.out.println("РЅР°С‡РёРЅР°РµРј РѕС‚СЂР°Р±РѕС‚РєСѓ"+typeofExport);
     jButton2.setEnabled(false);
     switch(type) {
        case 2: {
@@ -442,7 +442,7 @@ private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRS
                 if (DMI.getDictionary()!=null) {
                     if (DMI.getType()==2) {
                         Integer Key=Server.getKey();
-                        DataModuleInterface newDMI = Server.newDMI("Новый блок данных",Key,3,true);
+                        DataModuleInterface newDMI = Server.newDMI("РќРѕРІС‹Р№ Р±Р»РѕРє РґР°РЅРЅС‹С…",Key,3,true);
                         DMI.addElement(Key,parent.getLibrary().getID(),true);
                         newDMI.setDictionary(DMI.getDictionary(),parent.getLibrary().getID(),true);
                         newDMI.createTable();
@@ -488,7 +488,7 @@ private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRS
 
 private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
 // TODO add your handling code here:
-    System.out.println("начинаем отработку"+typeofExport);
+    System.out.println("РЅР°С‡РёРЅР°РµРј РѕС‚СЂР°Р±РѕС‚РєСѓ"+typeofExport);
     jButton2.setEnabled(false);
     switch(type) {
        case 2: {
@@ -496,7 +496,7 @@ private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRS
                 if (DMI.getDictionary()!=null) {
                     if (DMI.getType()==2) {
                         Integer Key=Server.getKey();
-                        DataModuleInterface newDMI = Server.newDMI("Новый блок данных",Key,3,true);
+                        DataModuleInterface newDMI = Server.newDMI("РќРѕРІС‹Р№ Р±Р»РѕРє РґР°РЅРЅС‹С…",Key,3,true);
                         DMI.addElement(Key,parent.getLibrary().getID(),true);
                         newDMI.setDictionary(DMI.getDictionary(),parent.getLibrary().getID(),true);
                         newDMI.createTable();
@@ -526,7 +526,7 @@ private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRS
 
 private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
 // TODO add your handling code here:
-        System.out.println("начинаем отработку"+typeofExport);
+        System.out.println("РЅР°С‡РёРЅР°РµРј РѕС‚СЂР°Р±РѕС‚РєСѓ"+typeofExport);
     jButton2.setEnabled(false);
     switch(type) {
        case 3: {
@@ -543,8 +543,8 @@ private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRS
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
 // TODO add your handling code here:
-    //загрузка из Парчи
-    System.out.println("начинаем отработку по Парче"+typeofExport);
+    //Р·Р°РіСЂСѓР·РєР° РёР· РџР°СЂС‡Рё
+    System.out.println("РЅР°С‡РёРЅР°РµРј РѕС‚СЂР°Р±РѕС‚РєСѓ РїРѕ РџР°СЂС‡Рµ"+typeofExport);
     jButton2.setEnabled(false);
     switch(type) {
        case 2: {
@@ -552,7 +552,7 @@ private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRS
                 if (DMI.getDictionary()!=null) {
                     if (DMI.getType()==2) {
                         Integer Key=Server.getKey();
-                        DataModuleInterface newDMI = Server.newDMI("Новый блок данных для загрузки из парчи",Key,3,true);
+                        DataModuleInterface newDMI = Server.newDMI("РќРѕРІС‹Р№ Р±Р»РѕРє РґР°РЅРЅС‹С… РґР»СЏ Р·Р°РіСЂСѓР·РєРё РёР· РїР°СЂС‡Рё",Key,3,true);
                         DMI.addElement(Key,parent.getLibrary().getID(),true);
                         newDMI.setDictionary(DMI.getDictionary(),parent.getLibrary().getID(),true);
                         newDMI.createTable();

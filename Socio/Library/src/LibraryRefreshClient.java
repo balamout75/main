@@ -1,7 +1,7 @@
 /*
  * SocioRefreshClient.java
  *
- * Created on 17 Январь 2004 г., 19:49
+ * Created on 17 РЇРЅРІР°СЂСЊ 2004 Рі., 19:49
  */
 import java.rmi.server.UnicastRemoteObject;
 import java.rmi.RemoteException;
@@ -40,21 +40,21 @@ public class LibraryRefreshClient extends UnicastRemoteObject implements Library
     
     public void Refresh() throws RemoteException {
         System.out.println( "Refresher check" );	
-        //Object[] options = {"Да","Нет","Отмена"};
-        //int n = JOptionPane.showOptionDialog(null,"Вы желаете перенести?","Вопрос",JOptionPane.YES_NO_CANCEL_OPTION,JOptionPane.QUESTION_MESSAGE,null,options,options[1]);                
+        //Object[] options = {"Р”Р°","РќРµС‚","РћС‚РјРµРЅР°"};
+        //int n = JOptionPane.showOptionDialog(null,"Р’С‹ Р¶РµР»Р°РµС‚Рµ РїРµСЂРµРЅРµСЃС‚Рё?","Р’РѕРїСЂРѕСЃ",JOptionPane.YES_NO_CANCEL_OPTION,JOptionPane.QUESTION_MESSAGE,null,options,options[1]);                
         //Parent.Functionality();
     }
        
     public void RefreshLocalClient() throws RemoteException {
         System.out.println( "Refresher LOCAL check" );	        
-        //Object[] options = {"Да","Нет","Отмена"};
-        //JOptionPane.showMessageDialog(Parent, "ПРивет");
-        //int n = JOptionPane.showOptionDialog(null,"Вы желаете перенести папку?","Вопрос",JOptionPane.YES_NO_CANCEL_OPTION,JOptionPane.QUESTION_MESSAGE,null,options,options[1]);        
+        //Object[] options = {"Р”Р°","РќРµС‚","РћС‚РјРµРЅР°"};
+        //JOptionPane.showMessageDialog(Parent, "РџР РёРІРµС‚");
+        //int n = JOptionPane.showOptionDialog(null,"Р’С‹ Р¶РµР»Р°РµС‚Рµ РїРµСЂРµРЅРµСЃС‚Рё РїР°РїРєСѓ?","Р’РѕРїСЂРѕСЃ",JOptionPane.YES_NO_CANCEL_OPTION,JOptionPane.QUESTION_MESSAGE,null,options,options[1]);        
         //Parent.Functionality();
     }
     
     public void RefreshQuestionList() throws RemoteException {
-        System.out.println( "Обновляем Набор Словарей" );	
+        System.out.println( "РћР±РЅРѕРІР»СЏРµРј РќР°Р±РѕСЂ РЎР»РѕРІР°СЂРµР№" );	
         Parent.RefreshQuestionList();
         //Parent.Functionality();
     }
@@ -64,15 +64,15 @@ public class LibraryRefreshClient extends UnicastRemoteObject implements Library
     }    
     
     public void RefreshDataList() throws RemoteException {
-        System.out.println( "Кто то кнопку 31 нажал" );	
+        System.out.println( "РљС‚Рѕ С‚Рѕ РєРЅРѕРїРєСѓ 31 РЅР°Р¶Р°Р»" );	
         Parent.RefreshDataList();
-        System.out.println( "Кто то кнопку 32 нажал" );	
+        System.out.println( "РљС‚Рѕ С‚Рѕ РєРЅРѕРїРєСѓ 32 РЅР°Р¶Р°Р»" );	
         
     }
     
     public void RefreshDimensionList() throws RemoteException {
-        System.out.println( "Кто то кнопку 31 нажал" );	
+        System.out.println( "РљС‚Рѕ С‚Рѕ РєРЅРѕРїРєСѓ 31 РЅР°Р¶Р°Р»" );	
         Parent. RefreshDimensionList();
-        System.out.println( "Кто то кнопку 32 нажал" );	
+        System.out.println( "РљС‚Рѕ С‚Рѕ РєРЅРѕРїРєСѓ 32 РЅР°Р¶Р°Р»" );	
     }
 }
