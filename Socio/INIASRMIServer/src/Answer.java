@@ -25,7 +25,7 @@ public class Answer extends UnicastRemoteObject implements AnswerInterface, Seri
     /** Creates a new instance of Answer */
     public void setTextable(boolean Textable, boolean Flag) throws RemoteException {
         this.Textable=Textable;
-        if (Flag) Server.StoreDQÀ(this, 2);
+        if (Flag) Server.StoreDQA(this, 2);
     };
 
     public boolean getTextable() throws RemoteException {
@@ -65,7 +65,7 @@ public class Answer extends UnicastRemoteObject implements AnswerInterface, Seri
         int ResultFlag=Server.askArbitr(this,2,LibID);        
         if (ResultFlag==0) {
             Name = aName;
-            if (Flag) Server.StoreDQÀ(this, 1);
+            if (Flag) Server.StoreDQA(this, 1);
         }
         return ResultFlag;
     }

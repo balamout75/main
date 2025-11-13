@@ -51,14 +51,14 @@ public class ConnectWindow extends javax.swing.JFrame {
     JPanel Tool ;
     JButton JButton1 ;
     JButton JButton2 ;
-    //Попытка сделать нечто, подобное примерчику
+    //РџРѕРїС‹С‚РєР° СЃРґРµР»Р°С‚СЊ РЅРµС‡С‚Рѕ, РїРѕРґРѕР±РЅРѕРµ РїСЂРёРјРµСЂС‡РёРєСѓ
     //Table 	sorter;
     //JDBCAdapter 	dataBase;
     
     
 public void connect() {
     //mainFrame.sorter = new TableSorter();    				
-    //начало его 
+    //РЅР°С‡Р°Р»Рѕ РµРіРѕ 
     try {
         //Class.forName(DriverField.getText());
         System.out.println("Opening db connection");
@@ -104,35 +104,35 @@ public  ConnectWindow(INIACRMIServer aMainFrame) {
         gridLayout8.setColumns( 1 );
         gridLayout8.setRows( 0 );
         Dialog.setLayout( gridLayout8 )	;
-        //Поле ввода имени пользователя
+        //РџРѕР»Рµ РІРІРѕРґР° РёРјРµРЅРё РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
         NickPanel = new JPanel();
         NickPanel.setLayout( new java.awt.GridLayout() );
         NickLabel = new JLabel();
-        NickLabel.setText( "Пользователь" );
+        NickLabel.setText( "РџРѕР»СЊР·РѕРІР°С‚РµР»СЊ" );
         NickField = new JTextField(mainFrame.User);
         NickPanel.add(NickLabel, null, -1);
         NickPanel.add(NickField, null, -1);
-        //Поле ввода пароля
+        //РџРѕР»Рµ РІРІРѕРґР° РїР°СЂРѕР»СЏ
         PassPanel = new JPanel();
         PassPanel.setLayout( new java.awt.GridLayout() );
         PassLabel = new JLabel();
-        PassLabel.setText( "Пароль" );
+        PassLabel.setText( "РџР°СЂРѕР»СЊ" );
         PassField = new JTextField(mainFrame.Password);
         PassPanel.add(PassLabel, null, -1);
         PassPanel.add(PassField, null, -1);
-        //Поле ввода Сервера имени
+        //РџРѕР»Рµ РІРІРѕРґР° РЎРµСЂРІРµСЂР° РёРјРµРЅРё
         ServerPanel = new JPanel();
         ServerPanel.setLayout( new java.awt.GridLayout() );
         ServerLabel = new JLabel();
-        ServerLabel.setText( "Сервер" );
+        ServerLabel.setText( "РЎРµСЂРІРµСЂ" );
         ServerField = new JTextField(mainFrame.Server);
         ServerPanel.add(ServerLabel, null, -1);
         ServerPanel.add(ServerField, null, -1);
-        //Поле ввода драйвера имени
+        //РџРѕР»Рµ РІРІРѕРґР° РґСЂР°Р№РІРµСЂР° РёРјРµРЅРё
         DriverPanel = new JPanel();
         DriverPanel.setLayout( new java.awt.GridLayout() );
         DriverLabel = new JLabel();
-        DriverLabel.setText("Драйвер");
+        DriverLabel.setText("Р”СЂР°Р№РІРµСЂ");
         DriverField = new JTextField(mainFrame.Driver);
         DriverPanel.add(DriverLabel, null, -1);
         DriverPanel.add(DriverField, null, -1);
@@ -160,7 +160,7 @@ public  ConnectWindow(INIACRMIServer aMainFrame) {
 	       }}	
 	);
 	      
-	JButton1.setText( "Соединить" );
+	JButton1.setText( "РЎРѕРµРґРёРЅРёС‚СЊ" );
 	JButton2 = new JButton();
         JButton2.addActionListener(new ActionListener() {
 	       public void actionPerformed(ActionEvent e) {
@@ -168,7 +168,7 @@ public  ConnectWindow(INIACRMIServer aMainFrame) {
  	      
 	       }}	
 	);
-        JButton2.setText( "Выход" );
+        JButton2.setText( "Р’С‹С…РѕРґ" );
         Tool.add(JButton1, null, -1);
         Tool.add(JButton2, null, -1);
         {
